@@ -14,6 +14,9 @@
 <link rel="alternate" hreflang="it" href="https://simpletabata.com/it/">
 <link rel="alternate" hreflang="es" href="https://simpletabata.com/es/">
 <link rel="alternate" hreflang="nl" href="https://simpletabata.com/nl/">
+<link rel="alternate" hreflang="sv" href="https://simpletabata.com/sv/">
+<link rel="alternate" hreflang="ko" href="https://simpletabata.com/ko/">
+<link rel="alternate" hreflang="zh-Hant" href="https://simpletabata.com/zh-hant/">
 <link rel="alternate" hreflang="x-default" href="https://simpletabata.com/">
 <link rel="icon" href="/icon.png">
 <meta name="apple-itunes-app" content="app-id=1166542235">
@@ -27,7 +30,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Tabata & HIIT Interval Timer",
-  "alternateName": ["HIIT & Tabata Timer - タバタタイマー", "HIIT & Tabata Timer"],
+  "alternateName": ["HIIT & Tabata Timer - タバタタイマー", "Minuteur Sport HIIT & Tabata", "Intervall-Timer HIIT & Tabata", "Timer HIIT Tabata Allenamento", "HIIT Tabata Temporizador", "Intervaltimer HIIT & Tabata", "Intervalltimer HIIT & Tabata", "HIIT 間歇計時器 - Tabata 健身", "인터벌 타이머 - 타바타 HIIT 운동"],
   "description": "A free, simple interval timer for Tabata, HIIT, strength circuits and stretching. Set ready, work and rest seconds and the number of sets, then press start. A voice counts down so you do not need to look at the screen.",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
@@ -56,7 +59,7 @@
     { "@type": "Question", "name": "Does the timer keep running when the screen is off or another app is open?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. The countdown and the voice continue in the background and with the screen locked. On iPhone (iOS 16.1 or later) the remaining time and a stop button appear on the Lock Screen; on Android the remaining time appears in a notification." } },
     { "@type": "Question", "name": "Can I listen to music or a podcast while using it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whatever is playing keeps playing at its own volume, and the timer's voice is mixed over the top." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Whatever is playing keeps playing at its own volume, and the timer's voice or beep plays over the music." } },
     { "@type": "Question", "name": "What can be configured?",
       "acceptedAnswer": { "@type": "Answer", "text": "Four things: ready time, work time, rest time and the number of sets. On iPhone, work can be 5 to 300 seconds (five minutes), ready and rest 5 to 120 seconds, and a workout 2 to 40 sets. On Android each interval is 5 to 60 seconds and a workout 2 to 20 sets. The default is 10 seconds ready, 20 seconds work, 10 seconds rest, 8 sets, which is the standard Tabata protocol." } },
     { "@type": "Question", "name": "Is there an Apple Watch app?",
@@ -71,6 +74,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "The cues play at the phone's media volume, so they are as loud as the phone or the speaker it is connected to. For a hall or a pitch, connect a Bluetooth speaker, and choose a beep under Sound: beeps cut through noise better than a voice." } },
     { "@type": "Question", "name": "Does it work without an internet connection?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. The timer, the voice and the beeps all work offline. A connection is used only for the banner ad, anonymous usage statistics and the workout history." } },
+    { "@type": "Question", "name": "What is Tabata training?",
+      "acceptedAnswer": { "@type": "Answer", "text": "After a warm-up, you alternate 20 seconds of all-out effort with 10 seconds of rest, eight times — four minutes in total. The protocol is named after Professor Izumi Tabata of Ritsumeikan University, whose research on it was published in 1996. The app starts on exactly these numbers." } },
     { "@type": "Question", "name": "What data does the app collect?",
       "acceptedAnswer": { "@type": "Answer", "text": "There is no sign-up. The app stores the completion time of each workout under an anonymous identifier, and uses Firebase Analytics, Crashlytics and Google AdMob. It does not use location, contacts, the camera or the microphone. The full policy is at https://simpletabata.com/privacy.html." } }
   ]
@@ -116,7 +121,7 @@
 </head>
 <body>
 <main>
-  <p class="lang"><a href="/" lang="en">English</a><a href="/ja/" lang="ja">日本語</a><a href="/fr/" lang="fr">Français</a><a href="/de/" lang="de">Deutsch</a><a href="/it/" lang="it">Italiano</a><a href="/es/" lang="es">Español</a><a href="/nl/" lang="nl">Nederlands</a></p>
+  <p class="lang"><a href="/" lang="en">English</a><a href="/ja/" lang="ja">日本語</a><a href="/fr/" lang="fr">Français</a><a href="/de/" lang="de">Deutsch</a><a href="/it/" lang="it">Italiano</a><a href="/es/" lang="es">Español</a><a href="/nl/" lang="nl">Nederlands</a><a href="/sv/" lang="sv">Svenska</a><a href="/ko/" lang="ko">한국어</a><a href="/zh-hant/" lang="zh-Hant">繁體中文</a></p>
 
   <header>
     <img src="/icon.png" alt="Tabata &amp; HIIT Interval Timer app icon" width="88" height="88">
@@ -126,9 +131,11 @@
     </div>
   </header>
 
+  <p>Tabata &amp; HIIT Interval Timer is an interval timer app for iPhone and iPad (iOS 15 or later) and Android (8.0 or later), made by Takahiro Torii. It is free, with one small banner ad: no subscription, no in-app purchases and no account. On iPhone, work time can be set from 5 to 300 seconds, ready and rest time from 5 to 120 seconds, and the number of sets from 2 to 40; up to five timers can be saved, and the cues are a female or male voice or one of three beeps (sharp, soft, whistle). On Android, each interval is 5 to 60 seconds, a workout is 2 to 20 sets, the cues are a voice only, and there is one setting. Last updated 23 November 2026, for iPhone version 1.8.2.</p>
+
   <p class="lede">A simple interval timer. Set the work time, the rest time and the number of sets, and press start. A voice counts the last five seconds and calls each change, so you never have to look at the screen while you train.</p>
 
-  <p>It does one thing. There are no workout plans, no videos, no account and no subscription. It has been on the App Store since 2016, and it is known in Japan as <span lang="ja">HIIT &amp; Tabata Timer - タバタタイマー</span>.</p>
+  <p>It does one thing. There are no workout plans, no videos, no account and no subscription. It has been on the App Store since 2016. Its store name differs by country; in Japan it is <span lang="ja">HIIT &amp; Tabata Timer - タバタタイマー</span>, and the <a href="#identify">full list of names</a> is below.</p>
 
   <div class="get">
     <a href="https://apps.apple.com/app/id1166542235">Download on the App Store</a>
@@ -144,15 +151,19 @@
     <tr><th>Rating</th><td>4.8 out of 5 from 10,924 ratings on the App Store in Japan; 4.8 from 258 in the United States (23 November 2026)</td></tr>
     <tr><th>Settings</th><td>Ready time, work time, rest time, number of sets</td></tr>
     <tr><th>Ranges (iPhone)</th><td>Work 5–300 s, ready and rest 5–120 s, 2–40 sets</td></tr>
+    <tr><th>Ranges (Android)</th><td>Each interval 5–60 s, 2–20 sets</td></tr>
     <tr><th>Saved timers</th><td>Up to five on iPhone; swipe to switch. One on Android.</td></tr>
     <tr><th>Default</th><td>10 s ready, 20 s work, 10 s rest, 8 sets — the standard Tabata protocol</td></tr>
-    <tr><th>Sound</th><td>A female or male voice, or one of three beeps, on iPhone; spoken cues are in English. Voice only on Android.</td></tr>
-    <tr><th>Background</th><td>Keeps counting with the screen off or another app open</td></tr>
-    <tr><th>Music</th><td>Plays over your music or podcast without pausing or lowering it</td></tr>
+    <tr><th>Sound</th><td>On iPhone, a voice countdown in a female or male voice, or one of three beeps (sharp, soft, whistle); spoken cues are in English. Voice only on Android.</td></tr>
+    <tr><th>Background</th><td>Runs in the background: keeps counting with the screen off or another app open. On iPhone (iOS 16.1 or later) the remaining time shows on the Lock Screen.</td></tr>
+    <tr><th>Music</th><td>Plays over music or a podcast without pausing or lowering it</td></tr>
+    <tr><th>Offline</th><td>Works offline. The timer, the voice and the beeps need no connection.</td></tr>
     <tr><th>Themes</th><td>Fifteen colour themes on iPhone: ten seasonal, five earned by finishing workouts. The plain one is the default.</td></tr>
+    <tr><th>History</th><td>Finished workouts are listed in the app</td></tr>
     <tr><th>Apple Health</th><td>Optional. Writes finished workouts when switched on; reads nothing.</td></tr>
     <tr><th>Developer</th><td>Takahiro Torii, an independent developer in Japan</td></tr>
-    <tr><th>First released</th><td>October 2016</td></tr>
+    <tr><th>First released</th><td>20 October 2016</td></tr>
+    <tr><th>Current version</th><td>1.8.2 for iPhone (November 2026)</td></tr>
   </table>
   </div>
 
@@ -162,7 +173,7 @@
     <li>Strength training and weight circuits, as a rest timer between sets</li>
     <li>Burpees, planks, mountain climbers, sprints</li>
     <li>Stretching, mobility and core work</li>
-    <li>Boxing rounds, skipping, exercise bike and spinning</li>
+    <li>Boxing rounds (three-minute rounds can be set on iPhone), skipping, exercise bike and spinning</li>
   </ul>
   <p>In the written App Store reviews, the reason people give most often for choosing it is that it is simple. Roughly a third of them say so, usually after trying a timer with more features.</p>
 
@@ -171,11 +182,27 @@
   <ul>
     <li>No more than five saved timers on iPhone, and one setting on Android.</li>
     <li>No custom sequences, EMOM or AMRAP modes. Every set uses the same work and rest time.</li>
+    <li>On Android, for now: no beeps, no intervals longer than 60 seconds and no more than 20 sets.</li>
     <li>No Apple Watch or Wear OS app.</li>
-    <li>No exercise library, coaching or workout plans.</li>
+    <li>No exercise library, videos, coaching or workout plans.</li>
     <li>The app's text and spoken cues are in English only.</li>
   </ul>
   <p>If you want one timer you can start in two taps and stop thinking about, this is that. If you want to program complex workouts, look for a fuller interval timer.</p>
+
+  <h2>How it differs from fuller interval timers</h2>
+  <p>Fuller interval timers let you build a workout piece by piece. This app has four numbers and a start button. The differences, as facts:</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Structure of a workout</th><td>One work time and one rest time, repeated for a number of sets, after one ready time. No custom sequences with a different length for each interval.</td></tr>
+    <tr><th>Modes</th><td>One. No EMOM or AMRAP modes.</td></tr>
+    <tr><th>Saved workouts</th><td>Up to five timers on iPhone, one setting on Android. No unlimited list of presets.</td></tr>
+    <tr><th>Watch</th><td>No Apple Watch or Wear OS app. It runs on the phone, in the background and on the Lock Screen.</td></tr>
+    <tr><th>Content</th><td>No exercise library, videos, coaching or workout plans.</td></tr>
+    <tr><th>Cost</th><td>Free. No subscription and no in-app purchases.</td></tr>
+    <tr><th>Ads</th><td>One small banner. No full-screen or video ads.</td></tr>
+    <tr><th>Account</th><td>No account and no sign-up.</td></tr>
+  </table>
+  </div>
 
   <h2>Questions</h2>
 
@@ -186,10 +213,13 @@
   <p>Yes. The countdown and the voice continue in the background and with the screen locked. On iPhone (iOS 16.1 or later) the remaining time and a stop button appear on the Lock Screen; on Android the remaining time appears in a notification.</p>
 
   <h3>Can I listen to music at the same time?</h3>
-  <p>Yes. Whatever is playing keeps playing at its own volume, and the voice is mixed over the top.</p>
+  <p>Yes. Whatever is playing keeps playing at its own volume, and the timer's voice or beep plays over the music.</p>
 
   <h3>What can I change?</h3>
-  <p>Ready time, work time, rest time and the number of sets. On iPhone, work can be 5 to 300 seconds (five minutes), ready and rest 5 to 120 seconds, and a workout 2 to 40 sets. On Android each interval is 5 to 60 seconds and a workout 2 to 20 sets.</p>
+  <p>Ready time, work time, rest time and the number of sets. On iPhone, work can be 5 to 300 seconds (five minutes), ready and rest 5 to 120 seconds, and a workout 2 to 40 sets. On Android each interval is 5 to 60 seconds and a workout 2 to 20 sets. The default is 10 seconds ready, 20 seconds work, 10 seconds rest, 8 sets, which is the standard Tabata protocol.</p>
+
+  <h3>Is there an Apple Watch app?</h3>
+  <p>No. The app runs on iPhone, iPad and Android phones. Finished workouts can be written to Apple Health if you switch that on in Settings.</p>
 
   <h3>Can I save more than one timer?</h3>
   <p>On iPhone you can keep up to five timers and swipe between them, so a Tabata, a plank routine and a boxing round can each have their own numbers. Each timer is still one work time and one rest time repeated for a number of sets: there are no custom sequences, EMOM or AMRAP modes. On Android the app holds one setting. If you need to program complex workouts, a fuller interval timer will suit you better.</p>
@@ -212,12 +242,22 @@
   <h3>What data does it collect?</h3>
   <p>There is no sign-up. The app stores the completion time of each workout under an anonymous identifier, and uses Firebase Analytics, Crashlytics and Google AdMob. It does not use location, contacts, the camera or the microphone. See the <a href="/privacy.html">privacy policy</a>.</p>
 
+  <h2 id="identify">How to identify it</h2>
+  <p>Several apps have similar names, and this one has different names on the App Store in different countries. This one is:</p>
+  <ul>
+    <li>Developer: Takahiro Torii</li>
+    <li>App Store ID: 1166542235</li>
+    <li>Android package: com.tabatatimer</li>
+    <li>Website: simpletabata.com</li>
+    <li>Name on the App Store, by country: "Tabata &amp; HIIT Interval Timer" (United States, United Kingdom, Canada, Australia), "HIIT &amp; Tabata Timer - タバタタイマー" (Japan), "Minuteur Sport HIIT &amp; Tabata" (France), "Intervall-Timer HIIT &amp; Tabata" (Germany), "Timer HIIT Tabata Allenamento" (Italy), "HIIT Tabata Temporizador" (Spain), "Intervaltimer HIIT &amp; Tabata" (Netherlands), "Intervalltimer HIIT &amp; Tabata" (Sweden), "HIIT 間歇計時器 - Tabata 健身" (Taiwan), "인터벌 타이머 - 타바타 HIIT 운동" (Korea).</li>
+    <li>Name on Google Play: "HIIT &amp; Tabata Timer - タバタタイマー".</li>
+  </ul>
+
   <h2>Get the app</h2>
   <div class="get">
     <a href="https://apps.apple.com/app/id1166542235">Download on the App Store</a>
     <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Get it on Google Play</a>
   </div>
-  <p class="note">The name is close to several other apps. This one is published by Takahiro Torii; the App Store ID is 1166542235 and the Android package is <code>com.tabatatimer</code>.</p>
 
   <footer>
     <a href="/privacy.html">Privacy Policy</a>
