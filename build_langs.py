@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate the fr/de/it/es/nl pages of simpletabata.com from one template.
+"""Generate the fr/de/it/es/nl/sv/ko/zh-hant pages of simpletabata.com from one template.
 
 Run from the site repo root:  python3 build_langs.py <site-dir>
 The English and Japanese pages are hand-written; this only patches their
@@ -15,7 +15,9 @@ SITE = Path(sys.argv[1])
 BASE = "https://simpletabata.com"
 ALL = [("en", "English", "/"), ("ja", "日本語", "/ja/"), ("fr", "Français", "/fr/"),
        ("de", "Deutsch", "/de/"), ("it", "Italiano", "/it/"), ("es", "Español", "/es/"),
-       ("nl", "Nederlands", "/nl/")]
+       ("nl", "Nederlands", "/nl/"), ("sv", "Svenska", "/sv/"), ("ko", "한국어", "/ko/"),
+       ("zh-Hant", "繁體中文", "/zh-hant/")]
+PATHS = {c: p for c, _, p in ALL}
 
 L = {}
 
@@ -26,6 +28,7 @@ L["fr"] = dict(
     ogdesc="Un minuteur d'intervalles gratuit et simple pour iPhone et Android. Décompte vocal, arrière-plan, sans compte ni abonnement.",
     alt="Icône de l'app Minuteur Sport HIIT & Tabata",
     by="par Takahiro Torii · iPhone, iPad et Android · gratuit",
+    summary="Minuteur Sport HIIT & Tabata est une app de minuteur d'intervalles pour iPhone et iPad (iOS 15 ou version ultérieure) et Android (8.0 ou version ultérieure), créée par Takahiro Torii. Elle est gratuite, avec une seule petite bannière publicitaire : pas d'abonnement, pas d'achats intégrés, pas de compte. Sur iPhone, l'effort se règle de 5 à 300 secondes, la préparation et le repos de 5 à 120 secondes, et le nombre de séries de 2 à 40 ; on peut enregistrer jusqu'à cinq minuteurs, et le signal est une voix féminine ou masculine, ou l'un des trois bips (aigu, doux, sifflet). Sur Android, chaque intervalle dure de 5 à 60 secondes, une séance compte de 2 à 20 séries, seule la voix est disponible et l'app garde un seul réglage. Dernière mise à jour : 23 novembre 2026, pour la version 1.8.2 sur iPhone.",
     lede="Un minuteur d'intervalles tout simple. Réglez le temps d'effort, le temps de repos et le nombre de séries, puis appuyez sur démarrer. Une voix compte les cinq dernières secondes et annonce chaque changement : vous n'avez jamais besoin de regarder l'écran pendant l'entraînement.",
     p2="Il ne fait qu'une chose. Pas de programmes d'entraînement, pas de vidéos, pas de compte, pas d'abonnement. Il est sur l'App Store depuis 2016 ; ailleurs, il s'appelle « Tabata & HIIT Interval Timer », et au Japon",
     appstore="Télécharger dans l'App Store", play="Disponible sur Google Play",
@@ -86,6 +89,7 @@ L["de"] = dict(
     ogdesc="Ein kostenloser, einfacher Intervall-Timer für iPhone und Android. Sprach-Countdown, läuft im Hintergrund, ohne Konto und ohne Abo.",
     alt="App-Symbol von Intervall-Timer HIIT & Tabata",
     by="von Takahiro Torii · iPhone, iPad und Android · kostenlos",
+    summary="Intervall-Timer HIIT & Tabata ist eine Intervall-Timer-App für iPhone und iPad (iOS 15 oder neuer) und Android (8.0 oder neuer), entwickelt von Takahiro Torii. Sie ist kostenlos und zeigt nur ein kleines Werbebanner: kein Abo, keine In-App-Käufe, kein Konto. Auf dem iPhone lässt sich die Belastungszeit von 5 bis 300 Sekunden einstellen, Vorbereitung und Pause von 5 bis 120 Sekunden und die Anzahl der Sätze von 2 bis 40; bis zu fünf Timer können gespeichert werden, und als Signal gibt es eine weibliche oder männliche Stimme oder einen von drei Signaltönen (scharf, weich, Pfeife). Unter Android dauert jedes Intervall 5 bis 60 Sekunden, ein Workout hat 2 bis 20 Sätze, es gibt nur die Stimme und nur eine Einstellung. Zuletzt aktualisiert am 23. November 2026, Stand: iPhone-Version 1.8.2.",
     lede="Ein einfacher Intervall-Timer. Belastungszeit, Pausenzeit und Anzahl der Sätze einstellen, Start drücken. Eine Stimme zählt die letzten fünf Sekunden herunter und sagt jeden Wechsel an – Sie müssen beim Training nie auf den Bildschirm schauen.",
     p2="Er kann genau eine Sache. Keine Trainingspläne, keine Videos, kein Konto, kein Abo. Im App Store gibt es ihn seit 2016; anderswo heißt er „Tabata & HIIT Interval Timer“, in Japan",
     appstore="Laden im App Store", play="Jetzt bei Google Play",
@@ -128,7 +132,7 @@ L["de"] = dict(
         ("Was lässt sich einstellen?", "Vorbereitungszeit, Belastungszeit, Pausenzeit und die Anzahl der Sätze. Auf dem iPhone kann die Belastung bis zu 300 Sekunden (5 Minuten) dauern, Vorbereitung und Pause bis zu 120 Sekunden, und ein Workout kann bis zu 40 Sätze haben. Unter Android dauert jedes Intervall 5 bis 60 Sekunden, ein Workout hat 2 bis 20 Sätze."),
         ("Was ist Tabata-Training?", "Nach dem Aufwärmen wechseln sich 20 Sekunden maximale Belastung und 10 Sekunden Pause ab, achtmal – insgesamt vier Minuten. Das Protokoll ist nach Professor Izumi Tabata von der Ritsumeikan-Universität benannt, dessen Studie dazu 1996 erschien. Die App startet mit genau diesen Werten."),
         ("Gibt es statt der Stimme auch einen Signalton?", "Ja, auf dem iPhone. Unter „Sound“ in den Einstellungen stehen eine weibliche Stimme, eine männliche Stimme und drei Arten von Signaltönen zur Wahl; antippen, um sie zu hören. Signaltöne sind im Studio oder über Musik leichter zu hören. Unter Android gibt es vorerst nur die Stimme."),
-        ("Kann ich mehrere Timer speichern?", "Ja, auf dem iPhone: bis zu fünf. Unter „Timers“ in den Einstellungen einen hinzufügen und auf dem Hauptbildschirm nach links oder rechts wischen, um zu wechseln. Unter Android merkt sich die App eine Einstellung."),
+        ("Kann ich mehrere Timer speichern?", "Ja, auf dem iPhone: bis zu fünf. Unter „Timers“ in den Einstellungen einen hinzufügen und auf dem Hauptbildschirm nach links oder rechts wischen, um zu wechseln. Unter Android merkt sich die App nur eine Einstellung."),
         ("Eignet er sich für 3-Minuten-Runden beim Boxen?", "Ja, auf dem iPhone. Die Belastungszeit reicht bis 300 Sekunden, also 5 Minuten, die Pause bis 120 Sekunden: 3 Minuten Runde und 1 Minute Pause lassen sich direkt einstellen."),
         ("Welche Daten erfasst die App?", "Es gibt keine Anmeldung. Die App speichert den Zeitpunkt, zu dem ein Workout beendet wurde, unter einer anonymen Kennung und verwendet Firebase Analytics, Crashlytics und Google AdMob. Standort, Kontakte, Kamera und Mikrofon werden nicht verwendet."),
     ],
@@ -146,6 +150,7 @@ L["it"] = dict(
     ogdesc="Un timer a intervalli gratuito e semplice per iPhone e Android. Conto alla rovescia vocale, funziona in background, senza account né abbonamento.",
     alt="Icona dell'app Timer HIIT Tabata Allenamento",
     by="di Takahiro Torii · iPhone, iPad e Android · gratis",
+    summary="Timer HIIT Tabata Allenamento è un'app di timer a intervalli per iPhone e iPad (iOS 15 o versioni successive) e Android (8.0 o versioni successive), sviluppata da Takahiro Torii. È gratuita, con un solo piccolo banner pubblicitario: nessun abbonamento, nessun acquisto in-app, nessun account. Su iPhone il tempo di lavoro si imposta da 5 a 300 secondi, la preparazione e il recupero da 5 a 120 secondi e il numero di serie da 2 a 40; si possono salvare fino a cinque timer, e gli avvisi sono dati da una voce femminile o maschile oppure da uno dei tre segnali acustici (acuto, morbido, fischietto). Su Android ogni intervallo dura da 5 a 60 secondi, un allenamento ha da 2 a 20 serie, c'è solo la voce e l'app conserva una sola impostazione. Ultimo aggiornamento: 23 novembre 2026, per la versione 1.8.2 per iPhone.",
     lede="Un timer a intervalli semplice. Imposta il tempo di lavoro, il tempo di recupero e il numero di serie, poi premi start. Una voce conta gli ultimi cinque secondi e annuncia ogni cambio, così non devi mai guardare lo schermo mentre ti alleni.",
     p2="Fa una cosa sola. Niente programmi di allenamento, niente video, niente account, niente abbonamento. È sull'App Store dal 2016; altrove si chiama «Tabata & HIIT Interval Timer», in Giappone",
     appstore="Scarica su App Store", play="Disponibile su Google Play",
@@ -206,6 +211,7 @@ L["es"] = dict(
     ogdesc="Un temporizador de intervalos gratuito y sencillo para iPhone y Android. Cuenta atrás por voz, funciona en segundo plano, sin cuenta ni suscripción.",
     alt="Icono de la app HIIT Tabata Temporizador",
     by="de Takahiro Torii · iPhone, iPad y Android · gratis",
+    summary="HIIT Tabata Temporizador es una app de temporizador de intervalos para iPhone y iPad (iOS 15 o posterior) y Android (8.0 o posterior), creada por Takahiro Torii. Es gratuita, con un solo banner publicitario pequeño: sin suscripción, sin compras dentro de la app y sin cuenta. En iPhone, el tiempo de trabajo se ajusta de 5 a 300 segundos, la preparación y el descanso de 5 a 120 segundos, y el número de series de 2 a 40; se pueden guardar hasta cinco temporizadores, y los avisos son una voz femenina o masculina, o uno de los tres pitidos (agudo, suave, silbato). En Android, cada intervalo dura de 5 a 60 segundos, un entrenamiento tiene de 2 a 20 series, solo hay voz y la app conserva un solo ajuste. Última actualización: 23 de noviembre de 2026, para la versión 1.8.2 de iPhone.",
     lede="Un temporizador de intervalos sencillo. Ajusta el tiempo de trabajo, el tiempo de descanso y el número de series, y pulsa empezar. Una voz cuenta los últimos cinco segundos y anuncia cada cambio, así que nunca tienes que mirar la pantalla mientras entrenas.",
     p2="Hace una sola cosa. No hay planes de entrenamiento, ni vídeos, ni cuenta, ni suscripción. Está en el App Store desde 2016; en otros países se llama «Tabata & HIIT Interval Timer», y en Japón",
     appstore="Descargar en el App Store", play="Disponible en Google Play",
@@ -266,6 +272,7 @@ L["nl"] = dict(
     ogdesc="Een gratis, eenvoudige intervaltimer voor iPhone en Android. Gesproken aftelling, werkt op de achtergrond, geen account en geen abonnement.",
     alt="Appsymbool van Intervaltimer HIIT & Tabata",
     by="door Takahiro Torii · iPhone, iPad en Android · gratis",
+    summary="Intervaltimer HIIT & Tabata is een intervaltimer-app voor iPhone en iPad (iOS 15 of nieuwer) en Android (8.0 of nieuwer), gemaakt door Takahiro Torii. De app is gratis, met één kleine advertentiebanner: geen abonnement, geen in-app-aankopen, geen account. Op iPhone stel je de inspanningstijd in van 5 tot 300 seconden, de voorbereiding en de rust van 5 tot 120 seconden en het aantal sets van 2 tot 40; je kunt maximaal vijf timers bewaren, en de signalen zijn een vrouwen- of mannenstem of een van de drie pieptonen (scherp, zacht, fluitje). Op Android duurt elk interval 5 tot 60 seconden, telt een workout 2 tot 20 sets, is er alleen de stem en onthoudt de app één instelling. Laatst bijgewerkt op 23 november 2026, voor iPhone-versie 1.8.2.",
     lede="Een eenvoudige intervaltimer. Stel de inspanningstijd, de rusttijd en het aantal sets in en druk op start. Een stem telt de laatste vijf seconden af en kondigt elke wissel aan, zodat je tijdens het trainen nooit naar het scherm hoeft te kijken.",
     p2="Hij doet één ding. Geen trainingsschema's, geen video's, geen account, geen abonnement. Hij staat sinds 2016 in de App Store; elders heet hij ‘Tabata & HIIT Interval Timer’, in Japan",
     appstore="Download in de App Store", play="Ontdek het op Google Play",
@@ -307,7 +314,7 @@ L["nl"] = dict(
         ("Kan ik tegelijk muziek luisteren?", "Ja. Wat er speelt, blijft op zijn eigen volume spelen, en de stem klinkt eroverheen."),
         ("Wat kan ik aanpassen?", "De voorbereidingstijd, de inspanningstijd, de rusttijd en het aantal sets. Op iPhone kan de inspanning tot 300 seconden (5 minuten) duren, de voorbereiding en de rust tot 120 seconden, en een workout kan tot 40 sets tellen. Op Android duurt elk interval 5 tot 60 seconden en telt een workout 2 tot 20 sets."),
         ("Wat is Tabata-training?", "Na een warming-up wissel je 20 seconden maximale inspanning af met 10 seconden rust, acht keer — vier minuten in totaal. Het protocol is genoemd naar professor Izumi Tabata van de Ritsumeikan-universiteit, wiens onderzoek in 1996 verscheen. De app start met precies deze waarden."),
-        ("Kan ik een pieptoon gebruiken in plaats van de stem?", "Ja, op iPhone. Onder ‘Sound’ in de instellingen kies je een vrouwenstem, een mannenstem of een van drie pieptonen; tik erop om hem te horen. Pieptonen zijn beter te horen in de sportschool of boven muziek uit. Op Android is er voorlopig alleen de stem."),
+        ("Kan ik een pieptoon gebruiken in plaats van de stem?", "Ja, op iPhone. Onder ‘Sound’ in de instellingen kies je een vrouwenstem, een mannenstem of een van de drie pieptonen; tik erop om hem te horen. Pieptonen zijn beter te horen in de sportschool of boven de muziek uit. Op Android is er voorlopig alleen de stem."),
         ("Kan ik meerdere timers bewaren?", "Ja, op iPhone: tot vijf. Voeg er een toe onder ‘Timers’ in de instellingen en veeg op het hoofdscherm naar links of rechts om te wisselen. Op Android onthoudt de app één instelling."),
         ("Is hij geschikt voor boksrondes van 3 minuten?", "Ja, op iPhone. De inspanningstijd gaat tot 300 seconden, dus 5 minuten, en de rust tot 120 seconden: 3 minuten ronde en 1 minuut rust stel je direct in."),
         ("Welke gegevens verzamelt de app?", "Je hoeft je niet aan te melden. De app bewaart het tijdstip waarop een workout is voltooid onder een anonieme identificatie en gebruikt Firebase Analytics, Crashlytics en Google AdMob. Locatie, contacten, camera en microfoon worden niet gebruikt."),
@@ -317,6 +324,192 @@ L["nl"] = dict(
     note="Er zijn meerdere apps met een vergelijkbare naam. Deze is van Takahiro Torii; de App Store-ID is 1166542235 en het Android-pakket is <code>com.tabatatimer</code>.",
     privacy="Privacybeleid", contact="Contact", updated="Laatst bijgewerkt: 23 november 2026",
     rating=("4,8", "17"), store="nl",
+)
+
+L["sv"] = dict(
+    name="Intervalltimer HIIT & Tabata",
+    title="Intervalltimer HIIT & Tabata — en gratis, enkel intervalltimer för iPhone och Android",
+    metadesc="Intervalltimer HIIT & Tabata av Takahiro Torii: en gratis intervalltimer för iPhone och Android. Ställ in arbete, vila och antal set och tryck på start. Röstnedräkning, fortsätter i bakgrunden och hörs över din musik. Inget konto, ingen prenumeration.",
+    ogdesc="En gratis, enkel intervalltimer för iPhone och Android. Röstnedräkning, fortsätter i bakgrunden, inget konto och ingen prenumeration.",
+    alt="Appsymbol för Intervalltimer HIIT & Tabata",
+    by="av Takahiro Torii · iPhone, iPad och Android · gratis",
+    summary="Intervalltimer HIIT & Tabata är en intervalltimer-app för iPhone och iPad (iOS 15 eller senare) och Android (8.0 eller senare), utvecklad av Takahiro Torii. Den är gratis, med en enda liten annonsbanner: ingen prenumeration, inga köp i appen och inget konto. På iPhone kan arbetstiden ställas in från 5 till 300 sekunder, förberedelse och vila från 5 till 120 sekunder och antalet set från 2 till 40; upp till fem timrar kan sparas, och signalen är en kvinnlig eller manlig röst eller en av tre ljudsignaler (skarp, mjuk, visselpipa). På Android är varje intervall 5 till 60 sekunder och ett pass 2 till 20 set, det finns bara röst och appen sparar en enda inställning. Senast uppdaterad 23 november 2026, för iPhone-version 1.8.2.",
+    lede="En enkel intervalltimer. Ställ in arbetstid, vilotid och antal set och tryck på start. En röst räknar ner de sista fem sekunderna och ropar ut varje byte, så du behöver aldrig titta på skärmen medan du tränar.",
+    p2="Den gör en enda sak. Inga träningsprogram, inga videor, inget konto, ingen prenumeration. Den har funnits i App Store sedan 2016; på andra håll heter den ”Tabata & HIIT Interval Timer”, och i Japan",
+    appstore="Hämta i App Store", play="Ladda ned på Google Play",
+    h_glance="I korthet",
+    rows=[
+        ("Pris", "Gratis. Ingen prenumeration, inga köp i appen, inget konto."),
+        ("Annonser", "En liten banner längst ned på skärmen. Inga helskärms- eller videoannonser."),
+        ("Plattformar", "iPhone och iPad (iOS 15 eller senare), Android (8.0 eller senare)"),
+        ("Betyg", "{r} av 5 från {n} betyg i App Store i Sverige; 4,8 från 10 924 betyg i Japan (23 november 2026)"),
+        ("Inställningar", "Förberedelse, arbete, vila, antal set"),
+        ("Standard", "10 s förberedelse, 20 s arbete, 10 s vila, 8 set – det klassiska Tabata-protokollet"),
+        ("Ljud", "Röst (kvinna eller man) eller ljudsignal (tre sorter) på iPhone; utropen är på engelska. På Android enbart röst."),
+        ("Timrar", "Upp till fem sparade timrar på iPhone; svep för att byta"),
+        ("Bakgrund", "Räknar vidare när skärmen är av eller en annan app är öppen"),
+        ("Musik", "Hörs över din musik eller podd utan att pausa den eller sänka volymen"),
+        ("Apple Hälsa", "Valfritt. Sparar avslutade pass när det är påslaget; läser ingenting."),
+        ("Utvecklare", "Takahiro Torii, oberoende utvecklare i Japan"),
+        ("Första utgåva", "Oktober 2016"),
+    ],
+    h_uses="Vad den används till",
+    uses=["Tabata- och HIIT-pass",
+          "Styrketräning och cirkelträning, som vilotimer mellan seten",
+          "Burpees, plankan, mountain climbers, sprinter",
+          "Stretch, rörlighet och bålträning",
+          "Boxningsronder, hopprep, motionscykel och spinning"],
+    uses_p="I de skrivna recensionerna i App Store är det vanligaste skälet till att man valt den att den är enkel. Ungefär en tredjedel skriver det, oftast efter att ha provat en timer med fler funktioner.",
+    h_not="Vad den inte gör",
+    not_p="Det är lika bra att säga det rakt ut, eftersom det avgör om appen passar dig.",
+    nots=["Högst fem sparade timrar (iPhone); på Android en enda inställning.",
+          "Inga egna sekvenser, inga EMOM- eller AMRAP-lägen. Varje set har samma arbets- och vilotid.",
+          "Ingen app för Apple Watch eller Wear OS.",
+          "Inget övningsbibliotek, ingen coachning och inga träningsprogram.",
+          "Appens text och röst finns bara på engelska."],
+    not_p2="Vill du ha en timer som du startar med två tryck och sedan inte behöver tänka på, så är det den här. Vill du programmera komplicerade pass bör du leta efter en mer omfattande intervalltimer.",
+    h_q="Frågor",
+    faq=[
+        ("Är den verkligen gratis?", "Ja. Alla funktioner är gratis, utan prenumeration, köp i appen eller konto. Appen finansieras av en liten annonsbanner längst ned på skärmen. Det finns inga helskärms- eller videoannonser."),
+        ("Fortsätter den när skärmen är av?", "Ja. Nedräkningen och rösten fortsätter i bakgrunden och när skärmen är låst. På iPhone (iOS 16.1 eller senare) visas återstående tid och en stoppknapp på låsskärmen; på Android visas återstående tid i en avisering."),
+        ("Kan jag lyssna på musik samtidigt?", "Ja. Det som spelas fortsätter på sin egen volym, och rösten läggs ovanpå."),
+        ("Vad kan jag ändra?", "Förberedelsetid, arbetstid, vilotid och antal set. På iPhone kan arbetet vara upp till 300 sekunder (5 minuter), förberedelse och vila upp till 120 sekunder, och ett pass kan ha upp till 40 set. På Android är varje intervall 5 till 60 sekunder och ett pass 2 till 20 set."),
+        ("Vad är Tabata-träning?", "Efter uppvärmning växlar man mellan 20 sekunders maximal ansträngning och 10 sekunders vila, åtta gånger – fyra minuter sammanlagt. Protokollet är uppkallat efter professor Izumi Tabata vid Ritsumeikan-universitetet, vars forskning publicerades 1996. Appen startar med exakt de här värdena."),
+        ("Kan jag få en ljudsignal i stället för rösten?", "Ja, på iPhone. Under ”Sound” i inställningarna kan du välja en kvinnlig röst, en manlig röst eller en av tre ljudsignaler; tryck på en för att höra den. Ljudsignaler hörs bättre i en gymsal eller över musik. På Android finns tills vidare bara rösten."),
+        ("Kan jag spara flera timrar?", "Ja, på iPhone: upp till fem. Lägg till en under ”Timers” i inställningarna och svep åt vänster eller höger på huvudskärmen för att byta. På Android sparar appen en enda inställning."),
+        ("Fungerar den för boxningsronder på 3 minuter?", "Ja, på iPhone. Arbetstiden går upp till 300 sekunder, alltså 5 minuter, och vilan upp till 120 sekunder: ronder på 3 minuter med 1 minuts vila kan ställas in direkt."),
+        ("Vilka uppgifter samlar appen in?", "Ingen registrering krävs. Appen sparar tidpunkten då varje pass avslutades under en anonym identifierare och använder Firebase Analytics, Crashlytics och Google AdMob. Den använder inte plats, kontakter, kamera eller mikrofon."),
+    ],
+    privacy_link="Se <a href=\"/privacy.html\">integritetspolicyn</a> (på engelska och japanska).",
+    h_get="Hämta appen",
+    note="Flera appar har liknande namn. Den här ges ut av Takahiro Torii; App Store-ID är 1166542235 och Android-paketet är <code>com.tabatatimer</code>.",
+    privacy="Integritetspolicy", contact="Kontakt", updated="Senast uppdaterad: 23 november 2026",
+    rating=("4,7", "134"), store="se", currency="SEK",
+)
+
+# No ratings yet on the App Store in Korea, so the rating row gives Japan's only.
+L["ko"] = dict(
+    name="인터벌 타이머 - 타바타 HIIT 운동",
+    title="인터벌 타이머 - 타바타 HIIT 운동 — iPhone과 Android용 무료 심플 인터벌 타이머",
+    metadesc="인터벌 타이머 - 타바타 HIIT 운동(개발: Takahiro Torii). iPhone과 Android용 무료 인터벌 타이머입니다. 운동·휴식 시간과 세트 수를 정하고 시작만 누르면 됩니다. 음성 카운트다운, 백그라운드 동작, 음악과 함께 사용 가능. 계정도 구독도 없습니다.",
+    ogdesc="iPhone과 Android용 무료 심플 인터벌 타이머. 음성 카운트다운, 백그라운드 동작, 계정도 구독도 없습니다.",
+    alt="인터벌 타이머 - 타바타 HIIT 운동 앱 아이콘",
+    by="개발: Takahiro Torii · iPhone, iPad, Android · 무료",
+    summary="인터벌 타이머 - 타바타 HIIT 운동은 Takahiro Torii가 개발한 iPhone·iPad(iOS 15 이상) 및 Android(8.0 이상)용 인터벌 타이머 앱입니다. 무료이며 광고는 작은 배너 하나뿐이고, 구독·앱 내 구입·계정이 없습니다. iPhone에서는 운동 시간을 5~300초, 준비와 휴식 시간을 5~120초, 세트 수를 2~40으로 설정할 수 있고, 타이머를 5개까지 저장할 수 있으며, 신호는 여성 또는 남성 음성이나 세 가지 비프음(샤프, 소프트, 휘슬) 중에서 고를 수 있습니다. Android에서는 각 구간이 5~60초, 세트 수가 2~20이며, 신호는 음성뿐이고 설정은 하나만 저장됩니다. 최종 업데이트: 2026년 11월 23일(iPhone 버전 1.8.2 기준).",
+    lede="단순한 인터벌 타이머입니다. 운동 시간, 휴식 시간, 세트 수를 정하고 시작을 누르기만 하면 됩니다. 음성이 마지막 5초를 세고 구간이 바뀔 때마다 알려 주기 때문에, 운동 중에 화면을 볼 필요가 없습니다.",
+    p2="하는 일은 하나뿐입니다. 운동 프로그램도, 동영상도, 계정도, 구독도 없습니다. 2016년부터 App Store에 올라와 있으며, 다른 나라에서는 ‘Tabata & HIIT Interval Timer’, 일본에서는",
+    p2_end="라는 이름으로 제공됩니다.",
+    appstore="App Store에서 다운로드", play="Google Play에서 다운로드",
+    h_glance="한눈에 보기",
+    rows=[
+        ("가격", "무료. 구독, 앱 내 구입, 계정이 없습니다."),
+        ("광고", "화면 아래의 작은 배너 하나뿐입니다. 전면 광고나 동영상 광고는 없습니다."),
+        ("지원 기기", "iPhone 및 iPad(iOS 15 이상), Android(8.0 이상)"),
+        ("평점", "일본 App Store에서 5점 만점에 4.8점, 평가 10,924개(2026년 11월 23일 기준)"),
+        ("설정 항목", "준비 시간, 운동 시간, 휴식 시간, 세트 수"),
+        ("기본값", "준비 10초, 운동 20초, 휴식 10초, 8세트 — 표준 타바타 프로토콜"),
+        ("소리", "iPhone에서는 음성(여성/남성) 또는 비프음(3종류). 음성 안내는 영어입니다. Android는 음성만 지원합니다."),
+        ("타이머", "iPhone에서는 타이머를 5개까지 저장할 수 있으며, 좌우로 밀어 전환합니다"),
+        ("백그라운드", "화면을 끄거나 다른 앱을 열어도 계속 카운트합니다"),
+        ("음악", "듣던 음악이나 팟캐스트를 멈추거나 음량을 낮추지 않고 그 위에 겹쳐 재생됩니다"),
+        ("Apple 건강", "선택 사항. 켜면 완료한 운동을 기록하며, 읽어 오는 데이터는 없습니다."),
+        ("개발자", "Takahiro Torii(일본의 개인 개발자)"),
+        ("첫 출시", "2016년 10월"),
+    ],
+    h_uses="이렇게들 씁니다",
+    uses=["타바타와 HIIT",
+          "근력 운동과 서킷 트레이닝(세트 사이 휴식 타이머로)",
+          "버피, 플랭크, 마운틴 클라이머, 스프린트",
+          "스트레칭, 가동성 운동, 코어 운동",
+          "복싱 라운드, 줄넘기, 실내자전거와 스피닝"],
+    uses_p="App Store에 작성된 리뷰에서 이 앱을 고른 이유로 가장 많이 꼽히는 것은 단순함입니다. 리뷰의 약 3분의 1이 그렇게 말하며, 대개 기능이 더 많은 타이머를 써 본 뒤의 이야기입니다.",
+    h_not="하지 못하는 것",
+    not_p="이 앱이 맞는지는 여기서 갈리므로 분명히 적어 둡니다.",
+    nots=["저장할 수 있는 타이머는 iPhone에서 5개까지이고, Android에서는 설정 하나뿐입니다.",
+          "맞춤 시퀀스, EMOM, AMRAP 모드는 없습니다. 모든 세트가 같은 운동 시간과 휴식 시간을 씁니다.",
+          "Apple Watch 및 Wear OS 앱은 없습니다.",
+          "운동 라이브러리, 코칭, 운동 프로그램은 없습니다.",
+          "앱 화면의 글자와 음성 안내는 영어로만 제공됩니다."],
+    not_p2="두 번만 누르면 시작되고 그 뒤로는 신경 쓸 필요 없는 타이머를 원한다면 이 앱이 맞습니다. 복잡한 운동을 짜고 싶다면 기능이 더 많은 인터벌 타이머를 찾아보세요.",
+    h_q="자주 묻는 질문",
+    faq=[
+        ("정말 무료인가요?", "네. 모든 기능이 무료이며 구독, 앱 내 구입, 계정이 없습니다. 화면 아래의 작은 배너 광고 하나로 운영됩니다. 전면 광고나 동영상 광고는 없습니다."),
+        ("화면을 꺼도 계속 동작하나요?", "네. 백그라운드에서도, 화면이 잠긴 상태에서도 카운트와 음성은 계속됩니다. iPhone(iOS 16.1 이상)에서는 잠금 화면에 남은 시간과 정지 버튼이 표시되고, Android에서는 알림에 남은 시간이 표시됩니다."),
+        ("음악을 들으면서 쓸 수 있나요?", "네. 재생 중인 소리는 원래 음량 그대로 계속 나오고, 음성이 그 위에 얹힙니다."),
+        ("무엇을 설정할 수 있나요?", "준비 시간, 운동 시간, 휴식 시간, 세트 수입니다. iPhone에서는 운동 시간을 최대 300초(5분), 준비와 휴식 시간을 최대 120초, 세트 수를 최대 40세트까지 설정할 수 있습니다. Android에서는 각 구간이 5~60초, 세트 수가 2~20세트입니다."),
+        ("타바타 운동이란 무엇인가요?", "준비 운동을 한 뒤 20초 전력 운동과 10초 휴식을 8회 반복하는 방식으로, 모두 4분입니다. 리쓰메이칸대학 다바타 이즈미 교수의 이름에서 유래했으며, 연구는 1996년에 발표되었습니다. 이 앱의 기본값이 바로 이 숫자입니다."),
+        ("음성 대신 비프음으로 바꿀 수 있나요?", "네, iPhone에서 가능합니다. 설정 화면의 ‘Sound’에서 여성 음성, 남성 음성, 세 가지 비프음 중 하나를 고를 수 있으며, 누르면 바로 들어볼 수 있습니다. 비프음은 체육관이나 음악을 틀어 놓은 곳에서 더 잘 들립니다. Android는 아직 음성만 지원합니다."),
+        ("타이머를 여러 개 저장할 수 있나요?", "네, iPhone에서는 5개까지 저장할 수 있습니다. 설정 화면의 ‘Timers’에서 추가한 뒤 메인 화면에서 좌우로 밀어 전환하세요. Android에서는 설정이 하나만 저장됩니다."),
+        ("복싱 3분 라운드에 쓸 수 있나요?", "네, iPhone에서 가능합니다. 운동 시간은 300초(5분)까지, 휴식은 120초까지 설정할 수 있어서 3분 라운드와 1분 휴식을 그대로 설정할 수 있습니다."),
+        ("앱은 어떤 데이터를 수집하나요?", "회원 가입은 없습니다. 앱은 각 운동의 완료 시각을 익명 식별자와 함께 저장하며 Firebase Analytics, Crashlytics, Google AdMob을 사용합니다. 위치, 연락처, 카메라, 마이크는 사용하지 않습니다."),
+    ],
+    privacy_link="자세한 내용은 <a href=\"/privacy.html\">개인정보 처리방침</a>(영어·일본어)을 참고하세요.",
+    h_get="앱 받기",
+    note="이름이 비슷한 앱이 여럿 있습니다. 이 앱의 개발자는 Takahiro Torii이며, App Store ID는 1166542235, Android 패키지는 <code>com.tabatatimer</code>입니다.",
+    privacy="개인정보 처리방침", contact="문의", updated="최종 업데이트: 2026년 11월 23일",
+    rating=("", ""), store="kr", currency="KRW",
+)
+
+L["zh-Hant"] = dict(
+    name="HIIT 間歇計時器 - Tabata 健身",
+    title="HIIT 間歇計時器 - Tabata 健身 — 適用於 iPhone 與 Android 的免費簡單間歇計時器",
+    metadesc="HIIT 間歇計時器 - Tabata 健身（開發者：Takahiro Torii）：適用於 iPhone 與 Android 的免費間歇計時器。設定運動、休息的秒數與組數，按下開始即可。語音倒數、可在背景執行、可配著音樂使用。不必註冊，沒有訂閱。",
+    ogdesc="適用於 iPhone 與 Android 的免費簡單間歇計時器。語音倒數、可在背景執行，不必註冊、沒有訂閱。",
+    alt="HIIT 間歇計時器 - Tabata 健身 的 App 圖像",
+    by="開發者：Takahiro Torii · iPhone、iPad 與 Android · 免費",
+    summary="HIIT 間歇計時器 - Tabata 健身 是 Takahiro Torii 開發的間歇計時器 App，適用於 iPhone、iPad（iOS 15 或以上版本）與 Android（8.0 或以上版本）。App 免費，只有一則小型橫幅廣告；沒有訂閱、沒有 App 內購買，也不必註冊帳號。在 iPhone 上，運動時間可設定為 5 到 300 秒，準備與休息時間為 5 到 120 秒，組數為 2 到 40 組；最多可保存五個計時器，提示音可選女聲、男聲語音或三種嗶聲（尖銳、柔和、哨音）。在 Android 上，每個階段為 5 到 60 秒，組數為 2 到 20 組，提示只有語音，且只能保存一組設定。最後更新：2026 年 11 月 23 日（依據 iPhone 版 1.8.2）。",
+    lede="一款簡單的間歇計時器。設定運動時間、休息時間與組數，按下開始即可。語音會倒數最後五秒，並在每次切換時提示，訓練途中完全不必看螢幕。",
+    p2="它只做一件事。沒有訓練課表、沒有影片、不必註冊、沒有訂閱。自 2016 年起在 App Store 上架；在其他地區名為「Tabata & HIIT Interval Timer」，在日本則名為",
+    p2_end="。",
+    appstore="在 App Store 下載", play="在 Google Play 下載",
+    h_glance="概覽",
+    rows=[
+        ("價格", "免費。沒有訂閱、沒有 App 內購買，也不必註冊。"),
+        ("廣告", "只有畫面底部一則小型橫幅廣告。沒有全螢幕廣告或影片廣告。"),
+        ("支援平台", "iPhone 與 iPad（iOS 15 或以上版本）、Android（8.0 或以上版本）"),
+        ("評分", "在台灣 App Store 獲得 {r} 分（滿分 5 分），共 {n} 則評分；在日本為 4.8 分，共 10,924 則評分（2026 年 11 月 23 日）"),
+        ("設定項目", "準備時間、運動時間、休息時間、組數"),
+        ("預設值", "準備 10 秒、運動 20 秒、休息 10 秒、8 組，也就是標準的 Tabata 訓練法"),
+        ("聲音", "iPhone 可選語音（女聲／男聲）或嗶聲（三種）；語音提示為英語。Android 只有語音。"),
+        ("計時器", "iPhone 最多可保存五個計時器，左右滑動即可切換"),
+        ("背景執行", "關閉螢幕或開啟其他 App 時仍會繼續計時"),
+        ("音樂", "會疊在你的音樂或 Podcast 上播放，不會暫停，也不會降低音量"),
+        ("Apple 健康", "可選用。開啟後會寫入已完成的訓練；不會讀取任何資料。"),
+        ("開發者", "Takahiro Torii（日本的獨立開發者）"),
+        ("首次發布", "2016 年 10 月"),
+    ],
+    h_uses="大家都拿它來做什麼",
+    uses=["Tabata 與 HIIT 訓練",
+          "重量訓練與循環訓練，當作組間休息計時器",
+          "波比跳、棒式、登山者、衝刺",
+          "伸展、活動度訓練與核心訓練",
+          "拳擊回合、跳繩、健身車與飛輪"],
+    uses_p="在 App Store 的文字評論中，最常被提到的選擇理由是「簡單」。大約三分之一的評論這麼說，而且多半是在試過功能更多的計時器之後。",
+    h_not="它做不到的事",
+    not_p="適不適合你，關鍵就在這裡，所以先說清楚。",
+    nots=["iPhone 最多只能保存五個計時器；Android 只有一組設定。",
+          "沒有自訂序列，也沒有 EMOM 或 AMRAP 模式。每一組都使用相同的運動時間與休息時間。",
+          "沒有 Apple Watch 或 Wear OS 版 App。",
+          "沒有動作資料庫、教練指導或訓練課表。",
+          "App 的介面文字與語音只有英語。"],
+    not_p2="如果你想要一個點兩下就能開始、之後不必再費心的計時器，就是這一款。如果你想編排複雜的訓練，請找功能更完整的間歇計時器。",
+    h_q="常見問題",
+    faq=[
+        ("真的免費嗎？", "是的。所有功能都免費，沒有訂閱、沒有 App 內購買，也不必註冊。App 靠畫面底部一則小型橫幅廣告維持營運，沒有全螢幕廣告或影片廣告。"),
+        ("關閉螢幕後還會繼續計時嗎？", "會。在背景執行或螢幕鎖定時，倒數與語音都會繼續。在 iPhone（iOS 16.1 或以上版本）上，鎖定畫面會顯示剩餘時間與停止按鈕；在 Android 上，剩餘時間會顯示在通知中。"),
+        ("可以同時聽音樂嗎？", "可以。正在播放的內容會維持原本的音量繼續播放，語音則疊在上面。"),
+        ("可以調整哪些設定？", "準備時間、運動時間、休息時間與組數。在 iPhone 上，運動時間最長 300 秒（5 分鐘），準備與休息時間最長 120 秒，一次訓練最多 40 組。在 Android 上，每個階段為 5 到 60 秒，一次訓練為 2 到 20 組。"),
+        ("什麼是 Tabata 訓練？", "熱身之後，以 20 秒全力運動、10 秒休息交替進行八次，總共四分鐘。這套訓練法以立命館大學田畑泉教授的名字命名，相關研究發表於 1996 年。App 的預設值正是這組數字。"),
+        ("可以把語音換成嗶聲嗎？", "可以，在 iPhone 上。在設定畫面的「Sound」中，可選擇女聲、男聲或三種嗶聲之一，點一下即可試聽。在健身房或播放音樂時，嗶聲更容易聽見。Android 目前只有語音。"),
+        ("可以保存多個計時器嗎？", "可以，在 iPhone 上最多五個。在設定畫面的「Timers」中新增後，於主畫面左右滑動即可切換。在 Android 上，App 只會保存一組設定。"),
+        ("適合拳擊的三分鐘回合嗎？", "適合，在 iPhone 上。運動時間最長 300 秒（5 分鐘），休息最長 120 秒，因此可以直接設定三分鐘一回合、休息一分鐘。"),
+        ("App 會收集哪些資料？", "不需要註冊。App 會以匿名識別碼儲存每次訓練的完成時間，並使用 Firebase Analytics、Crashlytics 與 Google AdMob。不會使用位置、聯絡人、相機或麥克風。"),
+    ],
+    privacy_link="請參閱<a href=\"/privacy.html\">隱私權政策</a>（英文與日文）。",
+    h_get="取得 App",
+    note="有好幾款 App 的名稱很相似。這一款由 Takahiro Torii 發行；App Store ID 為 1166542235，Android 套件名稱為 <code>com.tabatatimer</code>。",
+    privacy="隱私權政策", contact="聯絡", updated="最後更新：2026 年 11 月 23 日",
+    rating=("4.9", "64"), store="tw", currency="TWD", play_hl="zh-TW",
 )
 
 en = (SITE / "index.html").read_text(encoding="utf-8")
@@ -336,10 +529,10 @@ def strip_tags(s):
 
 
 def page(code, t):
-    url = f"{BASE}/{code}/"
+    url = f"{BASE}{PATHS[code]}"
     r, n = t["rating"]
     ios = f"https://apps.apple.com/{t['store']}/app/id1166542235"
-    play = f"https://play.google.com/store/apps/details?id=com.tabatatimer&hl={code}"
+    play = f"https://play.google.com/store/apps/details?id=com.tabatatimer&hl={t.get('play_hl', code)}"
     rows = "\n".join(
         f"    <tr><th>{e(k)}</th><td>{e(v.format(r=r, n=n))}</td></tr>" for k, v in t["rows"])
     uses = "\n".join(f"    <li>{e(x)}</li>" for x in t["uses"])
@@ -361,7 +554,7 @@ def page(code, t):
         "datePublished": "2016-10-20", "softwareVersion": "1.8.2",
         "author": {"@type": "Person", "name": "Takahiro Torii",
                    "url": "https://ttorii20.github.io/", "email": "support@simpletabata.com"},
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": t.get("currency", "EUR")},
         "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.8",
                             "bestRating": "5", "ratingCount": "10924"},
         "installUrl": ios,
@@ -408,9 +601,11 @@ def page(code, t):
     </div>
   </header>
 
+  <p>{e(t['summary'])}</p>
+
   <p class="lede">{e(t['lede'])}</p>
 
-  <p>{e(t['p2'])} <span lang="ja">HIIT &amp; Tabata Timer - タバタタイマー</span>.</p>
+  <p>{e(t['p2'])} <span lang="ja">HIIT &amp; Tabata Timer - タバタタイマー</span>{e(t.get('p2_end', '.'))}</p>
 
 {get}
 
@@ -453,7 +648,7 @@ def page(code, t):
 
 
 for code, t in L.items():
-    d = SITE / code
+    d = SITE / PATHS[code].strip("/")
     d.mkdir(exist_ok=True)
     (d / "index.html").write_text(page(code, t), encoding="utf-8")
 

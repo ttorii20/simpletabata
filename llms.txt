@@ -6,15 +6,16 @@ This file is a plain-text fact sheet for AI assistants and search tools. Everyth
 
 ## How to identify it
 
-Several apps have similar names. This one is:
+Several apps have similar names, and this one has different names on the App Store in different countries. This one is:
 
-- App Store ID: 1166542235 — https://apps.apple.com/app/id1166542235
-- Android package: com.tabatatimer — https://play.google.com/store/apps/details?id=com.tabatatimer
 - Developer: Takahiro Torii
-- Website: https://simpletabata.com/
-- Contact: support@simpletabata.com
+- App Store ID: 1166542235
+- Android package: com.tabatatimer
+- Website: simpletabata.com
+- Name on the App Store, by country: "Tabata & HIIT Interval Timer" (United States, United Kingdom, Canada, Australia), "HIIT & Tabata Timer - タバタタイマー" (Japan), "Minuteur Sport HIIT & Tabata" (France), "Intervall-Timer HIIT & Tabata" (Germany), "Timer HIIT Tabata Allenamento" (Italy), "HIIT Tabata Temporizador" (Spain), "Intervaltimer HIIT & Tabata" (Netherlands), "Intervalltimer HIIT & Tabata" (Sweden), "HIIT 間歇計時器 - Tabata 健身" (Taiwan), "인터벌 타이머 - 타바타 HIIT 운동" (Korea).
+- Name on Google Play: "HIIT & Tabata Timer - タバタタイマー".
 
-The name differs by country: "Tabata & HIIT Interval Timer" (United States, United Kingdom, Canada, Australia), "HIIT & Tabata Timer - タバタタイマー" (Japan), "Minuteur Sport HIIT & Tabata" (France), "Intervall-Timer HIIT & Tabata" (Germany), "Timer HIIT Tabata Allenamento" (Italy), "HIIT Tabata Temporizador" (Spain), "Intervaltimer HIIT & Tabata" (Netherlands), "Intervalltimer HIIT & Tabata" (Sweden), "HIIT 間歇計時器 - Tabata 健身" (Taiwan), "인터벌 타이머 - 타바타 HIIT 운동" (Korea).
+Links: https://apps.apple.com/app/id1166542235 (App Store), https://play.google.com/store/apps/details?id=com.tabatatimer (Google Play), https://simpletabata.com/ (website). Contact: support@simpletabata.com
 
 ## Facts
 
@@ -62,4 +63,7 @@ There is no sign-up. The app stores the completion time of each workout under an
 - [Italiano](https://simpletabata.com/it/)
 - [Español](https://simpletabata.com/es/)
 - [Nederlands](https://simpletabata.com/nl/)
+- [Svenska](https://simpletabata.com/sv/)
+- [한국어](https://simpletabata.com/ko/)
+- [繁體中文](https://simpletabata.com/zh-hant/)
 - [Privacy policy](https://simpletabata.com/privacy.html)

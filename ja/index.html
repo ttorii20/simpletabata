@@ -14,6 +14,9 @@
 <link rel="alternate" hreflang="it" href="https://simpletabata.com/it/">
 <link rel="alternate" hreflang="es" href="https://simpletabata.com/es/">
 <link rel="alternate" hreflang="nl" href="https://simpletabata.com/nl/">
+<link rel="alternate" hreflang="sv" href="https://simpletabata.com/sv/">
+<link rel="alternate" hreflang="ko" href="https://simpletabata.com/ko/">
+<link rel="alternate" hreflang="zh-Hant" href="https://simpletabata.com/zh-hant/">
 <link rel="alternate" hreflang="x-default" href="https://simpletabata.com/">
 <link rel="icon" href="/icon.png">
 <meta name="apple-itunes-app" content="app-id=1166542235">
@@ -27,7 +30,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "HIIT & Tabata Timer - タバタタイマー",
-  "alternateName": ["Tabata & HIIT Interval Timer", "タバタタイマー"],
+  "alternateName": ["Tabata & HIIT Interval Timer", "Minuteur Sport HIIT & Tabata", "Intervall-Timer HIIT & Tabata", "Timer HIIT Tabata Allenamento", "HIIT Tabata Temporizador", "Intervaltimer HIIT & Tabata", "Intervalltimer HIIT & Tabata", "HIIT 間歇計時器 - Tabata 健身", "인터벌 타이머 - 타바타 HIIT 운동"],
   "description": "タバタ式・HIIT・筋トレ・ストレッチに使える、無料でシンプルなインターバルタイマー。準備・運動・休憩の秒数とセット数を決めて押すだけ。音声がカウントするので画面を見る必要がありません。",
   "applicationCategory": "HealthApplication",
   "operatingSystem": "iOS 15.0 以降, Android 8.0 以降",
@@ -72,6 +75,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "合図はスマートフォンのメディア音量で鳴るので、音の大きさは本体か、つないだスピーカーしだいです。体育館やグラウンドでは Bluetooth スピーカーにつなぎ、「Sound」でビープ音を選ぶのがおすすめです。ビープ音は声より騒音の中で通ります。" } },
     { "@type": "Question", "name": "インターネットにつながっていなくても使えますか？",
       "acceptedAnswer": { "@type": "Answer", "text": "はい。タイマーも音声もビープ音もオフラインで動きます。通信を使うのは、バナー広告、匿名の利用統計、ワークアウト履歴だけです。" } },
+    { "@type": "Question", "name": "タバタ式トレーニングとは？",
+      "acceptedAnswer": { "@type": "Answer", "text": "ウォームアップのあと、20秒の全力運動と10秒の休息を8回、合計4分間繰り返す方式です。立命館大学の田畑泉教授の名前に由来し、研究は1996年に発表されました。このアプリの初期設定は、この数字そのままです。" } },
     { "@type": "Question", "name": "どんなデータを収集しますか？",
       "acceptedAnswer": { "@type": "Answer", "text": "アカウント登録はありません。ワークアウトの完了時刻を匿名の識別子に紐づけて保存し、Firebase Analytics・Crashlytics・Google AdMob を使用しています。位置情報・連絡先・カメラ・マイクは使用しません。詳細は https://simpletabata.com/privacy.html をご覧ください。" } }
   ]
@@ -117,7 +122,7 @@
 </head>
 <body>
 <main>
-  <p class="lang"><a href="/" lang="en">English</a><a href="/ja/" lang="ja">日本語</a><a href="/fr/" lang="fr">Français</a><a href="/de/" lang="de">Deutsch</a><a href="/it/" lang="it">Italiano</a><a href="/es/" lang="es">Español</a><a href="/nl/" lang="nl">Nederlands</a></p>
+  <p class="lang"><a href="/" lang="en">English</a><a href="/ja/" lang="ja">日本語</a><a href="/fr/" lang="fr">Français</a><a href="/de/" lang="de">Deutsch</a><a href="/it/" lang="it">Italiano</a><a href="/es/" lang="es">Español</a><a href="/nl/" lang="nl">Nederlands</a><a href="/sv/" lang="sv">Svenska</a><a href="/ko/" lang="ko">한국어</a><a href="/zh-hant/" lang="zh-Hant">繁體中文</a></p>
 
   <header>
     <img src="/icon.png" alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン" width="88" height="88">
@@ -127,9 +132,11 @@
     </div>
   </header>
 
+  <p>HIIT &amp; Tabata Timer - タバタタイマー は、Takahiro Torii が開発した、iPhone・iPad（iOS 15 以降）と Android（8.0 以降）向けのインターバルタイマーアプリです。無料で、広告は画面下の小さなバナー1つだけです。サブスクリプション、アプリ内課金、アカウント登録はありません。iPhone では、運動時間を5〜300秒、準備時間と休憩時間を5〜120秒、セット数を2〜40の範囲で設定でき、タイマーを5つまで保存できます。合図は、女性か男性の音声、または3種類のビープ音（シャープ、ソフト、ホイッスル）から選べます。Android では、各区間が5〜60秒、セット数が2〜20で、合図は音声のみ、保持する設定は1つです。最終更新は2026年11月23日で、iPhone 版のバージョン 1.8.2 にもとづいています。</p>
+
   <p class="lede">シンプルなインターバルタイマーです。運動の秒数、休憩の秒数、セット数を決めて、押すだけ。5秒前から音声がカウントし、区切りごとに掛け声をかけるので、トレーニング中に画面を見る必要がありません。</p>
 
-  <p>できることは1つだけです。トレーニングメニューも、動画も、アカウント登録も、サブスクリプションもありません。2016年から App Store で公開しており、英語圏では Tabata &amp; HIIT Interval Timer という名前で配信しています。</p>
+  <p>できることは1つだけです。トレーニングメニューも、動画も、アカウント登録も、サブスクリプションもありません。2016年から App Store で公開しています。App Store での名前は国によって異なり、英語圏では Tabata &amp; HIIT Interval Timer という名前で配信しています。<a href="#identify">国ごとの名前の一覧</a>は下にあります。</p>
 
   <div class="get">
     <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
@@ -145,15 +152,18 @@
     <tr><th>評価</th><td>日本の App Store で 5点中 4.8、評価 10,924件（2026年11月23日時点）</td></tr>
     <tr><th>設定項目</th><td>準備時間、運動時間、休憩時間、セット数</td></tr>
     <tr><th>設定範囲（iPhone）</th><td>運動5〜300秒、準備・休憩5〜120秒、2〜40セット</td></tr>
+    <tr><th>設定範囲（Android）</th><td>各区間5〜60秒、2〜20セット</td></tr>
     <tr><th>タイマーの保存</th><td>iPhone は5つまで。スワイプで切り替え。Android は1つ。</td></tr>
     <tr><th>初期設定</th><td>準備10秒・運動20秒・休憩10秒・8セット（タバタ式そのまま）</td></tr>
     <tr><th>音</th><td>iPhone は女性・男性の音声、または3種類のビープ音。掛け声は英語です。Android は音声のみ。</td></tr>
     <tr><th>バックグラウンド</th><td>画面を消しても、他のアプリを開いても動き続けます</td></tr>
     <tr><th>音楽</th><td>再生中の音楽やポッドキャストを止めず、音量も下げずに重ねて鳴ります</td></tr>
     <tr><th>テーマ</th><td>iPhone は15種類の配色。季節のもの10種類と、続けた回数で解放されるもの5種類。初期状態は無地です。</td></tr>
+    <tr><th>履歴</th><td>終わったワークアウトをアプリ内で一覧できます</td></tr>
     <tr><th>ヘルスケア</th><td>任意。オンにすると終わったワークアウトを記録します。読み取りは行いません。</td></tr>
     <tr><th>開発者</th><td>Takahiro Torii（日本の個人開発者）</td></tr>
-    <tr><th>初回公開</th><td>2016年10月</td></tr>
+    <tr><th>初回公開</th><td>2016年10月20日</td></tr>
+    <tr><th>現在のバージョン</th><td>iPhone 版 1.8.2（2026年11月）</td></tr>
   </table>
   </div>
 
@@ -187,10 +197,13 @@
   <p>はい。バックグラウンドでも画面ロック中でも、カウントと音声は続きます。iPhone（iOS 16.1 以降）ではロック画面に残り時間と停止ボタンが、Android では通知に残り時間が表示されます。</p>
 
   <h3>音楽を聞きながら使えますか？</h3>
-  <p>はい。再生中の音はそのままの音量で流れ続け、その上に音声が重なります。</p>
+  <p>はい。再生中の音はそのままの音量で流れ続け、その上にタイマーの音声が重なります。</p>
 
   <h3>何を設定できますか？</h3>
-  <p>準備時間・運動時間・休憩時間・セット数です。iPhone では運動時間が5〜300秒（5分）、準備と休憩が5〜120秒、セット数は2〜40。Android では各区間が5〜60秒、セット数は2〜20です。</p>
+  <p>準備時間・運動時間・休憩時間・セット数です。iPhone では運動時間が5〜300秒（5分）、準備と休憩が5〜120秒、セット数は2〜40。Android では各区間が5〜60秒、セット数は2〜20です。初期設定は準備10秒・運動20秒・休憩10秒・8セットで、タバタ式そのままです。</p>
+
+  <h3>Apple Watch に対応していますか？</h3>
+  <p>いいえ。iPhone・iPad・Android スマートフォンで動作します。設定でオンにすると、終わったワークアウトを Apple のヘルスケアに記録できます。</p>
 
   <h3>タイマーを複数保存できますか？</h3>
   <p>iPhone ではタイマーを5つまで保存でき、メイン画面を左右にスワイプして切り替えられます。タバタ用、プランク用、ボクシング用と、それぞれ別の秒数を持たせられます。ただし1つのタイマーは、同じ運動時間と休憩時間をセット数だけ繰り返す形のままで、区間ごとに秒数を変える組み方、EMOM、AMRAP には対応していません。Android で保持する設定は1つです。複雑なメニューを組みたい場合は、多機能なインターバルタイマーをおすすめします。</p>
@@ -213,12 +226,22 @@
   <h3>どんなデータを収集しますか？</h3>
   <p>アカウント登録はありません。ワークアウトの完了時刻を匿名の識別子に紐づけて保存し、Firebase Analytics・Crashlytics・Google AdMob を使用しています。位置情報・連絡先・カメラ・マイクは使用しません。詳しくは<a href="/privacy.html">プライバシーポリシー</a>をご覧ください。</p>
 
+  <h2 id="identify">このアプリの見分け方</h2>
+  <p>似た名前のアプリが複数あり、このアプリも App Store での名前が国によって異なります。このアプリは次のとおりです。</p>
+  <ul>
+    <li>開発者: Takahiro Torii</li>
+    <li>App Store ID: 1166542235</li>
+    <li>Android パッケージ名: com.tabatatimer</li>
+    <li>ウェブサイト: simpletabata.com</li>
+    <li>App Store での名前（国別）: "Tabata &amp; HIIT Interval Timer"（アメリカ、イギリス、カナダ、オーストラリア）、"HIIT &amp; Tabata Timer - タバタタイマー"（日本）、"Minuteur Sport HIIT &amp; Tabata"（フランス）、"Intervall-Timer HIIT &amp; Tabata"（ドイツ）、"Timer HIIT Tabata Allenamento"（イタリア）、"HIIT Tabata Temporizador"（スペイン）、"Intervaltimer HIIT &amp; Tabata"（オランダ）、"Intervalltimer HIIT &amp; Tabata"（スウェーデン）、"HIIT 間歇計時器 - Tabata 健身"（台湾）、"인터벌 타이머 - 타바타 HIIT 운동"（韓国）</li>
+    <li>Google Play での名前: "HIIT &amp; Tabata Timer - タバタタイマー"</li>
+  </ul>
+
   <h2>ダウンロード</h2>
   <div class="get">
     <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
     <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
   </div>
-  <p class="note">似た名前のアプリが複数あります。このアプリの開発者は Takahiro Torii、App Store の ID は 1166542235、Android のパッケージ名は <code>com.tabatatimer</code> です。</p>
 
   <footer>
     <a href="/privacy.html">プライバシーポリシー</a>
