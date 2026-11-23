@@ -66,4 +66,5 @@ There is no sign-up. The app stores the completion time of each workout under an
 - [Svenska](https://simpletabata.com/sv/)
 - [한국어](https://simpletabata.com/ko/)
 - [繁體中文](https://simpletabata.com/zh-hant/)
+- [Timer in the browser](https://simpletabata.com/timer/): the same kind of timer as a web page, free, nothing to install; work 5–300 s, rest 5–120 s, 2–40 sets, with beeps. [日本語](https://simpletabata.com/timer/ja/)
 - [Privacy policy](https://simpletabata.com/privacy.html)
