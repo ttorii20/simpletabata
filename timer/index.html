@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Tabata Timer — a free interval timer that runs in your browser</title>
+<meta name="description" content="A free Tabata and HIIT interval timer that runs in your browser. Set ready, work and rest seconds and the number of sets, and press Start. Beeps on the last three seconds. Nothing to install, no account.">
+<link rel="canonical" href="https://simpletabata.com/timer/">
+<link rel="alternate" hreflang="en" href="https://simpletabata.com/timer/">
+<link rel="alternate" hreflang="ja" href="https://simpletabata.com/timer/ja/">
+<link rel="alternate" hreflang="x-default" href="https://simpletabata.com/timer/">
+<link rel="icon" href="/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Online Tabata Timer">
+<meta property="og:description" content="A free Tabata and HIIT interval timer that runs in your browser. Set ready, work, rest and sets, and press Start.">
+<meta property="og:url" content="https://simpletabata.com/timer/">
+<meta property="og:image" content="https://simpletabata.com/icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Online Tabata Timer",
+  "description": "A free interval timer for Tabata and HIIT that runs in a web browser. Set ready, work and rest seconds and the number of sets, and press Start. It beeps on the last three seconds of each phase and at each change.",
+  "url": "https://simpletabata.com/timer/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any (web browser)",
+  "inLanguage": "en",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Person", "name": "Takahiro Torii", "url": "https://ttorii20.github.io/" }
+}
+</script>
+<style>
+  :root {
+    --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7;
+    --ready:#c9b817; --ready-ink:#1c1c1e;
+    --work:#c62828; --work-ink:#fff;
+    --rest:#1565c0; --rest-ink:#fff;
+    --done:#2e7d32; --done-ink:#fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#ececef; --muted:#9a9aa0; --rule:#303034; --bg:#131315; --card:#1c1c20; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:3rem 1.25rem 5rem;
+    background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  main { max-width:44rem; margin:0 auto; }
+  .lang { font-size:.875rem; color:var(--muted); margin:0 0 2.5rem; }
+  .lang a { margin-right:.75rem; }
+  h1 { font-size:1.65rem; line-height:1.3; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .by { color:var(--muted); font-size:.9rem; margin:0 0 1.5rem; }
+  h2 { font-size:1.1rem; margin:2.75rem 0 .6rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  ul { padding-left:1.15rem; }
+  li { margin:.4rem 0; }
+  a { color:inherit; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  .get { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.75rem 0 0; }
+  .get a {
+    display:inline-block; padding:.6rem 1.1rem; border-radius:10px;
+    background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600; font-size:.95rem;
+  }
+  .note { color:var(--muted); font-size:.875rem; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
+  footer a { margin-right:1rem; }
+
+  /* The timer */
+  :focus-visible { outline:3px solid var(--ink); outline-offset:2px; }
+  .sr {
+    position:absolute; width:1px; height:1px; margin:-1px; padding:0;
+    overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;
+  }
+  .face {
+    background:var(--card); color:var(--ink);
+    border-radius:16px; padding:1.25rem 1rem 1rem; text-align:center;
+    font-variant-numeric:tabular-nums;
+  }
+  .face[data-phase="ready"] { background:var(--ready); color:var(--ready-ink); }
+  .face[data-phase="work"]  { background:var(--work);  color:var(--work-ink); }
+  .face[data-phase="rest"]  { background:var(--rest);  color:var(--rest-ink); }
+  .face[data-phase="done"]  { background:var(--done);  color:var(--done-ink); }
+  @media (prefers-reduced-motion: no-preference) {
+    .face { transition:background-color .2s, color .2s; }
+  }
+  .phase { margin:0; font-size:1.25rem; font-weight:600; line-height:1.5; }
+  .secs { margin:0; font-size:clamp(5rem, 30vw, 10rem); font-weight:700; line-height:1.1; letter-spacing:-.02em; }
+  .meta { display:flex; justify-content:space-between; gap:1rem; margin:.5rem 0 0; font-size:1rem; line-height:1.5; }
+  .meta span { white-space:nowrap; }
+
+  button, input { font:inherit; color:inherit; }
+  button { cursor:pointer; touch-action:manipulation; }
+  button:disabled { cursor:default; opacity:.4; }
+  .controls { display:flex; gap:.5rem; margin:.75rem 0 0; }
+  .controls button {
+    flex:1 1 0; min-width:0; min-height:3rem; padding:.5rem .25rem;
+    border:1px solid var(--ink); border-radius:10px;
+    background:transparent; font-weight:600;
+  }
+  .controls #start { background:var(--ink); color:var(--bg); }
+  .sound { display:inline-flex; align-items:center; gap:.5rem; margin:.75rem 0 0; min-height:2.75rem; }
+  .sound input { width:1.25rem; height:1.25rem; margin:0; accent-color:var(--ink); }
+
+  fieldset { border:0; margin:.5rem 0 0; padding:0; min-width:0; }
+  .row {
+    display:flex; align-items:center; justify-content:space-between; gap:.5rem;
+    padding:.4rem 0; border-bottom:1px solid var(--rule);
+  }
+  .row label { font-weight:600; }
+  .unit { color:var(--muted); font-weight:400; font-size:.875rem; }
+  .step { display:flex; align-items:center; gap:.35rem; flex:none; }
+  .step button {
+    width:2.75rem; height:2.75rem; padding:0;
+    border:1px solid var(--rule); border-radius:10px;
+    background:var(--card); font-size:1.25rem; line-height:1;
+  }
+  .step input {
+    width:4.25rem; height:2.75rem; padding:0 .25rem; text-align:center;
+    border:1px solid var(--rule); border-radius:10px;
+    background:var(--bg); font-variant-numeric:tabular-nums;
+    -moz-appearance:textfield; appearance:textfield;
+  }
+  .step input::-webkit-outer-spin-button, .step input::-webkit-inner-spin-button { -webkit-appearance:none; margin:0; }
+  fieldset:disabled .row { opacity:.5; }
+  fieldset:disabled button { opacity:1; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="/timer/" lang="en">English</a><a href="/timer/ja/" lang="ja">日本語</a></p>
+
+  <h1>Online Tabata Timer</h1>
+  <p class="by">by Takahiro Torii · runs in your browser · free</p>
+
+  <section id="timer" lang="en" aria-label="Interval timer">
+    <div class="face" id="face">
+      <p class="phase" id="phase">Ready</p>
+      <p class="secs" id="secs" role="timer" aria-label="Seconds left in this phase">10</p>
+      <p class="meta"><span>Set <span id="set">1</span> / <span id="sets-total">8</span></span><span>Total <span id="total">4:00</span></span></p>
+    </div>
+    <p class="sr" id="live" role="status" aria-live="polite"></p>
+
+    <div class="controls">
+      <button type="button" id="start">Start</button>
+      <button type="button" id="pause" disabled>Pause</button>
+      <button type="button" id="stop" disabled>Stop</button>
+    </div>
+
+    <label class="sound"><input type="checkbox" id="sound" checked> Sound</label>
+
+    <fieldset id="settings">
+      <legend class="sr">Settings</legend>
+      <div class="row">
+        <label for="ready">Ready <span class="unit">sec</span></label>
+        <div class="step">
+          <button type="button" data-for="ready" data-by="-5" aria-label="Ready, 5 seconds less">−</button>
+          <input type="number" id="ready" inputmode="numeric" min="5" max="120" step="1" value="10">
+          <button type="button" data-for="ready" data-by="5" aria-label="Ready, 5 seconds more">+</button>
+        </div>
+      </div>
+      <div class="row">
+        <label for="work">Work <span class="unit">sec</span></label>
+        <div class="step">
+          <button type="button" data-for="work" data-by="-5" aria-label="Work, 5 seconds less">−</button>
+          <input type="number" id="work" inputmode="numeric" min="5" max="300" step="1" value="20">
+          <button type="button" data-for="work" data-by="5" aria-label="Work, 5 seconds more">+</button>
+        </div>
+      </div>
+      <div class="row">
+        <label for="rest">Rest <span class="unit">sec</span></label>
+        <div class="step">
+          <button type="button" data-for="rest" data-by="-5" aria-label="Rest, 5 seconds less">−</button>
+          <input type="number" id="rest" inputmode="numeric" min="5" max="120" step="1" value="10">
+          <button type="button" data-for="rest" data-by="5" aria-label="Rest, 5 seconds more">+</button>
+        </div>
+      </div>
+      <div class="row">
+        <label for="sets">Sets</label>
+        <div class="step">
+          <button type="button" data-for="sets" data-by="-1" aria-label="One set fewer">−</button>
+          <input type="number" id="sets" inputmode="numeric" min="2" max="40" step="1" value="8">
+          <button type="button" data-for="sets" data-by="1" aria-label="One set more">+</button>
+        </div>
+      </div>
+    </fieldset>
+    <noscript><p class="note">This timer needs JavaScript.</p></noscript>
+  </section>
+
+  <h2>About this page</h2>
+  <p>This is a free interval timer that runs in your web browser. Set the ready, work and rest seconds and the number of sets, and press Start. It beeps on the last three seconds of each phase, sounds a tone at each change, and a longer one at the end. There is nothing to install and no account.</p>
+  <p>Work can be 5 to 300 seconds, ready and rest 5 to 120 seconds, and a workout 2 to 40 sets. It starts on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets. There is no rest after the last set. Your settings are written into the address of the page, so you can bookmark a timer or send it to someone.</p>
+  <p>A browser has limits, and it is better to say so. This timer needs the screen on and this tab in front. If the phone locks, or you switch to another app or tab, the beeps stop or come late; the countdown itself is correct again when you come back. The page asks the browser to keep the screen awake while the timer runs, where the browser allows it.</p>
+
+  <h2>What the app adds</h2>
+  <p>This page is the small sibling of <a href="/">Tabata &amp; HIIT Interval Timer</a>, an app for iPhone and Android by the same developer. The app does what a browser cannot do reliably:</p>
+  <ul>
+    <li>It keeps running with the phone locked or another app in front.</li>
+    <li>A spoken countdown, in a female or male voice, plays over your music. On iPhone you can choose beeps instead.</li>
+    <li>Up to five saved timers on iPhone.</li>
+    <li>Workout history.</li>
+  </ul>
+  <p>It is free, with one small banner ad and no account.</p>
+  <div class="get">
+    <a href="https://apps.apple.com/app/id1166542235">Download on the App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Get it on Google Play</a>
+  </div>
+
+  <h2>What is Tabata training?</h2>
+  <p>After a warm-up, you alternate 20 seconds of all-out effort with 10 seconds of rest, eight times — four minutes in total. The protocol is named after Professor Izumi Tabata of Ritsumeikan University, whose research on it was published in 1996.</p>
+
+  <footer>
+    <a href="/">Home: Tabata &amp; HIIT Interval Timer</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="mailto:support@simpletabata.com">Contact: support@simpletabata.com</a>
+    <a href="https://ttorii20.github.io/">Takahiro Torii</a>
+    <span>Last updated 23 November 2026</span>
+  </footer>
+</main>
+<script>
+/* This script is the same, byte for byte, in /timer/ and /timer/ja/.
+   timer/test/timer.test.js reads it out of both pages and checks that. */
+(function () {
+  'use strict';
+
+  /* timer-core:begin
+     Pure functions: no DOM, no clock, no storage. The Node tests evaluate
+     exactly the text between these two markers. */
+  var RANGES = {
+    ready: { min: 5, max: 120, def: 10 },
+    work:  { min: 5, max: 300, def: 20 },
+    rest:  { min: 5, max: 120, def: 10 },
+    sets:  { min: 2, max: 40,  def: 8 }
+  };
+  var KEYS = ['ready', 'work', 'rest', 'sets'];
+
+  /* A whole number inside the range for `key`; the default when `value` is
+     missing or is not a number at all. */
+  function clampValue(key, value) {
+    var r = RANGES[key];
+    if (value === null || value === undefined || String(value).trim() === '') return r.def;
+    var n = Math.round(Number(value));
+    if (!isFinite(n)) return r.def;
+    return Math.min(r.max, Math.max(r.min, n));
+  }
+
+  function normalize(raw) {
+    var out = {};
+    KEYS.forEach(function (k) { out[k] = clampValue(k, raw ? raw[k] : undefined); });
+    return out;
+  }
+
+  /* "?ready=10&work=20" -> settings, or null when the query names none of them. */
+  function parseQuery(search) {
+    var params = new URLSearchParams(search || '');
+    var raw = {}, any = false;
+    KEYS.forEach(function (k) {
+      if (params.has(k)) { raw[k] = params.get(k); any = true; }
+    });
+    return any ? normalize(raw) : null;
+  }
+
+  function toQuery(s) {
+    return '?' + KEYS.map(function (k) { return k + '=' + s[k]; }).join('&');
+  }
+
+  /* Ready, then work and rest in turn. No rest after the last work phase,
+     as in the app: ready + work * sets + rest * (sets - 1). */
+  function totalMs(s) {
+    return (s.ready + s.work * s.sets + s.rest * (s.sets - 1)) * 1000;
+  }
+
+  /* Where the workout is `elapsedMs` after Start. Any elapsed time gives a
+     right answer, so a tab that slept for a minute is correct on waking.
+     `step` counts phases from 0 and changes exactly when the phase does.
+     During a rest, `set` is the set just finished. */
+  function stateAt(s, elapsedMs) {
+    var t = Number(elapsedMs);
+    if (!(t > 0)) t = 0;
+    var total = totalMs(s);
+    if (t >= total) {
+      return { phase: 'done', set: s.sets, sets: s.sets, step: 2 * s.sets,
+               secondsLeft: 0, totalSecondsLeft: 0, finished: true };
+    }
+    var phase, set, step, left;
+    var readyMs = s.ready * 1000;
+    if (t < readyMs) {
+      phase = 'ready'; set = 1; step = 0; left = readyMs - t;
+    } else {
+      var workMs = s.work * 1000;
+      var cycle = workMs + s.rest * 1000;
+      var u = t - readyMs;
+      var i = Math.floor(u / cycle);
+      var r = u - i * cycle;
+      set = i + 1;
+      if (r < workMs) { phase = 'work'; step = 1 + 2 * i; left = workMs - r; }
+      else            { phase = 'rest'; step = 2 + 2 * i; left = cycle - r; }
+    }
+    return { phase: phase, set: set, sets: s.sets, step: step,
+             secondsLeft: Math.ceil(left / 1000),
+             totalSecondsLeft: Math.ceil((total - t) / 1000),
+             finished: false };
+  }
+
+  /* The one sound to make on going from state `a` to state `b`, or null.
+     After a long gap this is the newest phase only, never a backlog. */
+  function cueFor(a, b) {
+    if (b.finished) return a.finished ? null : 'finish';
+    if (b.step !== a.step) return b.phase;
+    if (b.secondsLeft !== a.secondsLeft && b.secondsLeft <= 3) return 'tick';
+    return null;
+  }
+
+  function clock(seconds) {
+    var m = Math.floor(seconds / 60), sec = seconds % 60;
+    return m + ':' + (sec < 10 ? '0' : '') + sec;
+  }
+  /* timer-core:end */
+
+  var NAMES = { ready: 'Ready', work: 'Work', rest: 'Rest', done: 'Done' };
+  var STORE = 'simpletabata.timer';
+  var $ = function (id) { return document.getElementById(id); };
+  var el = {
+    face: $('face'), phase: $('phase'), secs: $('secs'), set: $('set'),
+    setsTotal: $('sets-total'), total: $('total'), live: $('live'),
+    start: $('start'), pause: $('pause'), stop: $('stop'),
+    sound: $('sound'), settings: $('settings')
+  };
+  var inputs = {};
+  KEYS.forEach(function (k) { inputs[k] = $(k); });
+
+  var settings = normalize(null);
+  var status = 'idle';      /* idle | running | paused | done */
+  var startedAt = 0;        /* Date.now() at which elapsed was 0 */
+  var pausedAt = 0;         /* elapsed ms, while paused */
+  var last = null;          /* the state last shown */
+  var ticker = null;
+  var wakeLock = null;
+  var audio = null;
+
+  /* ---- storage and address ---- */
+  function load() {
+    var stored = null;
+    try { stored = JSON.parse(localStorage.getItem(STORE)); } catch (e) {}
+    var fromUrl = parseQuery(location.search);
+    settings = fromUrl || normalize(stored);
+    if (stored && stored.sound === false) el.sound.checked = false;
+  }
+  function save() {
+    try {
+      localStorage.setItem(STORE, JSON.stringify({
+        ready: settings.ready, work: settings.work, rest: settings.rest,
+        sets: settings.sets, sound: el.sound.checked
+      }));
+    } catch (e) {}
+  }
+  function writeAddress() {
+    try { history.replaceState(null, '', location.pathname + toQuery(settings)); } catch (e) {}
+  }
+
+  /* ---- sound ---- */
+  function ensureAudio() {
+    try {
+      if (!audio) {
+        var AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) return null;
+        audio = new AC();
+      }
+      if (audio.state === 'suspended') audio.resume();
+    } catch (e) { audio = null; }
+    return audio;
+  }
+  function tone(freq, at, length) {
+    var osc = audio.createOscillator(), gain = audio.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = freq;
+    gain.gain.setValueAtTime(0.0001, at);
+    gain.gain.exponentialRampToValueAtTime(0.5, at + 0.01);
+    gain.gain.setValueAtTime(0.5, at + length - 0.03);
+    gain.gain.exponentialRampToValueAtTime(0.0001, at + length);
+    osc.connect(gain); gain.connect(audio.destination);
+    osc.start(at); osc.stop(at + length + 0.02);
+  }
+  function play(cue) {
+    if (!cue || !el.sound.checked || !ensureAudio()) return;
+    try {
+      var t = audio.currentTime + 0.02;
+      if (cue === 'tick') tone(880, t, 0.09);
+      else if (cue === 'ready') tone(660, t, 0.2);
+      else if (cue === 'work') tone(1320, t, 0.5);
+      else if (cue === 'rest') tone(440, t, 0.5);
+      else if (cue === 'finish') { tone(880, t, 0.16); tone(1100, t + 0.22, 0.16); tone(1320, t + 0.44, 1.0); }
+    } catch (e) {}
+  }
+
+  /* ---- screen wake lock ---- */
+  function holdScreen() {
+    try {
+      if (!('wakeLock' in navigator) || wakeLock || document.visibilityState !== 'visible') return;
+      navigator.wakeLock.request('screen').then(function (lock) {
+        if (status !== 'running') { lock.release().catch(function () {}); return; }
+        wakeLock = lock;
+        lock.addEventListener('release', function () { if (wakeLock === lock) wakeLock = null; });
+      }).catch(function () {});
+    } catch (e) {}
+  }
+  function letScreenGo() {
+    var lock = wakeLock;
+    wakeLock = null;
+    try { if (lock) lock.release().catch(function () {}); } catch (e) {}
+  }
+
+  /* ---- drawing ---- */
+  function text(node, value) {
+    value = String(value);
+    if (node.textContent !== value) node.textContent = value;
+  }
+  function elapsed() {
+    if (status === 'running') return Date.now() - startedAt;
+    if (status === 'paused') return pausedAt;
+    if (status === 'done') return totalMs(settings);
+    return 0;
+  }
+  function draw(state) {
+    text(el.phase, NAMES[state.phase] + (status === 'paused' ? ' (paused)' : ''));
+    text(el.secs, state.secondsLeft);
+    text(el.set, state.set);
+    text(el.setsTotal, state.sets);
+    text(el.total, clock(state.totalSecondsLeft));
+    if (status === 'idle') el.face.removeAttribute('data-phase');
+    else if (el.face.getAttribute('data-phase') !== state.phase) el.face.setAttribute('data-phase', state.phase);
+  }
+  function drawControls() {
+    var live = status === 'running' || status === 'paused';
+    el.start.disabled = live;
+    el.pause.disabled = !live;
+    el.stop.disabled = status === 'idle';
+    text(el.pause, status === 'paused' ? 'Resume' : 'Pause');
+    el.settings.disabled = live;
+  }
+  function announce(state) {
+    var words = NAMES[state.phase];
+    if (state.phase === 'work') words += ', set ' + state.set + ' of ' + state.sets;
+    text(el.live, words);
+  }
+
+  /* One look at the clock. Called by the interval, and directly whenever
+     the tab becomes visible again, so a throttled tab catches up at once. */
+  function tick() {
+    var state = stateAt(settings, elapsed());
+    if (status === 'running' && last) {
+      var cue = cueFor(last, state);
+      play(cue);
+      if (state.step !== last.step) announce(state);
+      if (state.finished) finish();
+    }
+    last = state;
+    draw(state);
+  }
+  function run() {
+    if (!ticker) ticker = setInterval(tick, 100);
+  }
+  function halt() {
+    if (ticker) { clearInterval(ticker); ticker = null; }
+  }
+  function finish() {
+    var hadFocus = document.activeElement === el.pause || document.activeElement === el.stop;
+    status = 'done';
+    halt();
+    letScreenGo();
+    drawControls();
+    if (hadFocus) el.start.focus();
+  }
+
+  /* ---- settings ---- */
+  function commit() {
+    var next = {};
+    KEYS.forEach(function (k) { next[k] = clampValue(k, inputs[k].value); });
+    var changed = KEYS.some(function (k) { return next[k] !== settings[k]; });
+    settings = next;
+    showSettings();
+    if (changed) { save(); writeAddress(); }
+    if (status === 'done') { status = 'idle'; drawControls(); }
+    if (status === 'idle') { last = null; tick(); }
+  }
+  function showSettings() {
+    KEYS.forEach(function (k) {
+      if (inputs[k].value !== String(settings[k])) inputs[k].value = settings[k];
+    });
+  }
+
+  /* ---- buttons ---- */
+  el.start.addEventListener('click', function () {
+    commit();
+    ensureAudio();               /* must begin inside this click */
+    status = 'running';
+    startedAt = Date.now();
+    last = stateAt(settings, 0);
+    play('ready');
+    announce(last);
+    drawControls();
+    draw(last);
+    holdScreen();
+    run();
+    el.pause.focus();
+  });
+  el.pause.addEventListener('click', function () {
+    if (status === 'running') {
+      pausedAt = Date.now() - startedAt;
+      status = 'paused';
+      halt();
+      letScreenGo();
+    } else if (status === 'paused') {
+      ensureAudio();
+      startedAt = Date.now() - pausedAt;
+      status = 'running';
+      holdScreen();
+      run();
+    }
+    drawControls();
+    tick();
+  });
+  el.stop.addEventListener('click', function () {
+    status = 'idle';
+    halt();
+    letScreenGo();
+    last = null;
+    text(el.live, '');
+    drawControls();
+    tick();
+    el.start.focus();
+  });
+  el.sound.addEventListener('change', function () {
+    if (el.sound.checked) ensureAudio();
+    save();
+  });
+  KEYS.forEach(function (k) {
+    inputs[k].addEventListener('change', commit);
+  });
+  el.settings.addEventListener('click', function (event) {
+    var button = event.target.closest ? event.target.closest('button[data-for]') : null;
+    if (!button) return;
+    var k = button.getAttribute('data-for');
+    inputs[k].value = clampValue(k, clampValue(k, inputs[k].value) + Number(button.getAttribute('data-by')));
+    commit();
+  });
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState !== 'visible') return;
+    if (status === 'running') { holdScreen(); tick(); }
+  });
+
+  load();
+  showSettings();
+  drawControls();
+  tick();
+})();
+</script>
+</body>
+</html>
