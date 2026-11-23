@@ -56,14 +56,20 @@
 
 <section lang="en">
   <h1>Privacy Policy</h1>
-  <p class="updated">HIIT &amp; Tabata Timer · Last updated 15 August 2026</p>
+  <p class="updated">HIIT &amp; Tabata Timer · Last updated 23 November 2026</p>
 
   <p class="lede">This app is an interval timer. It has no account to sign up for, no
   profile, and nothing to share. The little data it does handle is described below in full.</p>
 
   <h2>What the app stores on your device</h2>
-  <p>Your workout settings — the ready, work and rest durations and the number of sets —
-  are kept on your device and never leave it.</p>
+  <p>Your timers — the ready, work and rest durations and the number of sets — and your
+  choice of sound and theme are kept on your device. The app does not upload them. The
+  usage data described below does carry a rough picture of them: which band each duration
+  falls in (11–20 seconds, say, rather than the number), the number of sets, how many
+  timers you keep, and the name of the theme in use.</p>
+  <p>A copy of your workout history is kept on the device too, so that it does not have to
+  be fetched again every time. If your phone backs itself up, what the app keeps on the
+  device is part of that backup.</p>
 
   <h2>What leaves your device</h2>
 
@@ -80,14 +86,29 @@
       <td>Firebase Firestore</td>
     </tr>
     <tr>
-      <td>Usage, performance and crash data</td>
-      <td>To find out what breaks and what gets used</td>
+      <td>Usage data</td>
+      <td>To find out what gets used</td>
       <td>Firebase Analytics</td>
+    </tr>
+    <tr>
+      <td>Crash and error reports</td>
+      <td>To find out what breaks</td>
+      <td>Firebase Crashlytics</td>
+    </tr>
+    <tr>
+      <td>A notification token</td>
+      <td>Created when the app registers for notifications</td>
+      <td>Firebase Cloud Messaging, and Apple's notification service on iPhone</td>
     </tr>
     <tr>
       <td>Advertising and device data</td>
       <td>To show the banner advertisement</td>
       <td>Google AdMob</td>
+    </tr>
+    <tr>
+      <td>Your answer on the ad consent form, where one is shown</td>
+      <td>To keep to the choice you made</td>
+      <td>Google's consent platform</td>
     </tr>
   </table>
 
@@ -96,29 +117,71 @@
   no name, no email address, no phone number, no password. Your workout history is stored
   against that identifier, so the identifier is what makes the history yours.</p>
 
+  <h3>Usage data</h3>
+  <p>The app records that a workout was started, paused, stopped or finished, that a setting
+  was changed, and that a timer or a theme was added or chosen. Durations are sent as the
+  band they fall in. Google's analytics library adds the device model, the OS version, the
+  language and the country, and keeps its own identifier for the installation. The anonymous
+  ID above is not attached to any of it.</p>
+
+  <h3>Crash and error reports</h3>
+  <p>When the app crashes, or meets an error it recovers from, a report is sent: where in the
+  program it happened, the device model and OS version, and what the timer was doing at that
+  moment — which phase, how many seconds in, whether the app was on screen. The anonymous ID
+  is not attached. On Android, crash reports begin with version 1.2.0.</p>
+
+  <h3>Notifications</h3>
+  <p>The app asks for permission to show notifications. The ones it shows — "Good job" when a
+  workout finishes and, on Android, the running workout — are made on the device. Registering
+  for notifications also produces a token held by Firebase Cloud Messaging; nothing in the
+  app reads or uses it.</p>
+
+  <h3>Apple Health (iPhone only)</h3>
+  <p>Settings has an Apple Health switch. It is off until you turn it on, and iOS asks for
+  your permission when you do. With it on, each workout you finish is written to Apple Health
+  on your device as a high-intensity interval training workout, with its start time and its
+  length.</p>
+  <p>The app reads nothing from Apple Health. What it writes there goes to Apple Health and
+  nowhere else: the app does not send it to Firebase, to Google, or to anyone. You can delete
+  those workouts, or take the permission back, in the Health app. The finish time kept in
+  your history, described above, is stored whether the switch is on or off.</p>
+
   <h3>What is <em>not</em> collected</h3>
   <ul>
     <li>No location. The app does not ask for it and cannot read it.</li>
-    <li>No contacts, photos, microphone, camera, or health data.</li>
+    <li>No contacts, photos, microphone or camera.</li>
+    <li>Nothing from Apple Health. The app can write to it if you switch that on, and never
+      reads from it.</li>
     <li>No name, email address or phone number.</li>
-    <li>No tracking across other companies' apps or websites. The app does not ask for
-      permission to track, and without that permission iOS does not allow it.</li>
+    <li>On iPhone, no tracking across other companies' apps or websites. The app does not ask
+      for permission to track, and without that permission iOS does not allow it.</li>
   </ul>
 
   <h2>Advertising</h2>
   <p>The app shows a single banner advertisement, served by Google AdMob. AdMob receives
-  device and usage data in order to serve it. In regions that require consent, you are asked
-  before any personalised advertising is used, and you can decline.</p>
+  device and usage data in order to serve it, and like any service on the internet it sees
+  the IP address the request comes from. On Android the advertising and analytics libraries
+  can also use the device's advertising ID, which you can reset or delete in Android's
+  settings.</p>
+  <p>Where Google requires consent — the European Economic Area, the United Kingdom and
+  Switzerland — the app shows Google's consent form the first time it is opened, and the
+  advertisement waits for your answer. You can decline, and you can open the form again from
+  Ad Privacy Settings on the Settings screen. If the form cannot be fetched, for instance
+  with no connection, the banner is requested without a recorded choice. On Android the form
+  begins with version 1.2.0.</p>
 
   <h2>Sharing</h2>
   <p>Nothing is sold, and nothing is shared with anyone beyond the Google services listed
   above, which process it under
-  <a href="https://policies.google.com/privacy">Google's privacy policy</a>.</p>
+  <a href="https://policies.google.com/privacy">Google's privacy policy</a> — and Apple, for
+  notifications on iPhone and for Apple Health if you switch it on.</p>
 
   <h2>Keeping and deleting</h2>
-  <p>Workout history is kept while you use the app. Deleting the app removes everything
-  stored on your device, and the anonymous identifier along with it — which leaves the
-  history unreachable. To have the stored history deleted outright, get in touch and say so.</p>
+  <p>Workout history is kept until it is deleted. The app has no button for that, and nothing
+  removes it automatically. Deleting the app removes what the app stored on your device. It
+  does not delete the history held on the server, and it may not remove the anonymous
+  identifier: on iPhone, installing the app again can bring the same history back. To have
+  the stored history deleted outright, get in touch and say so.</p>
 
   <h2>Children</h2>
   <p>The app is rated 4+ and is not directed at children under 13. It does not knowingly
@@ -135,13 +198,18 @@
 
 <section lang="ja">
   <h1>プライバシーポリシー</h1>
-  <p class="updated">HIIT &amp; Tabata Timer ／ 最終更新 2026年8月15日</p>
+  <p class="updated">HIIT &amp; Tabata Timer ／ 最終更新 2026年11月23日</p>
 
   <p class="lede">このアプリはインターバルタイマーです。アカウント登録もプロフィールも共有機能もありません。
   取り扱うわずかなデータについて、以下に全て記載します。</p>
 
   <h2>端末内に保存されるもの</h2>
-  <p>準備・運動・休憩の秒数とセット数の設定は端末内に保存され、外部に送信されることはありません。</p>
+  <p>タイマーの設定（準備・運動・休憩の秒数とセット数）、音とテーマの選択は端末内に保存されます。
+  アプリがこれらをそのまま送信することはありません。ただし、後述の利用状況データには、その大まかな内容が
+  含まれます。各秒数がどの区分に入るか（秒数そのものではなく「11〜20秒」のような区分）、セット数、
+  タイマーの数、使用中のテーマの名前です。</p>
+  <p>ワークアウト履歴の写しも、毎回取得し直さずに済むよう端末内に保存されます。端末のバックアップを
+  有効にしている場合、アプリが端末内に保存しているものはそのバックアップに含まれます。</p>
 
   <h2>端末外に送信されるもの</h2>
 
@@ -158,14 +226,29 @@
       <td>Firebase Firestore</td>
     </tr>
     <tr>
-      <td>利用状況・パフォーマンス・クラッシュ情報</td>
-      <td>不具合の把握と、どの機能が使われているかの確認のため</td>
+      <td>利用状況データ</td>
+      <td>どの機能が使われているかの確認のため</td>
       <td>Firebase Analytics</td>
+    </tr>
+    <tr>
+      <td>クラッシュ・エラーの報告</td>
+      <td>不具合の把握のため</td>
+      <td>Firebase Crashlytics</td>
+    </tr>
+    <tr>
+      <td>通知用トークン</td>
+      <td>アプリが通知の登録を行う際に生成されます</td>
+      <td>Firebase Cloud Messaging、および iPhone では Apple の通知サービス</td>
     </tr>
     <tr>
       <td>広告関連データ・端末情報</td>
       <td>バナー広告を表示するため</td>
       <td>Google AdMob</td>
+    </tr>
+    <tr>
+      <td>広告の同意フォームでの回答（表示された場合）</td>
+      <td>選択された内容に従うため</td>
+      <td>Google の同意管理プラットフォーム</td>
     </tr>
   </table>
 
@@ -173,27 +256,62 @@
   <p>このアプリは匿名でサインインします。生成されるのはランダムな識別子のみで、氏名・メールアドレス・
   電話番号・パスワードは一切扱いません。ワークアウト履歴はこの識別子に紐づけて保存されます。</p>
 
+  <h3>利用状況データについて</h3>
+  <p>ワークアウトの開始・一時停止・中止・完了、設定の変更、タイマーやテーマの追加・選択があったことを
+  記録します。秒数は区分として送信されます。Google の分析ライブラリが、端末の機種、OS のバージョン、
+  言語、国を加え、インストールごとの独自の識別子を保持します。上記の匿名IDはこれらに付加されません。</p>
+
+  <h3>クラッシュ・エラーの報告について</h3>
+  <p>アプリがクラッシュしたとき、または復帰できたエラーが起きたときに、報告が送信されます。内容は、
+  プログラムのどこで起きたか、端末の機種と OS のバージョン、その時点のタイマーの状態（どのフェーズか、
+  何秒経過していたか、アプリが画面に表示されていたか）です。匿名IDは付加されません。Android では
+  バージョン 1.2.0 から送信されます。</p>
+
+  <h3>通知について</h3>
+  <p>アプリは通知の許可を求めます。表示する通知（ワークアウト完了時の「Good job」と、Android では
+  実行中のワークアウト）は端末内で作成されます。通知の登録にともない、Firebase Cloud Messaging が
+  保持するトークンも生成されますが、アプリがこれを読み取ったり利用したりすることはありません。</p>
+
+  <h3>Apple ヘルスケアについて（iPhone のみ）</h3>
+  <p>設定画面に「Apple Health」のスイッチがあります。初期状態はオフで、オンにしたときに iOS が許可を
+  確認します。オンの間は、完了したワークアウトが、開始時刻と長さとともに、高強度インターバル
+  トレーニングとして端末の「ヘルスケア」に書き込まれます。</p>
+  <p>アプリが「ヘルスケア」からデータを読み取ることはありません。書き込んだ内容の行き先は
+  「ヘルスケア」だけで、アプリが Firebase や Google、その他のどこかに送信することはありません。
+  書き込まれたワークアウトの削除と許可の取り消しは「ヘルスケア」アプリで行えます。なお、上記の履歴に
+  保存される完了日時は、このスイッチのオン・オフにかかわらず保存されます。</p>
+
   <h3>収集して<em>いない</em>もの</h3>
   <ul>
     <li>位置情報。要求しておらず、取得できません。</li>
-    <li>連絡先、写真、マイク、カメラ、ヘルスケアデータ。</li>
+    <li>連絡先、写真、マイク、カメラ。</li>
+    <li>「ヘルスケア」のデータ。オンにした場合に書き込むことはありますが、読み取ることはありません。</li>
     <li>氏名、メールアドレス、電話番号。</li>
-    <li>他社のアプリやウェブサイトをまたぐトラッキング。トラッキングの許可を求めておらず、
+    <li>iPhone では、他社のアプリやウェブサイトをまたぐトラッキング。トラッキングの許可を求めておらず、
       許可なしに iOS がそれを認めることはありません。</li>
   </ul>
 
   <h2>広告について</h2>
   <p>Google AdMob によるバナー広告を1つ表示します。表示のために AdMob が端末情報と利用状況を
-  受け取ります。同意が必要な地域では、パーソナライズ広告の利用前に確認が表示され、拒否できます。</p>
+  受け取ります。また、インターネット上のサービス一般と同じく、リクエストの送信元の IP アドレスが
+  AdMob に伝わります。Android では、広告と分析のライブラリが端末の広告 ID を利用することがあります。
+  広告 ID は Android の設定でリセットまたは削除できます。</p>
+  <p>Google が同意を必要としている地域（欧州経済領域、英国、スイス）では、初回起動時に Google の
+  同意フォームを表示し、回答をいただくまで広告は表示しません。拒否することもでき、設定画面の
+  「Ad Privacy Settings」からフォームを開き直せます。通信できないなどの理由でフォームを取得できなかった
+  場合は、選択が記録されないままバナーをリクエストします。Android ではバージョン 1.2.0 から
+  このフォームが表示されます。</p>
 
   <h2>第三者提供</h2>
   <p>販売は一切行いません。上記の Google の各サービス以外への提供もありません。これらは
-  <a href="https://policies.google.com/privacy?hl=ja">Google のプライバシーポリシー</a>に基づいて処理されます。</p>
+  <a href="https://policies.google.com/privacy?hl=ja">Google のプライバシーポリシー</a>に基づいて処理されます。
+  このほか、iPhone での通知と、オンにした場合の「ヘルスケア」については Apple が関わります。</p>
 
   <h2>保持と削除</h2>
-  <p>ワークアウト履歴はアプリの利用中は保持されます。アプリを削除すると端末内のデータは全て消え、
-  匿名の識別子も失われるため、履歴に到達する手段がなくなります。保存済みの履歴そのものの削除を
-  希望される場合は、ご連絡ください。</p>
+  <p>ワークアウト履歴は削除されるまで保持されます。アプリ内に削除の操作はなく、自動的に消えることも
+  ありません。アプリを削除すると、アプリが端末内に保存したデータは消えます。サーバー上の履歴は
+  消えません。匿名の識別子も残ることがあり、iPhone ではアプリを入れ直すと同じ履歴が再び表示される
+  場合があります。保存済みの履歴そのものの削除を希望される場合は、ご連絡ください。</p>
 
   <h2>お子様について</h2>
   <p>本アプリの年齢制限指定は 4+ で、13歳未満のお子様を対象としていません。13歳未満の方から
