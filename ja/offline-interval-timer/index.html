@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>オフラインで使えるインターバルタイマー｜通信なし・登録なし｜タバタタイマー</title>
+<meta name="description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、インターネットにつながっていなくても使えます。タイマーも音声もビープ音もオフラインで動き、アカウント登録もありません。iPhone・iPad・Android、無料。">
+<link rel="canonical" href="https://simpletabata.com/ja/offline-interval-timer/">
+<link rel="alternate" hreflang="en" href="https://simpletabata.com/offline-interval-timer/">
+<link rel="alternate" hreflang="ja" href="https://simpletabata.com/ja/offline-interval-timer/">
+<link rel="alternate" hreflang="x-default" href="https://simpletabata.com/offline-interval-timer/">
+<link rel="icon" href="/icon.png">
+<meta name="apple-itunes-app" content="app-id=1166542235">
+<meta property="og:type" content="article">
+<meta property="og:title" content="オフラインで使えるインターバルタイマー">
+<meta property="og:description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、インターネットにつながっていなくても使えます。タイマーも音声もビープ音もオフラインで動き、アカウント登録もありません。iPhone・iPad・Android、無料。">
+<meta property="og:url" content="https://simpletabata.com/ja/offline-interval-timer/">
+<meta property="og:image" content="https://simpletabata.com/icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "インターネットにつながっていなくても使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。タイマーも音声もビープ音もオフラインで動きます。通信を使うのは、バナー広告、匿名の利用統計、ワークアウト履歴だけです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "機内モードでも使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。タイマーに必要なものは通信を使わないので、機内モードでも同じようにカウントして音が鳴ります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アカウント登録は必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。iPhone・iPad・Android のどれでも、アカウント登録はありません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "画面を消しても動きますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。バックグラウンドでも画面ロック中でも、カウントと音は続きます。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "inLanguage": "ja",
+  "name": "オフラインで使えるインターバルタイマー",
+  "url": "https://simpletabata.com/ja/offline-interval-timer/",
+  "dateModified": "2026-11-24",
+  "author": {
+    "@type": "Person",
+    "name": "Takahiro Torii"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "HIIT & Tabata Timer - タバタタイマー",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
+    "url": "https://simpletabata.com/ja/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/id1166542235",
+      "https://play.google.com/store/apps/details?id=com.tabatatimer"
+    ]
+  }
+}
+</script>
+<style>
+  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#ececef; --muted:#9a9aa0; --rule:#303034; --bg:#131315; --card:#1c1c20; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:3rem 1.25rem 5rem;
+    background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  main { max-width:44rem; margin:0 auto; }
+  .lang { font-size:.875rem; color:var(--muted); margin:0 0 2.5rem; }
+  .lang a { margin-right:.75rem; }
+  header { display:flex; gap:1.25rem; align-items:center; margin:0 0 1.5rem; }
+  header img { width:64px; height:64px; border-radius:15px; flex:none; }
+  h1 { font-size:1.5rem; line-height:1.35; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .by { color:var(--muted); font-size:.9rem; margin:0; }
+  .lede { font-size:1.1rem; }
+  h2 { font-size:1.1rem; margin:2.75rem 0 .6rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  h3 { font-size:1rem; margin:1.6rem 0 .3rem; }
+  ul, ol { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:inherit; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  .get { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.75rem 0 0; }
+  .get a {
+    display:inline-block; padding:.6rem 1.1rem; border-radius:10px;
+    background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600; font-size:.95rem;
+  }
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+  th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font-weight:600; color:var(--muted); }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
+  footer a { margin-right:1rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a><a href="/offline-interval-timer/" lang="en">English</a></p>
+
+  <header>
+    <img src="/icon.png" alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン" width="64" height="64">
+    <div>
+      <h1>オフラインで使えるインターバルタイマー</h1>
+      <p class="by">HIIT &amp; Tabata Timer - タバタタイマー · 開発: Takahiro Torii ・ iPhone / iPad / Android ・ 無料</p>
+    </div>
+  </header>
+
+  <p class="lede">HIIT &amp; Tabata Timer - タバタタイマー は、インターネットにつながっていなくても使えます。タイマーも音声もビープ音もオフラインで動き、ログインするアカウントもありません。地下のジムでも、グラウンドでも、機内モードでも、同じように始められます。iPhone・iPad・Android 向けで、無料です。</p>
+
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <h2>通信なしで動くもの</h2>
+  <ul>
+    <li>タイマー本体（準備時間・運動時間・休憩時間・セット数）</li>
+    <li>女性・男性の音声によるカウントダウン</li>
+    <li>iPhone の3種類のビープ音（シャープ、ソフト、ホイッスル）</li>
+    <li>バックグラウンドと画面ロック中の動作</li>
+  </ul>
+
+  <h2>通信を使うもの</h2>
+  <p>画面下の小さなバナー広告、匿名の利用統計、ワークアウト履歴の3つだけです。どれもトレーニングを始めるのには必要ありません。</p>
+
+  <h2>ログインがありません</h2>
+  <p>アカウント登録も、確認が必要なサブスクリプションもないので、スタートを押すときにサーバーの応答を待つことがありません。位置情報・連絡先・カメラ・マイクも使いません。</p>
+
+  <h2>こんな場所で役に立ちます</h2>
+  <ul>
+    <li>電波の届かない地下のジムやガレージ</li>
+    <li>グラウンド、陸上トラック、山道</li>
+    <li>データ通信なしでの旅行中</li>
+    <li>通知を止めて集中したいときの機内モード</li>
+  </ul>
+
+  <h2>概要</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>価格</th><td>無料。サブスク・アプリ内課金・アカウント登録なし。</td></tr>
+    <tr><th>対応機種</th><td>iPhone・iPad（iOS 15 以降）、Android（8.0 以降）</td></tr>
+    <tr><th>設定範囲（iPhone）</th><td>運動5〜300秒、準備・休憩5〜120秒、2〜40セット</td></tr>
+    <tr><th>設定範囲（Android）</th><td>各区間5〜60秒、2〜20セット</td></tr>
+    <tr><th>広告</th><td>小さなバナー1つだけ。全画面広告・動画広告はありません。</td></tr>
+  </table>
+  </div>
+
+  <h2>よくある質問</h2>
+
+  <h3>インターネットにつながっていなくても使えますか？</h3>
+  <p>はい。タイマーも音声もビープ音もオフラインで動きます。通信を使うのは、バナー広告、匿名の利用統計、ワークアウト履歴だけです。</p>
+
+  <h3>機内モードでも使えますか？</h3>
+  <p>はい。タイマーに必要なものは通信を使わないので、機内モードでも同じようにカウントして音が鳴ります。</p>
+
+  <h3>アカウント登録は必要ですか？</h3>
+  <p>いいえ。iPhone・iPad・Android のどれでも、アカウント登録はありません。</p>
+
+  <h3>画面を消しても動きますか？</h3>
+  <p>はい。バックグラウンドでも画面ロック中でも、カウントと音は続きます。</p>
+
+  <h2>ほかの使い方</h2>
+  <ul>
+    <li><a href="/ja/boxing-round-timer/">ボクシングのラウンドタイマー</a></li>
+    <li><a href="/ja/team-practice-timer/">部活・クラス用のタイマー</a></li>
+    <li><a href="/ja/interval-timer-with-beeps/">ビープ音・ホイッスル音のタイマー</a></li>
+    <li><a href="/ja/">アプリの説明</a></li>
+  </ul>
+
+  <h2>ダウンロード</h2>
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <footer>
+    <a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a>
+    <a href="/timer/ja/">ブラウザ版タイマー</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="mailto:support@simpletabata.com">お問い合わせ: support@simpletabata.com</a>
+    <span>最終更新 2026年11月24日</span>
+  </footer>
+</main>
+</body>
+</html>

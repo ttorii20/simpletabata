@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>部活やクラスで使えるインターバルタイマー｜スピーカーからホイッスル音｜タバタタイマー</title>
+<meta name="description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、サーキットやダッシュの合図を全員に聞かせられます。Bluetooth スピーカーにつないでホイッスル音を選ぶだけ。無料、登録なし。">
+<link rel="canonical" href="https://simpletabata.com/ja/team-practice-timer/">
+<link rel="alternate" hreflang="en" href="https://simpletabata.com/team-practice-timer/">
+<link rel="alternate" hreflang="ja" href="https://simpletabata.com/ja/team-practice-timer/">
+<link rel="alternate" hreflang="x-default" href="https://simpletabata.com/team-practice-timer/">
+<link rel="icon" href="/icon.png">
+<meta name="apple-itunes-app" content="app-id=1166542235">
+<meta property="og:type" content="article">
+<meta property="og:title" content="部活やクラスで使えるインターバルタイマー">
+<meta property="og:description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、サーキットやダッシュの合図を全員に聞かせられます。Bluetooth スピーカーにつないでホイッスル音を選ぶだけ。無料、登録なし。">
+<meta property="og:url" content="https://simpletabata.com/ja/team-practice-timer/">
+<meta property="og:image" content="https://simpletabata.com/icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "部活やクラスで使える音量ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "合図はスマートフォンのメディア音量で鳴るので、音の大きさは本体か、つないだスピーカーしだいです。体育館やグラウンドでは Bluetooth スピーカーにつなぎ、設定の「Sound」でビープ音を選ぶのがおすすめです。ビープ音は声より騒音の中で通ります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アプリで音量をもっと大きくできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "できません。すでにスマートフォンのメディア音量の最大で鳴らしています。それより大きくするには、Bluetooth スピーカーにつないでください。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ホイッスルの音はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、iPhone と iPad にあります。設定の「Sound」で、シャープ、ソフト、ホイッスルの3種類のビープ音から選べます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "学校や部活で使うのに料金はかかりますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "かかりません。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は画面下の小さなバナー1つだけで、全画面広告や動画広告は出ません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "電波の届かないグラウンドでも使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。タイマーも音声もビープ音も、インターネットにつながっていなくても動きます。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "inLanguage": "ja",
+  "name": "部活やクラスで使えるインターバルタイマー",
+  "url": "https://simpletabata.com/ja/team-practice-timer/",
+  "dateModified": "2026-11-24",
+  "author": {
+    "@type": "Person",
+    "name": "Takahiro Torii"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "HIIT & Tabata Timer - タバタタイマー",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
+    "url": "https://simpletabata.com/ja/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/id1166542235",
+      "https://play.google.com/store/apps/details?id=com.tabatatimer"
+    ]
+  }
+}
+</script>
+<style>
+  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#ececef; --muted:#9a9aa0; --rule:#303034; --bg:#131315; --card:#1c1c20; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:3rem 1.25rem 5rem;
+    background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  main { max-width:44rem; margin:0 auto; }
+  .lang { font-size:.875rem; color:var(--muted); margin:0 0 2.5rem; }
+  .lang a { margin-right:.75rem; }
+  header { display:flex; gap:1.25rem; align-items:center; margin:0 0 1.5rem; }
+  header img { width:64px; height:64px; border-radius:15px; flex:none; }
+  h1 { font-size:1.5rem; line-height:1.35; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .by { color:var(--muted); font-size:.9rem; margin:0; }
+  .lede { font-size:1.1rem; }
+  h2 { font-size:1.1rem; margin:2.75rem 0 .6rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  h3 { font-size:1rem; margin:1.6rem 0 .3rem; }
+  ul, ol { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:inherit; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  .get { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.75rem 0 0; }
+  .get a {
+    display:inline-block; padding:.6rem 1.1rem; border-radius:10px;
+    background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600; font-size:.95rem;
+  }
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+  th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font-weight:600; color:var(--muted); }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
+  footer a { margin-right:1rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a><a href="/team-practice-timer/" lang="en">English</a></p>
+
+  <header>
+    <img src="/icon.png" alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン" width="64" height="64">
+    <div>
+      <h1>部活やクラスで使えるインターバルタイマー</h1>
+      <p class="by">HIIT &amp; Tabata Timer - タバタタイマー · 開発: Takahiro Torii ・ iPhone / iPad / Android ・ 無料</p>
+    </div>
+  </header>
+
+  <p class="lede">HIIT &amp; Tabata Timer - タバタタイマー は、チーム全員の合図として使えます。スマートフォンを Bluetooth スピーカーにつなぎ、ビープ音を選んでスタートを押したら、ベンチに置いておくだけです。始めと終わりが全員に聞こえます。無料で、サブスクリプションもアカウント登録もありません。</p>
+
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <h2>大人数で使うときの準備</h2>
+  <ol>
+    <li>スマートフォンか iPad を Bluetooth スピーカーにつなぎます。</li>
+    <li>設定の「Sound」でビープ音を選びます。シャープ、ソフト、ホイッスルの3種類があり、タップするとスピーカーから試聴できます。</li>
+    <li>スマートフォンのメディア音量を上げ、次にスピーカーの音量を上げます。</li>
+    <li>運動時間・休憩時間・セット数を決めて、スタートを押します。</li>
+  </ol>
+  <p>音はスマートフォンのメディア音量で鳴るので、大きさはつないだスピーカーしだいです。アプリの側で本体の最大音量より大きくすることはできません。体育館やグラウンドではスピーカーが必要です。</p>
+
+  <h2>声よりビープ音がよい理由</h2>
+  <p>ビープ音は、掛け声やボールの音、音楽の中でも声より通ります。掛け声は英語ですが、ビープ音なら誰にでも伝わります。</p>
+
+  <h2>部活で使いやすい設定</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>用途</th><th>運動</th><th>休憩</th><th>セット数</th></tr>
+    <tr><td>サーキット（休憩の間に移動）</td><td>30秒</td><td>15秒</td><td>種目数 × 周回数</td></tr>
+    <tr><td>全員でタバタ式</td><td>20秒</td><td>10秒</td><td>8</td></tr>
+    <tr><td>ダッシュ、シャトルラン</td><td>20秒</td><td>40秒</td><td>10</td></tr>
+    <tr><td>体幹トレーニング</td><td>40秒</td><td>20秒</td><td>6〜10</td></tr>
+    <tr><td>3分間の練習メニュー</td><td>180秒</td><td>60秒</td><td>4〜6</td></tr>
+  </table>
+  </div>
+  <p>iPhone では、運動時間が5〜300秒、休憩時間が5〜120秒、セット数が2〜40です。タイマーは5つまで保存できるので、アップ用、サーキット用、ダッシュ用と分けておけます。スワイプで切り替えます。</p>
+
+  <h2>練習中</h2>
+  <ul>
+    <li>画面をロックしても動き続けるので、ベンチに置いたままで大丈夫です。</li>
+    <li>同じスマートフォンで流している音楽は止まらず、その上にビープ音が重なります。</li>
+    <li>インターネットにつながっていなくても動きます。電波の届かない体育館やグラウンドでも使えます。</li>
+  </ul>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>すべてのセットが同じ運動時間・休憩時間です。種目ごとに秒数を変えたい場合は、多機能なインターバルタイマーが向いています。</li>
+    <li>Android 版は今のところ音声のみで、各区間は60秒まで、セット数は20までです。</li>
+    <li>種目の解説や、名前・記録をつける機能はありません。</li>
+  </ul>
+
+  <h2>よくある質問</h2>
+
+  <h3>部活やクラスで使える音量ですか？</h3>
+  <p>合図はスマートフォンのメディア音量で鳴るので、音の大きさは本体か、つないだスピーカーしだいです。体育館やグラウンドでは Bluetooth スピーカーにつなぎ、設定の「Sound」でビープ音を選ぶのがおすすめです。ビープ音は声より騒音の中で通ります。</p>
+
+  <h3>アプリで音量をもっと大きくできますか？</h3>
+  <p>できません。すでにスマートフォンのメディア音量の最大で鳴らしています。それより大きくするには、Bluetooth スピーカーにつないでください。</p>
+
+  <h3>ホイッスルの音はありますか？</h3>
+  <p>はい、iPhone と iPad にあります。設定の「Sound」で、シャープ、ソフト、ホイッスルの3種類のビープ音から選べます。</p>
+
+  <h3>学校や部活で使うのに料金はかかりますか？</h3>
+  <p>かかりません。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は画面下の小さなバナー1つだけで、全画面広告や動画広告は出ません。</p>
+
+  <h3>電波の届かないグラウンドでも使えますか？</h3>
+  <p>はい。タイマーも音声もビープ音も、インターネットにつながっていなくても動きます。</p>
+
+  <h2>ほかの使い方</h2>
+  <ul>
+    <li><a href="/ja/boxing-round-timer/">ボクシングのラウンドタイマー</a></li>
+    <li><a href="/ja/offline-interval-timer/">オフラインで使えるタイマー</a></li>
+    <li><a href="/ja/interval-timer-with-beeps/">ビープ音・ホイッスル音のタイマー</a></li>
+    <li><a href="/ja/">アプリの説明</a></li>
+  </ul>
+
+  <h2>ダウンロード</h2>
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <footer>
+    <a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a>
+    <a href="/timer/ja/">ブラウザ版タイマー</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="mailto:support@simpletabata.com">お問い合わせ: support@simpletabata.com</a>
+    <span>最終更新 2026年11月24日</span>
+  </footer>
+</main>
+</body>
+</html>
