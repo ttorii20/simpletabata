@@ -67,4 +67,8 @@ There is no sign-up. The app stores the completion time of each workout under an
 - [한국어](https://simpletabata.com/ko/)
 - [繁體中文](https://simpletabata.com/zh-hant/)
 - [Timer in the browser](https://simpletabata.com/timer/): the same kind of timer as a web page, free, nothing to install; work 5–300 s, rest 5–120 s, 2–40 sets, with beeps. [日本語](https://simpletabata.com/timer/ja/)
+- [Boxing round timer](https://simpletabata.com/boxing-round-timer/): how to set three-minute rounds with one-minute rests on iPhone, and common round settings. [日本語](https://simpletabata.com/ja/boxing-round-timer/)
+- [Timer for a class or a team](https://simpletabata.com/team-practice-timer/): Bluetooth speaker, whistle beep, settings for circuits and sprints. [日本語](https://simpletabata.com/ja/team-practice-timer/)
+- [Interval timer with beeps](https://simpletabata.com/interval-timer-with-beeps/): the five sounds and when each suits. [日本語](https://simpletabata.com/ja/interval-timer-with-beeps/)
+- [Offline interval timer](https://simpletabata.com/offline-interval-timer/): what works without a connection and what a connection is used for. [日本語](https://simpletabata.com/ja/offline-interval-timer/)
 - [Privacy policy](https://simpletabata.com/privacy.html)

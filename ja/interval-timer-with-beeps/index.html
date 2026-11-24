@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>音声の代わりにビープ音やホイッスルで知らせるインターバルタイマー｜タバタタイマー</title>
+<meta name="description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone で音声の代わりにビープ音を選べます。シャープ、ソフト、ホイッスルの3種類。無料、サブスクなし。">
+<link rel="canonical" href="https://simpletabata.com/ja/interval-timer-with-beeps/">
+<link rel="alternate" hreflang="en" href="https://simpletabata.com/interval-timer-with-beeps/">
+<link rel="alternate" hreflang="ja" href="https://simpletabata.com/ja/interval-timer-with-beeps/">
+<link rel="alternate" hreflang="x-default" href="https://simpletabata.com/interval-timer-with-beeps/">
+<link rel="icon" href="/icon.png">
+<meta name="apple-itunes-app" content="app-id=1166542235">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ビープ音やホイッスルで知らせるインターバルタイマー">
+<meta property="og:description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone で音声の代わりにビープ音を選べます。シャープ、ソフト、ホイッスルの3種類。無料、サブスクなし。">
+<meta property="og:url" content="https://simpletabata.com/ja/interval-timer-with-beeps/">
+<meta property="og:image" content="https://simpletabata.com/icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "音声の代わりにビープ音にできますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい、iPhone と iPad でできます。設定の「Sound」で、女性の声・男性の声・3種類のビープ音（シャープ、ソフト、ホイッスル）から選べ、タップすると試聴できます。Android 版は今のところ音声のみです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ホイッスルの音が鳴るインターバルタイマーはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。iPhone・iPad 版の HIIT & Tabata Timer - タバタタイマー には、3種類のビープ音の1つとしてホイッスルがあります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "音楽を流しながらでもビープ音は鳴りますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。再生中の音はそのままの音量で流れ続け、その上にビープ音が重なります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。どの音も無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "inLanguage": "ja",
+  "name": "ビープ音やホイッスルで知らせるインターバルタイマー",
+  "url": "https://simpletabata.com/ja/interval-timer-with-beeps/",
+  "dateModified": "2026-11-24",
+  "author": {
+    "@type": "Person",
+    "name": "Takahiro Torii"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "HIIT & Tabata Timer - タバタタイマー",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
+    "url": "https://simpletabata.com/ja/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/id1166542235",
+      "https://play.google.com/store/apps/details?id=com.tabatatimer"
+    ]
+  }
+}
+</script>
+<style>
+  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#ececef; --muted:#9a9aa0; --rule:#303034; --bg:#131315; --card:#1c1c20; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:3rem 1.25rem 5rem;
+    background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  main { max-width:44rem; margin:0 auto; }
+  .lang { font-size:.875rem; color:var(--muted); margin:0 0 2.5rem; }
+  .lang a { margin-right:.75rem; }
+  header { display:flex; gap:1.25rem; align-items:center; margin:0 0 1.5rem; }
+  header img { width:64px; height:64px; border-radius:15px; flex:none; }
+  h1 { font-size:1.5rem; line-height:1.35; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .by { color:var(--muted); font-size:.9rem; margin:0; }
+  .lede { font-size:1.1rem; }
+  h2 { font-size:1.1rem; margin:2.75rem 0 .6rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  h3 { font-size:1rem; margin:1.6rem 0 .3rem; }
+  ul, ol { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:inherit; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  .get { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.75rem 0 0; }
+  .get a {
+    display:inline-block; padding:.6rem 1.1rem; border-radius:10px;
+    background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600; font-size:.95rem;
+  }
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+  th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font-weight:600; color:var(--muted); }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
+  footer a { margin-right:1rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a><a href="/interval-timer-with-beeps/" lang="en">English</a></p>
+
+  <header>
+    <img src="/icon.png" alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン" width="64" height="64">
+    <div>
+      <h1>ビープ音やホイッスルで知らせるインターバルタイマー</h1>
+      <p class="by">HIIT &amp; Tabata Timer - タバタタイマー · 開発: Takahiro Torii ・ iPhone / iPad / Android ・ 無料</p>
+    </div>
+  </header>
+
+  <p class="lede">HIIT &amp; Tabata Timer - タバタタイマー は、iPhone と iPad で、音声の代わりにビープ音で知らせることができます。ビープ音はシャープ、ソフト、ホイッスルの3種類です。無料で、サブスクリプションもアカウント登録もありません。</p>
+
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <h2>ビープ音の選び方</h2>
+  <ol>
+    <li>設定を開き、「Sound」をタップします。</li>
+    <li>音をタップすると試聴できます。女性の声、男性の声、ビープ音3種類の、合わせて5つです。</li>
+    <li>使いたい音を選んだままにします。次のワークアウトからその音で鳴ります。</li>
+  </ol>
+
+  <h2>5つの音</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>音</th><th>向いている場面</th></tr>
+    <tr><td>女性の声</td><td>ひとりでのトレーニング。数字を聞きたいとき。英語です。</td></tr>
+    <tr><td>男性の声</td><td>同じく、低めの声で。英語です。</td></tr>
+    <tr><td>シャープ</td><td>音の大きい場所、音楽を流しているとき</td></tr>
+    <tr><td>ソフト</td><td>自宅、早朝、まわりに人がいる場所</td></tr>
+    <tr><td>ホイッスル</td><td>部活、クラス、屋外での練習</td></tr>
+  </table>
+  </div>
+
+  <h2>ビープ音を選ぶ理由</h2>
+  <ul>
+    <li>体育館や大きな音楽の中でも、声より聞き取りやすい音です。</li>
+    <li>言語に関係ありません。掛け声は英語のみです。</li>
+    <li>ポッドキャストや曲に声がかぶりません。再生中の音はそのままの音量で流れ続けます。</li>
+  </ul>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>Android 版は今のところ音声のみです。</li>
+    <li>ビープ音はスマートフォンのメディア音量で鳴ります。体育館やグラウンドでは Bluetooth スピーカーにつないでください。</li>
+  </ul>
+  <p>このサイトの<a href="/timer/ja/">ブラウザ版タイマー</a>もビープ音で知らせます。インストールは不要です。</p>
+
+  <h2>よくある質問</h2>
+
+  <h3>音声の代わりにビープ音にできますか？</h3>
+  <p>はい、iPhone と iPad でできます。設定の「Sound」で、女性の声・男性の声・3種類のビープ音（シャープ、ソフト、ホイッスル）から選べ、タップすると試聴できます。Android 版は今のところ音声のみです。</p>
+
+  <h3>ホイッスルの音が鳴るインターバルタイマーはありますか？</h3>
+  <p>はい。iPhone・iPad 版の HIIT &amp; Tabata Timer - タバタタイマー には、3種類のビープ音の1つとしてホイッスルがあります。</p>
+
+  <h3>音楽を流しながらでもビープ音は鳴りますか？</h3>
+  <p>はい。再生中の音はそのままの音量で流れ続け、その上にビープ音が重なります。</p>
+
+  <h3>無料ですか？</h3>
+  <p>はい。どの音も無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。</p>
+
+  <h2>ほかの使い方</h2>
+  <ul>
+    <li><a href="/ja/boxing-round-timer/">ボクシングのラウンドタイマー</a></li>
+    <li><a href="/ja/team-practice-timer/">部活・クラス用のタイマー</a></li>
+    <li><a href="/ja/offline-interval-timer/">オフラインで使えるタイマー</a></li>
+    <li><a href="/ja/">アプリの説明</a></li>
+  </ul>
+
+  <h2>ダウンロード</h2>
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <footer>
+    <a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a>
+    <a href="/timer/ja/">ブラウザ版タイマー</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="mailto:support@simpletabata.com">お問い合わせ: support@simpletabata.com</a>
+    <span>最終更新 2026年11月24日</span>
+  </footer>
+</main>
+</body>
+</html>
