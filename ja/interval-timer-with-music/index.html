@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>音楽を聴きながら使えるインターバルタイマー｜バックグラウンド・画面ロック対応｜タバタタイマー</title>
+<meta name="description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、音楽やポッドキャストを止めず、音量も下げずに、その上に音声やビープ音を重ねます。バックグラウンドでも画面ロック中でも動きます。無料、サブスクなし。">
+<link rel="canonical" href="https://simpletabata.com/ja/interval-timer-with-music/">
+<link rel="alternate" hreflang="en" href="https://simpletabata.com/interval-timer-with-music/">
+<link rel="alternate" hreflang="ja" href="https://simpletabata.com/ja/interval-timer-with-music/">
+<link rel="alternate" hreflang="x-default" href="https://simpletabata.com/interval-timer-with-music/">
+<link rel="icon" href="/icon.png">
+<meta name="apple-itunes-app" content="app-id=1166542235">
+<meta property="og:type" content="article">
+<meta property="og:title" content="音楽を聴きながら使えるインターバルタイマー">
+<meta property="og:description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、音楽やポッドキャストを止めず、音量も下げずに、その上に音声やビープ音を重ねます。バックグラウンドでも画面ロック中でも動きます。無料、サブスクなし。">
+<meta property="og:url" content="https://simpletabata.com/ja/interval-timer-with-music/">
+<meta property="og:image" content="https://simpletabata.com/icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "音楽を聴きながら使えるインターバルタイマーはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、再生中の音をそのままの音量で流し続け、その上に音声かビープ音を重ねます。バックグラウンドでも画面ロック中でもカウントは続きます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "音楽が止まったり、音量が下がったりしますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。音楽は止まらず、音量も下がりません。合図がその上に重なります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Spotify や Apple Music、ポッドキャストのアプリと一緒に使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。再生しているアプリから音を奪わないので、どのアプリの音にも重ねて鳴ります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "イヤホンでも使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。合図はスマートフォンのメディア音量で、音楽と同じイヤホンやスピーカーから鳴ります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "inLanguage": "ja",
+  "name": "音楽を聴きながら使えるインターバルタイマー",
+  "url": "https://simpletabata.com/ja/interval-timer-with-music/",
+  "dateModified": "2026-11-25",
+  "author": {
+    "@type": "Person",
+    "name": "Takahiro Torii"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "HIIT & Tabata Timer - タバタタイマー",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
+    "url": "https://simpletabata.com/ja/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/id1166542235",
+      "https://play.google.com/store/apps/details?id=com.tabatatimer"
+    ]
+  }
+}
+</script>
+<style>
+  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#ececef; --muted:#9a9aa0; --rule:#303034; --bg:#131315; --card:#1c1c20; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:3rem 1.25rem 5rem;
+    background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  main { max-width:44rem; margin:0 auto; }
+  .lang { font-size:.875rem; color:var(--muted); margin:0 0 2.5rem; }
+  .lang a { margin-right:.75rem; }
+  header { display:flex; gap:1.25rem; align-items:center; margin:0 0 1.5rem; }
+  header img { width:64px; height:64px; border-radius:15px; flex:none; }
+  h1 { font-size:1.5rem; line-height:1.35; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .by { color:var(--muted); font-size:.9rem; margin:0; }
+  .lede { font-size:1.1rem; }
+  h2 { font-size:1.1rem; margin:2.75rem 0 .6rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  h3 { font-size:1rem; margin:1.6rem 0 .3rem; }
+  ul, ol { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:inherit; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  .get { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.75rem 0 0; }
+  .get a {
+    display:inline-block; padding:.6rem 1.1rem; border-radius:10px;
+    background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600; font-size:.95rem;
+  }
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+  th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font-weight:600; color:var(--muted); }
+  tr > th:first-child { min-width:5.5em; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
+  footer a { margin-right:1rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a><a href="/interval-timer-with-music/" lang="en">English</a></p>
+
+  <header>
+    <img src="/icon.png" alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン" width="64" height="64">
+    <div>
+      <h1>音楽を聴きながら使えるインターバルタイマー</h1>
+      <p class="by">HIIT &amp; Tabata Timer - タバタタイマー · 開発: Takahiro Torii ・ iPhone / iPad / Android ・ 無料</p>
+    </div>
+  </header>
+
+  <p class="lede">HIIT &amp; Tabata Timer - タバタタイマー は、聴いている音の上に重ねて鳴ります。音楽やポッドキャストはそのままの音量で流れ続け、その上にタイマーの音声かビープ音が鳴ります。バックグラウンドでも画面ロック中でもカウントは続きます。無料で、サブスクリプションもアカウント登録もありません。</p>
+
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <h2>音楽と一緒に使う手順</h2>
+  <ol>
+    <li>好きなアプリで音楽やポッドキャストを再生します。</li>
+    <li>タイマーを開き、運動時間・休憩時間・セット数を決めて、スタートを押します。</li>
+    <li>音楽アプリに戻るか、画面をロックします。タイマーはそのまま動き、音も鳴ります。</li>
+  </ol>
+  <p>このための設定はありません。タイマーが音楽を止めることはなく、声が出るあいだに音量を下げることもありません。</p>
+
+  <h2>聞こえる音</h2>
+  <ul>
+    <li>各区間の最後の5秒を声で数え、切り替わりを知らせます。</li>
+    <li>iPhone と iPad では、声の代わりにビープ音（シャープ、ソフト、ホイッスル）を選べます。ビープ音なら曲に声がかぶりません。</li>
+    <li>合図はスマートフォンのメディア音量で、音楽と同じイヤホンやスピーカーから鳴ります。</li>
+  </ul>
+
+  <h2>画面をロックしたまま</h2>
+  <p>画面を消しても、ほかのアプリを開いても、カウントと合図は続きます。iOS 16.1 以降の iPhone では、ロック画面に残り時間と停止ボタンが出るので、ロックを解除せずに時間を確かめられます。</p>
+
+  <h2>音楽のほうが大きくて合図が聞こえないとき</h2>
+  <p>音楽の音量を下げないので、音の大きい曲では小さな声が埋もれることがあります。設定の「Sound」でシャープのビープ音を選ぶか、音楽アプリの側で少し音量を下げてください。</p>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>このアプリ自体は音楽を再生しません。プレイリストもありません。お使いの音楽アプリと並べて使います。</li>
+    <li>合図のあいだだけ音楽を小さくする機能はありません。</li>
+    <li>Android 版は今のところ音声のみで、各区間は60秒まで、セット数は20までです。</li>
+  </ul>
+
+  <h2>よくある質問</h2>
+
+  <h3>音楽を聴きながら使えるインターバルタイマーはありますか？</h3>
+  <p>はい。HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、再生中の音をそのままの音量で流し続け、その上に音声かビープ音を重ねます。バックグラウンドでも画面ロック中でもカウントは続きます。</p>
+
+  <h3>音楽が止まったり、音量が下がったりしますか？</h3>
+  <p>いいえ。音楽は止まらず、音量も下がりません。合図がその上に重なります。</p>
+
+  <h3>Spotify や Apple Music、ポッドキャストのアプリと一緒に使えますか？</h3>
+  <p>はい。再生しているアプリから音を奪わないので、どのアプリの音にも重ねて鳴ります。</p>
+
+  <h3>イヤホンでも使えますか？</h3>
+  <p>はい。合図はスマートフォンのメディア音量で、音楽と同じイヤホンやスピーカーから鳴ります。</p>
+
+  <h3>無料ですか？</h3>
+  <p>はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。</p>
+
+  <h2>ほかの使い方</h2>
+  <ul>
+    <li><a href="/ja/boxing-round-timer/">ボクシングのラウンドタイマー</a></li>
+    <li><a href="/ja/team-practice-timer/">部活・クラス用のタイマー</a></li>
+    <li><a href="/ja/offline-interval-timer/">オフラインで使えるタイマー</a></li>
+    <li><a href="/ja/interval-timer-with-beeps/">ビープ音・ホイッスル音のタイマー</a></li>
+    <li><a href="/ja/free-interval-timer-no-subscription/">無料・サブスクなしのタイマー</a></li>
+    <li><a href="/ja/tabata-timer-for-android/">Android のタバタタイマー</a></li>
+    <li><a href="/ja/simple-interval-timer/">シンプルなインターバルタイマー</a></li>
+    <li><a href="/ja/">アプリの説明</a></li>
+  </ul>
+
+  <h2>ダウンロード</h2>
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <footer>
+    <a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a>
+    <a href="/timer/ja/">ブラウザ版タイマー</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="mailto:support@simpletabata.com">お問い合わせ: support@simpletabata.com</a>
+    <span>最終更新 2026年11月25日</span>
+  </footer>
+</main>
+</body>
+</html>
