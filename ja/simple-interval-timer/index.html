@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>筋トレや HIIT のインターバルを計るシンプルなタイマーアプリ｜数字4つとスタートだけ｜タバタタイマー</title>
+<meta name="description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、準備時間・運動時間・休憩時間・セット数を決めてスタートを押すだけのシンプルなインターバルタイマーです。iPhone・iPad・Android、無料、サブスク・登録なし。">
+<link rel="canonical" href="https://simpletabata.com/ja/simple-interval-timer/">
+<link rel="alternate" hreflang="en" href="https://simpletabata.com/simple-interval-timer/">
+<link rel="alternate" hreflang="ja" href="https://simpletabata.com/ja/simple-interval-timer/">
+<link rel="alternate" hreflang="x-default" href="https://simpletabata.com/simple-interval-timer/">
+<link rel="icon" href="/icon.png">
+<meta name="apple-itunes-app" content="app-id=1166542235">
+<meta property="og:type" content="article">
+<meta property="og:title" content="筋トレや HIIT のインターバルを計るシンプルなタイマー">
+<meta property="og:description" content="HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、準備時間・運動時間・休憩時間・セット数を決めてスタートを押すだけのシンプルなインターバルタイマーです。iPhone・iPad・Android、無料、サブスク・登録なし。">
+<meta property="og:url" content="https://simpletabata.com/ja/simple-interval-timer/">
+<meta property="og:image" content="https://simpletabata.com/icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "inLanguage": "ja",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "筋トレのインターバルを計るシンプルなアプリはありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、準備時間・運動時間・休憩時間・セット数を決めてスタートを押すだけのタイマーです。トレーニングプラン、動画、アカウント登録、サブスクリプションはなく、無料です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "何も設定せずに使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。最初から準備10秒、運動20秒、休憩10秒、8セットの標準のタバタ式になっています。スタートを押すだけです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "筋トレのセット間の休憩タイマーとして使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "時間で区切る筋トレなら使えます。1つの運動時間と1つの休憩時間を繰り返し、iPhone では休憩を120秒まで設定できます。セットの終わりにタップして休憩を始める形ではないので、セットごとに長さが変わる場合には向きません。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "タイマーを複数保存できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "iPhone では5つまで保存でき、スワイプで切り替えます。Android は設定1つです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "inLanguage": "ja",
+  "name": "筋トレや HIIT のインターバルを計るシンプルなタイマー",
+  "url": "https://simpletabata.com/ja/simple-interval-timer/",
+  "dateModified": "2026-11-25",
+  "author": {
+    "@type": "Person",
+    "name": "Takahiro Torii"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "HIIT & Tabata Timer - タバタタイマー",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
+    "url": "https://simpletabata.com/ja/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "JPY"
+    },
+    "sameAs": [
+      "https://apps.apple.com/app/id1166542235",
+      "https://play.google.com/store/apps/details?id=com.tabatatimer"
+    ]
+  }
+}
+</script>
+<style>
+  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#ececef; --muted:#9a9aa0; --rule:#303034; --bg:#131315; --card:#1c1c20; }
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; padding:3rem 1.25rem 5rem;
+    background:var(--bg); color:var(--ink);
+    font:16px/1.75 -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+  }
+  main { max-width:44rem; margin:0 auto; }
+  .lang { font-size:.875rem; color:var(--muted); margin:0 0 2.5rem; }
+  .lang a { margin-right:.75rem; }
+  header { display:flex; gap:1.25rem; align-items:center; margin:0 0 1.5rem; }
+  header img { width:64px; height:64px; border-radius:15px; flex:none; }
+  h1 { font-size:1.5rem; line-height:1.35; margin:0 0 .25rem; letter-spacing:-.01em; }
+  .by { color:var(--muted); font-size:.9rem; margin:0; }
+  .lede { font-size:1.1rem; }
+  h2 { font-size:1.1rem; margin:2.75rem 0 .6rem; padding-top:1.5rem; border-top:1px solid var(--rule); }
+  h3 { font-size:1rem; margin:1.6rem 0 .3rem; }
+  ul, ol { padding-left:1.25rem; }
+  li { margin:.4rem 0; }
+  a { color:inherit; text-decoration-color:var(--accent); text-underline-offset:3px; }
+  .get { display:flex; flex-wrap:wrap; gap:.75rem; margin:1.75rem 0 0; }
+  .get a {
+    display:inline-block; padding:.6rem 1.1rem; border-radius:10px;
+    background:var(--ink); color:var(--bg); text-decoration:none; font-weight:600; font-size:.95rem;
+  }
+  .tablewrap { overflow-x:auto; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+  th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { font-weight:600; color:var(--muted); }
+  tr > th:first-child { min-width:5.5em; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
+  footer a { margin-right:1rem; }
+</style>
+</head>
+<body>
+<main>
+  <p class="lang"><a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a><a href="/simple-interval-timer/" lang="en">English</a></p>
+
+  <header>
+    <img src="/icon.png" alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン" width="64" height="64">
+    <div>
+      <h1>筋トレや HIIT のインターバルを計るシンプルなタイマー</h1>
+      <p class="by">HIIT &amp; Tabata Timer - タバタタイマー · 開発: Takahiro Torii ・ iPhone / iPad / Android ・ 無料</p>
+    </div>
+  </header>
+
+  <p class="lede">HIIT &amp; Tabata Timer - タバタタイマー にある数字は4つだけです。準備時間、運動時間、休憩時間、セット数。決めてスタートを押せば、始めと終わりを声かビープ音で知らせます。トレーニングプランも、動画も、アカウント登録もありません。iPhone・iPad・Android で無料、サブスクリプションもありません。</p>
+
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <h2>設定はこれだけ</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>設定</th><th>iPhone・iPad</th><th>Android</th></tr>
+    <tr><td>準備時間</td><td>5〜120秒</td><td>5〜60秒</td></tr>
+    <tr><td>運動時間</td><td>5〜300秒</td><td>5〜60秒</td></tr>
+    <tr><td>休憩時間</td><td>5〜120秒</td><td>5〜60秒</td></tr>
+    <tr><td>セット数</td><td>2〜40</td><td>2〜20</td></tr>
+  </table>
+  </div>
+  <p>最初は準備10秒、運動20秒、休憩10秒、8セットになっています。タバタ式なら何も設定せず、開いてスタートを押すだけです。</p>
+
+  <h2>よく使われる設定</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>用途</th><th>運動</th><th>休憩</th><th>セット数</th></tr>
+    <tr><td>タバタ式</td><td>20秒</td><td>10秒</td><td>8</td></tr>
+    <tr><td>HIIT（同じ長さ）</td><td>30秒</td><td>30秒</td><td>10</td></tr>
+    <tr><td>HIIT（運動を長めに）</td><td>40秒</td><td>20秒</td><td>8〜12</td></tr>
+    <tr><td>筋トレのサーキット（時間で区切る）</td><td>45秒</td><td>15秒</td><td>種目数 × 周回数</td></tr>
+    <tr><td>筋トレ（時間で区切り、しっかり休む。iPhone）</td><td>40秒</td><td>90秒</td><td>3〜5</td></tr>
+    <tr><td>プランク</td><td>60秒</td><td>30秒</td><td>3〜5</td></tr>
+  </table>
+  </div>
+
+  <h2>筋トレのセット間の休憩に使う場合</h2>
+  <p>このアプリは、1つの運動時間と1つの休憩時間を繰り返します。時間で区切る筋トレに向いています。たとえば、スクワット40秒、休憩90秒、をそのまま繰り返せます。iPhone では休憩を120秒まで設定できます。</p>
+  <p>セットが終わるのを待ってはくれません。セットごとにかかる時間が違い、バーベルを置いたときにタップして休憩を始めたい場合は、そのための休憩タイマーのほうが向いています。</p>
+
+  <h2>シンプルなままにしている理由</h2>
+  <ul>
+    <li>2タップで始められ、そのあとは画面を見なくて済みます。各区間の最後の5秒を声で数えます。</li>
+    <li>画面をロックしても動き続け、音楽の上に重ねて鳴ります。</li>
+    <li>App Store に書かれたレビューで、選んだ理由としていちばん多く挙がるのは「シンプル」です。</li>
+  </ul>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>区間ごとに長さを変えるメニュー、EMOM、AMRAP のモードはありません。すべてのセットが同じ運動時間・休憩時間です。</li>
+    <li>保存できるタイマーは iPhone で5つまで、Android は設定1つです。</li>
+    <li>種目の解説、動画、コーチング、トレーニングプランはありません。</li>
+    <li>Apple Watch と Wear OS のアプリはありません。</li>
+  </ul>
+
+  <h2>よくある質問</h2>
+
+  <h3>筋トレのインターバルを計るシンプルなアプリはありますか？</h3>
+  <p>はい。HIIT &amp; Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、準備時間・運動時間・休憩時間・セット数を決めてスタートを押すだけのタイマーです。トレーニングプラン、動画、アカウント登録、サブスクリプションはなく、無料です。</p>
+
+  <h3>何も設定せずに使えますか？</h3>
+  <p>はい。最初から準備10秒、運動20秒、休憩10秒、8セットの標準のタバタ式になっています。スタートを押すだけです。</p>
+
+  <h3>筋トレのセット間の休憩タイマーとして使えますか？</h3>
+  <p>時間で区切る筋トレなら使えます。1つの運動時間と1つの休憩時間を繰り返し、iPhone では休憩を120秒まで設定できます。セットの終わりにタップして休憩を始める形ではないので、セットごとに長さが変わる場合には向きません。</p>
+
+  <h3>タイマーを複数保存できますか？</h3>
+  <p>iPhone では5つまで保存でき、スワイプで切り替えます。Android は設定1つです。</p>
+
+  <h3>無料ですか？</h3>
+  <p>はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。</p>
+
+  <h2>ほかの使い方</h2>
+  <ul>
+    <li><a href="/ja/boxing-round-timer/">ボクシングのラウンドタイマー</a></li>
+    <li><a href="/ja/team-practice-timer/">部活・クラス用のタイマー</a></li>
+    <li><a href="/ja/offline-interval-timer/">オフラインで使えるタイマー</a></li>
+    <li><a href="/ja/interval-timer-with-beeps/">ビープ音・ホイッスル音のタイマー</a></li>
+    <li><a href="/ja/free-interval-timer-no-subscription/">無料・サブスクなしのタイマー</a></li>
+    <li><a href="/ja/interval-timer-with-music/">音楽を聴きながら使えるタイマー</a></li>
+    <li><a href="/ja/tabata-timer-for-android/">Android のタバタタイマー</a></li>
+    <li><a href="/ja/">アプリの説明</a></li>
+  </ul>
+
+  <h2>ダウンロード</h2>
+  <div class="get">
+    <a href="https://apps.apple.com/jp/app/id1166542235">App Store でダウンロード</a>
+    <a href="https://play.google.com/store/apps/details?id=com.tabatatimer">Google Play で入手</a>
+  </div>
+
+  <footer>
+    <a href="/ja/">HIIT &amp; Tabata Timer - タバタタイマー</a>
+    <a href="/timer/ja/">ブラウザ版タイマー</a>
+    <a href="/privacy.html">プライバシーポリシー</a>
+    <a href="mailto:support@simpletabata.com">お問い合わせ: support@simpletabata.com</a>
+    <span>最終更新 2026年11月25日</span>
+  </footer>
+</main>
+</body>
+</html>

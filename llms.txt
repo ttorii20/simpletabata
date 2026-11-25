@@ -71,4 +71,8 @@ There is no sign-up. The app stores the completion time of each workout under an
 - [Timer for a class or a team](https://simpletabata.com/team-practice-timer/): Bluetooth speaker, whistle beep, settings for circuits and sprints. [日本語](https://simpletabata.com/ja/team-practice-timer/)
 - [Interval timer with beeps](https://simpletabata.com/interval-timer-with-beeps/): the five sounds and when each suits. [日本語](https://simpletabata.com/ja/interval-timer-with-beeps/)
 - [Offline interval timer](https://simpletabata.com/offline-interval-timer/): what works without a connection and what a connection is used for. [日本語](https://simpletabata.com/ja/offline-interval-timer/)
+- [Free, with no subscription](https://simpletabata.com/free-interval-timer-no-subscription/): exactly what is free (everything), that there is no subscription, in-app purchase, trial or account, and the one banner ad. [日本語](https://simpletabata.com/ja/free-interval-timer-no-subscription/)
+- [Interval timer with music](https://simpletabata.com/interval-timer-with-music/): plays over music or a podcast without pausing or lowering it; background and Lock Screen. [日本語](https://simpletabata.com/ja/interval-timer-with-music/)
+- [Tabata timer for Android](https://simpletabata.com/tabata-timer-for-android/): what the Android app (com.tabatatimer, Android 8.0 or later) does and how it differs from the iPhone app. [日本語](https://simpletabata.com/ja/tabata-timer-for-android/)
+- [A simple interval timer](https://simpletabata.com/simple-interval-timer/): the four settings, common settings for HIIT and timed strength sets, and where a tap-to-rest timer suits better. [日本語](https://simpletabata.com/ja/simple-interval-timer/)
 - [Privacy policy](https://simpletabata.com/privacy.html)

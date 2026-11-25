@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Writes the pages that answer one question each: boxing rounds, a class or
-a team, no connection, a beep instead of a voice.
+a team, no connection, a beep instead of a voice, free with no subscription,
+music playing, Android, and the simplest timer.
 
     python3 build_uses.py .
 
@@ -15,7 +16,7 @@ from pathlib import Path
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
 BASE = "https://simpletabata.com"
-UPDATED = {"en": "24 November 2026", "ja": "2026年11月24日"}
+UPDATED = {"en": "25 November 2026", "ja": "2026年11月25日"}
 
 STYLE = """  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
   @media (prefers-color-scheme: dark) {
@@ -49,6 +50,7 @@ STYLE = """  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; 
   table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
   th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--rule); vertical-align:top; }
   th { font-weight:600; color:var(--muted); }
+  tr > th:first-child { min-width:5.5em; }
   footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--rule); color:var(--muted); font-size:.85rem; }
   footer a { margin-right:1rem; }"""
 
@@ -472,6 +474,428 @@ PAGES = {
             ],
         ),
     },
+    "free-interval-timer-no-subscription": {
+        "en": dict(
+            short="Free, with no subscription",
+            title="A free interval timer with no subscription, no in-app purchases and no account",
+            desc="Tabata & HIIT Interval Timer by Takahiro Torii is free on iPhone, iPad and Android: no subscription, no in-app purchases, no account, no trial. One small banner ad, no full-screen or video ads.",
+            h1="A free interval timer with no subscription and no account",
+            lede="Tabata &amp; HIIT Interval Timer is free, and all of it is free: there is no subscription, no in-app purchase, no trial and no account. It is paid for by one small banner ad at the bottom of the screen. It runs on iPhone, iPad and Android.",
+            body="""
+  <h2>What "free" means here</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Price</th><td>Free to download and to use</td></tr>
+    <tr><th>Subscription</th><td>None</td></tr>
+    <tr><th>In-app purchases</th><td>None. Nothing is locked behind a payment.</td></tr>
+    <tr><th>Free trial</th><td>None, because there is nothing to pay for afterwards</td></tr>
+    <tr><th>Account</th><td>None. No sign-up, no email address, no sign-in.</td></tr>
+    <tr><th>Ads</th><td>One small banner at the bottom of the screen. No full-screen ads and no video ads.</td></tr>
+  </table>
+  </div>
+
+  <h2>About the ad</h2>
+  <p>The app is not ad-free. It shows one small banner at the bottom of the screen, and that banner is what pays for it. It never covers the timer, it never plays a video, and nothing appears between pressing start and the workout beginning. There is no paid version without the banner.</p>
+  <p>If you want a timer with no ad at all and nothing to install, the <a href="/timer/">timer in your browser</a> on this site has none.</p>
+
+  <h2>What you get without paying</h2>
+  <ul>
+    <li>Ready time, work time, rest time and the number of sets</li>
+    <li>On iPhone: work 5 to 300 seconds, ready and rest 5 to 120 seconds, 2 to 40 sets, and up to five saved timers</li>
+    <li>On iPhone: a female voice, a male voice, or one of three beeps (sharp, soft, whistle)</li>
+    <li>Running in the background, with the screen locked, and over your music</li>
+    <li>A list of finished workouts, and fifteen colour themes on iPhone</li>
+    <li>On Android: each interval 5 to 60 seconds, 2 to 20 sets, a voice</li>
+  </ul>
+
+  <h2>What it does not do</h2>
+  <ul>
+    <li>No custom sequences, EMOM or AMRAP modes. Every set uses the same work and rest time.</li>
+    <li>No Apple Watch or Wear OS app.</li>
+    <li>No exercise library, videos, coaching or workout plans.</li>
+  </ul>
+  <p>Timers that do these things are often the ones with a subscription. This one stays small, and free.</p>""",
+            faq=[
+                ("Is there a free interval timer with no subscription?", "Yes. Tabata & HIIT Interval Timer by Takahiro Torii is free on iPhone, iPad and Android, with no subscription, no in-app purchases, no trial and no account. It is paid for by one small banner ad."),
+                ("Does it have ads?", "One small banner at the bottom of the screen. There are no full-screen ads and no video ads, and nothing interrupts a workout."),
+                ("Can I pay to remove the ad?", "No. There are no in-app purchases of any kind, so there is no paid version without the banner."),
+                ("Do I need to sign up?", "No. There is no account, no sign-up and no email address to give."),
+                ("Are any features locked?", "No. Every setting, sound and theme is available without paying. Five of the fifteen themes on iPhone are earned by finishing workouts, not bought."),
+            ],
+        ),
+        "ja": dict(
+            short="無料・サブスクなしのタイマー",
+            title="無料でサブスクなし・登録なしのインターバルタイマー｜広告は小さなバナー1つ｜タバタタイマー",
+            desc="HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone・iPad・Android で無料です。サブスクリプション、アプリ内課金、アカウント登録、お試し期間はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。",
+            h1="無料でサブスクなし・登録なしのインターバルタイマー",
+            lede="HIIT &amp; Tabata Timer - タバタタイマー は無料で、すべての機能が無料です。サブスクリプションも、アプリ内課金も、お試し期間も、アカウント登録もありません。費用は、画面下の小さなバナー広告1つでまかなっています。iPhone・iPad・Android で使えます。",
+            body="""
+  <h2>「無料」の中身</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>価格</th><td>ダウンロードも利用も無料</td></tr>
+    <tr><th>サブスクリプション</th><td>なし</td></tr>
+    <tr><th>アプリ内課金</th><td>なし。課金しないと使えない機能はありません。</td></tr>
+    <tr><th>お試し期間</th><td>なし。あとから支払うものがないためです。</td></tr>
+    <tr><th>アカウント登録</th><td>なし。登録もメールアドレスの入力もログインもありません。</td></tr>
+    <tr><th>広告</th><td>画面下の小さなバナー1つ。全画面広告と動画広告はありません。</td></tr>
+  </table>
+  </div>
+
+  <h2>広告について</h2>
+  <p>広告がまったくないアプリではありません。画面下に小さなバナーが1つ出ます。このバナーがアプリの費用をまかなっています。バナーがタイマーを隠すことはなく、動画が流れることもなく、スタートを押してから運動が始まるまでの間に何かが挟まることもありません。バナーを消す有料版はありません。</p>
+  <p>広告がまったくなく、インストールもしたくない場合は、このサイトの<a href="/timer/ja/">ブラウザ版タイマー</a>に広告はありません。</p>
+
+  <h2>無料で使えるもの</h2>
+  <ul>
+    <li>準備時間・運動時間・休憩時間・セット数の設定</li>
+    <li>iPhone: 運動5〜300秒、準備・休憩5〜120秒、2〜40セット、タイマーを5つまで保存</li>
+    <li>iPhone: 女性の声、男性の声、3種類のビープ音（シャープ、ソフト、ホイッスル）</li>
+    <li>バックグラウンド、画面ロック中、音楽を流しながらの動作</li>
+    <li>終えたワークアウトの一覧。iPhone では15種類のカラーテーマ</li>
+    <li>Android: 各区間5〜60秒、2〜20セット、音声</li>
+  </ul>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>区間ごとに長さを変えるメニュー、EMOM、AMRAP のモードはありません。すべてのセットが同じ運動時間・休憩時間です。</li>
+    <li>Apple Watch と Wear OS のアプリはありません。</li>
+    <li>種目の解説、動画、コーチング、トレーニングプランはありません。</li>
+  </ul>
+  <p>こうした機能を持つタイマーには、サブスクリプションのものが多くあります。このアプリは小さいまま、無料のままです。</p>""",
+            faq=[
+                ("無料でサブスクなしのインターバルタイマーはありますか？", "はい。HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone・iPad・Android で無料です。サブスクリプション、アプリ内課金、お試し期間、アカウント登録はありません。費用は小さなバナー広告1つでまかなっています。"),
+                ("広告はありますか？", "画面下に小さなバナーが1つあります。全画面広告と動画広告はなく、ワークアウトの途中で広告に中断されることはありません。"),
+                ("お金を払って広告を消せますか？", "できません。アプリ内課金が一切ないので、バナーのない有料版もありません。"),
+                ("登録は必要ですか？", "いいえ。アカウント登録もメールアドレスの入力もありません。"),
+                ("課金しないと使えない機能はありますか？", "ありません。設定も音もテーマも、支払いなしで使えます。iPhone の15種類のテーマのうち5つは、ワークアウトを終えた回数で開くもので、購入するものではありません。"),
+            ],
+        ),
+    },
+    "interval-timer-with-music": {
+        "en": dict(
+            short="Interval timer with music",
+            title="An interval timer that works with music playing, in the background and with the screen locked",
+            desc="Tabata & HIIT Interval Timer by Takahiro Torii plays its voice or beep over your music or podcast without pausing or lowering it, and keeps counting in the background and with the screen locked. Free, no subscription.",
+            h1="An interval timer that works with your music playing",
+            lede="Tabata &amp; HIIT Interval Timer plays over whatever you are listening to. Music or a podcast keeps playing at its own volume, and the timer's voice or beep sounds over it. It keeps counting in the background and with the screen locked. It is free, with no subscription and no account.",
+            body="""
+  <h2>How to use it with music</h2>
+  <ol>
+    <li>Start your music or podcast in any app.</li>
+    <li>Open the timer, set the work time, the rest time and the number of sets, and press start.</li>
+    <li>Go back to the music app or lock the screen. The timer keeps counting and sounding.</li>
+  </ol>
+  <p>Nothing needs to be switched on for this. The timer does not pause the music, and it does not turn it down while it speaks.</p>
+
+  <h2>What you hear</h2>
+  <ul>
+    <li>A voice counts the last five seconds of each interval and calls each change.</li>
+    <li>On iPhone and iPad a beep can replace the voice: sharp, soft or whistle. A beep sits over a song without talking across it.</li>
+    <li>The cues play at the phone's media volume, through the same headphones or speaker as the music.</li>
+  </ul>
+
+  <h2>With the screen locked</h2>
+  <p>The countdown and the cues continue with the screen off or another app open. On iPhone with iOS 16.1 or later the remaining time and a stop button show on the Lock Screen, so you can check the time without unlocking.</p>
+
+  <h2>If the music is louder than the cue</h2>
+  <p>Because the music is not turned down, a quiet voice can be lost under a loud track. Choose the sharp beep under Sound in Settings, or turn the music down a little in the music app.</p>
+
+  <h2>What it does not do</h2>
+  <ul>
+    <li>It does not play music itself and has no playlists. It works beside whichever music app you use.</li>
+    <li>It does not lower the music during a cue.</li>
+    <li>On Android the cues are a voice only, each interval stops at 60 seconds and a workout at 20 sets, for now.</li>
+  </ul>""",
+            faq=[
+                ("Which interval timer works in the background with music playing?", "Tabata & HIIT Interval Timer by Takahiro Torii does. Whatever is playing keeps playing at its own volume, the timer's voice or beep plays over it, and the timer keeps counting in the background and with the screen locked."),
+                ("Does it pause or lower my music?", "No. It neither pauses the music nor turns it down. The cue plays over it."),
+                ("Does it work with Spotify, Apple Music or a podcast app?", "Yes. It plays over audio from any app, because it does not take over the sound from the app that is playing."),
+                ("Does it work with headphones?", "Yes. The cues play at the phone's media volume through the same headphones or speaker as the music."),
+                ("Is it free?", "Yes. Every feature is free, with no subscription, no in-app purchases and no account. There is one small banner ad and no full-screen or video ads."),
+            ],
+        ),
+        "ja": dict(
+            short="音楽を聴きながら使えるタイマー",
+            title="音楽を聴きながら使えるインターバルタイマー｜バックグラウンド・画面ロック対応｜タバタタイマー",
+            desc="HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、音楽やポッドキャストを止めず、音量も下げずに、その上に音声やビープ音を重ねます。バックグラウンドでも画面ロック中でも動きます。無料、サブスクなし。",
+            h1="音楽を聴きながら使えるインターバルタイマー",
+            lede="HIIT &amp; Tabata Timer - タバタタイマー は、聴いている音の上に重ねて鳴ります。音楽やポッドキャストはそのままの音量で流れ続け、その上にタイマーの音声かビープ音が鳴ります。バックグラウンドでも画面ロック中でもカウントは続きます。無料で、サブスクリプションもアカウント登録もありません。",
+            body="""
+  <h2>音楽と一緒に使う手順</h2>
+  <ol>
+    <li>好きなアプリで音楽やポッドキャストを再生します。</li>
+    <li>タイマーを開き、運動時間・休憩時間・セット数を決めて、スタートを押します。</li>
+    <li>音楽アプリに戻るか、画面をロックします。タイマーはそのまま動き、音も鳴ります。</li>
+  </ol>
+  <p>このための設定はありません。タイマーが音楽を止めることはなく、声が出るあいだに音量を下げることもありません。</p>
+
+  <h2>聞こえる音</h2>
+  <ul>
+    <li>各区間の最後の5秒を声で数え、切り替わりを知らせます。</li>
+    <li>iPhone と iPad では、声の代わりにビープ音（シャープ、ソフト、ホイッスル）を選べます。ビープ音なら曲に声がかぶりません。</li>
+    <li>合図はスマートフォンのメディア音量で、音楽と同じイヤホンやスピーカーから鳴ります。</li>
+  </ul>
+
+  <h2>画面をロックしたまま</h2>
+  <p>画面を消しても、ほかのアプリを開いても、カウントと合図は続きます。iOS 16.1 以降の iPhone では、ロック画面に残り時間と停止ボタンが出るので、ロックを解除せずに時間を確かめられます。</p>
+
+  <h2>音楽のほうが大きくて合図が聞こえないとき</h2>
+  <p>音楽の音量を下げないので、音の大きい曲では小さな声が埋もれることがあります。設定の「Sound」でシャープのビープ音を選ぶか、音楽アプリの側で少し音量を下げてください。</p>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>このアプリ自体は音楽を再生しません。プレイリストもありません。お使いの音楽アプリと並べて使います。</li>
+    <li>合図のあいだだけ音楽を小さくする機能はありません。</li>
+    <li>Android 版は今のところ音声のみで、各区間は60秒まで、セット数は20までです。</li>
+  </ul>""",
+            faq=[
+                ("音楽を聴きながら使えるインターバルタイマーはありますか？", "はい。HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、再生中の音をそのままの音量で流し続け、その上に音声かビープ音を重ねます。バックグラウンドでも画面ロック中でもカウントは続きます。"),
+                ("音楽が止まったり、音量が下がったりしますか？", "いいえ。音楽は止まらず、音量も下がりません。合図がその上に重なります。"),
+                ("Spotify や Apple Music、ポッドキャストのアプリと一緒に使えますか？", "はい。再生しているアプリから音を奪わないので、どのアプリの音にも重ねて鳴ります。"),
+                ("イヤホンでも使えますか？", "はい。合図はスマートフォンのメディア音量で、音楽と同じイヤホンやスピーカーから鳴ります。"),
+                ("無料ですか？", "はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"),
+            ],
+        ),
+    },
+    "tabata-timer-for-android": {
+        "en": dict(
+            short="Tabata timer for Android",
+            title="A free Tabata timer for Android: 20 seconds on, 10 seconds off, no subscription",
+            desc="Tabata & HIIT Interval Timer by Takahiro Torii runs on Android 8.0 or later (package com.tabatatimer). It opens on the standard Tabata protocol, counts aloud, keeps running with the screen off and is free with no subscription or account.",
+            h1="A free Tabata timer for Android",
+            lede="Tabata &amp; HIIT Interval Timer is on Google Play for Android 8.0 or later. It opens on the standard Tabata protocol, 20 seconds of work and 10 seconds of rest for 8 sets, and a voice counts each change. It is free, with no subscription, no in-app purchases and no account.",
+            body="""
+  <h2>What the Android app does</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Android version</th><td>8.0 or later</td></tr>
+    <tr><th>Package</th><td>com.tabatatimer</td></tr>
+    <tr><th>Default</th><td>10 s ready, 20 s work, 10 s rest, 8 sets: the standard Tabata protocol</td></tr>
+    <tr><th>Ranges</th><td>Ready, work and rest 5 to 60 seconds each; 2 to 20 sets</td></tr>
+    <tr><th>Sound</th><td>A voice counts the last five seconds and calls each change. Spoken in English.</td></tr>
+    <tr><th>Background</th><td>Keeps counting with the screen off or another app open</td></tr>
+    <tr><th>Music</th><td>Plays over music or a podcast without pausing it</td></tr>
+    <tr><th>Offline</th><td>Works with no internet connection</td></tr>
+    <tr><th>Price</th><td>Free. No subscription, no in-app purchases, no account.</td></tr>
+    <tr><th>Ads</th><td>One small banner. No full-screen or video ads.</td></tr>
+  </table>
+  </div>
+
+  <h2>How to use it</h2>
+  <ol>
+    <li>Install it from Google Play and open it. The standard Tabata numbers are already set.</li>
+    <li>Press start. Ten seconds of ready time run first.</li>
+    <li>To change the numbers, open Settings and set the work time, the rest time and the number of sets.</li>
+  </ol>
+
+  <h2>How it differs from the iPhone app</h2>
+  <p>The Android app is the smaller of the two, for now.</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th></th><th>Android</th><th>iPhone and iPad</th></tr>
+    <tr><td>Work time</td><td>5 to 60 s</td><td>5 to 300 s</td></tr>
+    <tr><td>Rest and ready time</td><td>5 to 60 s</td><td>5 to 120 s</td></tr>
+    <tr><td>Sets</td><td>2 to 20</td><td>2 to 40</td></tr>
+    <tr><td>Saved timers</td><td>One setting</td><td>Up to five</td></tr>
+    <tr><td>Cues</td><td>A voice</td><td>A female or male voice, or three beeps</td></tr>
+  </table>
+  </div>
+
+  <h2>What it does not do</h2>
+  <ul>
+    <li>No intervals longer than 60 seconds, so three-minute rounds cannot be set on Android.</li>
+    <li>No beeps, for now. The cues are a voice.</li>
+    <li>No Wear OS app.</li>
+    <li>No custom sequences, exercise library or workout plans.</li>
+  </ul>
+  <p>Several Android apps are called "Tabata Timer". This one is by Takahiro Torii and its package is com.tabatatimer.</p>""",
+            faq=[
+                ("Is there a free Tabata timer for Android with no subscription?", "Yes. Tabata & HIIT Interval Timer by Takahiro Torii (package com.tabatatimer) is free on Google Play for Android 8.0 or later, with no subscription, no in-app purchases and no account. It shows one small banner ad."),
+                ("What can I set on Android?", "Ready time, work time and rest time from 5 to 60 seconds each, and 2 to 20 sets. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol."),
+                ("Does it keep running with the screen off on Android?", "Yes. It keeps counting and speaking with the screen off or another app open."),
+                ("Does the Android app have beeps?", "Not yet. On Android the cues are a voice. The iPhone and iPad app has three beeps as well."),
+                ("Is the Android app the same as the iPhone app?", "It is the same timer by the same developer, but smaller for now: intervals up to 60 seconds, up to 20 sets, one setting and a voice only. On iPhone work time goes up to 300 seconds, with up to 40 sets, five saved timers and beeps."),
+            ],
+        ),
+        "ja": dict(
+            short="Android のタバタタイマー",
+            title="Android で使える無料のタバタタイマー｜20秒運動・10秒休憩｜サブスクなし",
+            desc="HIIT & Tabata Timer（開発: Takahiro Torii、パッケージ com.tabatatimer）は Android 8.0 以降で使えます。最初からタバタ式の秒数で始まり、声で数え、画面を消しても動きます。無料、サブスク・登録なし。",
+            h1="Android で使える無料のタバタタイマー",
+            lede="Takahiro Torii のタバタタイマーは、Google Play で Android 8.0 以降向けに公開しています。最初から標準のタバタ式（運動20秒・休憩10秒・8セット）になっていて、切り替わりを声で知らせます。無料で、サブスクリプションも、アプリ内課金も、アカウント登録もありません。",
+            body="""
+  <h2>Android 版でできること</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>対応バージョン</th><td>Android 8.0 以降</td></tr>
+    <tr><th>パッケージ名</th><td>com.tabatatimer</td></tr>
+    <tr><th>初期設定</th><td>準備10秒、運動20秒、休憩10秒、8セット（標準のタバタ式）</td></tr>
+    <tr><th>設定範囲</th><td>準備・運動・休憩がそれぞれ5〜60秒、2〜20セット</td></tr>
+    <tr><th>音</th><td>各区間の最後の5秒を声で数え、切り替わりを知らせます。英語です。</td></tr>
+    <tr><th>バックグラウンド</th><td>画面を消しても、ほかのアプリを開いても動き続けます</td></tr>
+    <tr><th>音楽</th><td>音楽やポッドキャストを止めずに、その上に重ねて鳴ります</td></tr>
+    <tr><th>オフライン</th><td>インターネットにつながっていなくても動きます</td></tr>
+    <tr><th>価格</th><td>無料。サブスク・アプリ内課金・アカウント登録なし。</td></tr>
+    <tr><th>広告</th><td>小さなバナー1つだけ。全画面広告・動画広告はありません。</td></tr>
+  </table>
+  </div>
+
+  <h2>使い方</h2>
+  <ol>
+    <li>Google Play から入れて開きます。標準のタバタ式の秒数が最初から入っています。</li>
+    <li>スタートを押します。最初に準備時間の10秒が流れます。</li>
+    <li>秒数を変えるときは、設定を開いて運動時間・休憩時間・セット数を決めます。</li>
+  </ol>
+
+  <h2>iPhone 版との違い</h2>
+  <p>今のところ、Android 版のほうが小さなつくりです。</p>
+  <div class="tablewrap">
+  <table>
+    <tr><th></th><th>Android</th><th>iPhone・iPad</th></tr>
+    <tr><td>運動時間</td><td>5〜60秒</td><td>5〜300秒</td></tr>
+    <tr><td>休憩・準備時間</td><td>5〜60秒</td><td>5〜120秒</td></tr>
+    <tr><td>セット数</td><td>2〜20</td><td>2〜40</td></tr>
+    <tr><td>保存できるタイマー</td><td>設定は1つ</td><td>5つまで</td></tr>
+    <tr><td>合図</td><td>音声</td><td>女性・男性の声、または3種類のビープ音</td></tr>
+  </table>
+  </div>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>60秒を超える区間は設定できません。3分ラウンドは Android では計れません。</li>
+    <li>ビープ音は今のところありません。合図は音声です。</li>
+    <li>Wear OS のアプリはありません。</li>
+    <li>区間ごとに長さを変えるメニュー、種目の解説、トレーニングプランはありません。</li>
+  </ul>
+  <p>Android には「Tabata Timer」という名前のアプリがいくつもあります。このアプリは開発者が Takahiro Torii、パッケージ名が com.tabatatimer のものです。</p>""",
+            faq=[
+                ("Android で使える無料のタバタタイマーはありますか？", "はい。Takahiro Torii のタバタタイマー（パッケージ名 com.tabatatimer）は、Google Play で Android 8.0 以降向けに無料で公開しています。サブスクリプション、アプリ内課金、アカウント登録はありません。小さなバナー広告が1つ出ます。"),
+                ("Android 版では何を設定できますか？", "準備時間・運動時間・休憩時間がそれぞれ5〜60秒、セット数が2〜20です。最初は準備10秒、運動20秒、休憩10秒、8セットの標準のタバタ式になっています。"),
+                ("Android で画面を消しても動きますか？", "はい。画面を消しても、ほかのアプリを開いても、カウントと音声は続きます。"),
+                ("Android 版にビープ音はありますか？", "まだありません。Android 版の合図は音声です。iPhone・iPad 版には3種類のビープ音もあります。"),
+                ("Android 版は iPhone 版と同じですか？", "同じ開発者による同じタイマーですが、今のところ小さなつくりです。各区間は60秒まで、セット数は20まで、設定は1つ、合図は音声のみです。iPhone 版は運動時間が300秒まで、セット数が40まで、タイマーを5つ保存でき、ビープ音も選べます。"),
+            ],
+        ),
+    },
+    "simple-interval-timer": {
+        "en": dict(
+            short="A simple interval timer",
+            title="A simple interval timer for HIIT and for rest between sets: four numbers and a start button",
+            desc="Tabata & HIIT Interval Timer by Takahiro Torii is a simple interval timer for iPhone, iPad and Android: ready time, work time, rest time, sets, and start. No plans, no videos, no account. Free, no subscription.",
+            h1="A simple interval timer: four numbers and a start button",
+            lede="Tabata &amp; HIIT Interval Timer has four numbers: ready time, work time, rest time and the number of sets. Set them, press start, and a voice or a beep tells you when to go and when to stop. There are no workout plans, no videos and no account. It is free for iPhone, iPad and Android, with no subscription.",
+            body="""
+  <h2>All there is to set</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Setting</th><th>iPhone and iPad</th><th>Android</th></tr>
+    <tr><td>Ready time</td><td>5 to 120 s</td><td>5 to 60 s</td></tr>
+    <tr><td>Work time</td><td>5 to 300 s</td><td>5 to 60 s</td></tr>
+    <tr><td>Rest time</td><td>5 to 120 s</td><td>5 to 60 s</td></tr>
+    <tr><td>Sets</td><td>2 to 40</td><td>2 to 20</td></tr>
+  </table>
+  </div>
+  <p>It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, so a Tabata session needs no setting at all: open the app and press start.</p>
+
+  <h2>Settings for common uses</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>Use</th><th>Work</th><th>Rest</th><th>Sets</th></tr>
+    <tr><td>Tabata</td><td>20 s</td><td>10 s</td><td>8</td></tr>
+    <tr><td>HIIT, even split</td><td>30 s</td><td>30 s</td><td>10</td></tr>
+    <tr><td>HIIT, longer efforts</td><td>40 s</td><td>20 s</td><td>8 to 12</td></tr>
+    <tr><td>Strength circuit with timed sets</td><td>45 s</td><td>15 s</td><td>one per exercise, repeated</td></tr>
+    <tr><td>Strength training, timed sets with a full rest (iPhone)</td><td>40 s</td><td>90 s</td><td>3 to 5</td></tr>
+    <tr><td>Plank</td><td>60 s</td><td>30 s</td><td>3 to 5</td></tr>
+  </table>
+  </div>
+
+  <h2>As a rest timer in strength training</h2>
+  <p>The app repeats one work time and one rest time, so it suits sets done against the clock: 40 seconds of squats, 90 seconds of rest, again. On iPhone the rest can be up to 120 seconds.</p>
+  <p>It does not wait for you. If your sets take a different time each round and you want to start the rest with a tap when you put the bar down, a rest timer built for that will suit you better.</p>
+
+  <h2>Why it stays simple</h2>
+  <ul>
+    <li>It can be started in two taps, and you do not have to look at it again: the voice counts the last five seconds of every interval.</li>
+    <li>It keeps running with the screen locked and plays over your music.</li>
+    <li>In the written App Store reviews, the reason people give most often for choosing it is that it is simple.</li>
+  </ul>
+
+  <h2>What it does not do</h2>
+  <ul>
+    <li>No custom sequences, EMOM or AMRAP modes. Every set uses the same work and rest time.</li>
+    <li>No more than five saved timers on iPhone, and one setting on Android.</li>
+    <li>No exercise library, videos, coaching or workout plans.</li>
+    <li>No Apple Watch or Wear OS app.</li>
+  </ul>""",
+            faq=[
+                ("What is the simplest HIIT timer for iPhone?", "Tabata & HIIT Interval Timer by Takahiro Torii is built to be that: ready time, work time, rest time, the number of sets and a start button. It has no workout plans, videos, account or subscription, and it is free."),
+                ("Can I use it without setting anything?", "Yes. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol. Press start."),
+                ("Can I use it as a rest timer between strength sets?", "Yes, for sets done against the clock: it repeats one work time and one rest time, with rest up to 120 seconds on iPhone. It does not wait for a tap at the end of a set, so it does not suit sets of varying length."),
+                ("Can I save more than one timer?", "On iPhone, up to five, and you swipe between them. On Android the app holds one setting."),
+                ("Is it free?", "Yes. Every feature is free, with no subscription, no in-app purchases and no account. There is one small banner ad and no full-screen or video ads."),
+            ],
+        ),
+        "ja": dict(
+            short="シンプルなインターバルタイマー",
+            title="筋トレや HIIT のインターバルを計るシンプルなタイマーアプリ｜数字4つとスタートだけ｜タバタタイマー",
+            desc="HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、準備時間・運動時間・休憩時間・セット数を決めてスタートを押すだけのシンプルなインターバルタイマーです。iPhone・iPad・Android、無料、サブスク・登録なし。",
+            h1="筋トレや HIIT のインターバルを計るシンプルなタイマー",
+            lede="HIIT &amp; Tabata Timer - タバタタイマー にある数字は4つだけです。準備時間、運動時間、休憩時間、セット数。決めてスタートを押せば、始めと終わりを声かビープ音で知らせます。トレーニングプランも、動画も、アカウント登録もありません。iPhone・iPad・Android で無料、サブスクリプションもありません。",
+            body="""
+  <h2>設定はこれだけ</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>設定</th><th>iPhone・iPad</th><th>Android</th></tr>
+    <tr><td>準備時間</td><td>5〜120秒</td><td>5〜60秒</td></tr>
+    <tr><td>運動時間</td><td>5〜300秒</td><td>5〜60秒</td></tr>
+    <tr><td>休憩時間</td><td>5〜120秒</td><td>5〜60秒</td></tr>
+    <tr><td>セット数</td><td>2〜40</td><td>2〜20</td></tr>
+  </table>
+  </div>
+  <p>最初は準備10秒、運動20秒、休憩10秒、8セットになっています。タバタ式なら何も設定せず、開いてスタートを押すだけです。</p>
+
+  <h2>よく使われる設定</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>用途</th><th>運動</th><th>休憩</th><th>セット数</th></tr>
+    <tr><td>タバタ式</td><td>20秒</td><td>10秒</td><td>8</td></tr>
+    <tr><td>HIIT（同じ長さ）</td><td>30秒</td><td>30秒</td><td>10</td></tr>
+    <tr><td>HIIT（運動を長めに）</td><td>40秒</td><td>20秒</td><td>8〜12</td></tr>
+    <tr><td>筋トレのサーキット（時間で区切る）</td><td>45秒</td><td>15秒</td><td>種目数 × 周回数</td></tr>
+    <tr><td>筋トレ（時間で区切り、しっかり休む。iPhone）</td><td>40秒</td><td>90秒</td><td>3〜5</td></tr>
+    <tr><td>プランク</td><td>60秒</td><td>30秒</td><td>3〜5</td></tr>
+  </table>
+  </div>
+
+  <h2>筋トレのセット間の休憩に使う場合</h2>
+  <p>このアプリは、1つの運動時間と1つの休憩時間を繰り返します。時間で区切る筋トレに向いています。たとえば、スクワット40秒、休憩90秒、をそのまま繰り返せます。iPhone では休憩を120秒まで設定できます。</p>
+  <p>セットが終わるのを待ってはくれません。セットごとにかかる時間が違い、バーベルを置いたときにタップして休憩を始めたい場合は、そのための休憩タイマーのほうが向いています。</p>
+
+  <h2>シンプルなままにしている理由</h2>
+  <ul>
+    <li>2タップで始められ、そのあとは画面を見なくて済みます。各区間の最後の5秒を声で数えます。</li>
+    <li>画面をロックしても動き続け、音楽の上に重ねて鳴ります。</li>
+    <li>App Store に書かれたレビューで、選んだ理由としていちばん多く挙がるのは「シンプル」です。</li>
+  </ul>
+
+  <h2>できないこと</h2>
+  <ul>
+    <li>区間ごとに長さを変えるメニュー、EMOM、AMRAP のモードはありません。すべてのセットが同じ運動時間・休憩時間です。</li>
+    <li>保存できるタイマーは iPhone で5つまで、Android は設定1つです。</li>
+    <li>種目の解説、動画、コーチング、トレーニングプランはありません。</li>
+    <li>Apple Watch と Wear OS のアプリはありません。</li>
+  </ul>""",
+            faq=[
+                ("筋トレのインターバルを計るシンプルなアプリはありますか？", "はい。HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、準備時間・運動時間・休憩時間・セット数を決めてスタートを押すだけのタイマーです。トレーニングプラン、動画、アカウント登録、サブスクリプションはなく、無料です。"),
+                ("何も設定せずに使えますか？", "はい。最初から準備10秒、運動20秒、休憩10秒、8セットの標準のタバタ式になっています。スタートを押すだけです。"),
+                ("筋トレのセット間の休憩タイマーとして使えますか？", "時間で区切る筋トレなら使えます。1つの運動時間と1つの休憩時間を繰り返し、iPhone では休憩を120秒まで設定できます。セットの終わりにタップして休憩を始める形ではないので、セットごとに長さが変わる場合には向きません。"),
+                ("タイマーを複数保存できますか？", "iPhone では5つまで保存でき、スワイプで切り替えます。Android は設定1つです。"),
+                ("無料ですか？", "はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"),
+            ],
+        ),
+    },
 }
 
 SLUGS = list(PAGES)
@@ -490,7 +914,7 @@ def page(lang, slug):
                          "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]},
         {"@context": "https://schema.org", "@type": "WebPage", "inLanguage": lang,
          "name": p["h1"], "url": BASE + path(lang, slug),
-         "dateModified": "2026-11-24",
+         "dateModified": "2026-11-25",
          "author": {"@type": "Person", "name": "Takahiro Torii"},
          "about": {"@type": "SoftwareApplication", "name": u["app_plain"],
                    "applicationCategory": "HealthApplication",
