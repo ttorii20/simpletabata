@@ -668,8 +668,8 @@ for rel in ("index.html", "ja/index.html"):
     s = re.sub(r'<p class="lang">.*?</p>', NAV, s, count=1, flags=re.S)
     f.write_text(s, encoding="utf-8")
 
-USE_SLUGS = ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer")
-urls = [(p, "2026-11-26" if p in ("/fr/", "/de/") else "2026-11-23") for _, _, p in ALL] + [("/timer/", "2026-11-24"), ("/timer/ja/", "2026-11-24")] + [(pre + slug + "/", "2026-11-25") for slug in ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer") for pre in ("/", "/ja/")] + [(pre + slug + "/", "2026-11-26") for slug in USE_SLUGS for pre in ("/fr/", "/de/")] + [("/privacy.html", "2026-11-23")]
+USE_SLUGS = ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer", "tabata-timer-apps-compared")
+urls = [(p, "2026-11-26" if p in ("/fr/", "/de/") else "2026-11-23") for _, _, p in ALL] + [("/timer/", "2026-11-24"), ("/timer/ja/", "2026-11-24")] + [(pre + slug + "/", "2026-11-26") for slug in ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer", "tabata-timer-apps-compared") for pre in ("/", "/ja/")] + [(pre + slug + "/", "2026-11-26") for slug in USE_SLUGS for pre in ("/fr/", "/de/")] + [("/privacy.html", "2026-11-23")]
 (SITE / "sitemap.xml").write_text(
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
