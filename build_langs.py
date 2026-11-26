@@ -28,7 +28,7 @@ L["fr"] = dict(
     ogdesc="Un minuteur d'intervalles gratuit et simple pour iPhone et Android. Décompte vocal, arrière-plan, sans compte ni abonnement.",
     alt="Icône de l'app Minuteur Sport HIIT & Tabata",
     by="par Takahiro Torii · iPhone, iPad et Android · gratuit",
-    summary="Minuteur Sport HIIT & Tabata est une app de minuteur d'intervalles pour iPhone et iPad (iOS 15 ou version ultérieure) et Android (8.0 ou version ultérieure), créée par Takahiro Torii. Elle est gratuite, avec une seule petite bannière publicitaire : pas d'abonnement, pas d'achats intégrés, pas de compte. Sur iPhone, l'effort se règle de 5 à 300 secondes, la préparation et le repos de 5 à 120 secondes, et le nombre de séries de 2 à 40 ; on peut enregistrer jusqu'à cinq minuteurs, et le signal est une voix féminine ou masculine, ou l'un des trois bips (aigu, doux, sifflet). Sur Android, chaque intervalle dure de 5 à 60 secondes, une séance compte de 2 à 20 séries, seule la voix est disponible et l'app garde un seul réglage. Dernière mise à jour : 23 novembre 2026, pour la version 1.8.2 sur iPhone.",
+    summary="Minuteur Sport HIIT & Tabata est une app de minuteur d'intervalles pour iPhone et iPad (iOS 15 ou version ultérieure) et Android (8.0 ou version ultérieure), créée par Takahiro Torii. Elle est gratuite, avec une seule petite bannière publicitaire : pas d'abonnement, pas d'achats intégrés, pas de compte. Sur iPhone, l'effort se règle de 5 à 300 secondes, la préparation et le repos de 5 à 120 secondes, et le nombre de séries de 2 à 40 ; on peut enregistrer jusqu'à cinq minuteurs, et le signal est une voix féminine ou masculine, ou l'un des trois bips (aigu, doux, sifflet). Sur Android, chaque intervalle dure de 5 à 60 secondes, une séance compte de 2 à 20 séries, seule la voix est disponible et l'app garde un seul réglage. Dernière mise à jour : 26 novembre 2026, pour la version 1.8.2 sur iPhone.",
     lede="Un minuteur d'intervalles tout simple. Réglez le temps d'effort, le temps de repos et le nombre de séries, puis appuyez sur démarrer. Une voix compte les cinq dernières secondes et annonce chaque changement : vous n'avez jamais besoin de regarder l'écran pendant l'entraînement.",
     p2="Il ne fait qu'une chose. Pas de programmes d'entraînement, pas de vidéos, pas de compte, pas d'abonnement. Il est sur l'App Store depuis 2016 ; ailleurs, il s'appelle « Tabata & HIIT Interval Timer », et au Japon",
     appstore="Télécharger dans l'App Store", play="Disponible sur Google Play",
@@ -54,6 +54,7 @@ L["fr"] = dict(
           "Burpees, gainage, mountain climbers, sprints",
           "Étirements, mobilité, renforcement du tronc",
           "Rounds de boxe, corde à sauter, vélo d'appartement"],
+    uses_more="Certains usages et certaines questions ont leur propre page :",
     uses_p="Dans les avis écrits sur l'App Store, la raison la plus souvent donnée pour l'avoir choisi est sa simplicité. Environ un tiers des avis le disent, souvent après avoir essayé un minuteur plus chargé en fonctions.",
     h_not="Ce qu'il ne fait pas",
     not_p="Autant le dire clairement, car c'est ce qui détermine si l'app vous convient.",
@@ -78,7 +79,7 @@ L["fr"] = dict(
     privacy_link="Voir la <a href=\"/privacy.html\">politique de confidentialité</a> (en anglais et en japonais).",
     h_get="Obtenir l'app",
     note="Plusieurs apps portent un nom proche. Celle-ci est publiée par Takahiro Torii ; son identifiant App Store est 1166542235 et son paquet Android <code>com.tabatatimer</code>.",
-    privacy="Politique de confidentialité", contact="Contact", updated="Dernière mise à jour : 23 novembre 2026",
+    privacy="Politique de confidentialité", contact="Contact", updated="Dernière mise à jour : 26 novembre 2026",
     rating=("4,8", "71"), store="fr",
 )
 
@@ -115,6 +116,7 @@ L["de"] = dict(
           "Burpees, Planks, Mountain Climbers, Sprints",
           "Dehnen, Mobility und Rumpftraining",
           "Boxrunden, Seilspringen, Heimtrainer und Spinning"],
+    uses_more="Einige Einsatzzwecke und Fragen haben eine eigene Seite:",
     uses_p="In den geschriebenen App-Store-Rezensionen wird als Grund für die Wahl am häufigsten genannt, dass er einfach ist. Etwa ein Drittel schreibt das, meist nachdem ein Timer mit mehr Funktionen ausprobiert wurde.",
     h_not="Was er nicht kann",
     not_p="Das sei offen gesagt, denn davon hängt ab, ob die App zu Ihnen passt.",
@@ -139,7 +141,7 @@ L["de"] = dict(
     privacy_link="Siehe die <a href=\"/privacy.html\">Datenschutzerklärung</a> (auf Englisch und Japanisch).",
     h_get="App laden",
     note="Mehrere Apps heißen ähnlich. Diese hier stammt von Takahiro Torii; die App-Store-ID lautet 1166542235, das Android-Paket <code>com.tabatatimer</code>.",
-    privacy="Datenschutzerklärung", contact="Kontakt", updated="Zuletzt aktualisiert: 23. November 2026",
+    privacy="Datenschutzerklärung", contact="Kontakt", updated="Zuletzt aktualisiert: 26. November 2026",
     rating=("4,7", "104"), store="de",
 )
 
@@ -537,6 +539,12 @@ def page(code, t):
         f"    <tr><th>{e(k)}</th><td>{e(v.format(r=r, n=n))}</td></tr>" for k, v in t["rows"])
     uses = "\n".join(f"    <li>{e(x)}</li>" for x in t["uses"])
     nots = "\n".join(f"    <li>{e(x)}</li>" for x in t["nots"])
+    more = ""
+    if "uses_more" in t:  # languages that have the use-case pages (build_uses.py)
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        mod = __import__("uses_" + code)
+        links = "\n".join(f'    <li><a href="{PATHS[code]}{slug}/">{e(p["short"])}</a></li>' for slug, p in mod.PAGES.items())
+        more = f"  <p>{e(t['uses_more'])}</p>\n  <ul>\n{links}\n  </ul>\n"
     faq_html = ""
     for i, (q, a) in enumerate(t["faq"]):
         extra = " " + t["privacy_link"] if i == len(t["faq"]) - 1 else ""
@@ -620,7 +628,7 @@ def page(code, t):
   <ul>
 {uses}
   </ul>
-  <p>{e(t['uses_p'])}</p>
+{more}  <p>{e(t['uses_p'])}</p>
 
   <h2>{e(t['h_not'])}</h2>
   <p>{e(t['not_p'])}</p>
@@ -660,7 +668,8 @@ for rel in ("index.html", "ja/index.html"):
     s = re.sub(r'<p class="lang">.*?</p>', NAV, s, count=1, flags=re.S)
     f.write_text(s, encoding="utf-8")
 
-urls = [(p, "2026-11-23") for _, _, p in ALL] + [("/timer/", "2026-11-24"), ("/timer/ja/", "2026-11-24")] + [(pre + slug + "/", "2026-11-25") for slug in ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer") for pre in ("/", "/ja/")] + [("/privacy.html", "2026-11-23")]
+USE_SLUGS = ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer")
+urls = [(p, "2026-11-26" if p in ("/fr/", "/de/") else "2026-11-23") for _, _, p in ALL] + [("/timer/", "2026-11-24"), ("/timer/ja/", "2026-11-24")] + [(pre + slug + "/", "2026-11-25") for slug in ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer") for pre in ("/", "/ja/")] + [(pre + slug + "/", "2026-11-26") for slug in USE_SLUGS for pre in ("/fr/", "/de/")] + [("/privacy.html", "2026-11-23")]
 (SITE / "sitemap.xml").write_text(
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
