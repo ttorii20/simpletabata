@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Writes the pages that answer one question each: boxing rounds, a class or
 a team, no connection, a beep instead of a voice, free with no subscription,
-music playing, Android, and the simplest timer.
+music playing, Android, the simplest timer, and a comparison with other apps.
 
     python3 build_uses.py .
 
@@ -17,8 +17,8 @@ from pathlib import Path
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
 BASE = "https://simpletabata.com"
-UPDATED = {"en": "25 November 2026", "ja": "2026年11月25日", "fr": "26 novembre 2026", "de": "26. November 2026"}
-MODIFIED = {"en": "2026-11-25", "ja": "2026-11-25", "fr": "2026-11-26", "de": "2026-11-26"}
+UPDATED = {"en": "26 November 2026", "ja": "2026年11月26日", "fr": "26 novembre 2026", "de": "26. November 2026"}
+MODIFIED = {"en": "2026-11-26", "ja": "2026-11-26", "fr": "2026-11-26", "de": "2026-11-26"}
 LANGS = ("en", "ja", "fr", "de")
 NAMES = {"en": "English", "ja": "日本語", "fr": "Français", "de": "Deutsch"}
 
@@ -917,6 +917,104 @@ PAGES = {
                 ("筋トレのセット間の休憩タイマーとして使えますか？", "時間で区切る筋トレなら使えます。1つの運動時間と1つの休憩時間を繰り返し、iPhone では休憩を120秒まで設定できます。セットの終わりにタップして休憩を始める形ではないので、セットごとに長さが変わる場合には向きません。"),
                 ("タイマーを複数保存できますか？", "iPhone では5つまで保存でき、スワイプで切り替えます。Android は設定1つです。"),
                 ("無料ですか？", "はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"),
+            ],
+        ),
+    },
+    "tabata-timer-apps-compared": {
+        "en": dict(
+            short="Tabata timer apps compared",
+            title="Tabata timer apps compared: which one suits which workout",
+            desc="Six Tabata and interval timer apps side by side: Tabata & HIIT Interval Timer, SmartWOD Timer, Seconds, Intervals Pro and two more. What each does, what is free, which run on Apple Watch. Written by the developer of one of them.",
+            h1="Tabata timer apps compared: which one suits which workout",
+            lede="There is no single best Tabata timer app. A plain timer suits a workout that repeats the same work and rest; a fuller one suits a session built from different intervals. This page puts six of them side by side. It is written by Takahiro Torii, who makes one of the six, Tabata &amp; HIIT Interval Timer, and it says where the others suit better.",
+            body="""
+  <h2>The short answer</h2>
+  <ul>
+    <li><strong>The same work and rest repeated, with nothing to set up</strong> (Tabata, 20 seconds on and 10 off, eight times; simple HIIT): Tabata &amp; HIIT Interval Timer, the app this site is about.</li>
+    <li><strong>EMOM, AMRAP and For Time</strong>: SmartWOD Timer.</li>
+    <li><strong>Intervals of different lengths</strong>, or a warm-up running into the main set: Seconds Interval Timer or Intervals Pro.</li>
+    <li><strong>A timer on Apple Watch</strong>: SmartWOD Timer, Seconds Interval Timer and Intervals Pro. The app this site is about has none.</li>
+  </ul>
+
+  <h2>Six apps side by side</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>App</th><th>What its App Store page says it does</th><th>Paying</th></tr>
+    <tr><td>Tabata &amp; HIIT Interval Timer<br>Takahiro Torii</td><td>One ready time, work time and rest time, and a number of sets. A voice or one of three beeps. Up to five saved timers. Runs in the background and on the Lock Screen, over music. No custom sequences.</td><td>Free. One small banner ad. No subscription and no in-app purchases.</td></tr>
+    <tr><td>SmartWOD Timer - WOD Clock<br>SmartWOD GmbH</td><td>AMRAP, EMOM, For Time and Tabata timers and a custom timer. Presets, Apple Watch, casting to a TV, a workout log.</td><td>Free to download. Its page lists subscriptions.</td></tr>
+    <tr><td>Seconds Interval Timer<br>Runloop Ltd</td><td>Templates for HIIT, Tabata and circuits. Intervals of different lengths, and timers chained into one. Voice, beeps and bells. Runs on Apple Watch by itself.</td><td>Free to download. Seconds Pro is a separate paid app.</td></tr>
+    <tr><td>Intervals Pro: HIIT Timer<br>Intervals, LLC</td><td>A name, a duration, an alert and a colour for each interval. Apple Watch workouts without the phone, heart-rate monitors, running pace targets, widgets.</td><td>Free to download.</td></tr>
+    <tr><td>Tabata Timer: Interval Timer.<br>Oleksandr Serhiienko</td><td>Work and rest times, sets and cycles. Interval names, voice cues, vibration. Runs in the background.</td><td>Free to download.</td></tr>
+    <tr><td>Interval Timer □ HIIT Timer<br>Float Tech, LLC</td><td>Drag to set work, rest and rounds. A voice or a beep. History and statistics.</td><td>Free to download. Its page describes an optional subscription and a one-time lifetime pass.</td></tr>
+  </table>
+  </div>
+  <p>The names, developers and descriptions of the other five apps are taken from their pages on the US App Store on 26 November 2026. What is free inside each of them, and the prices, can change: check the store page before choosing.</p>
+
+  <h2>Where Tabata &amp; HIIT Interval Timer fits</h2>
+  <p>It is the narrow one. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, so a Tabata session starts in two taps with nothing to set. On iPhone, work time goes up to 300 seconds, rest up to 120 seconds and sets up to 40, and five timers can be saved. It is also on Android (8.0 or later), where each interval is 5 to 60 seconds, a workout is 2 to 20 sets, and the cues are a voice.</p>
+  <p>Every feature is free. In the written App Store reviews, the reason people give most often for choosing it is that it is simple.</p>
+
+  <h2>Where another app fits better</h2>
+  <ul>
+    <li>Sets of different lengths in one session, or named intervals: Seconds Interval Timer or Intervals Pro.</li>
+    <li>EMOM, AMRAP or For Time workouts: SmartWOD Timer.</li>
+    <li>Timing from an Apple Watch: SmartWOD Timer, Seconds Interval Timer or Intervals Pro.</li>
+    <li>An exercise library, videos or coaching: none of that is in Tabata &amp; HIIT Interval Timer.</li>
+  </ul>""",
+            faq=[
+                ("What is the best Tabata timer app?", "It depends on the workout. For plain Tabata, 20 seconds of work and 10 seconds of rest eight times, Tabata & HIIT Interval Timer by Takahiro Torii opens on exactly those numbers and starts in two taps; it is free, with no subscription. For EMOM and AMRAP, SmartWOD Timer has those modes. For sessions built from intervals of different lengths, Seconds Interval Timer and Intervals Pro are made for that."),
+                ("Which Tabata timer app is free with no subscription?", "Tabata & HIIT Interval Timer by Takahiro Torii: every feature is free, with no subscription, no in-app purchases and no account, and one small banner ad. The other apps on this page are free to download; the App Store pages of SmartWOD Timer and of Float Tech's Interval Timer describe subscriptions."),
+                ("Which Tabata timer apps have an Apple Watch app?", "SmartWOD Timer, Seconds Interval Timer and Intervals Pro say on their App Store pages that they run on Apple Watch. Tabata & HIIT Interval Timer has no Apple Watch app."),
+                ("Is there a simple Tabata timer for both iPhone and Android?", "Tabata & HIIT Interval Timer by Takahiro Torii is on iPhone and iPad (iOS 15 or later) and on Android (8.0 or later). On Android each interval is 5 to 60 seconds, a workout is 2 to 20 sets, and the cues are a voice."),
+                ("Who wrote this comparison?", "Takahiro Torii, the developer of Tabata & HIIT Interval Timer, one of the six apps compared. What it says about the other apps comes from their US App Store pages on 26 November 2026."),
+            ],
+        ),
+        "ja": dict(
+            short="タバタタイマーアプリの比較",
+            title="タバタタイマーアプリの比較｜どのアプリがどんなトレーニングに向くか",
+            desc="タバタ式・インターバルタイマーのアプリ6つを並べて比べました。HIIT & Tabata Timer - タバタタイマー、SmartWOD Timer、Seconds、Intervals Pro ほか。できること、無料の範囲、Apple Watch 対応。6つのうち1つの開発者が書いています。",
+            h1="タバタタイマーアプリの比較：どのアプリがどんなトレーニングに向くか",
+            lede="いちばん良いタバタタイマーアプリは、1つには決まりません。同じ運動と休憩を繰り返すなら単純なタイマーが、長さの違う区間を組み合わせるなら機能の多いタイマーが向いています。このページでは6つのアプリを並べます。書いているのは、そのうちの1つ HIIT &amp; Tabata Timer - タバタタイマー の開発者 Takahiro Torii です。ほかのアプリのほうが向く場合も、そのまま書いています。",
+            body="""
+  <h2>先に結論</h2>
+  <ul>
+    <li><strong>同じ運動と休憩を、設定なしで繰り返したい</strong>（20秒運動・10秒休憩を8回のタバタ式、単純な HIIT）: HIIT &amp; Tabata Timer - タバタタイマー（このサイトのアプリ）</li>
+    <li><strong>EMOM、AMRAP、For Time</strong>: SmartWOD Timer</li>
+    <li><strong>区間ごとに長さを変えたい</strong>、ウォームアップから本番まで続けて計りたい: Seconds Interval Timer、Intervals Pro</li>
+    <li><strong>Apple Watch で計りたい</strong>: SmartWOD Timer、Seconds Interval Timer、Intervals Pro。このサイトのアプリには Apple Watch 版がありません。</li>
+  </ul>
+
+  <h2>6つのアプリを並べる</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>アプリ</th><th>App Store のページに書かれていること</th><th>料金</th></tr>
+    <tr><td>HIIT &amp; Tabata Timer - タバタタイマー<br>Takahiro Torii</td><td>準備時間・運動時間・休憩時間を1つずつと、セット数。声か3種類のビープ音。タイマーを5つまで保存。バックグラウンドとロック画面で動き、音楽に重ねて鳴る。区間ごとに長さを変えるメニューはない。</td><td>無料。小さなバナー広告が1つ。サブスクリプションとアプリ内課金はなし。</td></tr>
+    <tr><td>SmartWOD Timer - WOD Clock<br>SmartWOD GmbH</td><td>AMRAP、EMOM、For Time、タバタのタイマーと、自分で組むタイマー。プリセット、Apple Watch、テレビへのキャスト、トレーニングの記録。</td><td>ダウンロードは無料。ページにサブスクリプションの記載あり。</td></tr>
+    <tr><td>Seconds Interval Timer<br>Runloop Ltd</td><td>HIIT、タバタ、サーキットのテンプレート。長さの違う区間を組め、複数のタイマーを1つにつなげられる。声、ビープ音、ベル。Apple Watch だけでも動く。</td><td>ダウンロードは無料。Seconds Pro は別の有料アプリ。</td></tr>
+    <tr><td>Intervals Pro: HIIT Timer<br>Intervals, LLC</td><td>区間ごとに名前・長さ・音・色を設定。iPhone なしで動く Apple Watch のワークアウト、心拍計、ランニングのペース目標、ウィジェット。</td><td>ダウンロードは無料。</td></tr>
+    <tr><td>Tabata Timer: Interval Timer.<br>Oleksandr Serhiienko</td><td>運動時間と休憩時間、セット数とサイクル数。区間の名前、音声、バイブレーション。バックグラウンドで動く。</td><td>ダウンロードは無料。</td></tr>
+    <tr><td>Interval Timer □ HIIT Timer<br>Float Tech, LLC</td><td>ドラッグで運動・休憩・ラウンド数を設定。声かビープ音。履歴と統計。</td><td>ダウンロードは無料。ページに、任意のサブスクリプションと買い切りのパスの記載あり。</td></tr>
+  </table>
+  </div>
+  <p>ほかの5つのアプリの名前・開発者・説明は、2026年11月26日に米国の App Store の各ページから取りました。日本の App Store では名前が違うことがあります。アプリの中でどこまで無料か、いくらかは変わるので、選ぶ前にストアのページを確かめてください。</p>
+
+  <h2>HIIT &amp; Tabata Timer - タバタタイマー が向く場合</h2>
+  <p>6つのなかで、いちばんできることが少ないアプリです。開くと準備10秒、運動20秒、休憩10秒、8セットになっていて、タバタ式なら何も設定せず2タップで始まります。iPhone では運動時間を300秒まで、休憩を120秒まで、セット数を40まで設定でき、タイマーを5つ保存できます。Android（8.0以降）にもあり、こちらは各区間5〜60秒、2〜20セット、合図は声です。</p>
+  <p>すべての機能が無料です。App Store に書かれたレビューで、選んだ理由としていちばん多く挙がるのは「シンプル」です。</p>
+
+  <h2>ほかのアプリのほうが向く場合</h2>
+  <ul>
+    <li>1回のメニューのなかで区間の長さを変えたい、区間に名前を付けたい: Seconds Interval Timer、Intervals Pro</li>
+    <li>EMOM、AMRAP、For Time のワークアウト: SmartWOD Timer</li>
+    <li>Apple Watch で計りたい: SmartWOD Timer、Seconds Interval Timer、Intervals Pro</li>
+    <li>種目の解説、動画、コーチング: HIIT &amp; Tabata Timer - タバタタイマー にはどれもありません。</li>
+  </ul>""",
+            faq=[
+                ("おすすめのタバタタイマーアプリはどれですか？", "トレーニングの内容で変わります。20秒運動・10秒休憩を8回繰り返す標準のタバタ式なら、HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）が最初からその数字になっていて、2タップで始まります。無料で、サブスクリプションはありません。EMOM や AMRAP なら、そのモードがある SmartWOD Timer。長さの違う区間を組むなら、Seconds Interval Timer か Intervals Pro がそのためのアプリです。"),
+                ("無料でサブスクリプションのないタバタタイマーアプリは？", "HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録がなく、広告は小さなバナー1つだけです。このページのほかのアプリもダウンロードは無料ですが、SmartWOD Timer と Float Tech の Interval Timer は、App Store のページにサブスクリプションの記載があります。"),
+                ("Apple Watch で使えるタバタタイマーアプリは？", "SmartWOD Timer、Seconds Interval Timer、Intervals Pro は、App Store のページに Apple Watch で動くと書かれています。HIIT & Tabata Timer - タバタタイマー に Apple Watch 版はありません。"),
+                ("iPhone と Android の両方で使えるシンプルなタバタタイマーは？", "HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone・iPad（iOS 15 以降）と Android（8.0 以降）で使えます。Android では各区間5〜60秒、2〜20セットで、合図は声です。"),
+                ("この比較は誰が書いていますか？", "比べた6つのうちの1つ、HIIT & Tabata Timer - タバタタイマー の開発者 Takahiro Torii です。ほかのアプリについての記述は、2026年11月26日に米国の App Store の各ページから取りました。"),
             ],
         ),
     },

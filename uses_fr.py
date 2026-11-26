@@ -404,4 +404,52 @@ PAGES = {
             ("Est-ce gratuit ?", "Oui. Toutes les fonctions sont gratuites, sans abonnement, sans achats intégrés et sans compte. Il y a une seule petite bannière publicitaire, et aucune publicité plein écran ni vidéo."),
         ],
     ),
+    "tabata-timer-apps-compared": dict(
+        short="Comparatif des minuteurs Tabata",
+        title="Comparatif des applications de minuteur Tabata : laquelle pour quel entraînement",
+        desc="Six applications de minuteur Tabata et d'intervalles côte à côte : Minuteur Sport HIIT & Tabata, SmartWOD Timer, Seconds, Intervals Pro et deux autres. Ce que fait chacune, ce qui est gratuit, lesquelles tournent sur Apple Watch. Écrit par le développeur de l'une d'elles.",
+        h1="Comparatif des minuteurs Tabata : quelle application pour quel entraînement",
+        lede="Il n'existe pas une seule meilleure application de minuteur Tabata. Un minuteur tout simple convient à une séance qui répète le même effort et le même repos ; un minuteur plus complet convient à une séance faite d'intervalles différents. Cette page en met six côte à côte. Elle est écrite par Takahiro Torii, qui développe l'une des six, Minuteur Sport HIIT &amp; Tabata, et elle dit aussi quand les autres conviennent mieux.",
+        body="""
+  <h2>La réponse courte</h2>
+  <ul>
+    <li><strong>Le même effort et le même repos répétés, sans rien régler</strong> (Tabata : 20 secondes d'effort, 10 de repos, huit fois ; HIIT simple) : Minuteur Sport HIIT &amp; Tabata, l'app de ce site.</li>
+    <li><strong>EMOM, AMRAP et For Time</strong> : SmartWOD Timer.</li>
+    <li><strong>Des intervalles de durées différentes</strong>, ou un échauffement qui s'enchaîne avec la séance : Seconds Interval Timer ou Intervals Pro.</li>
+    <li><strong>Un minuteur sur Apple Watch</strong> : SmartWOD Timer, Seconds Interval Timer et Intervals Pro. L'app de ce site n'en a pas.</li>
+  </ul>
+
+  <h2>Six applications côte à côte</h2>
+  <div class="tablewrap">
+  <table>
+    <tr><th>App</th><th>Ce que sa page App Store annonce</th><th>Prix</th></tr>
+    <tr><td>Minuteur Sport HIIT &amp; Tabata<br>Takahiro Torii</td><td>Un temps de préparation, un temps d'effort, un temps de repos et un nombre de séries. Une voix ou l'un des trois bips. Jusqu'à cinq minuteurs enregistrés. Fonctionne en arrière-plan et écran verrouillé, par-dessus la musique. Pas de séquences personnalisées.</td><td>Gratuit. Une petite bannière publicitaire. Sans abonnement ni achats intégrés.</td></tr>
+    <tr><td>SmartWOD Timer - WOD Clock<br>SmartWOD GmbH</td><td>Minuteurs AMRAP, EMOM, For Time et Tabata, et un minuteur personnalisé. Préréglages, Apple Watch, diffusion sur un téléviseur, journal des séances.</td><td>Téléchargement gratuit. Sa page mentionne des abonnements.</td></tr>
+    <tr><td>Seconds Interval Timer<br>Runloop Ltd</td><td>Modèles pour le HIIT, le Tabata et les circuits. Intervalles de durées différentes, minuteurs enchaînés en un seul. Voix, bips et cloches. Fonctionne seul sur Apple Watch.</td><td>Téléchargement gratuit. Seconds Pro est une app payante distincte.</td></tr>
+    <tr><td>Intervals Pro: HIIT Timer<br>Intervals, LLC</td><td>Un nom, une durée, une alerte et une couleur pour chaque intervalle. Séances sur Apple Watch sans le téléphone, cardiofréquencemètres, objectifs d'allure en course, widgets.</td><td>Téléchargement gratuit.</td></tr>
+    <tr><td>Tabata Timer: Interval Timer.<br>Oleksandr Serhiienko</td><td>Temps d'effort et de repos, séries et cycles. Noms d'intervalles, annonces vocales, vibration. Fonctionne en arrière-plan.</td><td>Téléchargement gratuit.</td></tr>
+    <tr><td>Interval Timer □ HIIT Timer<br>Float Tech, LLC</td><td>On fait glisser pour régler l'effort, le repos et les rounds. Voix ou bip. Historique et statistiques.</td><td>Téléchargement gratuit. Sa page décrit un abonnement facultatif et un achat unique à vie.</td></tr>
+  </table>
+  </div>
+  <p>Les noms, les développeurs et les descriptions des cinq autres apps viennent de leurs pages sur l'App Store américain, le 26 novembre 2026. Les noms peuvent différer sur l'App Store français. Ce qui est gratuit dans chacune, et les prix, peuvent changer : vérifiez la page de l'App Store avant de choisir.</p>
+
+  <h2>Quand Minuteur Sport HIIT &amp; Tabata convient</h2>
+  <p>C'est la plus limitée des six. Elle s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries : une séance Tabata démarre en deux touches, sans rien régler. Sur iPhone, l'effort va jusqu'à 300 secondes, le repos jusqu'à 120 secondes et les séries jusqu'à 40, et l'on peut enregistrer cinq minuteurs. Elle existe aussi sur Android (8.0 ou version ultérieure), où chaque intervalle dure de 5 à 60 secondes, une séance compte de 2 à 20 séries, et le signal est une voix.</p>
+  <p>Toutes les fonctions sont gratuites. Dans les avis écrits sur l'App Store, la raison la plus souvent donnée pour l'avoir choisie est sa simplicité.</p>
+
+  <h2>Quand une autre app convient mieux</h2>
+  <ul>
+    <li>Des séries de durées différentes dans une même séance, ou des intervalles nommés : Seconds Interval Timer ou Intervals Pro.</li>
+    <li>Des séances EMOM, AMRAP ou For Time : SmartWOD Timer.</li>
+    <li>Chronométrer depuis une Apple Watch : SmartWOD Timer, Seconds Interval Timer ou Intervals Pro.</li>
+    <li>Une bibliothèque d'exercices, des vidéos ou du coaching : rien de tout cela dans Minuteur Sport HIIT &amp; Tabata.</li>
+  </ul>""",
+        faq=[
+            ("Quelle est la meilleure application de minuteur Tabata ?", "Cela dépend de la séance. Pour un Tabata classique, 20 secondes d'effort et 10 secondes de repos huit fois, Minuteur Sport HIIT & Tabata, de Takahiro Torii, s'ouvre exactement sur ces valeurs et démarre en deux touches ; l'app est gratuite, sans abonnement. Pour l'EMOM et l'AMRAP, SmartWOD Timer propose ces modes. Pour des séances faites d'intervalles de durées différentes, Seconds Interval Timer et Intervals Pro sont conçus pour cela."),
+            ("Quel minuteur Tabata est gratuit et sans abonnement ?", "Minuteur Sport HIIT & Tabata, de Takahiro Torii : toutes les fonctions sont gratuites, sans abonnement, sans achats intégrés et sans compte, avec une seule petite bannière publicitaire. Les autres apps de cette page se téléchargent gratuitement ; les pages App Store de SmartWOD Timer et de l'Interval Timer de Float Tech décrivent des abonnements."),
+            ("Quels minuteurs Tabata ont une app Apple Watch ?", "SmartWOD Timer, Seconds Interval Timer et Intervals Pro indiquent sur leur page App Store qu'ils fonctionnent sur Apple Watch. Minuteur Sport HIIT & Tabata n'a pas d'app Apple Watch."),
+            ("Existe-t-il un minuteur Tabata simple pour iPhone et Android ?", "Minuteur Sport HIIT & Tabata, de Takahiro Torii, existe sur iPhone et iPad (iOS 15 ou version ultérieure) et sur Android (8.0 ou version ultérieure). Sur Android, chaque intervalle dure de 5 à 60 secondes, une séance compte de 2 à 20 séries, et le signal est une voix."),
+            ("Qui a écrit ce comparatif ?", "Takahiro Torii, le développeur de Minuteur Sport HIIT & Tabata, l'une des six apps comparées. Ce qui est dit des autres apps vient de leurs pages sur l'App Store américain, le 26 novembre 2026."),
+        ],
+    ),
 }
