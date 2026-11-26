@@ -5,7 +5,8 @@ music playing, Android, and the simplest timer.
 
     python3 build_uses.py .
 
-Each page exists in English and Japanese and says only what the main pages
+Each page exists in English and Japanese, written here, and in French and
+German, translated from the English in uses_fr.py and uses_de.py. It says only what the main pages
 already say about the app, arranged around the one use. When a fact changes
 on the main pages, change it here too and run this again.
 """
@@ -16,7 +17,10 @@ from pathlib import Path
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
 BASE = "https://simpletabata.com"
-UPDATED = {"en": "25 November 2026", "ja": "2026年11月25日"}
+UPDATED = {"en": "25 November 2026", "ja": "2026年11月25日", "fr": "26 novembre 2026", "de": "26. November 2026"}
+MODIFIED = {"en": "2026-11-25", "ja": "2026-11-25", "fr": "2026-11-26", "de": "2026-11-26"}
+LANGS = ("en", "ja", "fr", "de")
+NAMES = {"en": "English", "ja": "日本語", "fr": "Français", "de": "Deutsch"}
 
 STYLE = """  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
   @media (prefers-color-scheme: dark) {
@@ -30,7 +34,7 @@ STYLE = """  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; 
   }
   main { max-width:44rem; margin:0 auto; }
   .lang { font-size:.875rem; color:var(--muted); margin:0 0 2.5rem; }
-  .lang a { margin-right:.75rem; }
+  .lang a { display:inline-block; margin-right:.75rem; }
   header { display:flex; gap:1.25rem; align-items:center; margin:0 0 1.5rem; }
   header img { width:64px; height:64px; border-radius:15px; flex:none; }
   h1 { font-size:1.5rem; line-height:1.35; margin:0 0 .25rem; letter-spacing:-.01em; }
@@ -63,7 +67,7 @@ UI = {
         questions="Questions", related="Other uses", get="Get the app",
         about="About the app", timer="Timer in your browser", timer_url="/timer/",
         privacy="Privacy Policy", contact="Contact", updated="Last updated",
-        other_lang=("日本語", "ja"), alt="Tabata &amp; HIIT Interval Timer app icon",
+        alt="Tabata &amp; HIIT Interval Timer app icon",
     ),
     "ja": dict(
         home="/ja/", app="HIIT &amp; Tabata Timer - タバタタイマー", app_plain="HIIT & Tabata Timer - タバタタイマー",
@@ -73,7 +77,27 @@ UI = {
         questions="よくある質問", related="ほかの使い方", get="ダウンロード",
         about="アプリの説明", timer="ブラウザ版タイマー", timer_url="/timer/ja/",
         privacy="プライバシーポリシー", contact="お問い合わせ", updated="最終更新",
-        other_lang=("English", "en"), alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン",
+        alt="HIIT &amp; Tabata Timer - タバタタイマー のアイコン",
+    ),
+    "fr": dict(
+        home="/fr/", app="Minuteur Sport HIIT &amp; Tabata", app_plain="Minuteur Sport HIIT & Tabata",
+        by="par Takahiro Torii · iPhone, iPad et Android · gratuit",
+        ios="Télécharger dans l'App Store", ios_url="https://apps.apple.com/fr/app/id1166542235",
+        play="Disponible sur Google Play",
+        questions="Questions", related="Autres usages", get="Obtenir l'app",
+        about="Présentation de l'app", timer="Minuteur dans le navigateur (en anglais)", timer_url="/timer/",
+        privacy="Politique de confidentialité", contact="Contact", updated="Dernière mise à jour :",
+        alt="Icône de l'app Minuteur Sport HIIT &amp; Tabata",
+    ),
+    "de": dict(
+        home="/de/", app="Intervall-Timer HIIT &amp; Tabata", app_plain="Intervall-Timer HIIT & Tabata",
+        by="von Takahiro Torii · iPhone, iPad und Android · kostenlos",
+        ios="Laden im App Store", ios_url="https://apps.apple.com/de/app/id1166542235",
+        play="Jetzt bei Google Play",
+        questions="Fragen", related="Weitere Einsatzzwecke", get="App laden",
+        about="Über die App", timer="Timer im Browser (auf Englisch)", timer_url="/timer/",
+        privacy="Datenschutzerklärung", contact="Kontakt", updated="Zuletzt aktualisiert:",
+        alt="App-Symbol von Intervall-Timer HIIT &amp; Tabata",
     ),
 }
 
@@ -900,9 +924,20 @@ PAGES = {
 
 SLUGS = list(PAGES)
 
+# French and German are translations of the English text above.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import uses_de  # noqa: E402
+import uses_fr  # noqa: E402
+
+for _lang, _mod in (("fr", uses_fr), ("de", uses_de)):
+    assert list(_mod.PAGES) == SLUGS, _lang
+    for _slug in SLUGS:
+        assert len(_mod.PAGES[_slug]["faq"]) == len(PAGES[_slug]["en"]["faq"]), (_lang, _slug)
+        PAGES[_slug][_lang] = _mod.PAGES[_slug]
+
 
 def path(lang, slug):
-    return ("/ja/" if lang == "ja" else "/") + slug + "/"
+    return ("/" if lang == "en" else f"/{lang}/") + slug + "/"
 
 
 def page(lang, slug):
@@ -914,20 +949,21 @@ def page(lang, slug):
                          "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in p["faq"]]},
         {"@context": "https://schema.org", "@type": "WebPage", "inLanguage": lang,
          "name": p["h1"], "url": BASE + path(lang, slug),
-         "dateModified": "2026-11-25",
+         "dateModified": MODIFIED[lang],
          "author": {"@type": "Person", "name": "Takahiro Torii"},
          "about": {"@type": "SoftwareApplication", "name": u["app_plain"],
                    "applicationCategory": "HealthApplication",
                    "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
                    "url": BASE + u["home"],
-                   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY" if lang == "ja" else "USD"},
+                   "offers": {"@type": "Offer", "price": "0", "priceCurrency": {"ja": "JPY", "fr": "EUR", "de": "EUR"}.get(lang, "USD")},
                    "sameAs": ["https://apps.apple.com/app/id1166542235",
                               "https://play.google.com/store/apps/details?id=com.tabatatimer"]}},
     ]
     scripts = "\n".join('<script type="application/ld+json">\n' + json.dumps(x, ensure_ascii=False, indent=2) + "\n</script>" for x in ld)
     faq = "\n".join(f"  <h3>{e(q)}</h3>\n  <p>{e(a)}</p>\n" for q, a in p["faq"])
     related = "\n".join(f'    <li><a href="{path(lang, s)}">{e(PAGES[s][lang]["short"])}</a></li>' for s in SLUGS if s != slug)
-    ol_name, ol_code = u["other_lang"]
+    hreflang = "\n".join(f'<link rel="alternate" hreflang="{c}" href="{BASE}{path(c, slug)}">' for c in LANGS)
+    others = "".join(f'<a href="{path(c, slug)}" lang="{c}">{NAMES[c]}</a>' for c in LANGS if c != lang)
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
@@ -936,8 +972,7 @@ def page(lang, slug):
 <title>{e(p['title'])}</title>
 <meta name="description" content="{e(p['desc'])}">
 <link rel="canonical" href="{BASE}{path(lang, slug)}">
-<link rel="alternate" hreflang="en" href="{BASE}{path('en', slug)}">
-<link rel="alternate" hreflang="ja" href="{BASE}{path('ja', slug)}">
+{hreflang}
 <link rel="alternate" hreflang="x-default" href="{BASE}{path('en', slug)}">
 <link rel="icon" href="/icon.png">
 <meta name="apple-itunes-app" content="app-id=1166542235">
@@ -953,7 +988,7 @@ def page(lang, slug):
 </head>
 <body>
 <main>
-  <p class="lang"><a href="{u['home']}">{u['app']}</a><a href="{path(ol_code, slug)}" lang="{ol_code}">{ol_name}</a></p>
+  <p class="lang"><a href="{u['home']}">{u['app']}</a>{others}</p>
 
   <header>
     <img src="/icon.png" alt="{u['alt']}" width="64" height="64">
@@ -1000,7 +1035,7 @@ def page(lang, slug):
 
 
 for slug in SLUGS:
-    for lang in ("en", "ja"):
+    for lang in LANGS:
         d = SITE / path(lang, slug).strip("/")
         d.mkdir(parents=True, exist_ok=True)
         (d / "index.html").write_text(page(lang, slug), encoding="utf-8")
