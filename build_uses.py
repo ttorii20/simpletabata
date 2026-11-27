@@ -6,7 +6,7 @@ music playing, Android, the simplest timer, and a comparison with other apps.
     python3 build_uses.py .
 
 Each page exists in English and Japanese, written here, and in French and
-German, translated from the English in uses_fr.py and uses_de.py. It says only what the main pages
+German, Italian and Spanish, translated from the English in uses_<lang>.py. It says only what the main pages
 already say about the app, arranged around the one use. When a fact changes
 on the main pages, change it here too and run this again.
 """
@@ -17,10 +17,10 @@ from pathlib import Path
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
 BASE = "https://simpletabata.com"
-UPDATED = {"en": "26 November 2026", "ja": "2026年11月26日", "fr": "26 novembre 2026", "de": "26. November 2026"}
-MODIFIED = {"en": "2026-11-26", "ja": "2026-11-26", "fr": "2026-11-26", "de": "2026-11-26"}
-LANGS = ("en", "ja", "fr", "de")
-NAMES = {"en": "English", "ja": "日本語", "fr": "Français", "de": "Deutsch"}
+UPDATED = {"en": "26 November 2026", "ja": "2026年11月26日", "fr": "26 novembre 2026", "de": "26. November 2026", "it": "27 novembre 2026", "es": "27 de noviembre de 2026"}
+MODIFIED = {"en": "2026-11-26", "ja": "2026-11-26", "fr": "2026-11-26", "de": "2026-11-26", "it": "2026-11-27", "es": "2026-11-27"}
+LANGS = ("en", "ja", "fr", "de", "it", "es")
+NAMES = {"en": "English", "ja": "日本語", "fr": "Français", "de": "Deutsch", "it": "Italiano", "es": "Español"}
 
 STYLE = """  :root { --ink:#1c1c1e; --muted:#6b6b70; --rule:#e4e4e7; --bg:#fff; --accent:#c9b817; --card:#f6f6f7; }
   @media (prefers-color-scheme: dark) {
@@ -98,6 +98,26 @@ UI = {
         about="Über die App", timer="Timer im Browser (auf Englisch)", timer_url="/timer/",
         privacy="Datenschutzerklärung", contact="Kontakt", updated="Zuletzt aktualisiert:",
         alt="App-Symbol von Intervall-Timer HIIT &amp; Tabata",
+    ),
+    "it": dict(
+        home="/it/", app="Timer HIIT Tabata Allenamento", app_plain="Timer HIIT Tabata Allenamento",
+        by="di Takahiro Torii · iPhone, iPad e Android · gratis",
+        ios="Scarica su App Store", ios_url="https://apps.apple.com/it/app/id1166542235",
+        play="Disponibile su Google Play",
+        questions="Domande", related="Altri usi", get="Scarica l'app",
+        about="Informazioni sull'app", timer="Timer nel browser (in inglese)", timer_url="/timer/",
+        privacy="Informativa sulla privacy", contact="Contatto", updated="Ultimo aggiornamento:",
+        alt="Icona dell'app Timer HIIT Tabata Allenamento",
+    ),
+    "es": dict(
+        home="/es/", app="HIIT Tabata Temporizador", app_plain="HIIT Tabata Temporizador",
+        by="de Takahiro Torii · iPhone, iPad y Android · gratis",
+        ios="Descargar en el App Store", ios_url="https://apps.apple.com/es/app/id1166542235",
+        play="Disponible en Google Play",
+        questions="Preguntas", related="Otros usos", get="Descargar la app",
+        about="Sobre la app", timer="Temporizador en el navegador (en inglés)", timer_url="/timer/",
+        privacy="Política de privacidad", contact="Contacto", updated="Última actualización:",
+        alt="Icono de la app HIIT Tabata Temporizador",
     ),
 }
 
@@ -1024,10 +1044,10 @@ SLUGS = list(PAGES)
 
 # French and German are translations of the English text above.
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import uses_de  # noqa: E402
-import uses_fr  # noqa: E402
+import importlib  # noqa: E402
 
-for _lang, _mod in (("fr", uses_fr), ("de", uses_de)):
+for _lang in LANGS[2:]:
+    _mod = importlib.import_module("uses_" + _lang)
     assert list(_mod.PAGES) == SLUGS, _lang
     for _slug in SLUGS:
         assert len(_mod.PAGES[_slug]["faq"]) == len(PAGES[_slug]["en"]["faq"]), (_lang, _slug)
@@ -1053,7 +1073,7 @@ def page(lang, slug):
                    "applicationCategory": "HealthApplication",
                    "operatingSystem": "iOS 15.0 or later, Android 8.0 or later",
                    "url": BASE + u["home"],
-                   "offers": {"@type": "Offer", "price": "0", "priceCurrency": {"ja": "JPY", "fr": "EUR", "de": "EUR"}.get(lang, "USD")},
+                   "offers": {"@type": "Offer", "price": "0", "priceCurrency": {"ja": "JPY", "fr": "EUR", "de": "EUR", "it": "EUR", "es": "EUR"}.get(lang, "USD")},
                    "sameAs": ["https://apps.apple.com/app/id1166542235",
                               "https://play.google.com/store/apps/details?id=com.tabatatimer"]}},
     ]
