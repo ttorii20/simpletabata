@@ -178,6 +178,7 @@ L["it"] = dict(
           "Burpees, plank, mountain climbers, scatti",
           "Stretching, mobilità e core",
           "Round di boxe, salto con la corda, cyclette e spinning"],
+    uses_more="Alcuni usi e alcune domande hanno una pagina dedicata:",
     uses_p="Nelle recensioni scritte sull'App Store, il motivo citato più spesso per averlo scelto è che è semplice. Lo dice circa un terzo delle recensioni, di solito dopo aver provato un timer con più funzioni.",
     h_not="Cosa non fa",
     not_p="Meglio dirlo chiaramente, perché è questo che decide se l'app fa per te.",
@@ -202,7 +203,7 @@ L["it"] = dict(
     privacy_link="Vedi l'<a href=\"/privacy.html\">informativa sulla privacy</a> (in inglese e giapponese).",
     h_get="Scarica l'app",
     note="Diverse app hanno un nome simile. Questa è pubblicata da Takahiro Torii; l'ID App Store è 1166542235 e il pacchetto Android è <code>com.tabatatimer</code>.",
-    privacy="Informativa sulla privacy", contact="Contatto", updated="Ultimo aggiornamento: 23 novembre 2026",
+    privacy="Informativa sulla privacy", contact="Contatto", updated="Ultimo aggiornamento: 27 novembre 2026",
     rating=("4,7", "19"), store="it",
 )
 
@@ -239,6 +240,7 @@ L["es"] = dict(
           "Burpees, planchas, mountain climbers, sprints",
           "Estiramientos, movilidad y trabajo de core",
           "Asaltos de boxeo, comba, bicicleta estática y spinning"],
+    uses_more="Algunos usos y preguntas tienen su propia página:",
     uses_p="En las reseñas escritas del App Store, la razón que más se repite para elegirlo es que es sencillo. Lo dice aproximadamente un tercio de ellas, normalmente después de haber probado un temporizador con más funciones.",
     h_not="Lo que no hace",
     not_p="Conviene decirlo claramente, porque de ello depende que la app sea la adecuada para ti.",
@@ -263,7 +265,7 @@ L["es"] = dict(
     privacy_link="Consulta la <a href=\"/privacy.html\">política de privacidad</a> (en inglés y japonés).",
     h_get="Consigue la app",
     note="Hay varias apps con un nombre parecido. Esta la publica Takahiro Torii; su ID del App Store es 1166542235 y su paquete de Android es <code>com.tabatatimer</code>.",
-    privacy="Política de privacidad", contact="Contacto", updated="Última actualización: 23 de noviembre de 2026",
+    privacy="Política de privacidad", contact="Contacto", updated="Última actualización: 27 de noviembre de 2026",
     rating=("4,6", "17"), store="es",
 )
 
@@ -669,7 +671,7 @@ for rel in ("index.html", "ja/index.html"):
     f.write_text(s, encoding="utf-8")
 
 USE_SLUGS = ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer", "tabata-timer-apps-compared")
-urls = [(p, "2026-11-26" if p in ("/fr/", "/de/") else "2026-11-23") for _, _, p in ALL] + [("/timer/", "2026-11-24"), ("/timer/ja/", "2026-11-24")] + [(pre + slug + "/", "2026-11-26") for slug in ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer", "tabata-timer-apps-compared") for pre in ("/", "/ja/")] + [(pre + slug + "/", "2026-11-26") for slug in USE_SLUGS for pre in ("/fr/", "/de/")] + [("/privacy.html", "2026-11-23")]
+urls = [(p, "2026-11-26" if p in ("/fr/", "/de/") else "2026-11-27" if p in ("/it/", "/es/") else "2026-11-23") for _, _, p in ALL] + [("/timer/", "2026-11-24"), ("/timer/ja/", "2026-11-24")] + [(pre + slug + "/", "2026-11-26") for slug in ("boxing-round-timer", "team-practice-timer", "offline-interval-timer", "interval-timer-with-beeps", "free-interval-timer-no-subscription", "interval-timer-with-music", "tabata-timer-for-android", "simple-interval-timer", "tabata-timer-apps-compared") for pre in ("/", "/ja/")] + [(pre + slug + "/", "2026-11-26") for slug in USE_SLUGS for pre in ("/fr/", "/de/")] + [(pre + slug + "/", "2026-11-27") for slug in USE_SLUGS for pre in ("/it/", "/es/")] + [("/privacy.html", "2026-11-23")]
 (SITE / "sitemap.xml").write_text(
     '<?xml version="1.0" encoding="UTF-8"?>\n'
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
