@@ -3,10 +3,10 @@
 PAGES = {
     "boxing-round-timer": dict(
         short="Boxtimer / Rundentimer",
-        title="Kostenloser Boxtimer fürs iPhone: Rundentimer für 3-Minuten-Runden mit 1 Minute Pause",
+        title="Kostenloser Boxtimer für iPhone und Android: Rundentimer für 3-Minuten-Runden mit 1 Minute Pause",
         desc="3-Minuten-Runden mit 1 Minute Pause einstellen – mit Intervall-Timer HIIT & Tabata, einer kostenlosen App von Takahiro Torii. Runden bis fünf Minuten, bis zu 40 Runden, Stimme oder Signalton, kein Abo.",
         h1="Kostenloser Boxtimer: Rundentimer für 3-Minuten-Runden mit 1 Minute Pause",
-        lede="Intervall-Timer HIIT &amp; Tabata stoppt Boxrunden auf iPhone und iPad. Eine Runde kann bis zu fünf Minuten dauern, eine Pause bis zu zwei, bei 2 bis 40 Runden – 3-Minuten-Runden mit 1 Minute Pause lassen sich also direkt einstellen. Die App ist kostenlos, ohne Abo und ohne Konto.",
+        lede="Intervall-Timer HIIT &amp; Tabata stoppt Boxrunden auf iPhone, iPad und Android. Eine Runde kann bis zu fünf Minuten dauern, eine Pause bis zu zwei, bei 2 bis 40 Runden – 3-Minuten-Runden mit 1 Minute Pause lassen sich also direkt einstellen. Die App ist kostenlos, ohne Abo und ohne Konto.",
         body="""
   <h2>So wird er eingestellt</h2>
   <ol>
@@ -29,7 +29,7 @@ PAGES = {
   </table>
   </div>
   <p>Die Belastungszeit lässt sich von 5 bis 60 Sekunden in Fünferschritten einstellen, von 70 bis 120 Sekunden in Zehnerschritten, darüber auf 150, 180, 210, 240, 270 oder 300 Sekunden. Pause und Vorbereitungszeit enden bei 120 Sekunden.</p>
-  <p>Auf dem iPhone können bis zu fünf Timer gespeichert werden – Sparringsrunden, Sandsackarbeit und Seilspringen behalten so jeweils ihre eigenen Werte. Zum Wechseln auf dem Hauptbildschirm nach links oder rechts wischen.</p>
+  <p>Bis zu fünf Timer können gespeichert werden – Sparringsrunden, Sandsackarbeit und Seilspringen behalten so jeweils ihre eigenen Werte. Zum Wechseln auf dem Hauptbildschirm nach links oder rechts wischen.</p>
 
   <h2>Damit man ihn im Gym hört</h2>
   <p>Unter „Sound“ in den Einstellungen stehen eine weibliche Stimme, eine männliche Stimme und drei Signaltöne zur Wahl: scharf, weich oder Pfeife. Ein Signalton trägt über Sandsäcke und Musik hinweg weiter als eine Stimme. Der Ton wird in der Medienlautstärke des Handys abgespielt; mit einem Bluetooth-Lautsprecher ist er also so laut wie der Lautsprecher. Musik läuft darunter in ihrer eigenen Lautstärke weiter.</p>
@@ -37,16 +37,15 @@ PAGES = {
   <h2>Was er nicht kann</h2>
   <ul>
     <li>Jede Runde ist gleich lang, und jede Pause ist gleich lang. Für ein Training mit unterschiedlich langen Runden braucht es einen umfangreicheren Intervall-Timer.</li>
-    <li>Unter Android endet jedes Intervall bei 60 Sekunden; 3-Minuten-Runden gibt es daher vorerst nur auf iPhone und iPad.</li>
     <li>Es gibt keine App für die Apple Watch.</li>
     <li>Die Ansagen sind auf Englisch. Die Signaltöne sind an keine Sprache gebunden.</li>
   </ul>""",
         faq=[
-            ("Kann er 3-Minuten-Runden beim Boxen stoppen?", "Ja, auf iPhone und iPad. Die Belastungszeit auf 180 Sekunden und die Pausenzeit auf 60 Sekunden stellen, dazu die Anzahl der Sätze auf die Zahl der Runden. Die Belastungszeit reicht bis 300 Sekunden, die Pause bis 120 Sekunden, und es sind 2 bis 40 Runden möglich."),
+            ("Kann er 3-Minuten-Runden beim Boxen stoppen?", "Ja, auf iPhone, iPad und Android. Die Belastungszeit auf 180 Sekunden und die Pausenzeit auf 60 Sekunden stellen, dazu die Anzahl der Sätze auf die Zahl der Runden. Die Belastungszeit reicht bis 300 Sekunden, die Pause bis 120 Sekunden, und es sind 2 bis 40 Runden möglich."),
             ("Ist der Boxtimer kostenlos?", "Ja. Alle Funktionen sind kostenlos, ohne Abo, ohne In-App-Käufe und ohne Konto. Es gibt ein kleines Werbebanner am unteren Bildschirmrand und keine Vollbild- oder Videowerbung."),
             ("Zählt er die Runden bei gesperrtem Bildschirm weiter?", "Ja. Countdown und Ton laufen im Hintergrund und bei gesperrtem Bildschirm weiter. Auf dem iPhone mit iOS 16.1 oder neuer erscheinen die Restzeit und eine Stopp-Taste auf dem Sperrbildschirm."),
             ("Kann ich ihn für MMA- oder Grappling-Runden nutzen?", "Ja. Eine Runde kann bis zu fünf Minuten (300 Sekunden) dauern, die Pause bis zu zwei Minuten."),
-            ("Kann die Android-Version 3-Minuten-Runden stoppen?", "Noch nicht. Unter Android dauert jedes Intervall 5 bis 60 Sekunden, ein Workout hat 2 bis 20 Sätze."),
+            ("Kann die Android-Version 3-Minuten-Runden stoppen?", "Ja. Seit Version 1.8.2 hat die Android-App dieselben Bereiche wie die iPhone-App: Belastung bis 300 Sekunden, Pause bis 120 Sekunden und 2 bis 40 Runden."),
         ],
     ),
     "team-practice-timer": dict(
@@ -79,7 +78,7 @@ PAGES = {
     <tr><td>3-Minuten-Übungen</td><td>180 s</td><td>60 s</td><td>4 bis 6</td></tr>
   </table>
   </div>
-  <p>Auf dem iPhone reicht die Belastungszeit von 5 bis 300 Sekunden, die Pause von 5 bis 120 Sekunden, und eine Einheit kann 2 bis 40 Sätze haben. Bis zu fünf Timer können gespeichert werden – Aufwärmen, Zirkel und Sprints behalten so jeweils ihre eigenen Werte; gewechselt wird per Wischen.</p>
+  <p>Die Belastungszeit reicht von 5 bis 300 Sekunden, die Pause von 5 bis 120 Sekunden, und eine Einheit kann 2 bis 40 Sätze haben. Bis zu fünf Timer können gespeichert werden – Aufwärmen, Zirkel und Sprints behalten so jeweils ihre eigenen Werte; gewechselt wird per Wischen.</p>
 
   <h2>Während der Einheit</h2>
   <ul>
@@ -91,13 +90,12 @@ PAGES = {
   <h2>Was er nicht kann</h2>
   <ul>
     <li>Jeder Satz hat dieselbe Belastungs- und Pausenzeit. Für eine Einheit mit einer anderen Dauer je Station braucht es einen umfangreicheren Intervall-Timer.</li>
-    <li>Unter Android gibt es als Signal vorerst nur die Stimme, jedes Intervall endet bei 60 Sekunden und eine Einheit bei 20 Sätzen.</li>
     <li>Es gibt keine Übungsbibliothek und keine Liste mit Namen oder Ergebnissen.</li>
   </ul>""",
         faq=[
             ("Ist er laut genug für einen Kurs oder ein Mannschaftstraining?", "Die Signale werden in der Medienlautstärke des Handys abgespielt, sind also so laut wie das Handy oder der Lautsprecher, mit dem es verbunden ist. Für die Halle oder den Sportplatz einen Bluetooth-Lautsprecher verbinden und unter „Sound“ in den Einstellungen einen Signalton wählen: Ein Signalton setzt sich gegen Lärm besser durch als eine Stimme."),
             ("Kann die App das Handy lauter machen?", "Nein. Sie spielt bereits mit der höchsten Medienlautstärke des Handys ab. Wer es lauter braucht, verbindet einen Bluetooth-Lautsprecher."),
-            ("Gibt es einen Pfeifton?", "Ja, auf iPhone und iPad. Unter „Sound“ in den Einstellungen gibt es drei Signaltöne: scharf, weich und Pfeife."),
+            ("Gibt es einen Pfeifton?", "Ja, auf iPhone, iPad und Android. Unter „Sound“ in den Einstellungen gibt es drei Signaltöne: scharf, weich und Pfeife."),
             ("Kostet er für eine Schule oder einen Verein etwas?", "Nein. Alle Funktionen sind kostenlos, ohne Abo, ohne In-App-Käufe und ohne Konto. Es gibt ein kleines Werbebanner am unteren Bildschirmrand und keine Vollbild- oder Videowerbung."),
             ("Funktioniert er auf einem Platz ohne Empfang?", "Ja. Timer, Stimme und Signaltöne funktionieren alle ohne Internetverbindung."),
         ],
@@ -113,7 +111,7 @@ PAGES = {
   <ul>
     <li>Der Timer selbst: Vorbereitungszeit, Belastungszeit, Pausenzeit und Sätze.</li>
     <li>Der gesprochene Countdown, mit weiblicher oder männlicher Stimme.</li>
-    <li>Die drei Signaltöne auf dem iPhone: scharf, weich und Pfeife.</li>
+    <li>Die drei Signaltöne: scharf, weich und Pfeife.</li>
     <li>Der Betrieb im Hintergrund und bei gesperrtem Bildschirm.</li>
   </ul>
 
@@ -136,8 +134,7 @@ PAGES = {
   <table>
     <tr><th>Preis</th><td>Kostenlos. Kein Abo, keine In-App-Käufe, kein Konto.</td></tr>
     <tr><th>Plattformen</th><td>iPhone und iPad (iOS 15 oder neuer), Android (8.0 oder neuer)</td></tr>
-    <tr><th>Bereiche auf dem iPhone</th><td>Belastung 5–300 s, Vorbereitung und Pause 5–120 s, 2–40 Sätze</td></tr>
-    <tr><th>Bereiche unter Android</th><td>Jedes Intervall 5–60 s, 2–20 Sätze</td></tr>
+    <tr><th>Bereiche</th><td>Belastung 5–300 s, Vorbereitung und Pause 5–120 s, 2–40 Sätze, auf iPhone und Android</td></tr>
     <tr><th>Werbung</th><td>Ein kleines Banner. Keine Vollbild- oder Videowerbung.</td></tr>
   </table>
   </div>""",
@@ -151,9 +148,9 @@ PAGES = {
     "interval-timer-with-beeps": dict(
         short="Intervall-Timer mit Signalton",
         title="Intervall-Timer mit Signalton oder Pfeife statt Stimme",
-        desc="Intervall-Timer HIIT & Tabata von Takahiro Torii kann auf dem iPhone statt einer Stimme einen Signalton abspielen: scharf, weich oder Pfeife. Kostenlos, kein Abo. Signaltöne tragen durch die ganze Halle und sind an keine Sprache gebunden.",
+        desc="Intervall-Timer HIIT & Tabata von Takahiro Torii kann auf iPhone und Android statt einer Stimme einen Signalton abspielen: scharf, weich oder Pfeife. Kostenlos, kein Abo. Signaltöne tragen durch die ganze Halle und sind an keine Sprache gebunden.",
         h1="Intervall-Timer mit Signalton oder Pfeife statt Stimme",
-        lede="Auf iPhone und iPad kann Intervall-Timer HIIT &amp; Tabata statt einer Stimme einen Signalton abspielen. Es gibt drei Signaltöne: scharf, weich und Pfeife. Die App ist kostenlos, ohne Abo und ohne Konto.",
+        lede="Auf iPhone, iPad und Android kann Intervall-Timer HIIT &amp; Tabata statt einer Stimme einen Signalton abspielen. Es gibt drei Signaltöne: scharf, weich und Pfeife. Die App ist kostenlos, ohne Abo und ohne Konto.",
         body="""
   <h2>So wird ein Signalton gewählt</h2>
   <ol>
@@ -183,13 +180,12 @@ PAGES = {
 
   <h2>Was er nicht kann</h2>
   <ul>
-    <li>Unter Android gibt es als Signal vorerst nur die Stimme.</li>
     <li>Der Signalton wird in der Medienlautstärke des Handys abgespielt. Für die Halle oder den Sportplatz einen Bluetooth-Lautsprecher verbinden.</li>
   </ul>
   <p>Auch der <a href="/timer/">Timer im Browser</a> auf dieser Website arbeitet mit Signaltönen, ganz ohne Installation.</p>""",
         faq=[
-            ("Gibt es statt der Stimme auch einen Signalton?", "Ja, auf iPhone und iPad. Unter „Sound“ in den Einstellungen stehen eine weibliche Stimme, eine männliche Stimme und drei Signaltöne (scharf, weich, Pfeife) zur Wahl; antippen, um sie zu hören. Unter Android gibt es als Signal vorerst nur die Stimme."),
-            ("Gibt es einen Intervall-Timer mit Pfeifton?", "Ja. Intervall-Timer HIIT & Tabata für iPhone und iPad hat unter seinen drei Signaltönen eine Pfeife."),
+            ("Gibt es statt der Stimme auch einen Signalton?", "Ja, auf iPhone, iPad und Android. Unter „Sound“ in den Einstellungen stehen eine weibliche Stimme, eine männliche Stimme und drei Signaltöne (scharf, weich, Pfeife) zur Wahl; antippen, um sie zu hören."),
+            ("Gibt es einen Intervall-Timer mit Pfeifton?", "Ja. Intervall-Timer HIIT & Tabata für iPhone, iPad und Android hat unter seinen drei Signaltönen eine Pfeife."),
             ("Sind die Signaltöne über Musik zu hören?", "Ja. Was gerade läuft, läuft in seiner eigenen Lautstärke weiter, und der Signalton wird darübergelegt."),
             ("Ist er kostenlos?", "Ja. Alle Töne sind kostenlos, ohne Abo, ohne In-App-Käufe und ohne Konto. Es gibt ein kleines Werbebanner und keine Vollbild- oder Videowerbung."),
         ],
@@ -220,11 +216,10 @@ PAGES = {
   <h2>Was es ohne Bezahlen gibt</h2>
   <ul>
     <li>Vorbereitungszeit, Belastungszeit, Pausenzeit und die Anzahl der Sätze</li>
-    <li>Auf dem iPhone: Belastung 5 bis 300 Sekunden, Vorbereitung und Pause 5 bis 120 Sekunden, 2 bis 40 Sätze und bis zu fünf gespeicherte Timer</li>
-    <li>Auf dem iPhone: eine weibliche Stimme, eine männliche Stimme oder einen von drei Signaltönen (scharf, weich, Pfeife)</li>
+    <li>Belastung 5 bis 300 Sekunden, Vorbereitung und Pause 5 bis 120 Sekunden, 2 bis 40 Sätze und bis zu fünf gespeicherte Timer</li>
+    <li>Eine weibliche Stimme, eine männliche Stimme oder einen von drei Signaltönen (scharf, weich, Pfeife)</li>
     <li>Betrieb im Hintergrund, bei gesperrtem Bildschirm und über Ihrer Musik</li>
-    <li>Eine Liste der beendeten Workouts und, auf dem iPhone, fünfzehn Farbthemen</li>
-    <li>Unter Android: jedes Intervall 5 bis 60 Sekunden, 2 bis 20 Sätze, eine Stimme</li>
+    <li>Eine Liste der beendeten Workouts und fünfzehn Farbthemen</li>
   </ul>
 
   <h2>Was er nicht kann</h2>
@@ -239,7 +234,7 @@ PAGES = {
             ("Gibt es Werbung?", "Ein kleines Banner am unteren Bildschirmrand. Es gibt keine Vollbildwerbung und keine Videowerbung, und nichts unterbricht ein Workout."),
             ("Kann ich die Werbung gegen Bezahlung entfernen?", "Nein. Es gibt keinerlei In-App-Käufe und deshalb auch keine Bezahlversion ohne das Banner."),
             ("Muss ich mich registrieren?", "Nein. Es gibt kein Konto, keine Registrierung, und es muss keine E-Mail-Adresse angegeben werden."),
-            ("Sind Funktionen gesperrt?", "Nein. Alle Einstellungen, Töne und Themen stehen ohne Bezahlen zur Verfügung. Fünf der fünfzehn Themen auf dem iPhone werden durch beendete Workouts freigeschaltet, nicht gekauft."),
+            ("Sind Funktionen gesperrt?", "Nein. Alle Einstellungen, Töne und Themen stehen ohne Bezahlen zur Verfügung. Fünf der fünfzehn Themen werden durch beendete Workouts freigeschaltet, nicht gekauft."),
         ],
     ),
     "interval-timer-with-music": dict(
@@ -260,7 +255,7 @@ PAGES = {
   <h2>Was zu hören ist</h2>
   <ul>
     <li>Eine Stimme zählt die letzten fünf Sekunden jedes Intervalls herunter und sagt jeden Wechsel an.</li>
-    <li>Auf iPhone und iPad kann ein Signalton die Stimme ersetzen: scharf, weich oder Pfeife. Ein Signalton liegt über einem Song, ohne hineinzureden.</li>
+    <li>Auf iPhone, iPad und Android kann ein Signalton die Stimme ersetzen: scharf, weich oder Pfeife. Ein Signalton liegt über einem Song, ohne hineinzureden.</li>
     <li>Die Signale werden in der Medienlautstärke des Handys abgespielt, über dieselben Kopfhörer oder denselben Lautsprecher wie die Musik.</li>
   </ul>
 
@@ -274,7 +269,6 @@ PAGES = {
   <ul>
     <li>Er spielt selbst keine Musik ab und hat keine Playlists. Er arbeitet neben der Musik-App, die Sie ohnehin nutzen.</li>
     <li>Er stellt die Musik während eines Signals nicht leiser.</li>
-    <li>Unter Android gibt es als Signal vorerst nur die Stimme, jedes Intervall endet bei 60 Sekunden und ein Workout bei 20 Sätzen.</li>
   </ul>""",
         faq=[
             ("Welcher Intervall-Timer läuft im Hintergrund, während Musik spielt?", "Intervall-Timer HIIT & Tabata von Takahiro Torii. Was gerade läuft, läuft in seiner eigenen Lautstärke weiter, die Stimme oder der Signalton des Timers wird darübergelegt, und der Timer zählt im Hintergrund und bei gesperrtem Bildschirm weiter."),
@@ -297,8 +291,10 @@ PAGES = {
     <tr><th>Android-Version</th><td>8.0 oder neuer</td></tr>
     <tr><th>Paket</th><td>com.tabatatimer</td></tr>
     <tr><th>Standard</th><td>10 s Vorbereitung, 20 s Belastung, 10 s Pause, 8 Sätze: das klassische Tabata-Protokoll</td></tr>
-    <tr><th>Bereiche</th><td>Vorbereitung, Belastung und Pause jeweils 5 bis 60 Sekunden; 2 bis 20 Sätze</td></tr>
-    <tr><th>Ton</th><td>Eine Stimme zählt die letzten fünf Sekunden herunter und sagt jeden Wechsel an. Auf Englisch gesprochen.</td></tr>
+    <tr><th>Bereiche</th><td>Belastung 5 bis 300 Sekunden; Vorbereitung und Pause 5 bis 120 Sekunden; 2 bis 40 Sätze</td></tr>
+    <tr><th>Gespeicherte Timer</th><td>Bis zu fünf; Wechsel per Wischen auf dem Hauptbildschirm</td></tr>
+    <tr><th>Ton</th><td>Eine weibliche oder männliche Stimme zählt die letzten fünf Sekunden herunter und sagt jeden Wechsel an, oder einer von drei Signaltönen (scharf, weich, Pfeife). Die Stimme spricht Englisch.</td></tr>
+    <tr><th>Themen</th><td>Fünfzehn Farbthemen: zehn saisonale, fünf durch beendete Workouts freigeschaltet</td></tr>
     <tr><th>Hintergrund</th><td>Zählt weiter, wenn der Bildschirm aus ist oder eine andere App geöffnet ist</td></tr>
     <tr><th>Musik</th><td>Läuft über Musik oder einem Podcast, ohne sie anzuhalten</td></tr>
     <tr><th>Offline</th><td>Funktioniert ohne Internetverbindung</td></tr>
@@ -311,36 +307,29 @@ PAGES = {
   <ol>
     <li>Bei Google Play installieren und öffnen. Die klassischen Tabata-Werte sind schon eingestellt.</li>
     <li>Start drücken. Zuerst laufen zehn Sekunden Vorbereitungszeit.</li>
-    <li>Um die Werte zu ändern, die Einstellungen öffnen und Belastungszeit, Pausenzeit und Anzahl der Sätze einstellen.</li>
+    <li>Um die Werte zu ändern, die Einstellungen öffnen und Belastungszeit, Pausenzeit und Anzahl der Sätze einstellen. Unter „Sound“ wählen Sie eine Stimme oder einen Signalton, unter „Timers“ legen Sie bis zu fünf Timer an.</li>
   </ol>
 
   <h2>Worin er sich von der iPhone-App unterscheidet</h2>
-  <p>Die Android-App ist vorerst die kleinere der beiden.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone und iPad</th></tr>
-    <tr><td>Belastungszeit</td><td>5 bis 60 s</td><td>5 bis 300 s</td></tr>
-    <tr><td>Pausen- und Vorbereitungszeit</td><td>5 bis 60 s</td><td>5 bis 120 s</td></tr>
-    <tr><td>Sätze</td><td>2 bis 20</td><td>2 bis 40</td></tr>
-    <tr><td>Gespeicherte Timer</td><td>Eine Einstellung</td><td>Bis zu fünf</td></tr>
-    <tr><td>Signale</td><td>Eine Stimme</td><td>Eine weibliche oder männliche Stimme oder drei Signaltöne</td></tr>
-  </table>
-  </div>
+  <p>Seit Version 1.8.2 (November 2026) hat die Android-App denselben Timer wie die iPhone-App: dieselben Bereiche, bis zu fünf gespeicherte Timer, dieselben Stimmen und Signaltöne. Nur auf dem iPhone gibt es zwei Dinge:</p>
+  <ul>
+    <li>Restzeit und Stopp-Taste auf dem Sperrbildschirm und in der Dynamic Island (iOS 16.1 oder neuer). Unter Android erscheint die Restzeit in einer Benachrichtigung.</li>
+    <li>Das Speichern beendeter Workouts in Apple Health.</li>
+  </ul>
 
   <h2>Was er nicht kann</h2>
   <ul>
-    <li>Keine Intervalle über 60 Sekunden; 3-Minuten-Runden lassen sich unter Android also nicht einstellen.</li>
-    <li>Vorerst keine Signaltöne. Das Signal ist eine Stimme.</li>
     <li>Keine App für Wear OS.</li>
-    <li>Keine eigenen Abfolgen, keine Übungsbibliothek, keine Trainingspläne.</li>
+    <li>Keine eigenen Abläufe, keine EMOM- oder AMRAP-Modi. Jeder Satz hat dieselbe Belastungs- und Pausenzeit.</li>
+    <li>Keine Übungsbibliothek und keine Trainingspläne.</li>
   </ul>
   <p>Mehrere Android-Apps heißen „Tabata Timer“. Diese hier stammt von Takahiro Torii, ihr Paket ist com.tabatatimer.</p>""",
         faq=[
             ("Gibt es einen kostenlosen Tabata-Timer für Android ohne Abo?", "Ja. Intervall-Timer HIIT & Tabata von Takahiro Torii (Paket com.tabatatimer) ist bei Google Play für Android 8.0 oder neuer kostenlos, ohne Abo, ohne In-App-Käufe und ohne Konto. Die App zeigt ein kleines Werbebanner."),
-            ("Was lässt sich unter Android einstellen?", "Vorbereitungszeit, Belastungszeit und Pausenzeit jeweils von 5 bis 60 Sekunden, dazu 2 bis 20 Sätze. Die App startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen, dem klassischen Tabata-Protokoll."),
+            ("Was lässt sich unter Android einstellen?", "Belastungszeit von 5 bis 300 Sekunden, Vorbereitungs- und Pausenzeit von 5 bis 120 Sekunden, dazu 2 bis 40 Sätze; bis zu fünf Timer lassen sich speichern. Die App startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen, dem klassischen Tabata-Protokoll."),
             ("Läuft er unter Android weiter, wenn der Bildschirm aus ist?", "Ja. Er zählt und spricht weiter, wenn der Bildschirm aus ist oder eine andere App geöffnet ist."),
-            ("Hat die Android-App Signaltöne?", "Noch nicht. Unter Android ist das Signal eine Stimme. Die App für iPhone und iPad hat zusätzlich drei Signaltöne."),
-            ("Ist die Android-App dieselbe wie die iPhone-App?", "Es ist derselbe Timer vom selben Entwickler, vorerst aber kleiner: Intervalle bis 60 Sekunden, bis zu 20 Sätze, eine Einstellung und nur die Stimme. Auf dem iPhone reicht die Belastungszeit bis 300 Sekunden, bei bis zu 40 Sätzen, fünf gespeicherten Timern und Signaltönen."),
+            ("Hat die Android-App Signaltöne?", "Ja. Unter „Sound“ in den Einstellungen stehen eine weibliche Stimme, eine männliche Stimme und drei Signaltöne zur Wahl: scharf, weich und Pfeife. Antippen, um sie zu hören."),
+            ("Ist die Android-App dieselbe wie die iPhone-App?", "Seit Version 1.8.2 ist der Timer derselbe: Belastung bis 300 Sekunden, bis zu 40 Sätze, fünf gespeicherte Timer, zwei Stimmen und drei Signaltöne. Nur die iPhone-App zeigt die Zeit auf dem Sperrbildschirm und speichert Workouts in Apple Health."),
         ],
     ),
     "simple-interval-timer": dict(
@@ -354,10 +343,10 @@ PAGES = {
   <div class="tablewrap">
   <table>
     <tr><th>Einstellung</th><th>iPhone und iPad</th><th>Android</th></tr>
-    <tr><td>Vorbereitungszeit</td><td>5 bis 120 s</td><td>5 bis 60 s</td></tr>
-    <tr><td>Belastungszeit</td><td>5 bis 300 s</td><td>5 bis 60 s</td></tr>
-    <tr><td>Pausenzeit</td><td>5 bis 120 s</td><td>5 bis 60 s</td></tr>
-    <tr><td>Sätze</td><td>2 bis 40</td><td>2 bis 20</td></tr>
+    <tr><td>Vorbereitungszeit</td><td>5 bis 120 s</td><td>5 bis 120 s</td></tr>
+    <tr><td>Belastungszeit</td><td>5 bis 300 s</td><td>5 bis 300 s</td></tr>
+    <tr><td>Pausenzeit</td><td>5 bis 120 s</td><td>5 bis 120 s</td></tr>
+    <tr><td>Sätze</td><td>2 bis 40</td><td>2 bis 40</td></tr>
   </table>
   </div>
   <p>Die App startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen. Für eine Tabata-Einheit muss also gar nichts eingestellt werden: App öffnen und Start drücken.</p>
@@ -370,13 +359,13 @@ PAGES = {
     <tr><td>HIIT, gleich lange Phasen</td><td>30 s</td><td>30 s</td><td>10</td></tr>
     <tr><td>HIIT, längere Belastungen</td><td>40 s</td><td>20 s</td><td>8 bis 12</td></tr>
     <tr><td>Kraftzirkel mit Sätzen auf Zeit</td><td>45 s</td><td>15 s</td><td>einer pro Übung, wiederholt</td></tr>
-    <tr><td>Krafttraining, Sätze auf Zeit mit voller Pause (iPhone)</td><td>40 s</td><td>90 s</td><td>3 bis 5</td></tr>
+    <tr><td>Krafttraining, Sätze auf Zeit mit voller Pause</td><td>40 s</td><td>90 s</td><td>3 bis 5</td></tr>
     <tr><td>Plank</td><td>60 s</td><td>30 s</td><td>3 bis 5</td></tr>
   </table>
   </div>
 
   <h2>Als Pausentimer im Krafttraining</h2>
-  <p>Die App wiederholt eine Belastungszeit und eine Pausenzeit; sie passt also zu Sätzen, die auf Zeit absolviert werden: 40 Sekunden Kniebeugen, 90 Sekunden Pause, und wieder von vorn. Auf dem iPhone kann die Pause bis zu 120 Sekunden dauern.</p>
+  <p>Die App wiederholt eine Belastungszeit und eine Pausenzeit; sie passt also zu Sätzen, die auf Zeit absolviert werden: 40 Sekunden Kniebeugen, 90 Sekunden Pause, und wieder von vorn. Die Pause kann bis zu 120 Sekunden dauern.</p>
   <p>Sie wartet nicht auf Sie. Wenn Ihre Sätze in jeder Runde unterschiedlich lange dauern und Sie die Pause per Tipp starten möchten, sobald Sie die Hantel ablegen, passt ein eigens dafür gebauter Pausentimer besser zu Ihnen.</p>
 
   <h2>Warum er einfach bleibt</h2>
@@ -389,15 +378,15 @@ PAGES = {
   <h2>Was er nicht kann</h2>
   <ul>
     <li>Keine eigenen Abfolgen, kein EMOM- oder AMRAP-Modus. Jeder Satz hat dieselbe Belastungs- und Pausenzeit.</li>
-    <li>Höchstens fünf gespeicherte Timer auf dem iPhone, unter Android nur eine Einstellung.</li>
+    <li>Höchstens fünf gespeicherte Timer.</li>
     <li>Keine Übungsbibliothek, keine Videos, kein Coaching, keine Trainingspläne.</li>
     <li>Keine App für Apple Watch oder Wear OS.</li>
   </ul>""",
         faq=[
             ("Was ist der einfachste HIIT-Timer fürs iPhone?", "Genau dafür ist Intervall-Timer HIIT & Tabata von Takahiro Torii gebaut: Vorbereitungszeit, Belastungszeit, Pausenzeit, die Anzahl der Sätze und ein Startknopf. Er hat keine Trainingspläne, keine Videos, kein Konto und kein Abo, und er ist kostenlos."),
             ("Kann ich ihn nutzen, ohne etwas einzustellen?", "Ja. Er startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen, dem klassischen Tabata-Protokoll. Einfach Start drücken."),
-            ("Kann ich ihn als Pausentimer zwischen Kraftsätzen nutzen?", "Ja, für Sätze auf Zeit: Er wiederholt eine Belastungszeit und eine Pausenzeit, auf dem iPhone mit bis zu 120 Sekunden Pause. Er wartet am Ende eines Satzes nicht auf einen Tipp und eignet sich deshalb nicht für unterschiedlich lange Sätze."),
-            ("Kann ich mehr als einen Timer speichern?", "Auf dem iPhone bis zu fünf; gewechselt wird per Wischen. Unter Android merkt sich die App nur eine Einstellung."),
+            ("Kann ich ihn als Pausentimer zwischen Kraftsätzen nutzen?", "Ja, für Sätze auf Zeit: Er wiederholt eine Belastungszeit und eine Pausenzeit, mit bis zu 120 Sekunden Pause. Er wartet am Ende eines Satzes nicht auf einen Tipp und eignet sich deshalb nicht für unterschiedlich lange Sätze."),
+            ("Kann ich mehr als einen Timer speichern?", "Ja, bis zu fünf, auf dem iPhone wie unter Android; gewechselt wird per Wischen."),
             ("Ist er kostenlos?", "Ja. Alle Funktionen sind kostenlos, ohne Abo, ohne In-App-Käufe und ohne Konto. Es gibt ein kleines Werbebanner und keine Vollbild- oder Videowerbung."),
         ],
     ),
@@ -431,7 +420,7 @@ PAGES = {
   <p>Namen, Entwickler und Beschreibungen der fünf anderen Apps stammen von ihren Seiten im US-amerikanischen App Store vom 26. November 2026. Im deutschen App Store können die Namen abweichen. Was in jeder App kostenlos ist und was sie kostet, kann sich ändern: vor der Wahl die Store-Seite prüfen.</p>
 
   <h2>Wann Intervall-Timer HIIT &amp; Tabata passt</h2>
-  <p>Er ist der schmalste der sechs. Er öffnet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen: Ein Tabata-Training startet mit zwei Tipps, ohne etwas einzustellen. Auf dem iPhone geht die Belastungszeit bis 300 Sekunden, die Pause bis 120 Sekunden und die Anzahl der Sätze bis 40, und es lassen sich fünf Timer speichern. Es gibt ihn auch für Android (8.0 oder neuer); dort dauert jedes Intervall 5 bis 60 Sekunden, ein Workout hat 2 bis 20 Sätze, und das Signal ist eine Stimme.</p>
+  <p>Er ist der schmalste der sechs. Er öffnet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen: Ein Tabata-Training startet mit zwei Tipps, ohne etwas einzustellen. Die Belastungszeit geht bis 300 Sekunden, die Pause bis 120 Sekunden und die Anzahl der Sätze bis 40, und es lassen sich fünf Timer speichern. Es gibt ihn für iPhone und iPad und für Android (8.0 oder neuer), mit denselben Bereichen, Stimmen und Signaltönen.</p>
   <p>Alle Funktionen sind kostenlos. In den geschriebenen App-Store-Rezensionen wird als Grund für die Wahl am häufigsten genannt, dass er einfach ist.</p>
 
   <h2>Wann eine andere App besser passt</h2>
@@ -445,7 +434,7 @@ PAGES = {
             ("Welche Tabata-Timer-App ist die beste?", "Das hängt vom Training ab. Für klassisches Tabata, achtmal 20 Sekunden Belastung und 10 Sekunden Pause, öffnet Intervall-Timer HIIT & Tabata von Takahiro Torii genau mit diesen Werten und startet mit zwei Tipps; die App ist kostenlos und ohne Abo. Für EMOM und AMRAP hat SmartWOD Timer eigene Modi. Für Einheiten aus Intervallen unterschiedlicher Länge sind Seconds Interval Timer und Intervals Pro gemacht."),
             ("Welcher Tabata-Timer ist kostenlos und ohne Abo?", "Intervall-Timer HIIT & Tabata von Takahiro Torii: Alle Funktionen sind kostenlos, ohne Abo, ohne In-App-Käufe und ohne Konto, mit einem kleinen Werbebanner. Die anderen Apps auf dieser Seite lassen sich kostenlos laden; die App-Store-Seiten von SmartWOD Timer und von Float Techs Interval Timer beschreiben Abos."),
             ("Welche Tabata-Timer-Apps gibt es für die Apple Watch?", "SmartWOD Timer, Seconds Interval Timer und Intervals Pro geben auf ihren App-Store-Seiten an, auf der Apple Watch zu laufen. Intervall-Timer HIIT & Tabata hat keine Apple-Watch-App."),
-            ("Gibt es einen einfachen Tabata-Timer für iPhone und Android?", "Intervall-Timer HIIT & Tabata von Takahiro Torii gibt es für iPhone und iPad (iOS 15 oder neuer) und für Android (8.0 oder neuer). Unter Android dauert jedes Intervall 5 bis 60 Sekunden, ein Workout hat 2 bis 20 Sätze, und das Signal ist eine Stimme."),
+            ("Gibt es einen einfachen Tabata-Timer für iPhone und Android?", "Intervall-Timer HIIT & Tabata von Takahiro Torii gibt es für iPhone und iPad (iOS 15 oder neuer) und für Android (8.0 oder neuer). Beide haben dieselben Bereiche, fünf gespeicherte Timer, eine weibliche oder männliche Stimme und drei Signaltöne."),
             ("Wer hat diesen Vergleich geschrieben?", "Takahiro Torii, der Entwickler von Intervall-Timer HIIT & Tabata, einer der sechs verglichenen Apps. Die Angaben zu den anderen Apps stammen von ihren Seiten im US-amerikanischen App Store vom 26. November 2026."),
         ],
     ),

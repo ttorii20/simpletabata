@@ -17,8 +17,8 @@ from pathlib import Path
 
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else ".")
 BASE = "https://simpletabata.com"
-UPDATED = {"en": "26 November 2026", "ja": "2026年11月26日", "fr": "26 novembre 2026", "de": "26. November 2026", "it": "27 novembre 2026", "es": "27 de noviembre de 2026"}
-MODIFIED = {"en": "2026-11-26", "ja": "2026-11-26", "fr": "2026-11-26", "de": "2026-11-26", "it": "2026-11-27", "es": "2026-11-27"}
+UPDATED = {"en": "28 November 2026", "ja": "2026年11月28日", "fr": "28 novembre 2026", "de": "28. November 2026", "it": "28 novembre 2026", "es": "28 de noviembre de 2026"}
+MODIFIED = {l: "2026-11-28" for l in ("en", "ja", "fr", "de", "it", "es")}
 LANGS = ("en", "ja", "fr", "de", "it", "es")
 NAMES = {"en": "English", "ja": "日本語", "fr": "Français", "de": "Deutsch", "it": "Italiano", "es": "Español"}
 
@@ -127,10 +127,10 @@ PAGES = {
     "boxing-round-timer": {
         "en": dict(
             short="Boxing round timer",
-            title="A free boxing round timer for iPhone: three-minute rounds, one-minute rests",
+            title="A free boxing round timer for iPhone and Android: three-minute rounds, one-minute rests",
             desc="Set three-minute rounds with a one-minute rest in Tabata & HIIT Interval Timer, a free app by Takahiro Torii. Rounds up to five minutes, up to 40 rounds, a voice or a beep, no subscription.",
             h1="A free boxing round timer: three-minute rounds, one-minute rests",
-            lede="Tabata &amp; HIIT Interval Timer times boxing rounds on iPhone and iPad. A round can be up to five minutes and a rest up to two, for 2 to 40 rounds, so three-minute rounds with a one-minute rest can be set directly. It is free, with no subscription and no account.",
+            lede="Tabata &amp; HIIT Interval Timer times boxing rounds on iPhone, iPad and Android. A round can be up to five minutes and a rest up to two, for 2 to 40 rounds, so three-minute rounds with a one-minute rest can be set directly. It is free, with no subscription and no account.",
             body="""
   <h2>How to set it</h2>
   <ol>
@@ -153,7 +153,7 @@ PAGES = {
   </table>
   </div>
   <p>Work time can be 5 to 60 seconds in steps of five, 70 to 120 in steps of ten, or 150, 180, 210, 240, 270 or 300 seconds. Rest and ready time stop at 120 seconds.</p>
-  <p>Up to five timers can be saved on iPhone, so sparring rounds, bag work and skipping can each keep their own numbers. Swipe left or right on the main screen to switch.</p>
+  <p>Up to five timers can be saved, so sparring rounds, bag work and skipping can each keep their own numbers. Swipe left or right on the main screen to switch.</p>
 
   <h2>Hearing it in a gym</h2>
   <p>Under Sound in Settings, choose a female voice, a male voice, or one of three beeps: sharp, soft or whistle. A beep carries further than a voice over bags and music. The sound plays at the phone's media volume, so a Bluetooth speaker makes it as loud as the speaker. Music keeps playing underneath at its own volume.</p>
@@ -161,24 +161,23 @@ PAGES = {
   <h2>What it does not do</h2>
   <ul>
     <li>Every round is the same length, and every rest is the same length. A session with rounds of different lengths needs a fuller interval timer.</li>
-    <li>On Android each interval stops at 60 seconds, so three-minute rounds are iPhone and iPad only, for now.</li>
     <li>There is no Apple Watch app.</li>
     <li>The spoken cues are in English. The beeps have no language.</li>
   </ul>""",
             faq=[
-                ("Can it time three-minute boxing rounds?", "Yes, on iPhone and iPad. Set the work time to 180 seconds and the rest time to 60 seconds, and set the number of sets to the number of rounds. Work time goes up to 300 seconds, rest up to 120 seconds, and there can be 2 to 40 rounds."),
+                ("Can it time three-minute boxing rounds?", "Yes, on iPhone, iPad and Android. Set the work time to 180 seconds and the rest time to 60 seconds, and set the number of sets to the number of rounds. Work time goes up to 300 seconds, rest up to 120 seconds, and there can be 2 to 40 rounds."),
                 ("Is the boxing round timer free?", "Yes. Every feature is free, with no subscription, no in-app purchases and no account. There is one small banner ad at the bottom of the screen and no full-screen or video ads."),
                 ("Does it keep timing rounds with the screen locked?", "Yes. It keeps counting and sounding in the background and with the screen locked. On iPhone with iOS 16.1 or later the remaining time and a stop button show on the Lock Screen."),
                 ("Can I use it for MMA or grappling rounds?", "Yes. A round can be up to five minutes (300 seconds) with a rest of up to two minutes."),
-                ("Does the Android version time three-minute rounds?", "Not yet. On Android each interval is 5 to 60 seconds and a workout is 2 to 20 sets."),
+                ("Does the Android version time three-minute rounds?", "Yes. Since version 1.8.2 the Android app has the same ranges as the iPhone app: work up to 300 seconds, rest up to 120 seconds and 2 to 40 rounds."),
             ],
         ),
         "ja": dict(
             short="ボクシングのラウンドタイマー",
-            title="ボクシングの3分ラウンドを計れる無料タイマー（iPhone）｜タバタタイマー",
+            title="ボクシングの3分ラウンドを計れる無料タイマー（iPhone・Android）｜タバタタイマー",
             desc="HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）で、3分ラウンド・1分休憩をそのまま設定できます。1ラウンド最大5分、最大40ラウンド、音声またはビープ音。無料、サブスクなし。",
             h1="ボクシングの3分ラウンドを計れる無料タイマー",
-            lede="HIIT &amp; Tabata Timer - タバタタイマー は、iPhone と iPad でボクシングのラウンドを計れます。1ラウンドは最大5分、休憩は最大2分、ラウンド数は2〜40なので、3分ラウンド・1分休憩をそのまま設定できます。無料で、サブスクリプションもアカウント登録もありません。",
+            lede="HIIT &amp; Tabata Timer - タバタタイマー は、iPhone・iPad・Android でボクシングのラウンドを計れます。1ラウンドは最大5分、休憩は最大2分、ラウンド数は2〜40なので、3分ラウンド・1分休憩をそのまま設定できます。無料で、サブスクリプションもアカウント登録もありません。",
             body="""
   <h2>設定のしかた</h2>
   <ol>
@@ -201,7 +200,7 @@ PAGES = {
   </table>
   </div>
   <p>運動時間は、5〜60秒が5秒刻み、70〜120秒が10秒刻み、その先は150・180・210・240・270・300秒から選べます。休憩時間と準備時間は120秒までです。</p>
-  <p>iPhone ではタイマーを5つまで保存できるので、スパーリング用、サンドバッグ用、縄跳び用と別々の秒数を持たせられます。メイン画面を左右にスワイプして切り替えます。</p>
+  <p>タイマーを5つまで保存できるので、スパーリング用、サンドバッグ用、縄跳び用と別々の秒数を持たせられます。メイン画面を左右にスワイプして切り替えます。</p>
 
   <h2>ジムで聞こえるようにする</h2>
   <p>設定の「Sound」で、女性の声・男性の声・3種類のビープ音（シャープ、ソフト、ホイッスル）から選べます。ビープ音は、サンドバッグの音や音楽の中でも声より通ります。音はスマートフォンのメディア音量で鳴るので、Bluetooth スピーカーにつなげばスピーカーの音量で鳴ります。流している音楽は止まらず、音量もそのままです。</p>
@@ -209,16 +208,15 @@ PAGES = {
   <h2>できないこと</h2>
   <ul>
     <li>すべてのラウンドが同じ長さ、すべての休憩が同じ長さです。ラウンドごとに長さを変えたい場合は、多機能なインターバルタイマーが向いています。</li>
-    <li>Android 版は各区間が60秒までなので、3分ラウンドは今のところ iPhone と iPad だけです。</li>
     <li>Apple Watch のアプリはありません。</li>
     <li>掛け声は英語です。ビープ音は言語に関係なく使えます。</li>
   </ul>""",
             faq=[
-                ("ボクシングの3分ラウンドを計れますか？", "はい、iPhone と iPad で計れます。運動時間を180秒、休憩時間を60秒にして、セット数をラウンド数に合わせます。運動時間は300秒まで、休憩は120秒まで、ラウンド数は2〜40です。"),
+                ("ボクシングの3分ラウンドを計れますか？", "はい、iPhone・iPad・Android で計れます。運動時間を180秒、休憩時間を60秒にして、セット数をラウンド数に合わせます。運動時間は300秒まで、休憩は120秒まで、ラウンド数は2〜40です。"),
                 ("無料で使えますか？", "はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は画面下の小さなバナー1つだけで、全画面広告や動画広告は出ません。"),
                 ("画面をロックしてもラウンドを計り続けますか？", "はい。バックグラウンドでも画面ロック中でも、カウントと音は続きます。iOS 16.1 以降の iPhone では、ロック画面に残り時間と停止ボタンが出ます。"),
                 ("総合格闘技やグラップリングの5分ラウンドにも使えますか？", "はい。1ラウンドは最大5分（300秒）、休憩は最大2分まで設定できます。"),
-                ("Android 版で3分ラウンドは計れますか？", "まだ計れません。Android 版は各区間が5〜60秒、セット数は2〜20です。"),
+                ("Android 版で3分ラウンドは計れますか？", "計れます。バージョン 1.8.2 から、Android 版の設定範囲は iPhone 版と同じで、運動時間は300秒まで、休憩は120秒まで、ラウンド数は2〜40です。"),
             ],
         ),
     },
@@ -253,7 +251,7 @@ PAGES = {
     <tr><td>Three-minute drills</td><td>180 s</td><td>60 s</td><td>4 to 6</td></tr>
   </table>
   </div>
-  <p>On iPhone, work time goes from 5 to 300 seconds, rest from 5 to 120 seconds, and a session can be 2 to 40 sets. Up to five timers can be saved, so the warm-up, the circuit and the sprints can each keep their own numbers; swipe to switch between them.</p>
+  <p>Work time goes from 5 to 300 seconds, rest from 5 to 120 seconds, and a session can be 2 to 40 sets. Up to five timers can be saved, so the warm-up, the circuit and the sprints can each keep their own numbers; swipe to switch between them.</p>
 
   <h2>During the session</h2>
   <ul>
@@ -265,13 +263,12 @@ PAGES = {
   <h2>What it does not do</h2>
   <ul>
     <li>Every set uses the same work and rest time. A session with a different length for each station needs a fuller interval timer.</li>
-    <li>On Android the cues are a voice only, each interval stops at 60 seconds and a session at 20 sets, for now.</li>
     <li>There is no exercise library, and no list of names or scores.</li>
   </ul>""",
             faq=[
                 ("Is it loud enough for a class or a team practice?", "The cues play at the phone's media volume, so they are as loud as the phone or the speaker it is connected to. For a hall or a pitch, connect a Bluetooth speaker and choose a beep under Sound in Settings: a beep cuts through noise better than a voice."),
                 ("Can the app make the phone louder?", "No. It already plays at the phone's maximum media volume. To go louder, connect a Bluetooth speaker."),
-                ("Does it have a whistle sound?", "Yes, on iPhone and iPad. Under Sound in Settings there are three beeps: sharp, soft and whistle."),
+                ("Does it have a whistle sound?", "Yes, on iPhone, iPad and Android. Under Sound in Settings there are three beeps: sharp, soft and whistle."),
                 ("Does it cost anything for a school or a club?", "No. Every feature is free, with no subscription, no in-app purchases and no account. There is one small banner ad at the bottom of the screen and no full-screen or video ads."),
                 ("Does it work on a field with no signal?", "Yes. The timer, the voice and the beeps all work without an internet connection."),
             ],
@@ -306,7 +303,7 @@ PAGES = {
     <tr><td>3分間の練習メニュー</td><td>180秒</td><td>60秒</td><td>4〜6</td></tr>
   </table>
   </div>
-  <p>iPhone では、運動時間が5〜300秒、休憩時間が5〜120秒、セット数が2〜40です。タイマーは5つまで保存できるので、アップ用、サーキット用、ダッシュ用と分けておけます。スワイプで切り替えます。</p>
+  <p>運動時間は5〜300秒、休憩時間は5〜120秒、セット数は2〜40です。タイマーは5つまで保存できるので、アップ用、サーキット用、ダッシュ用と分けておけます。スワイプで切り替えます。</p>
 
   <h2>練習中</h2>
   <ul>
@@ -318,13 +315,12 @@ PAGES = {
   <h2>できないこと</h2>
   <ul>
     <li>すべてのセットが同じ運動時間・休憩時間です。種目ごとに秒数を変えたい場合は、多機能なインターバルタイマーが向いています。</li>
-    <li>Android 版は今のところ音声のみで、各区間は60秒まで、セット数は20までです。</li>
     <li>種目の解説や、名前・記録をつける機能はありません。</li>
   </ul>""",
             faq=[
                 ("部活やクラスで使える音量ですか？", "合図はスマートフォンのメディア音量で鳴るので、音の大きさは本体か、つないだスピーカーしだいです。体育館やグラウンドでは Bluetooth スピーカーにつなぎ、設定の「Sound」でビープ音を選ぶのがおすすめです。ビープ音は声より騒音の中で通ります。"),
                 ("アプリで音量をもっと大きくできますか？", "できません。すでにスマートフォンのメディア音量の最大で鳴らしています。それより大きくするには、Bluetooth スピーカーにつないでください。"),
-                ("ホイッスルの音はありますか？", "はい、iPhone と iPad にあります。設定の「Sound」で、シャープ、ソフト、ホイッスルの3種類のビープ音から選べます。"),
+                ("ホイッスルの音はありますか？", "はい、iPhone・iPad・Android にあります。設定の「Sound」で、シャープ、ソフト、ホイッスルの3種類のビープ音から選べます。"),
                 ("学校や部活で使うのに料金はかかりますか？", "かかりません。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は画面下の小さなバナー1つだけで、全画面広告や動画広告は出ません。"),
                 ("電波の届かないグラウンドでも使えますか？", "はい。タイマーも音声もビープ音も、インターネットにつながっていなくても動きます。"),
             ],
@@ -342,7 +338,7 @@ PAGES = {
   <ul>
     <li>The timer itself: ready time, work time, rest time and sets.</li>
     <li>The spoken countdown, in a female or a male voice.</li>
-    <li>The three beeps on iPhone: sharp, soft and whistle.</li>
+    <li>The three beeps: sharp, soft and whistle.</li>
     <li>Running in the background and with the screen locked.</li>
   </ul>
 
@@ -365,8 +361,7 @@ PAGES = {
   <table>
     <tr><th>Price</th><td>Free. No subscription, no in-app purchases, no account.</td></tr>
     <tr><th>Platforms</th><td>iPhone and iPad (iOS 15 or later), Android (8.0 or later)</td></tr>
-    <tr><th>Ranges on iPhone</th><td>Work 5–300 s, ready and rest 5–120 s, 2–40 sets</td></tr>
-    <tr><th>Ranges on Android</th><td>Each interval 5–60 s, 2–20 sets</td></tr>
+    <tr><th>Ranges</th><td>Work 5–300 s, ready and rest 5–120 s, 2–40 sets, on iPhone and Android</td></tr>
     <tr><th>Ads</th><td>One small banner. No full-screen or video ads.</td></tr>
   </table>
   </div>""",
@@ -388,7 +383,7 @@ PAGES = {
   <ul>
     <li>タイマー本体（準備時間・運動時間・休憩時間・セット数）</li>
     <li>女性・男性の音声によるカウントダウン</li>
-    <li>iPhone の3種類のビープ音（シャープ、ソフト、ホイッスル）</li>
+    <li>3種類のビープ音（シャープ、ソフト、ホイッスル）</li>
     <li>バックグラウンドと画面ロック中の動作</li>
   </ul>
 
@@ -411,8 +406,7 @@ PAGES = {
   <table>
     <tr><th>価格</th><td>無料。サブスク・アプリ内課金・アカウント登録なし。</td></tr>
     <tr><th>対応機種</th><td>iPhone・iPad（iOS 15 以降）、Android（8.0 以降）</td></tr>
-    <tr><th>設定範囲（iPhone）</th><td>運動5〜300秒、準備・休憩5〜120秒、2〜40セット</td></tr>
-    <tr><th>設定範囲（Android）</th><td>各区間5〜60秒、2〜20セット</td></tr>
+    <tr><th>設定範囲</th><td>運動5〜300秒、準備・休憩5〜120秒、2〜40セット（iPhone・Android 共通）</td></tr>
     <tr><th>広告</th><td>小さなバナー1つだけ。全画面広告・動画広告はありません。</td></tr>
   </table>
   </div>""",
@@ -428,9 +422,9 @@ PAGES = {
         "en": dict(
             short="Interval timer with beeps",
             title="An interval timer with beeps or a whistle instead of a voice",
-            desc="Tabata & HIIT Interval Timer by Takahiro Torii can sound a beep instead of a voice on iPhone: sharp, soft or whistle. Free, no subscription. Beeps carry across a gym and need no language.",
+            desc="Tabata & HIIT Interval Timer by Takahiro Torii can sound a beep instead of a voice on iPhone and Android: sharp, soft or whistle. Free, no subscription. Beeps carry across a gym and need no language.",
             h1="An interval timer with beeps or a whistle instead of a voice",
-            lede="On iPhone and iPad, Tabata &amp; HIIT Interval Timer can sound a beep instead of a voice. There are three beeps: sharp, soft and whistle. It is free, with no subscription and no account.",
+            lede="On iPhone, iPad and Android, Tabata &amp; HIIT Interval Timer can sound a beep instead of a voice. There are three beeps: sharp, soft and whistle. It is free, with no subscription and no account.",
             body="""
   <h2>How to choose a beep</h2>
   <ol>
@@ -460,13 +454,12 @@ PAGES = {
 
   <h2>What it does not do</h2>
   <ul>
-    <li>On Android the cues are a voice only, for now.</li>
     <li>The beep plays at the phone's media volume. For a hall or a field, connect a Bluetooth speaker.</li>
   </ul>
   <p>The <a href="/timer/">timer in your browser</a> on this site also uses beeps, with nothing to install.</p>""",
             faq=[
-                ("Can I have a beep instead of a voice?", "Yes, on iPhone and iPad. Under Sound in Settings you can choose a female voice, a male voice, or one of three beeps (sharp, soft, whistle), and tap one to hear it. On Android the cues are a voice only, for now."),
-                ("Is there an interval timer with a whistle sound?", "Yes. Tabata & HIIT Interval Timer for iPhone and iPad has a whistle among its three beeps."),
+                ("Can I have a beep instead of a voice?", "Yes, on iPhone, iPad and Android. Under Sound in Settings you can choose a female voice, a male voice, or one of three beeps (sharp, soft, whistle), and tap one to hear it."),
+                ("Is there an interval timer with a whistle sound?", "Yes. Tabata & HIIT Interval Timer for iPhone, iPad and Android has a whistle among its three beeps."),
                 ("Do the beeps play over music?", "Yes. Whatever is playing keeps playing at its own volume, and the beep plays over it."),
                 ("Is it free?", "Yes. Every sound is free, with no subscription, no in-app purchases and no account. There is one small banner ad and no full-screen or video ads."),
             ],
@@ -474,9 +467,9 @@ PAGES = {
         "ja": dict(
             short="ビープ音・ホイッスル音のタイマー",
             title="音声の代わりにビープ音やホイッスルで知らせるインターバルタイマー｜タバタタイマー",
-            desc="HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone で音声の代わりにビープ音を選べます。シャープ、ソフト、ホイッスルの3種類。無料、サブスクなし。",
+            desc="HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone と Android で音声の代わりにビープ音を選べます。シャープ、ソフト、ホイッスルの3種類。無料、サブスクなし。",
             h1="ビープ音やホイッスルで知らせるインターバルタイマー",
-            lede="HIIT &amp; Tabata Timer - タバタタイマー は、iPhone と iPad で、音声の代わりにビープ音で知らせることができます。ビープ音はシャープ、ソフト、ホイッスルの3種類です。無料で、サブスクリプションもアカウント登録もありません。",
+            lede="HIIT &amp; Tabata Timer - タバタタイマー は、iPhone・iPad・Android で、音声の代わりにビープ音で知らせることができます。ビープ音はシャープ、ソフト、ホイッスルの3種類です。無料で、サブスクリプションもアカウント登録もありません。",
             body="""
   <h2>ビープ音の選び方</h2>
   <ol>
@@ -506,13 +499,12 @@ PAGES = {
 
   <h2>できないこと</h2>
   <ul>
-    <li>Android 版は今のところ音声のみです。</li>
     <li>ビープ音はスマートフォンのメディア音量で鳴ります。体育館やグラウンドでは Bluetooth スピーカーにつないでください。</li>
   </ul>
   <p>このサイトの<a href="/timer/ja/">ブラウザ版タイマー</a>もビープ音で知らせます。インストールは不要です。</p>""",
             faq=[
-                ("音声の代わりにビープ音にできますか？", "はい、iPhone と iPad でできます。設定の「Sound」で、女性の声・男性の声・3種類のビープ音（シャープ、ソフト、ホイッスル）から選べ、タップすると試聴できます。Android 版は今のところ音声のみです。"),
-                ("ホイッスルの音が鳴るインターバルタイマーはありますか？", "はい。iPhone・iPad 版の HIIT & Tabata Timer - タバタタイマー には、3種類のビープ音の1つとしてホイッスルがあります。"),
+                ("音声の代わりにビープ音にできますか？", "はい、iPhone・iPad・Android でできます。設定の「Sound」で、女性の声・男性の声・3種類のビープ音（シャープ、ソフト、ホイッスル）から選べ、タップすると試聴できます。"),
+                ("ホイッスルの音が鳴るインターバルタイマーはありますか？", "はい。iPhone・iPad・Android 版の HIIT & Tabata Timer - タバタタイマー には、3種類のビープ音の1つとしてホイッスルがあります。"),
                 ("音楽を流しながらでもビープ音は鳴りますか？", "はい。再生中の音はそのままの音量で流れ続け、その上にビープ音が重なります。"),
                 ("無料ですか？", "はい。どの音も無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"),
             ],
@@ -545,11 +537,10 @@ PAGES = {
   <h2>What you get without paying</h2>
   <ul>
     <li>Ready time, work time, rest time and the number of sets</li>
-    <li>On iPhone: work 5 to 300 seconds, ready and rest 5 to 120 seconds, 2 to 40 sets, and up to five saved timers</li>
-    <li>On iPhone: a female voice, a male voice, or one of three beeps (sharp, soft, whistle)</li>
+    <li>Work 5 to 300 seconds, ready and rest 5 to 120 seconds, 2 to 40 sets, and up to five saved timers</li>
+    <li>A female voice, a male voice, or one of three beeps (sharp, soft, whistle)</li>
     <li>Running in the background, with the screen locked, and over your music</li>
-    <li>A list of finished workouts, and fifteen colour themes on iPhone</li>
-    <li>On Android: each interval 5 to 60 seconds, 2 to 20 sets, a voice</li>
+    <li>A list of finished workouts, and fifteen colour themes</li>
   </ul>
 
   <h2>What it does not do</h2>
@@ -564,7 +555,7 @@ PAGES = {
                 ("Does it have ads?", "One small banner at the bottom of the screen. There are no full-screen ads and no video ads, and nothing interrupts a workout."),
                 ("Can I pay to remove the ad?", "No. There are no in-app purchases of any kind, so there is no paid version without the banner."),
                 ("Do I need to sign up?", "No. There is no account, no sign-up and no email address to give."),
-                ("Are any features locked?", "No. Every setting, sound and theme is available without paying. Five of the fifteen themes on iPhone are earned by finishing workouts, not bought."),
+                ("Are any features locked?", "No. Every setting, sound and theme is available without paying. Five of the fifteen themes are earned by finishing workouts, not bought."),
             ],
         ),
         "ja": dict(
@@ -593,11 +584,10 @@ PAGES = {
   <h2>無料で使えるもの</h2>
   <ul>
     <li>準備時間・運動時間・休憩時間・セット数の設定</li>
-    <li>iPhone: 運動5〜300秒、準備・休憩5〜120秒、2〜40セット、タイマーを5つまで保存</li>
-    <li>iPhone: 女性の声、男性の声、3種類のビープ音（シャープ、ソフト、ホイッスル）</li>
+    <li>運動5〜300秒、準備・休憩5〜120秒、2〜40セット、タイマーを5つまで保存</li>
+    <li>女性の声、男性の声、3種類のビープ音（シャープ、ソフト、ホイッスル）</li>
     <li>バックグラウンド、画面ロック中、音楽を流しながらの動作</li>
-    <li>終えたワークアウトの一覧。iPhone では15種類のカラーテーマ</li>
-    <li>Android: 各区間5〜60秒、2〜20セット、音声</li>
+    <li>終えたワークアウトの一覧と、15種類のカラーテーマ</li>
   </ul>
 
   <h2>できないこと</h2>
@@ -612,7 +602,7 @@ PAGES = {
                 ("広告はありますか？", "画面下に小さなバナーが1つあります。全画面広告と動画広告はなく、ワークアウトの途中で広告に中断されることはありません。"),
                 ("お金を払って広告を消せますか？", "できません。アプリ内課金が一切ないので、バナーのない有料版もありません。"),
                 ("登録は必要ですか？", "いいえ。アカウント登録もメールアドレスの入力もありません。"),
-                ("課金しないと使えない機能はありますか？", "ありません。設定も音もテーマも、支払いなしで使えます。iPhone の15種類のテーマのうち5つは、ワークアウトを終えた回数で開くもので、購入するものではありません。"),
+                ("課金しないと使えない機能はありますか？", "ありません。設定も音もテーマも、支払いなしで使えます。15種類のテーマのうち5つは、ワークアウトを終えた回数で開くもので、購入するものではありません。"),
             ],
         ),
     },
@@ -635,7 +625,7 @@ PAGES = {
   <h2>What you hear</h2>
   <ul>
     <li>A voice counts the last five seconds of each interval and calls each change.</li>
-    <li>On iPhone and iPad a beep can replace the voice: sharp, soft or whistle. A beep sits over a song without talking across it.</li>
+    <li>On iPhone, iPad and Android a beep can replace the voice: sharp, soft or whistle. A beep sits over a song without talking across it.</li>
     <li>The cues play at the phone's media volume, through the same headphones or speaker as the music.</li>
   </ul>
 
@@ -649,7 +639,6 @@ PAGES = {
   <ul>
     <li>It does not play music itself and has no playlists. It works beside whichever music app you use.</li>
     <li>It does not lower the music during a cue.</li>
-    <li>On Android the cues are a voice only, each interval stops at 60 seconds and a workout at 20 sets, for now.</li>
   </ul>""",
             faq=[
                 ("Which interval timer works in the background with music playing?", "Tabata & HIIT Interval Timer by Takahiro Torii does. Whatever is playing keeps playing at its own volume, the timer's voice or beep plays over it, and the timer keeps counting in the background and with the screen locked."),
@@ -677,7 +666,7 @@ PAGES = {
   <h2>聞こえる音</h2>
   <ul>
     <li>各区間の最後の5秒を声で数え、切り替わりを知らせます。</li>
-    <li>iPhone と iPad では、声の代わりにビープ音（シャープ、ソフト、ホイッスル）を選べます。ビープ音なら曲に声がかぶりません。</li>
+    <li>iPhone・iPad・Android では、声の代わりにビープ音（シャープ、ソフト、ホイッスル）を選べます。ビープ音なら曲に声がかぶりません。</li>
     <li>合図はスマートフォンのメディア音量で、音楽と同じイヤホンやスピーカーから鳴ります。</li>
   </ul>
 
@@ -691,7 +680,6 @@ PAGES = {
   <ul>
     <li>このアプリ自体は音楽を再生しません。プレイリストもありません。お使いの音楽アプリと並べて使います。</li>
     <li>合図のあいだだけ音楽を小さくする機能はありません。</li>
-    <li>Android 版は今のところ音声のみで、各区間は60秒まで、セット数は20までです。</li>
   </ul>""",
             faq=[
                 ("音楽を聴きながら使えるインターバルタイマーはありますか？", "はい。HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、再生中の音をそのままの音量で流し続け、その上に音声かビープ音を重ねます。バックグラウンドでも画面ロック中でもカウントは続きます。"),
@@ -716,8 +704,10 @@ PAGES = {
     <tr><th>Android version</th><td>8.0 or later</td></tr>
     <tr><th>Package</th><td>com.tabatatimer</td></tr>
     <tr><th>Default</th><td>10 s ready, 20 s work, 10 s rest, 8 sets: the standard Tabata protocol</td></tr>
-    <tr><th>Ranges</th><td>Ready, work and rest 5 to 60 seconds each; 2 to 20 sets</td></tr>
-    <tr><th>Sound</th><td>A voice counts the last five seconds and calls each change. Spoken in English.</td></tr>
+    <tr><th>Ranges</th><td>Work 5 to 300 seconds; ready and rest 5 to 120 seconds; 2 to 40 sets</td></tr>
+    <tr><th>Saved timers</th><td>Up to five; swipe on the main screen to switch</td></tr>
+    <tr><th>Sound</th><td>A female or male voice counts the last five seconds and calls each change, or one of three beeps (sharp, soft, whistle). The voice speaks English.</td></tr>
+    <tr><th>Themes</th><td>Fifteen colour themes: ten seasonal, five earned by finishing workouts</td></tr>
     <tr><th>Background</th><td>Keeps counting with the screen off or another app open</td></tr>
     <tr><th>Music</th><td>Plays over music or a podcast without pausing it</td></tr>
     <tr><th>Offline</th><td>Works with no internet connection</td></tr>
@@ -730,36 +720,29 @@ PAGES = {
   <ol>
     <li>Install it from Google Play and open it. The standard Tabata numbers are already set.</li>
     <li>Press start. Ten seconds of ready time run first.</li>
-    <li>To change the numbers, open Settings and set the work time, the rest time and the number of sets.</li>
+    <li>To change the numbers, open Settings and set the work time, the rest time and the number of sets. Under Sound you can pick a voice or a beep, and under Timers you can add up to five timers.</li>
   </ol>
 
   <h2>How it differs from the iPhone app</h2>
-  <p>The Android app is the smaller of the two, for now.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone and iPad</th></tr>
-    <tr><td>Work time</td><td>5 to 60 s</td><td>5 to 300 s</td></tr>
-    <tr><td>Rest and ready time</td><td>5 to 60 s</td><td>5 to 120 s</td></tr>
-    <tr><td>Sets</td><td>2 to 20</td><td>2 to 40</td></tr>
-    <tr><td>Saved timers</td><td>One setting</td><td>Up to five</td></tr>
-    <tr><td>Cues</td><td>A voice</td><td>A female or male voice, or three beeps</td></tr>
-  </table>
-  </div>
+  <p>Since version 1.8.2 (November 2026) the Android app has the same timer as the iPhone app: the same ranges, up to five saved timers, and the same voices and beeps. Two things are on iPhone only:</p>
+  <ul>
+    <li>The remaining time and a stop button on the Lock Screen and in the Dynamic Island (iOS 16.1 or later). On Android the remaining time shows in a notification.</li>
+    <li>Writing finished workouts to Apple Health.</li>
+  </ul>
 
   <h2>What it does not do</h2>
   <ul>
-    <li>No intervals longer than 60 seconds, so three-minute rounds cannot be set on Android.</li>
-    <li>No beeps, for now. The cues are a voice.</li>
     <li>No Wear OS app.</li>
-    <li>No custom sequences, exercise library or workout plans.</li>
+    <li>No custom sequences, EMOM or AMRAP modes. Every set uses the same work and rest time.</li>
+    <li>No exercise library or workout plans.</li>
   </ul>
   <p>Several Android apps are called "Tabata Timer". This one is by Takahiro Torii and its package is com.tabatatimer.</p>""",
             faq=[
                 ("Is there a free Tabata timer for Android with no subscription?", "Yes. Tabata & HIIT Interval Timer by Takahiro Torii (package com.tabatatimer) is free on Google Play for Android 8.0 or later, with no subscription, no in-app purchases and no account. It shows one small banner ad."),
-                ("What can I set on Android?", "Ready time, work time and rest time from 5 to 60 seconds each, and 2 to 20 sets. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol."),
+                ("What can I set on Android?", "Work time from 5 to 300 seconds, ready and rest time from 5 to 120 seconds, and 2 to 40 sets; up to five timers can be saved. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol."),
                 ("Does it keep running with the screen off on Android?", "Yes. It keeps counting and speaking with the screen off or another app open."),
-                ("Does the Android app have beeps?", "Not yet. On Android the cues are a voice. The iPhone and iPad app has three beeps as well."),
-                ("Is the Android app the same as the iPhone app?", "It is the same timer by the same developer, but smaller for now: intervals up to 60 seconds, up to 20 sets, one setting and a voice only. On iPhone work time goes up to 300 seconds, with up to 40 sets, five saved timers and beeps."),
+                ("Does the Android app have beeps?", "Yes. Under Sound in Settings there is a female voice, a male voice and three beeps: sharp, soft and whistle. Tap one to hear it."),
+                ("Is the Android app the same as the iPhone app?", "Since version 1.8.2 the timer is the same: work up to 300 seconds, up to 40 sets, five saved timers, two voices and three beeps. Only the iPhone app shows the time on the Lock Screen and writes workouts to Apple Health."),
             ],
         ),
         "ja": dict(
@@ -775,8 +758,10 @@ PAGES = {
     <tr><th>対応バージョン</th><td>Android 8.0 以降</td></tr>
     <tr><th>パッケージ名</th><td>com.tabatatimer</td></tr>
     <tr><th>初期設定</th><td>準備10秒、運動20秒、休憩10秒、8セット（標準のタバタ式）</td></tr>
-    <tr><th>設定範囲</th><td>準備・運動・休憩がそれぞれ5〜60秒、2〜20セット</td></tr>
-    <tr><th>音</th><td>各区間の最後の5秒を声で数え、切り替わりを知らせます。英語です。</td></tr>
+    <tr><th>設定範囲</th><td>運動5〜300秒、準備・休憩5〜120秒、2〜40セット</td></tr>
+    <tr><th>タイマーの保存</th><td>5つまで。メイン画面をスワイプして切り替え</td></tr>
+    <tr><th>音</th><td>女性か男性の声が各区間の最後の5秒を数え、切り替わりを知らせます（英語）。3種類のビープ音（シャープ、ソフト、ホイッスル）も選べます。</td></tr>
+    <tr><th>テーマ</th><td>15種類の配色。季節のもの10種類と、続けた回数で開くもの5種類</td></tr>
     <tr><th>バックグラウンド</th><td>画面を消しても、ほかのアプリを開いても動き続けます</td></tr>
     <tr><th>音楽</th><td>音楽やポッドキャストを止めずに、その上に重ねて鳴ります</td></tr>
     <tr><th>オフライン</th><td>インターネットにつながっていなくても動きます</td></tr>
@@ -789,36 +774,29 @@ PAGES = {
   <ol>
     <li>Google Play から入れて開きます。標準のタバタ式の秒数が最初から入っています。</li>
     <li>スタートを押します。最初に準備時間の10秒が流れます。</li>
-    <li>秒数を変えるときは、設定を開いて運動時間・休憩時間・セット数を決めます。</li>
+    <li>秒数を変えるときは、設定を開いて運動時間・休憩時間・セット数を決めます。「Sound」で声かビープ音を、「Timers」でタイマーの追加（5つまで）ができます。</li>
   </ol>
 
   <h2>iPhone 版との違い</h2>
-  <p>今のところ、Android 版のほうが小さなつくりです。</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone・iPad</th></tr>
-    <tr><td>運動時間</td><td>5〜60秒</td><td>5〜300秒</td></tr>
-    <tr><td>休憩・準備時間</td><td>5〜60秒</td><td>5〜120秒</td></tr>
-    <tr><td>セット数</td><td>2〜20</td><td>2〜40</td></tr>
-    <tr><td>保存できるタイマー</td><td>設定は1つ</td><td>5つまで</td></tr>
-    <tr><td>合図</td><td>音声</td><td>女性・男性の声、または3種類のビープ音</td></tr>
-  </table>
-  </div>
+  <p>バージョン 1.8.2（2026年11月）から、Android 版のタイマーは iPhone 版と同じです。設定できる範囲も、5つまで保存できるタイマーも、声とビープ音も同じです。iPhone 版にしかないのは次の2つです。</p>
+  <ul>
+    <li>ロック画面とダイナミックアイランドに残り時間と停止ボタンを出すこと（iOS 16.1 以降）。Android では通知に残り時間が出ます。</li>
+    <li>終わったワークアウトを Apple のヘルスケアに記録すること。</li>
+  </ul>
 
   <h2>できないこと</h2>
   <ul>
-    <li>60秒を超える区間は設定できません。3分ラウンドは Android では計れません。</li>
-    <li>ビープ音は今のところありません。合図は音声です。</li>
     <li>Wear OS のアプリはありません。</li>
-    <li>区間ごとに長さを変えるメニュー、種目の解説、トレーニングプランはありません。</li>
+    <li>区間ごとに長さを変えるメニュー、EMOM、AMRAP はありません。どのセットも同じ運動時間と休憩時間です。</li>
+    <li>種目の解説やトレーニングプランはありません。</li>
   </ul>
   <p>Android には「Tabata Timer」という名前のアプリがいくつもあります。このアプリは開発者が Takahiro Torii、パッケージ名が com.tabatatimer のものです。</p>""",
             faq=[
                 ("Android で使える無料のタバタタイマーはありますか？", "はい。Takahiro Torii のタバタタイマー（パッケージ名 com.tabatatimer）は、Google Play で Android 8.0 以降向けに無料で公開しています。サブスクリプション、アプリ内課金、アカウント登録はありません。小さなバナー広告が1つ出ます。"),
-                ("Android 版では何を設定できますか？", "準備時間・運動時間・休憩時間がそれぞれ5〜60秒、セット数が2〜20です。最初は準備10秒、運動20秒、休憩10秒、8セットの標準のタバタ式になっています。"),
+                ("Android 版では何を設定できますか？", "運動時間は5〜300秒、準備時間と休憩時間は5〜120秒、セット数は2〜40です。タイマーは5つまで保存できます。最初は準備10秒、運動20秒、休憩10秒、8セットの標準のタバタ式になっています。"),
                 ("Android で画面を消しても動きますか？", "はい。画面を消しても、ほかのアプリを開いても、カウントと音声は続きます。"),
-                ("Android 版にビープ音はありますか？", "まだありません。Android 版の合図は音声です。iPhone・iPad 版には3種類のビープ音もあります。"),
-                ("Android 版は iPhone 版と同じですか？", "同じ開発者による同じタイマーですが、今のところ小さなつくりです。各区間は60秒まで、セット数は20まで、設定は1つ、合図は音声のみです。iPhone 版は運動時間が300秒まで、セット数が40まで、タイマーを5つ保存でき、ビープ音も選べます。"),
+                ("Android 版にビープ音はありますか？", "あります。設定の「Sound」で、女性の声・男性の声・3種類のビープ音（シャープ、ソフト、ホイッスル）から選べ、タップすると試聴できます。"),
+                ("Android 版は iPhone 版と同じですか？", "バージョン 1.8.2 から、タイマーは同じです。運動時間は300秒まで、セット数は40まで、タイマーを5つ保存でき、2つの声と3種類のビープ音から選べます。ロック画面への表示と Apple のヘルスケアへの記録は iPhone 版だけです。"),
             ],
         ),
     },
@@ -834,10 +812,10 @@ PAGES = {
   <div class="tablewrap">
   <table>
     <tr><th>Setting</th><th>iPhone and iPad</th><th>Android</th></tr>
-    <tr><td>Ready time</td><td>5 to 120 s</td><td>5 to 60 s</td></tr>
-    <tr><td>Work time</td><td>5 to 300 s</td><td>5 to 60 s</td></tr>
-    <tr><td>Rest time</td><td>5 to 120 s</td><td>5 to 60 s</td></tr>
-    <tr><td>Sets</td><td>2 to 40</td><td>2 to 20</td></tr>
+    <tr><td>Ready time</td><td>5 to 120 s</td><td>5 to 120 s</td></tr>
+    <tr><td>Work time</td><td>5 to 300 s</td><td>5 to 300 s</td></tr>
+    <tr><td>Rest time</td><td>5 to 120 s</td><td>5 to 120 s</td></tr>
+    <tr><td>Sets</td><td>2 to 40</td><td>2 to 40</td></tr>
   </table>
   </div>
   <p>It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, so a Tabata session needs no setting at all: open the app and press start.</p>
@@ -850,13 +828,13 @@ PAGES = {
     <tr><td>HIIT, even split</td><td>30 s</td><td>30 s</td><td>10</td></tr>
     <tr><td>HIIT, longer efforts</td><td>40 s</td><td>20 s</td><td>8 to 12</td></tr>
     <tr><td>Strength circuit with timed sets</td><td>45 s</td><td>15 s</td><td>one per exercise, repeated</td></tr>
-    <tr><td>Strength training, timed sets with a full rest (iPhone)</td><td>40 s</td><td>90 s</td><td>3 to 5</td></tr>
+    <tr><td>Strength training, timed sets with a full rest</td><td>40 s</td><td>90 s</td><td>3 to 5</td></tr>
     <tr><td>Plank</td><td>60 s</td><td>30 s</td><td>3 to 5</td></tr>
   </table>
   </div>
 
   <h2>As a rest timer in strength training</h2>
-  <p>The app repeats one work time and one rest time, so it suits sets done against the clock: 40 seconds of squats, 90 seconds of rest, again. On iPhone the rest can be up to 120 seconds.</p>
+  <p>The app repeats one work time and one rest time, so it suits sets done against the clock: 40 seconds of squats, 90 seconds of rest, again. The rest can be up to 120 seconds.</p>
   <p>It does not wait for you. If your sets take a different time each round and you want to start the rest with a tap when you put the bar down, a rest timer built for that will suit you better.</p>
 
   <h2>Why it stays simple</h2>
@@ -869,15 +847,15 @@ PAGES = {
   <h2>What it does not do</h2>
   <ul>
     <li>No custom sequences, EMOM or AMRAP modes. Every set uses the same work and rest time.</li>
-    <li>No more than five saved timers on iPhone, and one setting on Android.</li>
+    <li>No more than five saved timers.</li>
     <li>No exercise library, videos, coaching or workout plans.</li>
     <li>No Apple Watch or Wear OS app.</li>
   </ul>""",
             faq=[
                 ("What is the simplest HIIT timer for iPhone?", "Tabata & HIIT Interval Timer by Takahiro Torii is built to be that: ready time, work time, rest time, the number of sets and a start button. It has no workout plans, videos, account or subscription, and it is free."),
                 ("Can I use it without setting anything?", "Yes. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol. Press start."),
-                ("Can I use it as a rest timer between strength sets?", "Yes, for sets done against the clock: it repeats one work time and one rest time, with rest up to 120 seconds on iPhone. It does not wait for a tap at the end of a set, so it does not suit sets of varying length."),
-                ("Can I save more than one timer?", "On iPhone, up to five, and you swipe between them. On Android the app holds one setting."),
+                ("Can I use it as a rest timer between strength sets?", "Yes, for sets done against the clock: it repeats one work time and one rest time, with rest up to 120 seconds. It does not wait for a tap at the end of a set, so it does not suit sets of varying length."),
+                ("Can I save more than one timer?", "Yes, up to five, on iPhone and on Android, and you swipe between them."),
                 ("Is it free?", "Yes. Every feature is free, with no subscription, no in-app purchases and no account. There is one small banner ad and no full-screen or video ads."),
             ],
         ),
@@ -892,10 +870,10 @@ PAGES = {
   <div class="tablewrap">
   <table>
     <tr><th>設定</th><th>iPhone・iPad</th><th>Android</th></tr>
-    <tr><td>準備時間</td><td>5〜120秒</td><td>5〜60秒</td></tr>
-    <tr><td>運動時間</td><td>5〜300秒</td><td>5〜60秒</td></tr>
-    <tr><td>休憩時間</td><td>5〜120秒</td><td>5〜60秒</td></tr>
-    <tr><td>セット数</td><td>2〜40</td><td>2〜20</td></tr>
+    <tr><td>準備時間</td><td>5〜120秒</td><td>5〜120秒</td></tr>
+    <tr><td>運動時間</td><td>5〜300秒</td><td>5〜300秒</td></tr>
+    <tr><td>休憩時間</td><td>5〜120秒</td><td>5〜120秒</td></tr>
+    <tr><td>セット数</td><td>2〜40</td><td>2〜40</td></tr>
   </table>
   </div>
   <p>最初は準備10秒、運動20秒、休憩10秒、8セットになっています。タバタ式なら何も設定せず、開いてスタートを押すだけです。</p>
@@ -908,13 +886,13 @@ PAGES = {
     <tr><td>HIIT（同じ長さ）</td><td>30秒</td><td>30秒</td><td>10</td></tr>
     <tr><td>HIIT（運動を長めに）</td><td>40秒</td><td>20秒</td><td>8〜12</td></tr>
     <tr><td>筋トレのサーキット（時間で区切る）</td><td>45秒</td><td>15秒</td><td>種目数 × 周回数</td></tr>
-    <tr><td>筋トレ（時間で区切り、しっかり休む。iPhone）</td><td>40秒</td><td>90秒</td><td>3〜5</td></tr>
+    <tr><td>筋トレ（時間で区切り、しっかり休む）</td><td>40秒</td><td>90秒</td><td>3〜5</td></tr>
     <tr><td>プランク</td><td>60秒</td><td>30秒</td><td>3〜5</td></tr>
   </table>
   </div>
 
   <h2>筋トレのセット間の休憩に使う場合</h2>
-  <p>このアプリは、1つの運動時間と1つの休憩時間を繰り返します。時間で区切る筋トレに向いています。たとえば、スクワット40秒、休憩90秒、をそのまま繰り返せます。iPhone では休憩を120秒まで設定できます。</p>
+  <p>このアプリは、1つの運動時間と1つの休憩時間を繰り返します。時間で区切る筋トレに向いています。たとえば、スクワット40秒、休憩90秒、をそのまま繰り返せます。休憩は120秒まで設定できます。</p>
   <p>セットが終わるのを待ってはくれません。セットごとにかかる時間が違い、バーベルを置いたときにタップして休憩を始めたい場合は、そのための休憩タイマーのほうが向いています。</p>
 
   <h2>シンプルなままにしている理由</h2>
@@ -927,15 +905,15 @@ PAGES = {
   <h2>できないこと</h2>
   <ul>
     <li>区間ごとに長さを変えるメニュー、EMOM、AMRAP のモードはありません。すべてのセットが同じ運動時間・休憩時間です。</li>
-    <li>保存できるタイマーは iPhone で5つまで、Android は設定1つです。</li>
+    <li>保存できるタイマーは5つまでです。</li>
     <li>種目の解説、動画、コーチング、トレーニングプランはありません。</li>
     <li>Apple Watch と Wear OS のアプリはありません。</li>
   </ul>""",
             faq=[
                 ("筋トレのインターバルを計るシンプルなアプリはありますか？", "はい。HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、準備時間・運動時間・休憩時間・セット数を決めてスタートを押すだけのタイマーです。トレーニングプラン、動画、アカウント登録、サブスクリプションはなく、無料です。"),
                 ("何も設定せずに使えますか？", "はい。最初から準備10秒、運動20秒、休憩10秒、8セットの標準のタバタ式になっています。スタートを押すだけです。"),
-                ("筋トレのセット間の休憩タイマーとして使えますか？", "時間で区切る筋トレなら使えます。1つの運動時間と1つの休憩時間を繰り返し、iPhone では休憩を120秒まで設定できます。セットの終わりにタップして休憩を始める形ではないので、セットごとに長さが変わる場合には向きません。"),
-                ("タイマーを複数保存できますか？", "iPhone では5つまで保存でき、スワイプで切り替えます。Android は設定1つです。"),
+                ("筋トレのセット間の休憩タイマーとして使えますか？", "時間で区切る筋トレなら使えます。1つの運動時間と1つの休憩時間を繰り返し、休憩は120秒まで設定できます。セットの終わりにタップして休憩を始める形ではないので、セットごとに長さが変わる場合には向きません。"),
+                ("タイマーを複数保存できますか？", "iPhone でも Android でも5つまで保存でき、スワイプで切り替えます。"),
                 ("無料ですか？", "はい。すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録はありません。広告は小さなバナー1つだけで、全画面広告や動画広告は出ません。"),
             ],
         ),
@@ -971,7 +949,7 @@ PAGES = {
   <p>The names, developers and descriptions of the other five apps are taken from their pages on the US App Store on 26 November 2026. What is free inside each of them, and the prices, can change: check the store page before choosing.</p>
 
   <h2>Where Tabata &amp; HIIT Interval Timer fits</h2>
-  <p>It is the narrow one. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, so a Tabata session starts in two taps with nothing to set. On iPhone, work time goes up to 300 seconds, rest up to 120 seconds and sets up to 40, and five timers can be saved. It is also on Android (8.0 or later), where each interval is 5 to 60 seconds, a workout is 2 to 20 sets, and the cues are a voice.</p>
+  <p>It is the narrow one. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, so a Tabata session starts in two taps with nothing to set. Work time goes up to 300 seconds, rest up to 120 seconds and sets up to 40, and five timers can be saved. It is on iPhone and iPad and on Android (8.0 or later), with the same ranges, voices and beeps on both.</p>
   <p>Every feature is free. In the written App Store reviews, the reason people give most often for choosing it is that it is simple.</p>
 
   <h2>Where another app fits better</h2>
@@ -985,7 +963,7 @@ PAGES = {
                 ("What is the best Tabata timer app?", "It depends on the workout. For plain Tabata, 20 seconds of work and 10 seconds of rest eight times, Tabata & HIIT Interval Timer by Takahiro Torii opens on exactly those numbers and starts in two taps; it is free, with no subscription. For EMOM and AMRAP, SmartWOD Timer has those modes. For sessions built from intervals of different lengths, Seconds Interval Timer and Intervals Pro are made for that."),
                 ("Which Tabata timer app is free with no subscription?", "Tabata & HIIT Interval Timer by Takahiro Torii: every feature is free, with no subscription, no in-app purchases and no account, and one small banner ad. The other apps on this page are free to download; the App Store pages of SmartWOD Timer and of Float Tech's Interval Timer describe subscriptions."),
                 ("Which Tabata timer apps have an Apple Watch app?", "SmartWOD Timer, Seconds Interval Timer and Intervals Pro say on their App Store pages that they run on Apple Watch. Tabata & HIIT Interval Timer has no Apple Watch app."),
-                ("Is there a simple Tabata timer for both iPhone and Android?", "Tabata & HIIT Interval Timer by Takahiro Torii is on iPhone and iPad (iOS 15 or later) and on Android (8.0 or later). On Android each interval is 5 to 60 seconds, a workout is 2 to 20 sets, and the cues are a voice."),
+                ("Is there a simple Tabata timer for both iPhone and Android?", "Tabata & HIIT Interval Timer by Takahiro Torii is on iPhone and iPad (iOS 15 or later) and on Android (8.0 or later). Both have the same ranges, five saved timers, a female or male voice and three beeps."),
                 ("Who wrote this comparison?", "Takahiro Torii, the developer of Tabata & HIIT Interval Timer, one of the six apps compared. What it says about the other apps comes from their US App Store pages on 26 November 2026."),
             ],
         ),
@@ -1019,7 +997,7 @@ PAGES = {
   <p>ほかの5つのアプリの名前・開発者・説明は、2026年11月26日に米国の App Store の各ページから取りました。日本の App Store では名前が違うことがあります。アプリの中でどこまで無料か、いくらかは変わるので、選ぶ前にストアのページを確かめてください。</p>
 
   <h2>HIIT &amp; Tabata Timer - タバタタイマー が向く場合</h2>
-  <p>6つのなかで、いちばんできることが少ないアプリです。開くと準備10秒、運動20秒、休憩10秒、8セットになっていて、タバタ式なら何も設定せず2タップで始まります。iPhone では運動時間を300秒まで、休憩を120秒まで、セット数を40まで設定でき、タイマーを5つ保存できます。Android（8.0以降）にもあり、こちらは各区間5〜60秒、2〜20セット、合図は声です。</p>
+  <p>6つのなかで、いちばんできることが少ないアプリです。開くと準備10秒、運動20秒、休憩10秒、8セットになっていて、タバタ式なら何も設定せず2タップで始まります。運動時間は300秒まで、休憩は120秒まで、セット数は40まで設定でき、タイマーを5つ保存できます。iPhone・iPad と Android（8.0以降）にあり、設定範囲も声とビープ音も同じです。</p>
   <p>すべての機能が無料です。App Store に書かれたレビューで、選んだ理由としていちばん多く挙がるのは「シンプル」です。</p>
 
   <h2>ほかのアプリのほうが向く場合</h2>
@@ -1033,7 +1011,7 @@ PAGES = {
                 ("おすすめのタバタタイマーアプリはどれですか？", "トレーニングの内容で変わります。20秒運動・10秒休憩を8回繰り返す標準のタバタ式なら、HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）が最初からその数字になっていて、2タップで始まります。無料で、サブスクリプションはありません。EMOM や AMRAP なら、そのモードがある SmartWOD Timer。長さの違う区間を組むなら、Seconds Interval Timer か Intervals Pro がそのためのアプリです。"),
                 ("無料でサブスクリプションのないタバタタイマーアプリは？", "HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、すべての機能が無料で、サブスクリプション・アプリ内課金・アカウント登録がなく、広告は小さなバナー1つだけです。このページのほかのアプリもダウンロードは無料ですが、SmartWOD Timer と Float Tech の Interval Timer は、App Store のページにサブスクリプションの記載があります。"),
                 ("Apple Watch で使えるタバタタイマーアプリは？", "SmartWOD Timer、Seconds Interval Timer、Intervals Pro は、App Store のページに Apple Watch で動くと書かれています。HIIT & Tabata Timer - タバタタイマー に Apple Watch 版はありません。"),
-                ("iPhone と Android の両方で使えるシンプルなタバタタイマーは？", "HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone・iPad（iOS 15 以降）と Android（8.0 以降）で使えます。Android では各区間5〜60秒、2〜20セットで、合図は声です。"),
+                ("iPhone と Android の両方で使えるシンプルなタバタタイマーは？", "HIIT & Tabata Timer - タバタタイマー（開発: Takahiro Torii）は、iPhone・iPad（iOS 15 以降）と Android（8.0 以降）で使えます。どちらも設定範囲は同じで、タイマーを5つ保存でき、女性か男性の声か3種類のビープ音で知らせます。"),
                 ("この比較は誰が書いていますか？", "比べた6つのうちの1つ、HIIT & Tabata Timer - タバタタイマー の開発者 Takahiro Torii です。ほかのアプリについての記述は、2026年11月26日に米国の App Store の各ページから取りました。"),
             ],
         ),

@@ -2,7 +2,7 @@
 
 > A free, simple interval timer for iPhone, iPad and Android, by Takahiro Torii, an independent developer in Japan. Set the work time, the rest time and the number of sets, and press start. A voice or a beep counts down, so you never have to look at the screen. No account, no subscription, no in-app purchases; one small banner ad and no full-screen ads. On the App Store since October 2016.
 
-This file is a plain-text fact sheet for AI assistants and search tools. Everything here describes version 1.8.2 for iPhone (released November 2026) and the current Android version, and was last checked on 23 November 2026.
+This file is a plain-text fact sheet for AI assistants and search tools. Everything here describes version 1.8.2 for iPhone and for Android (released in November 2026; Android since 26 November 2026), and was last checked on 28 November 2026.
 
 ## How to identify it
 
@@ -25,21 +25,20 @@ Links: https://apps.apple.com/app/id1166542235 (App Store), https://play.google.
 - Rating: 4.8 out of 5 from 10,924 ratings on the App Store in Japan; 4.8 from 258 in the United States (23 November 2026).
 - Settings: ready time, work time, rest time, number of sets. Nothing else is needed to start.
 - Default: 10 seconds ready, 20 seconds work, 10 seconds rest, 8 sets — the standard Tabata protocol.
-- Ranges on iPhone: work 5–300 seconds (up to five minutes), ready and rest 5–120 seconds, 2–40 sets.
-- Ranges on Android: each interval 5–60 seconds, 2–20 sets.
-- Saved timers: up to five on iPhone, switched by swiping. One on Android.
-- Sound on iPhone: a female voice, a male voice, or one of three beeps (sharp, soft, whistle). Spoken cues are in English. Android: voice only.
+- Ranges (iPhone and Android): work 5–300 seconds (up to five minutes), ready and rest 5–120 seconds, 2–40 sets.
+- Saved timers: up to five, switched by swiping (iPhone and Android).
+- Sound (iPhone and Android): a female voice, a male voice, or one of three beeps (sharp, soft, whistle). Spoken cues are in English.
 - Background: keeps counting and speaking with the screen locked or another app open. On iPhone (iOS 16.1 or later) the remaining time and a stop button show on the Lock Screen; on Android the remaining time shows in a notification.
 - Music: the cues play over music or a podcast without pausing it or lowering its volume.
 - Offline: the timer and its sounds work without an internet connection.
-- Themes on iPhone: fifteen colour themes, ten seasonal and five earned by finishing workouts. The plain one is the default.
+- Themes (iPhone and Android): fifteen colour themes, ten seasonal and five earned by finishing workouts. The plain one is the default.
 - History: finished workouts are listed in the app. On iPhone they can also be written to Apple Health if that is switched on; nothing is read from Apple Health.
 - Language: the app's own text and spoken cues are in English in every country. The store pages and this website are translated.
 
 ## Who it suits
 
 - People who want a timer they can start in two taps: Tabata, HIIT, circuit training, rest between strength sets, planks, stretching, skipping, exercise bike.
-- Boxing and martial arts rounds: three-minute rounds with one-minute rests can be set directly on iPhone.
+- Boxing and martial arts rounds: three-minute rounds with one-minute rests can be set directly, on iPhone and on Android.
 - Coaches, classes and school teams: connect a Bluetooth speaker and choose a beep, which carries further than a voice.
 - People who have tried interval timers with subscriptions, full-screen ads or many features and want something plainer. In the written App Store reviews, about a third give simplicity as the reason they chose it.
 
@@ -67,13 +66,13 @@ There is no sign-up. The app stores the completion time of each workout under an
 - [한국어](https://simpletabata.com/ko/)
 - [繁體中文](https://simpletabata.com/zh-hant/)
 - [Timer in the browser](https://simpletabata.com/timer/): the same kind of timer as a web page, free, nothing to install; work 5–300 s, rest 5–120 s, 2–40 sets, with beeps. [日本語](https://simpletabata.com/timer/ja/)
-- [Boxing round timer](https://simpletabata.com/boxing-round-timer/): how to set three-minute rounds with one-minute rests on iPhone, and common round settings. [日本語](https://simpletabata.com/ja/boxing-round-timer/) [Français](https://simpletabata.com/fr/boxing-round-timer/) [Deutsch](https://simpletabata.com/de/boxing-round-timer/) [Italiano](https://simpletabata.com/it/boxing-round-timer/) [Español](https://simpletabata.com/es/boxing-round-timer/)
+- [Boxing round timer](https://simpletabata.com/boxing-round-timer/): how to set three-minute rounds with one-minute rests, and common round settings. [日本語](https://simpletabata.com/ja/boxing-round-timer/) [Français](https://simpletabata.com/fr/boxing-round-timer/) [Deutsch](https://simpletabata.com/de/boxing-round-timer/) [Italiano](https://simpletabata.com/it/boxing-round-timer/) [Español](https://simpletabata.com/es/boxing-round-timer/)
 - [Timer for a class or a team](https://simpletabata.com/team-practice-timer/): Bluetooth speaker, whistle beep, settings for circuits and sprints. [日本語](https://simpletabata.com/ja/team-practice-timer/) [Français](https://simpletabata.com/fr/team-practice-timer/) [Deutsch](https://simpletabata.com/de/team-practice-timer/) [Italiano](https://simpletabata.com/it/team-practice-timer/) [Español](https://simpletabata.com/es/team-practice-timer/)
 - [Interval timer with beeps](https://simpletabata.com/interval-timer-with-beeps/): the five sounds and when each suits. [日本語](https://simpletabata.com/ja/interval-timer-with-beeps/) [Français](https://simpletabata.com/fr/interval-timer-with-beeps/) [Deutsch](https://simpletabata.com/de/interval-timer-with-beeps/) [Italiano](https://simpletabata.com/it/interval-timer-with-beeps/) [Español](https://simpletabata.com/es/interval-timer-with-beeps/)
 - [Offline interval timer](https://simpletabata.com/offline-interval-timer/): what works without a connection and what a connection is used for. [日本語](https://simpletabata.com/ja/offline-interval-timer/) [Français](https://simpletabata.com/fr/offline-interval-timer/) [Deutsch](https://simpletabata.com/de/offline-interval-timer/) [Italiano](https://simpletabata.com/it/offline-interval-timer/) [Español](https://simpletabata.com/es/offline-interval-timer/)
 - [Free, with no subscription](https://simpletabata.com/free-interval-timer-no-subscription/): exactly what is free (everything), that there is no subscription, in-app purchase, trial or account, and the one banner ad. [日本語](https://simpletabata.com/ja/free-interval-timer-no-subscription/) [Français](https://simpletabata.com/fr/free-interval-timer-no-subscription/) [Deutsch](https://simpletabata.com/de/free-interval-timer-no-subscription/) [Italiano](https://simpletabata.com/it/free-interval-timer-no-subscription/) [Español](https://simpletabata.com/es/free-interval-timer-no-subscription/)
 - [Interval timer with music](https://simpletabata.com/interval-timer-with-music/): plays over music or a podcast without pausing or lowering it; background and Lock Screen. [日本語](https://simpletabata.com/ja/interval-timer-with-music/) [Français](https://simpletabata.com/fr/interval-timer-with-music/) [Deutsch](https://simpletabata.com/de/interval-timer-with-music/) [Italiano](https://simpletabata.com/it/interval-timer-with-music/) [Español](https://simpletabata.com/es/interval-timer-with-music/)
-- [Tabata timer for Android](https://simpletabata.com/tabata-timer-for-android/): what the Android app (com.tabatatimer, Android 8.0 or later) does and how it differs from the iPhone app. [日本語](https://simpletabata.com/ja/tabata-timer-for-android/) [Français](https://simpletabata.com/fr/tabata-timer-for-android/) [Deutsch](https://simpletabata.com/de/tabata-timer-for-android/) [Italiano](https://simpletabata.com/it/tabata-timer-for-android/) [Español](https://simpletabata.com/es/tabata-timer-for-android/)
+- [Tabata timer for Android](https://simpletabata.com/tabata-timer-for-android/): what the Android app (com.tabatatimer, Android 8.0 or later) does; since version 1.8.2 it has the same timer as the iPhone app. [日本語](https://simpletabata.com/ja/tabata-timer-for-android/) [Français](https://simpletabata.com/fr/tabata-timer-for-android/) [Deutsch](https://simpletabata.com/de/tabata-timer-for-android/) [Italiano](https://simpletabata.com/it/tabata-timer-for-android/) [Español](https://simpletabata.com/es/tabata-timer-for-android/)
 - [A simple interval timer](https://simpletabata.com/simple-interval-timer/): the four settings, common settings for HIIT and timed strength sets, and where a tap-to-rest timer suits better. [日本語](https://simpletabata.com/ja/simple-interval-timer/) [Français](https://simpletabata.com/fr/simple-interval-timer/) [Deutsch](https://simpletabata.com/de/simple-interval-timer/) [Italiano](https://simpletabata.com/it/simple-interval-timer/) [Español](https://simpletabata.com/es/simple-interval-timer/)
 - [Tabata timer apps compared](https://simpletabata.com/tabata-timer-apps-compared/): six Tabata and interval timer apps side by side (this one, SmartWOD Timer, Seconds, Intervals Pro and two more), what each does, what is free, Apple Watch, and which suits which workout; written by the developer of one of them. [日本語](https://simpletabata.com/ja/tabata-timer-apps-compared/) [Français](https://simpletabata.com/fr/tabata-timer-apps-compared/) [Deutsch](https://simpletabata.com/de/tabata-timer-apps-compared/) [Italiano](https://simpletabata.com/it/tabata-timer-apps-compared/) [Español](https://simpletabata.com/es/tabata-timer-apps-compared/)
 - [Privacy policy](https://simpletabata.com/privacy.html)

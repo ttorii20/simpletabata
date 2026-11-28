@@ -39,7 +39,7 @@
       "name": "Que peut-on régler sur Android ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Le temps de préparation, d'effort et de repos, de 5 à 60 secondes chacun, et de 2 à 20 séries. L'app s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries, le protocole Tabata classique."
+        "text": "L'effort de 5 à 300 secondes, la préparation et le repos de 5 à 120 secondes, et de 2 à 40 séries ; on peut enregistrer jusqu'à cinq minuteurs. L'app s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries, le protocole Tabata classique."
       }
     },
     {
@@ -55,7 +55,7 @@
       "name": "L'app Android a-t-elle des bips ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Pas encore. Sur Android, le signal est une voix. L'app iPhone et iPad propose en plus trois bips."
+        "text": "Oui. Dans les réglages, « Sound » propose une voix féminine, une voix masculine et trois bips : aigu, doux et sifflet. Touchez-en un pour l'écouter."
       }
     },
     {
@@ -63,7 +63,7 @@
       "name": "L'app Android est-elle la même que l'app iPhone ?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "C'est le même minuteur, du même développeur, mais en plus réduit pour l'instant : des intervalles jusqu'à 60 secondes, jusqu'à 20 séries, un seul réglage et uniquement une voix. Sur iPhone, l'effort va jusqu'à 300 secondes, avec jusqu'à 40 séries, cinq minuteurs enregistrés et des bips."
+        "text": "Depuis la version 1.8.2, le minuteur est le même : l'effort jusqu'à 300 secondes, jusqu'à 40 séries, cinq minuteurs enregistrés, deux voix et trois bips. Seule l'app iPhone affiche le temps sur l'écran verrouillé et enregistre les séances dans Apple Santé."
       }
     }
   ]
@@ -76,7 +76,7 @@
   "inLanguage": "fr",
   "name": "Minuteur Tabata gratuit pour Android",
   "url": "https://simpletabata.com/fr/tabata-timer-for-android/",
-  "dateModified": "2026-11-26",
+  "dateModified": "2026-11-28",
   "author": {
     "@type": "Person",
     "name": "Takahiro Torii"
@@ -162,8 +162,10 @@
     <tr><th>Version d'Android</th><td>8.0 ou version ultérieure</td></tr>
     <tr><th>Paquet</th><td>com.tabatatimer</td></tr>
     <tr><th>Par défaut</th><td>10 s de préparation, 20 s d'effort, 10 s de repos, 8 séries : le protocole Tabata classique</td></tr>
-    <tr><th>Plages</th><td>Préparation, effort et repos de 5 à 60 secondes chacun ; 2 à 20 séries</td></tr>
-    <tr><th>Son</th><td>Une voix compte les cinq dernières secondes et annonce chaque changement. En anglais.</td></tr>
+    <tr><th>Plages</th><td>Effort de 5 à 300 secondes ; préparation et repos de 5 à 120 secondes ; 2 à 40 séries</td></tr>
+    <tr><th>Minuteurs enregistrés</th><td>Jusqu'à cinq ; on passe de l'un à l'autre en balayant l'écran principal</td></tr>
+    <tr><th>Son</th><td>Une voix féminine ou masculine compte les cinq dernières secondes et annonce chaque changement, ou l'un des trois bips (aigu, doux, sifflet). La voix parle anglais.</td></tr>
+    <tr><th>Thèmes</th><td>Quinze thèmes de couleurs : dix de saison, cinq débloqués en terminant des séances</td></tr>
     <tr><th>Arrière-plan</th><td>Continue de compter écran éteint ou dans une autre app</td></tr>
     <tr><th>Musique</th><td>Se superpose à la musique ou à un podcast sans les mettre en pause</td></tr>
     <tr><th>Hors ligne</th><td>Fonctionne sans connexion Internet</td></tr>
@@ -176,28 +178,21 @@
   <ol>
     <li>Installez-la depuis Google Play et ouvrez-la. Les valeurs du Tabata classique sont déjà réglées.</li>
     <li>Appuyez sur démarrer. Dix secondes de préparation passent en premier.</li>
-    <li>Pour changer les valeurs, ouvrez les réglages et choisissez le temps d'effort, le temps de repos et le nombre de séries.</li>
+    <li>Pour changer les valeurs, ouvrez les réglages et choisissez le temps d'effort, le temps de repos et le nombre de séries. Dans « Sound », choisissez une voix ou un bip ; dans « Timers », ajoutez jusqu'à cinq minuteurs.</li>
   </ol>
 
   <h2>Ce qui la distingue de l'app iPhone</h2>
-  <p>L'app Android est la plus réduite des deux, pour l'instant.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone et iPad</th></tr>
-    <tr><td>Temps d'effort</td><td>5 à 60 s</td><td>5 à 300 s</td></tr>
-    <tr><td>Repos et préparation</td><td>5 à 60 s</td><td>5 à 120 s</td></tr>
-    <tr><td>Séries</td><td>2 à 20</td><td>2 à 40</td></tr>
-    <tr><td>Minuteurs enregistrés</td><td>Un seul réglage</td><td>Jusqu'à cinq</td></tr>
-    <tr><td>Signaux</td><td>Une voix</td><td>Une voix féminine ou masculine, ou trois bips</td></tr>
-  </table>
-  </div>
+  <p>Depuis la version 1.8.2 (novembre 2026), l'app Android a le même minuteur que l'app iPhone : les mêmes plages, jusqu'à cinq minuteurs enregistrés, les mêmes voix et les mêmes bips. Deux choses restent propres à l'iPhone :</p>
+  <ul>
+    <li>Le temps restant et un bouton d'arrêt sur l'écran verrouillé et dans la Dynamic Island (iOS 16.1 ou version ultérieure). Sur Android, le temps restant s'affiche dans une notification.</li>
+    <li>L'enregistrement des séances terminées dans Apple Santé.</li>
+  </ul>
 
   <h2>Ce qu'elle ne fait pas</h2>
   <ul>
-    <li>Pas d'intervalles de plus de 60 secondes : on ne peut donc pas régler de rounds de trois minutes sur Android.</li>
-    <li>Pas de bips, pour l'instant. Le signal est une voix.</li>
     <li>Pas d'app Wear OS.</li>
-    <li>Pas de séquences personnalisées, de bibliothèque d'exercices ni de programmes d'entraînement.</li>
+    <li>Pas de séquences personnalisées, ni de modes EMOM ou AMRAP. Chaque série utilise les mêmes temps d'effort et de repos.</li>
+    <li>Pas de bibliothèque d'exercices ni de programmes d'entraînement.</li>
   </ul>
   <p>Plusieurs apps Android s'appellent « Tabata Timer ». Celle-ci est de Takahiro Torii et son paquet est com.tabatatimer.</p>
 
@@ -207,16 +202,16 @@
   <p>Oui. Minuteur Sport HIIT &amp; Tabata, de Takahiro Torii (paquet com.tabatatimer), est gratuit sur Google Play pour Android 8.0 ou version ultérieure, sans abonnement, sans achats intégrés et sans compte. Il affiche une seule petite bannière publicitaire.</p>
 
   <h3>Que peut-on régler sur Android ?</h3>
-  <p>Le temps de préparation, d&#x27;effort et de repos, de 5 à 60 secondes chacun, et de 2 à 20 séries. L&#x27;app s&#x27;ouvre sur 10 secondes de préparation, 20 secondes d&#x27;effort, 10 secondes de repos et 8 séries, le protocole Tabata classique.</p>
+  <p>L&#x27;effort de 5 à 300 secondes, la préparation et le repos de 5 à 120 secondes, et de 2 à 40 séries ; on peut enregistrer jusqu&#x27;à cinq minuteurs. L&#x27;app s&#x27;ouvre sur 10 secondes de préparation, 20 secondes d&#x27;effort, 10 secondes de repos et 8 séries, le protocole Tabata classique.</p>
 
   <h3>Continue-t-il écran éteint sur Android ?</h3>
   <p>Oui. Il continue de compter et de parler écran éteint ou dans une autre app.</p>
 
   <h3>L&#x27;app Android a-t-elle des bips ?</h3>
-  <p>Pas encore. Sur Android, le signal est une voix. L&#x27;app iPhone et iPad propose en plus trois bips.</p>
+  <p>Oui. Dans les réglages, « Sound » propose une voix féminine, une voix masculine et trois bips : aigu, doux et sifflet. Touchez-en un pour l&#x27;écouter.</p>
 
   <h3>L&#x27;app Android est-elle la même que l&#x27;app iPhone ?</h3>
-  <p>C&#x27;est le même minuteur, du même développeur, mais en plus réduit pour l&#x27;instant : des intervalles jusqu&#x27;à 60 secondes, jusqu&#x27;à 20 séries, un seul réglage et uniquement une voix. Sur iPhone, l&#x27;effort va jusqu&#x27;à 300 secondes, avec jusqu&#x27;à 40 séries, cinq minuteurs enregistrés et des bips.</p>
+  <p>Depuis la version 1.8.2, le minuteur est le même : l&#x27;effort jusqu&#x27;à 300 secondes, jusqu&#x27;à 40 séries, cinq minuteurs enregistrés, deux voix et trois bips. Seule l&#x27;app iPhone affiche le temps sur l&#x27;écran verrouillé et enregistre les séances dans Apple Santé.</p>
 
   <h2>Autres usages</h2>
   <ul>
@@ -242,7 +237,7 @@
     <a href="/timer/">Minuteur dans le navigateur (en anglais)</a>
     <a href="/privacy.html">Politique de confidentialité</a>
     <a href="mailto:support@simpletabata.com">Contact: support@simpletabata.com</a>
-    <span>Dernière mise à jour : 26 novembre 2026</span>
+    <span>Dernière mise à jour : 28 novembre 2026</span>
   </footer>
 </main>
 </body>

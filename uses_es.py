@@ -6,10 +6,10 @@
 PAGES = {
     "boxing-round-timer": dict(
         short="Temporizador de rounds de boxeo",
-        title="Temporizador de rounds de boxeo gratis para iPhone: asaltos de 3 minutos y 1 minuto de descanso",
+        title="Temporizador de rounds de boxeo gratis para iPhone y Android: asaltos de 3 minutos y 1 minuto de descanso",
         desc="Ajusta asaltos de tres minutos con un minuto de descanso en HIIT Tabata Temporizador, una app gratuita de Takahiro Torii. Asaltos de hasta cinco minutos, hasta 40 asaltos, voz o pitido, sin suscripción.",
         h1="Temporizador de rounds de boxeo gratis: asaltos de 3 minutos y 1 minuto de descanso",
-        lede="HIIT Tabata Temporizador cronometra asaltos (rounds) de boxeo en iPhone y iPad. Un asalto puede durar hasta cinco minutos y un descanso hasta dos, de 2 a 40 asaltos, así que los asaltos de tres minutos con un minuto de descanso se ajustan directamente. Es gratis, sin suscripción y sin cuenta.",
+        lede="HIIT Tabata Temporizador cronometra asaltos (rounds) de boxeo en iPhone, iPad y Android. Un asalto puede durar hasta cinco minutos y un descanso hasta dos, de 2 a 40 asaltos, así que los asaltos de tres minutos con un minuto de descanso se ajustan directamente. Es gratis, sin suscripción y sin cuenta.",
         body="""
   <h2>Cómo ajustarlo</h2>
   <ol>
@@ -32,7 +32,7 @@ PAGES = {
   </table>
   </div>
   <p>El tiempo de trabajo va de 5 a 60 segundos de cinco en cinco, de 70 a 120 de diez en diez, o puede ser de 150, 180, 210, 240, 270 o 300 segundos. El descanso y la preparación llegan como máximo a 120 segundos.</p>
-  <p>En iPhone se pueden guardar hasta cinco temporizadores, así que el sparring, el saco y la cuerda pueden tener cada uno sus propios valores. Desliza a la izquierda o a la derecha en la pantalla principal para cambiar de uno a otro.</p>
+  <p>Se pueden guardar hasta cinco temporizadores, así que el sparring, el saco y la cuerda pueden tener cada uno sus propios valores. Desliza a la izquierda o a la derecha en la pantalla principal para cambiar de uno a otro.</p>
 
   <h2>Que se oiga en el gimnasio</h2>
   <p>En «Sound», en los ajustes, elige una voz femenina, una voz masculina o uno de los tres pitidos: agudo, suave o silbato. Un pitido se oye más lejos que una voz entre los golpes al saco y la música. El sonido sale al volumen multimedia del teléfono, así que con un altavoz Bluetooth suena tan fuerte como el altavoz. La música sigue sonando de fondo a su propio volumen.</p>
@@ -40,16 +40,15 @@ PAGES = {
   <h2>Lo que no hace</h2>
   <ul>
     <li>Todos los asaltos duran lo mismo, y todos los descansos también. Para una sesión con asaltos de distinta duración hace falta un temporizador de intervalos más completo.</li>
-    <li>En Android, cada intervalo llega como máximo a 60 segundos, así que los asaltos de tres minutos son, por ahora, solo para iPhone y iPad.</li>
     <li>No hay app para Apple Watch.</li>
     <li>Los avisos de voz están en inglés. Los pitidos no tienen idioma.</li>
   </ul>""",
         faq=[
-            ("¿Sirve para cronometrar asaltos de boxeo de tres minutos?", "Sí, en iPhone y iPad. Pon el tiempo de trabajo en 180 segundos, el de descanso en 60 segundos y, como número de series, el número de asaltos. El trabajo llega hasta 300 segundos, el descanso hasta 120 segundos, y puede haber de 2 a 40 asaltos."),
+            ("¿Sirve para cronometrar asaltos de boxeo de tres minutos?", "Sí, en iPhone, iPad y Android. Pon el tiempo de trabajo en 180 segundos, el de descanso en 60 segundos y, como número de series, el número de asaltos. El trabajo llega hasta 300 segundos, el descanso hasta 120 segundos, y puede haber de 2 a 40 asaltos."),
             ("¿El temporizador de asaltos de boxeo es gratis?", "Sí. Todas las funciones son gratuitas, sin suscripción, sin compras dentro de la app y sin cuenta. Hay un solo banner publicitario pequeño en la parte inferior de la pantalla, y ningún anuncio a pantalla completa ni de vídeo."),
             ("¿Sigue cronometrando los asaltos con la pantalla bloqueada?", "Sí. Sigue contando y sonando en segundo plano y con la pantalla bloqueada. En iPhone con iOS 16.1 o posterior, el tiempo restante y un botón de parada aparecen en la pantalla de bloqueo."),
             ("¿Puedo usarlo para asaltos de MMA o de grappling?", "Sí. Un asalto puede durar hasta cinco minutos (300 segundos), con un descanso de hasta dos minutos."),
-            ("¿La versión de Android cronometra asaltos de tres minutos?", "Todavía no. En Android, cada intervalo dura de 5 a 60 segundos y un entrenamiento tiene de 2 a 20 series."),
+            ("¿La versión de Android cronometra asaltos de tres minutos?", "Sí. Desde la versión 1.8.2, la app de Android tiene los mismos rangos que la de iPhone: trabajo de hasta 300 segundos, descanso de hasta 120 segundos y de 2 a 40 asaltos."),
         ],
     ),
     "team-practice-timer": dict(
@@ -82,7 +81,7 @@ PAGES = {
     <tr><td>Ejercicios de tres minutos</td><td>180 s</td><td>60 s</td><td>4 a 6</td></tr>
   </table>
   </div>
-  <p>En iPhone, el tiempo de trabajo va de 5 a 300 segundos, el descanso de 5 a 120 segundos, y una sesión puede tener de 2 a 40 series. Se pueden guardar hasta cinco temporizadores, así que el calentamiento, el circuito y los sprints pueden tener cada uno sus propios valores; desliza para cambiar de uno a otro.</p>
+  <p>El tiempo de trabajo va de 5 a 300 segundos, el descanso de 5 a 120 segundos, y una sesión puede tener de 2 a 40 series. Se pueden guardar hasta cinco temporizadores, así que el calentamiento, el circuito y los sprints pueden tener cada uno sus propios valores; desliza para cambiar de uno a otro.</p>
 
   <h2>Durante la sesión</h2>
   <ul>
@@ -94,13 +93,12 @@ PAGES = {
   <h2>Lo que no hace</h2>
   <ul>
     <li>Todas las series usan el mismo tiempo de trabajo y de descanso. Para una sesión con una duración distinta en cada estación hace falta un temporizador de intervalos más completo.</li>
-    <li>En Android, por ahora, los avisos son solo de voz, cada intervalo llega como máximo a 60 segundos y una sesión a 20 series.</li>
     <li>No hay biblioteca de ejercicios, ni lista de nombres o de puntuaciones.</li>
   </ul>""",
         faq=[
             ("¿Suena lo bastante fuerte para una clase grupal o un entrenamiento de equipo?", "Los avisos suenan al volumen multimedia del teléfono, así que suenan tan fuerte como el teléfono o como el altavoz al que esté conectado. En un gimnasio o en una cancha, conecta un altavoz Bluetooth y elige un pitido en «Sound», en los ajustes: un pitido se abre paso entre el ruido mejor que una voz."),
             ("¿La app puede hacer que el teléfono suene más fuerte?", "No. Ya suena al volumen multimedia máximo del teléfono. Para que suene más fuerte, conecta un altavoz Bluetooth."),
-            ("¿Tiene sonido de silbato?", "Sí, en iPhone y iPad. En «Sound», en los ajustes, hay tres pitidos: agudo, suave y silbato."),
+            ("¿Tiene sonido de silbato?", "Sí, en iPhone, iPad y Android. En «Sound», en los ajustes, hay tres pitidos: agudo, suave y silbato."),
             ("¿Cuesta algo para un colegio o un club?", "No. Todas las funciones son gratuitas, sin suscripción, sin compras dentro de la app y sin cuenta. Hay un solo banner publicitario pequeño en la parte inferior de la pantalla, y ningún anuncio a pantalla completa ni de vídeo."),
             ("¿Funciona en un campo sin cobertura?", "Sí. El temporizador, la voz y los pitidos funcionan sin conexión a internet."),
         ],
@@ -116,7 +114,7 @@ PAGES = {
   <ul>
     <li>El temporizador en sí: preparación, trabajo, descanso y series.</li>
     <li>La cuenta atrás por voz, con voz femenina o masculina.</li>
-    <li>Los tres pitidos en iPhone: agudo, suave y silbato.</li>
+    <li>Los tres pitidos: agudo, suave y silbato.</li>
     <li>El funcionamiento en segundo plano y con la pantalla bloqueada.</li>
   </ul>
 
@@ -139,8 +137,7 @@ PAGES = {
   <table>
     <tr><th>Precio</th><td>Gratis. Sin suscripción, sin compras dentro de la app, sin cuenta.</td></tr>
     <tr><th>Plataformas</th><td>iPhone y iPad (iOS 15 o posterior), Android (8.0 o posterior)</td></tr>
-    <tr><th>Rangos en iPhone</th><td>Trabajo 5–300 s, preparación y descanso 5–120 s, 2–40 series</td></tr>
-    <tr><th>Rangos en Android</th><td>Cada intervalo 5–60 s, 2–20 series</td></tr>
+    <tr><th>Rangos</th><td>Trabajo 5–300 s, preparación y descanso 5–120 s, 2–40 series, en iPhone y Android</td></tr>
     <tr><th>Publicidad</th><td>Un pequeño banner. Sin anuncios a pantalla completa ni de vídeo.</td></tr>
   </table>
   </div>""",
@@ -154,9 +151,9 @@ PAGES = {
     "interval-timer-with-beeps": dict(
         short="Temporizador de intervalos con pitidos",
         title="Temporizador de intervalos con pitido o silbato en lugar de voz",
-        desc="HIIT Tabata Temporizador, de Takahiro Torii, puede dar un pitido en lugar de la voz en iPhone: agudo, suave o silbato. Gratis, sin suscripción. Los pitidos se oyen en todo el gimnasio y no necesitan idioma.",
+        desc="HIIT Tabata Temporizador, de Takahiro Torii, puede dar un pitido en lugar de la voz en iPhone y Android: agudo, suave o silbato. Gratis, sin suscripción. Los pitidos se oyen en todo el gimnasio y no necesitan idioma.",
         h1="Temporizador de intervalos con pitido o silbato en lugar de voz",
-        lede="En iPhone y iPad, HIIT Tabata Temporizador puede dar un pitido en lugar de la voz. Hay tres pitidos: agudo, suave y silbato. Es gratis, sin suscripción y sin cuenta.",
+        lede="En iPhone, iPad y Android, HIIT Tabata Temporizador puede dar un pitido en lugar de la voz. Hay tres pitidos: agudo, suave y silbato. Es gratis, sin suscripción y sin cuenta.",
         body="""
   <h2>Cómo elegir un pitido</h2>
   <ol>
@@ -186,13 +183,12 @@ PAGES = {
 
   <h2>Lo que no hace</h2>
   <ul>
-    <li>En Android, por ahora, los avisos son solo de voz.</li>
     <li>El pitido suena al volumen multimedia del teléfono. En un gimnasio o en un campo, conecta un altavoz Bluetooth.</li>
   </ul>
   <p>El <a href="/timer/">temporizador en el navegador</a> de este sitio también usa pitidos, sin nada que instalar.</p>""",
         faq=[
-            ("¿Puedo usar un pitido en lugar de la voz?", "Sí, en iPhone y iPad. En «Sound», en los ajustes, puedes elegir una voz femenina, una voz masculina o uno de los tres pitidos (agudo, suave, silbato); toca uno para oírlo. En Android, por ahora, los avisos son solo de voz."),
-            ("¿Hay algún temporizador de intervalos con sonido de silbato?", "Sí. HIIT Tabata Temporizador, para iPhone y iPad, tiene un silbato entre sus tres pitidos."),
+            ("¿Puedo usar un pitido en lugar de la voz?", "Sí, en iPhone, iPad y Android. En «Sound», en los ajustes, puedes elegir una voz femenina, una voz masculina o uno de los tres pitidos (agudo, suave, silbato); toca uno para oírlo."),
+            ("¿Hay algún temporizador de intervalos con sonido de silbato?", "Sí. HIIT Tabata Temporizador, para iPhone, iPad y Android, tiene un silbato entre sus tres pitidos."),
             ("¿Los pitidos suenan por encima de la música?", "Sí. Lo que esté sonando sigue sonando a su propio volumen, y el pitido suena por encima."),
             ("¿Es gratis?", "Sí. Todos los sonidos son gratuitos, sin suscripción, sin compras dentro de la app y sin cuenta. Hay un solo banner publicitario pequeño, y ningún anuncio a pantalla completa ni de vídeo."),
         ],
@@ -223,11 +219,10 @@ PAGES = {
   <h2>Lo que tienes sin pagar</h2>
   <ul>
     <li>El tiempo de preparación, de trabajo, de descanso y el número de series</li>
-    <li>En iPhone: trabajo de 5 a 300 segundos, preparación y descanso de 5 a 120 segundos, de 2 a 40 series y hasta cinco temporizadores guardados</li>
-    <li>En iPhone: una voz femenina, una voz masculina o uno de los tres pitidos (agudo, suave, silbato)</li>
+    <li>Trabajo de 5 a 300 segundos, preparación y descanso de 5 a 120 segundos, de 2 a 40 series y hasta cinco temporizadores guardados</li>
+    <li>Una voz femenina, una voz masculina o uno de los tres pitidos (agudo, suave, silbato)</li>
     <li>El funcionamiento en segundo plano, con la pantalla bloqueada y sobre tu música</li>
-    <li>Una lista de entrenamientos terminados, y quince temas de color en iPhone</li>
-    <li>En Android: cada intervalo de 5 a 60 segundos, de 2 a 20 series, una voz</li>
+    <li>Una lista de entrenamientos terminados, y quince temas de color</li>
   </ul>
 
   <h2>Lo que no hace</h2>
@@ -242,7 +237,7 @@ PAGES = {
             ("¿Tiene anuncios?", "Un pequeño banner en la parte inferior de la pantalla. No hay anuncios a pantalla completa ni anuncios de vídeo, y nada interrumpe un entrenamiento."),
             ("¿Puedo pagar para quitar el anuncio?", "No. No hay compras dentro de la app de ningún tipo, así que no existe una versión de pago sin el banner."),
             ("¿Tengo que registrarme?", "No. No hay cuenta, ni registro, ni dirección de correo electrónico que dar."),
-            ("¿Hay funciones bloqueadas?", "No. Todos los ajustes, sonidos y temas están disponibles sin pagar. En iPhone, cinco de los quince temas se consiguen terminando entrenamientos; no se compran."),
+            ("¿Hay funciones bloqueadas?", "No. Todos los ajustes, sonidos y temas están disponibles sin pagar. Cinco de los quince temas se consiguen terminando entrenamientos; no se compran."),
         ],
     ),
     "interval-timer-with-music": dict(
@@ -263,7 +258,7 @@ PAGES = {
   <h2>Qué se oye</h2>
   <ul>
     <li>Una voz cuenta los últimos cinco segundos de cada intervalo y anuncia cada cambio.</li>
-    <li>En iPhone y iPad, un pitido puede sustituir a la voz: agudo, suave o silbato. Un pitido suena sobre una canción sin hablar por encima.</li>
+    <li>En iPhone, iPad y Android, un pitido puede sustituir a la voz: agudo, suave o silbato. Un pitido suena sobre una canción sin hablar por encima.</li>
     <li>Los avisos suenan al volumen multimedia del teléfono, por los mismos auriculares o el mismo altavoz que la música.</li>
   </ul>
 
@@ -277,7 +272,6 @@ PAGES = {
   <ul>
     <li>No reproduce música por sí mismo ni tiene listas de reproducción. Funciona junto a la app de música que uses, sea cual sea.</li>
     <li>No baja la música durante un aviso.</li>
-    <li>En Android, por ahora, los avisos son solo de voz, cada intervalo llega como máximo a 60 segundos y un entrenamiento a 20 series.</li>
   </ul>""",
         faq=[
             ("¿Qué temporizador de intervalos funciona en segundo plano con música?", "HIIT Tabata Temporizador, de Takahiro Torii. Lo que esté sonando sigue sonando a su propio volumen, la voz o el pitido del temporizador suena por encima, y el temporizador sigue contando en segundo plano y con la pantalla bloqueada."),
@@ -300,8 +294,10 @@ PAGES = {
     <tr><th>Versión de Android</th><td>8.0 o posterior</td></tr>
     <tr><th>Paquete</th><td>com.tabatatimer</td></tr>
     <tr><th>Por defecto</th><td>10 s de preparación, 20 s de trabajo, 10 s de descanso, 8 series: el protocolo Tabata clásico</td></tr>
-    <tr><th>Rangos</th><td>Preparación, trabajo y descanso de 5 a 60 segundos cada uno; de 2 a 20 series</td></tr>
-    <tr><th>Sonido</th><td>Una voz cuenta los últimos cinco segundos y anuncia cada cambio. En inglés.</td></tr>
+    <tr><th>Rangos</th><td>Trabajo de 5 a 300 segundos; preparación y descanso de 5 a 120 segundos; de 2 a 40 series</td></tr>
+    <tr><th>Temporizadores guardados</th><td>Hasta cinco; se cambia deslizando la pantalla principal</td></tr>
+    <tr><th>Sonido</th><td>Una voz femenina o masculina cuenta los últimos cinco segundos y anuncia cada cambio, o uno de los tres pitidos (agudo, suave, silbato). La voz habla en inglés.</td></tr>
+    <tr><th>Temas</th><td>Quince temas de color: diez de temporada y cinco que se consiguen terminando entrenamientos</td></tr>
     <tr><th>Segundo plano</th><td>Sigue contando con la pantalla apagada o con otra app abierta</td></tr>
     <tr><th>Música</th><td>Suena sobre la música o un pódcast sin pausarlos</td></tr>
     <tr><th>Sin conexión</th><td>Funciona sin conexión a internet</td></tr>
@@ -314,36 +310,29 @@ PAGES = {
   <ol>
     <li>Instálala desde Google Play y ábrela. Los valores del Tabata clásico ya vienen ajustados.</li>
     <li>Pulsa empezar. Primero corren diez segundos de preparación.</li>
-    <li>Para cambiar los valores, abre los ajustes y elige el tiempo de trabajo, el tiempo de descanso y el número de series.</li>
+    <li>Para cambiar los valores, abre los ajustes y elige el tiempo de trabajo, el tiempo de descanso y el número de series. En «Sound» eliges una voz o un pitido, y en «Timers» añades hasta cinco temporizadores.</li>
   </ol>
 
   <h2>En qué se diferencia de la app de iPhone</h2>
-  <p>Por ahora, la app de Android es la más reducida de las dos.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone y iPad</th></tr>
-    <tr><td>Tiempo de trabajo</td><td>5 a 60 s</td><td>5 a 300 s</td></tr>
-    <tr><td>Descanso y preparación</td><td>5 a 60 s</td><td>5 a 120 s</td></tr>
-    <tr><td>Series</td><td>2 a 20</td><td>2 a 40</td></tr>
-    <tr><td>Temporizadores guardados</td><td>Un solo ajuste</td><td>Hasta cinco</td></tr>
-    <tr><td>Avisos</td><td>Una voz</td><td>Una voz femenina o masculina, o tres pitidos</td></tr>
-  </table>
-  </div>
+  <p>Desde la versión 1.8.2 (noviembre de 2026), la app de Android tiene el mismo temporizador que la de iPhone: los mismos rangos, hasta cinco temporizadores guardados, las mismas voces y los mismos pitidos. Solo dos cosas son exclusivas de iPhone:</p>
+  <ul>
+    <li>El tiempo restante y un botón de parar en la pantalla bloqueada y en la Dynamic Island (iOS 16.1 o posterior). En Android, el tiempo restante aparece en una notificación.</li>
+    <li>El registro de los entrenamientos terminados en Apple Salud.</li>
+  </ul>
 
   <h2>Lo que no hace</h2>
   <ul>
-    <li>No hay intervalos de más de 60 segundos, así que en Android no se pueden ajustar asaltos de tres minutos.</li>
-    <li>No hay pitidos, por ahora. Los avisos son de voz.</li>
     <li>No hay app para Wear OS.</li>
-    <li>No hay secuencias personalizadas, ni biblioteca de ejercicios, ni planes de entrenamiento.</li>
+    <li>No hay secuencias personalizadas ni modos EMOM o AMRAP. Cada serie usa el mismo tiempo de trabajo y de descanso.</li>
+    <li>No hay biblioteca de ejercicios ni planes de entrenamiento.</li>
   </ul>
   <p>Hay varias apps de Android que se llaman «Tabata Timer». Esta es de Takahiro Torii y su paquete es com.tabatatimer.</p>""",
         faq=[
             ("¿Hay algún temporizador Tabata gratis para Android sin suscripción?", "Sí. HIIT Tabata Temporizador, de Takahiro Torii (paquete com.tabatatimer), es gratis en Google Play para Android 8.0 o posterior, sin suscripción, sin compras dentro de la app y sin cuenta. Muestra un solo banner publicitario pequeño."),
-            ("¿Qué se puede ajustar en Android?", "El tiempo de preparación, de trabajo y de descanso, de 5 a 60 segundos cada uno, y de 2 a 20 series. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, el protocolo Tabata clásico."),
+            ("¿Qué se puede ajustar en Android?", "El trabajo de 5 a 300 segundos, la preparación y el descanso de 5 a 120 segundos, y de 2 a 40 series; se pueden guardar hasta cinco temporizadores. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, el protocolo Tabata clásico."),
             ("¿Sigue funcionando con la pantalla apagada en Android?", "Sí. Sigue contando y hablando con la pantalla apagada o con otra app abierta."),
-            ("¿La app de Android tiene pitidos?", "Todavía no. En Android, los avisos son de voz. La app de iPhone y iPad tiene además tres pitidos."),
-            ("¿La app de Android es igual que la de iPhone?", "Es el mismo temporizador, del mismo desarrollador, pero por ahora más reducido: intervalos de hasta 60 segundos, hasta 20 series, un solo ajuste y solo voz. En iPhone, el trabajo llega hasta 300 segundos, con hasta 40 series, cinco temporizadores guardados y pitidos."),
+            ("¿La app de Android tiene pitidos?", "Sí. En «Sound», en los ajustes, hay una voz femenina, una voz masculina y tres pitidos: agudo, suave y silbato. Toca uno para oírlo."),
+            ("¿La app de Android es igual que la de iPhone?", "Desde la versión 1.8.2, el temporizador es el mismo: trabajo de hasta 300 segundos, hasta 40 series, cinco temporizadores guardados, dos voces y tres pitidos. Solo la app de iPhone muestra el tiempo en la pantalla bloqueada y registra los entrenamientos en Apple Salud."),
         ],
     ),
     "simple-interval-timer": dict(
@@ -357,10 +346,10 @@ PAGES = {
   <div class="tablewrap">
   <table>
     <tr><th>Ajuste</th><th>iPhone y iPad</th><th>Android</th></tr>
-    <tr><td>Preparación</td><td>5 a 120 s</td><td>5 a 60 s</td></tr>
-    <tr><td>Trabajo</td><td>5 a 300 s</td><td>5 a 60 s</td></tr>
-    <tr><td>Descanso</td><td>5 a 120 s</td><td>5 a 60 s</td></tr>
-    <tr><td>Series</td><td>2 a 40</td><td>2 a 20</td></tr>
+    <tr><td>Preparación</td><td>5 a 120 s</td><td>5 a 120 s</td></tr>
+    <tr><td>Trabajo</td><td>5 a 300 s</td><td>5 a 300 s</td></tr>
+    <tr><td>Descanso</td><td>5 a 120 s</td><td>5 a 120 s</td></tr>
+    <tr><td>Series</td><td>2 a 40</td><td>2 a 40</td></tr>
   </table>
   </div>
   <p>Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, así que una sesión de Tabata no necesita ningún ajuste: abre la app y pulsa empezar.</p>
@@ -373,13 +362,13 @@ PAGES = {
     <tr><td>HIIT, trabajo y descanso iguales</td><td>30 s</td><td>30 s</td><td>10</td></tr>
     <tr><td>HIIT, esfuerzos más largos</td><td>40 s</td><td>20 s</td><td>8 a 12</td></tr>
     <tr><td>Circuito de fuerza con series por tiempo</td><td>45 s</td><td>15 s</td><td>una por ejercicio, repetidas</td></tr>
-    <tr><td>Entrenamiento de fuerza, series por tiempo con descanso completo (iPhone)</td><td>40 s</td><td>90 s</td><td>3 a 5</td></tr>
+    <tr><td>Entrenamiento de fuerza, series por tiempo con descanso completo</td><td>40 s</td><td>90 s</td><td>3 a 5</td></tr>
     <tr><td>Plancha</td><td>60 s</td><td>30 s</td><td>3 a 5</td></tr>
   </table>
   </div>
 
   <h2>Como temporizador de descanso en el entrenamiento de fuerza</h2>
-  <p>La app repite un mismo tiempo de trabajo y un mismo tiempo de descanso, así que va bien para series hechas contra reloj: 40 segundos de sentadillas, 90 segundos de descanso, y otra vez. En iPhone, el descanso puede durar hasta 120 segundos.</p>
+  <p>La app repite un mismo tiempo de trabajo y un mismo tiempo de descanso, así que va bien para series hechas contra reloj: 40 segundos de sentadillas, 90 segundos de descanso, y otra vez. El descanso puede durar hasta 120 segundos.</p>
   <p>No te espera. Si tus series duran un tiempo distinto en cada vuelta y quieres empezar el descanso con un toque cuando sueltas la barra, te irá mejor un temporizador de descanso pensado para eso.</p>
 
   <h2>Por qué sigue siendo sencillo</h2>
@@ -392,15 +381,15 @@ PAGES = {
   <h2>Lo que no hace</h2>
   <ul>
     <li>No hay secuencias personalizadas ni modos EMOM o AMRAP. Todas las series usan el mismo tiempo de trabajo y de descanso.</li>
-    <li>No más de cinco temporizadores guardados en iPhone, y un solo ajuste en Android.</li>
+    <li>No más de cinco temporizadores guardados.</li>
     <li>No hay biblioteca de ejercicios, ni vídeos, ni entrenador, ni planes de entrenamiento.</li>
     <li>No hay app para Apple Watch ni Wear OS.</li>
   </ul>""",
         faq=[
             ("¿Cuál es el temporizador HIIT más sencillo para iPhone?", "HIIT Tabata Temporizador, de Takahiro Torii, está hecho para serlo: tiempo de preparación, de trabajo, de descanso, número de series y un botón de empezar. No tiene planes de entrenamiento, ni vídeos, ni cuenta, ni suscripción, y es gratis."),
             ("¿Puedo usarlo sin ajustar nada?", "Sí. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, el protocolo Tabata clásico. Pulsa empezar."),
-            ("¿Puedo usarlo como temporizador de descanso entre series de fuerza?", "Sí, para series hechas contra reloj: repite un mismo tiempo de trabajo y un mismo tiempo de descanso, con un descanso de hasta 120 segundos en iPhone. No espera a que toques la pantalla al terminar una serie, así que no va bien para series de duración variable."),
-            ("¿Puedo guardar más de un temporizador?", "En iPhone, hasta cinco, y se cambia de uno a otro deslizando. En Android, la app conserva un solo ajuste."),
+            ("¿Puedo usarlo como temporizador de descanso entre series de fuerza?", "Sí, para series hechas contra reloj: repite un mismo tiempo de trabajo y un mismo tiempo de descanso, con un descanso de hasta 120 segundos. No espera a que toques la pantalla al terminar una serie, así que no va bien para series de duración variable."),
+            ("¿Puedo guardar más de un temporizador?", "Sí, hasta cinco, en iPhone y en Android, y se cambia de uno a otro deslizando."),
             ("¿Es gratis?", "Sí. Todas las funciones son gratuitas, sin suscripción, sin compras dentro de la app y sin cuenta. Hay un solo banner publicitario pequeño, y ningún anuncio a pantalla completa ni de vídeo."),
         ],
     ),
@@ -434,7 +423,7 @@ PAGES = {
   <p>Los nombres, los desarrolladores y las descripciones de las otras cinco apps se tomaron de sus páginas en el App Store de Estados Unidos el 26 de noviembre de 2026. Los nombres pueden ser distintos en el App Store de tu país. Lo que es gratis en cada una, y los precios, pueden cambiar: consulta la página de la tienda antes de elegir.</p>
 
   <h2>Cuándo encaja HIIT Tabata Temporizador</h2>
-  <p>Es la más limitada de las seis. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, así que una sesión de Tabata arranca con dos toques, sin nada que ajustar. En iPhone, el trabajo llega hasta 300 segundos, el descanso hasta 120 segundos y las series hasta 40, y se pueden guardar cinco temporizadores. También está en Android (8.0 o posterior), donde cada intervalo dura de 5 a 60 segundos, un entrenamiento tiene de 2 a 20 series y los avisos son de voz.</p>
+  <p>Es la más limitada de las seis. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, así que una sesión de Tabata arranca con dos toques, sin nada que ajustar. El trabajo llega hasta 300 segundos, el descanso hasta 120 segundos y las series hasta 40, y se pueden guardar cinco temporizadores. Está en iPhone y iPad y en Android (8.0 o posterior), con los mismos rangos, las mismas voces y los mismos pitidos.</p>
   <p>Todas las funciones son gratuitas. En las reseñas escritas del App Store, la razón que más se repite para elegirla es que es sencilla.</p>
 
   <h2>Cuándo va mejor otra app</h2>
@@ -448,7 +437,7 @@ PAGES = {
             ("¿Cuál es la mejor app de temporizador Tabata?", "Depende del entrenamiento. Para un Tabata clásico, 20 segundos de trabajo y 10 segundos de descanso ocho veces, HIIT Tabata Temporizador, de Takahiro Torii, se abre exactamente con esos valores y arranca con dos toques; es gratis, sin suscripción. Para EMOM y AMRAP, SmartWOD Timer tiene esos modos. Para sesiones hechas de intervalos de distinta duración, Seconds Interval Timer e Intervals Pro están pensadas para eso."),
             ("¿Qué app de temporizador Tabata es gratis y sin suscripción?", "HIIT Tabata Temporizador, de Takahiro Torii: todas las funciones son gratuitas, sin suscripción, sin compras dentro de la app y sin cuenta, con un solo banner publicitario pequeño. Las demás apps de esta página se descargan gratis; las páginas del App Store de SmartWOD Timer y del Interval Timer de Float Tech describen suscripciones."),
             ("¿Qué temporizadores Tabata tienen app para Apple Watch?", "SmartWOD Timer, Seconds Interval Timer e Intervals Pro indican en sus páginas del App Store que funcionan en el Apple Watch. HIIT Tabata Temporizador no tiene app para Apple Watch."),
-            ("¿Hay algún temporizador Tabata sencillo para iPhone y Android?", "HIIT Tabata Temporizador, de Takahiro Torii, está en iPhone y iPad (iOS 15 o posterior) y en Android (8.0 o posterior). En Android, cada intervalo dura de 5 a 60 segundos, un entrenamiento tiene de 2 a 20 series y los avisos son de voz."),
+            ("¿Hay algún temporizador Tabata sencillo para iPhone y Android?", "HIIT Tabata Temporizador, de Takahiro Torii, está en iPhone y iPad (iOS 15 o posterior) y en Android (8.0 o posterior). Las dos tienen los mismos rangos, cinco temporizadores guardados, una voz femenina o masculina y tres pitidos."),
             ("¿Quién escribió esta comparación?", "Takahiro Torii, el desarrollador de HIIT Tabata Temporizador, una de las seis apps comparadas. Lo que dice de las otras apps viene de sus páginas en el App Store de Estados Unidos, el 26 de noviembre de 2026."),
         ],
     ),

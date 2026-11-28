@@ -39,7 +39,7 @@
       "name": "¿Qué se puede ajustar en Android?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El tiempo de preparación, de trabajo y de descanso, de 5 a 60 segundos cada uno, y de 2 a 20 series. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, el protocolo Tabata clásico."
+        "text": "El trabajo de 5 a 300 segundos, la preparación y el descanso de 5 a 120 segundos, y de 2 a 40 series; se pueden guardar hasta cinco temporizadores. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, el protocolo Tabata clásico."
       }
     },
     {
@@ -55,7 +55,7 @@
       "name": "¿La app de Android tiene pitidos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Todavía no. En Android, los avisos son de voz. La app de iPhone y iPad tiene además tres pitidos."
+        "text": "Sí. En «Sound», en los ajustes, hay una voz femenina, una voz masculina y tres pitidos: agudo, suave y silbato. Toca uno para oírlo."
       }
     },
     {
@@ -63,7 +63,7 @@
       "name": "¿La app de Android es igual que la de iPhone?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Es el mismo temporizador, del mismo desarrollador, pero por ahora más reducido: intervalos de hasta 60 segundos, hasta 20 series, un solo ajuste y solo voz. En iPhone, el trabajo llega hasta 300 segundos, con hasta 40 series, cinco temporizadores guardados y pitidos."
+        "text": "Desde la versión 1.8.2, el temporizador es el mismo: trabajo de hasta 300 segundos, hasta 40 series, cinco temporizadores guardados, dos voces y tres pitidos. Solo la app de iPhone muestra el tiempo en la pantalla bloqueada y registra los entrenamientos en Apple Salud."
       }
     }
   ]
@@ -76,7 +76,7 @@
   "inLanguage": "es",
   "name": "Temporizador Tabata gratis para Android",
   "url": "https://simpletabata.com/es/tabata-timer-for-android/",
-  "dateModified": "2026-11-27",
+  "dateModified": "2026-11-28",
   "author": {
     "@type": "Person",
     "name": "Takahiro Torii"
@@ -162,8 +162,10 @@
     <tr><th>Versión de Android</th><td>8.0 o posterior</td></tr>
     <tr><th>Paquete</th><td>com.tabatatimer</td></tr>
     <tr><th>Por defecto</th><td>10 s de preparación, 20 s de trabajo, 10 s de descanso, 8 series: el protocolo Tabata clásico</td></tr>
-    <tr><th>Rangos</th><td>Preparación, trabajo y descanso de 5 a 60 segundos cada uno; de 2 a 20 series</td></tr>
-    <tr><th>Sonido</th><td>Una voz cuenta los últimos cinco segundos y anuncia cada cambio. En inglés.</td></tr>
+    <tr><th>Rangos</th><td>Trabajo de 5 a 300 segundos; preparación y descanso de 5 a 120 segundos; de 2 a 40 series</td></tr>
+    <tr><th>Temporizadores guardados</th><td>Hasta cinco; se cambia deslizando la pantalla principal</td></tr>
+    <tr><th>Sonido</th><td>Una voz femenina o masculina cuenta los últimos cinco segundos y anuncia cada cambio, o uno de los tres pitidos (agudo, suave, silbato). La voz habla en inglés.</td></tr>
+    <tr><th>Temas</th><td>Quince temas de color: diez de temporada y cinco que se consiguen terminando entrenamientos</td></tr>
     <tr><th>Segundo plano</th><td>Sigue contando con la pantalla apagada o con otra app abierta</td></tr>
     <tr><th>Música</th><td>Suena sobre la música o un pódcast sin pausarlos</td></tr>
     <tr><th>Sin conexión</th><td>Funciona sin conexión a internet</td></tr>
@@ -176,28 +178,21 @@
   <ol>
     <li>Instálala desde Google Play y ábrela. Los valores del Tabata clásico ya vienen ajustados.</li>
     <li>Pulsa empezar. Primero corren diez segundos de preparación.</li>
-    <li>Para cambiar los valores, abre los ajustes y elige el tiempo de trabajo, el tiempo de descanso y el número de series.</li>
+    <li>Para cambiar los valores, abre los ajustes y elige el tiempo de trabajo, el tiempo de descanso y el número de series. En «Sound» eliges una voz o un pitido, y en «Timers» añades hasta cinco temporizadores.</li>
   </ol>
 
   <h2>En qué se diferencia de la app de iPhone</h2>
-  <p>Por ahora, la app de Android es la más reducida de las dos.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone y iPad</th></tr>
-    <tr><td>Tiempo de trabajo</td><td>5 a 60 s</td><td>5 a 300 s</td></tr>
-    <tr><td>Descanso y preparación</td><td>5 a 60 s</td><td>5 a 120 s</td></tr>
-    <tr><td>Series</td><td>2 a 20</td><td>2 a 40</td></tr>
-    <tr><td>Temporizadores guardados</td><td>Un solo ajuste</td><td>Hasta cinco</td></tr>
-    <tr><td>Avisos</td><td>Una voz</td><td>Una voz femenina o masculina, o tres pitidos</td></tr>
-  </table>
-  </div>
+  <p>Desde la versión 1.8.2 (noviembre de 2026), la app de Android tiene el mismo temporizador que la de iPhone: los mismos rangos, hasta cinco temporizadores guardados, las mismas voces y los mismos pitidos. Solo dos cosas son exclusivas de iPhone:</p>
+  <ul>
+    <li>El tiempo restante y un botón de parar en la pantalla bloqueada y en la Dynamic Island (iOS 16.1 o posterior). En Android, el tiempo restante aparece en una notificación.</li>
+    <li>El registro de los entrenamientos terminados en Apple Salud.</li>
+  </ul>
 
   <h2>Lo que no hace</h2>
   <ul>
-    <li>No hay intervalos de más de 60 segundos, así que en Android no se pueden ajustar asaltos de tres minutos.</li>
-    <li>No hay pitidos, por ahora. Los avisos son de voz.</li>
     <li>No hay app para Wear OS.</li>
-    <li>No hay secuencias personalizadas, ni biblioteca de ejercicios, ni planes de entrenamiento.</li>
+    <li>No hay secuencias personalizadas ni modos EMOM o AMRAP. Cada serie usa el mismo tiempo de trabajo y de descanso.</li>
+    <li>No hay biblioteca de ejercicios ni planes de entrenamiento.</li>
   </ul>
   <p>Hay varias apps de Android que se llaman «Tabata Timer». Esta es de Takahiro Torii y su paquete es com.tabatatimer.</p>
 
@@ -207,16 +202,16 @@
   <p>Sí. HIIT Tabata Temporizador, de Takahiro Torii (paquete com.tabatatimer), es gratis en Google Play para Android 8.0 o posterior, sin suscripción, sin compras dentro de la app y sin cuenta. Muestra un solo banner publicitario pequeño.</p>
 
   <h3>¿Qué se puede ajustar en Android?</h3>
-  <p>El tiempo de preparación, de trabajo y de descanso, de 5 a 60 segundos cada uno, y de 2 a 20 series. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, el protocolo Tabata clásico.</p>
+  <p>El trabajo de 5 a 300 segundos, la preparación y el descanso de 5 a 120 segundos, y de 2 a 40 series; se pueden guardar hasta cinco temporizadores. Se abre con 10 segundos de preparación, 20 segundos de trabajo, 10 segundos de descanso y 8 series, el protocolo Tabata clásico.</p>
 
   <h3>¿Sigue funcionando con la pantalla apagada en Android?</h3>
   <p>Sí. Sigue contando y hablando con la pantalla apagada o con otra app abierta.</p>
 
   <h3>¿La app de Android tiene pitidos?</h3>
-  <p>Todavía no. En Android, los avisos son de voz. La app de iPhone y iPad tiene además tres pitidos.</p>
+  <p>Sí. En «Sound», en los ajustes, hay una voz femenina, una voz masculina y tres pitidos: agudo, suave y silbato. Toca uno para oírlo.</p>
 
   <h3>¿La app de Android es igual que la de iPhone?</h3>
-  <p>Es el mismo temporizador, del mismo desarrollador, pero por ahora más reducido: intervalos de hasta 60 segundos, hasta 20 series, un solo ajuste y solo voz. En iPhone, el trabajo llega hasta 300 segundos, con hasta 40 series, cinco temporizadores guardados y pitidos.</p>
+  <p>Desde la versión 1.8.2, el temporizador es el mismo: trabajo de hasta 300 segundos, hasta 40 series, cinco temporizadores guardados, dos voces y tres pitidos. Solo la app de iPhone muestra el tiempo en la pantalla bloqueada y registra los entrenamientos en Apple Salud.</p>
 
   <h2>Otros usos</h2>
   <ul>
@@ -242,7 +237,7 @@
     <a href="/timer/">Temporizador en el navegador (en inglés)</a>
     <a href="/privacy.html">Política de privacidad</a>
     <a href="mailto:support@simpletabata.com">Contacto: support@simpletabata.com</a>
-    <span>Última actualización: 27 de noviembre de 2026</span>
+    <span>Última actualización: 28 de noviembre de 2026</span>
   </footer>
 </main>
 </body>

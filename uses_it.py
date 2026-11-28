@@ -6,10 +6,10 @@
 PAGES = {
     "boxing-round-timer": dict(
         short="Timer per round di boxe",
-        title="Timer per round di boxe gratis per iPhone: round da 3 minuti, 1 minuto di recupero",
+        title="Timer per round di boxe gratis per iPhone e Android: round da 3 minuti, 1 minuto di recupero",
         desc="Imposta round da tre minuti con un minuto di recupero in Timer HIIT Tabata Allenamento, un'app gratuita di Takahiro Torii. Round fino a cinque minuti, fino a 40 round, voce o segnale acustico, senza abbonamento.",
         h1="Timer per round di boxe gratis: round da 3 minuti, 1 minuto di recupero",
-        lede="Timer HIIT Tabata Allenamento cronometra i round di boxe su iPhone e iPad. Un round può durare fino a cinque minuti e il recupero fino a due, e si possono fare da 2 a 40 round: i round da tre minuti con un minuto di recupero si impostano quindi direttamente. È gratuito, senza abbonamento e senza account.",
+        lede="Timer HIIT Tabata Allenamento cronometra i round di boxe su iPhone, iPad e Android. Un round può durare fino a cinque minuti e il recupero fino a due, e si possono fare da 2 a 40 round: i round da tre minuti con un minuto di recupero si impostano quindi direttamente. È gratuito, senza abbonamento e senza account.",
         body="""
   <h2>Come impostarlo</h2>
   <ol>
@@ -32,7 +32,7 @@ PAGES = {
   </table>
   </div>
   <p>Il tempo di lavoro si imposta da 5 a 60 secondi a passi di cinque, da 70 a 120 a passi di dieci, oppure a 150, 180, 210, 240, 270 o 300 secondi. Il recupero e la preparazione arrivano al massimo a 120 secondi.</p>
-  <p>Su iPhone si possono salvare fino a cinque timer, così sparring, lavoro al sacco e salto con la corda possono avere ciascuno i propri valori. Scorri a sinistra o a destra sulla schermata principale per cambiare.</p>
+  <p>Si possono salvare fino a cinque timer, così sparring, lavoro al sacco e salto con la corda possono avere ciascuno i propri valori. Scorri a sinistra o a destra sulla schermata principale per cambiare.</p>
 
   <h2>Sentirlo in palestra</h2>
   <p>In «Sound», nelle impostazioni, scegli una voce femminile, una voce maschile o uno dei tre segnali acustici: acuto, morbido o fischietto. Sopra il rumore dei sacchi e la musica, un segnale acustico si sente più lontano di una voce. Il suono esce al volume multimediale del telefono, quindi con una cassa Bluetooth è forte quanto la cassa. La musica continua sotto, al suo volume.</p>
@@ -40,16 +40,15 @@ PAGES = {
   <h2>Cosa non fa</h2>
   <ul>
     <li>Tutti i round hanno la stessa durata, e anche tutti i recuperi. Per una sessione con round di durate diverse serve un timer a intervalli più completo.</li>
-    <li>Su Android ogni intervallo arriva al massimo a 60 secondi, quindi per ora i round da tre minuti sono solo su iPhone e iPad.</li>
     <li>Non c'è un'app per Apple Watch.</li>
     <li>Gli annunci vocali sono in inglese. I segnali acustici non hanno lingua.</li>
   </ul>""",
         faq=[
-            ("Può cronometrare round di boxe da tre minuti?", "Sì, su iPhone e iPad. Imposta il tempo di lavoro a 180 secondi, il tempo di recupero a 60 secondi e il numero di serie sul numero di round. Il lavoro arriva fino a 300 secondi, il recupero fino a 120 secondi, e si possono fare da 2 a 40 round."),
+            ("Può cronometrare round di boxe da tre minuti?", "Sì, su iPhone, iPad e Android. Imposta il tempo di lavoro a 180 secondi, il tempo di recupero a 60 secondi e il numero di serie sul numero di round. Il lavoro arriva fino a 300 secondi, il recupero fino a 120 secondi, e si possono fare da 2 a 40 round."),
             ("Il timer per round di boxe è gratis?", "Sì. Tutte le funzioni sono gratuite, senza abbonamento, acquisti in-app o account. C'è un solo piccolo banner pubblicitario in fondo allo schermo e nessuna pubblicità a schermo intero né video."),
             ("Continua a cronometrare i round con lo schermo bloccato?", "Sì. Il conto alla rovescia e i suoni continuano in background e con lo schermo bloccato. Su iPhone con iOS 16.1 o versioni successive, il tempo rimanente e un pulsante di stop compaiono nella schermata di blocco."),
             ("Posso usarlo per round di MMA o grappling?", "Sì. Un round può durare fino a cinque minuti (300 secondi), con un recupero fino a due minuti."),
-            ("La versione Android cronometra round da tre minuti?", "Non ancora. Su Android ogni intervallo dura da 5 a 60 secondi e un allenamento ha da 2 a 20 serie."),
+            ("La versione Android cronometra round da tre minuti?", "Sì. Dalla versione 1.8.2 l'app Android ha gli stessi valori dell'app per iPhone: lavoro fino a 300 secondi, recupero fino a 120 secondi e da 2 a 40 round."),
         ],
     ),
     "team-practice-timer": dict(
@@ -82,7 +81,7 @@ PAGES = {
     <tr><td>Esercitazioni da tre minuti</td><td>180 s</td><td>60 s</td><td>da 4 a 6</td></tr>
   </table>
   </div>
-  <p>Su iPhone il lavoro va da 5 a 300 secondi, il recupero da 5 a 120 secondi e una sessione può avere da 2 a 40 serie. Si possono salvare fino a cinque timer, così riscaldamento, circuito e sprint possono avere ciascuno i propri valori; scorri per passare dall'uno all'altro.</p>
+  <p>Il lavoro va da 5 a 300 secondi, il recupero da 5 a 120 secondi e una sessione può avere da 2 a 40 serie. Si possono salvare fino a cinque timer, così riscaldamento, circuito e sprint possono avere ciascuno i propri valori; scorri per passare dall'uno all'altro.</p>
 
   <h2>Durante la sessione</h2>
   <ul>
@@ -94,13 +93,12 @@ PAGES = {
   <h2>Cosa non fa</h2>
   <ul>
     <li>Ogni serie usa gli stessi tempi di lavoro e di recupero. Per una sessione con una durata diversa per ogni stazione serve un timer a intervalli più completo.</li>
-    <li>Su Android, per ora, c'è solo la voce, ogni intervallo arriva al massimo a 60 secondi e una sessione a 20 serie.</li>
     <li>Non c'è una libreria di esercizi, né un elenco di nomi o di punteggi.</li>
   </ul>""",
         faq=[
             ("È abbastanza forte per un corso di gruppo o un allenamento di squadra?", "Gli avvisi escono al volume multimediale del telefono, quindi sono forti quanto il telefono o la cassa a cui è collegato. In una palestra o su un campo, collega una cassa Bluetooth e scegli un segnale acustico in «Sound», nelle impostazioni: nel rumore un segnale acustico si sente meglio di una voce."),
             ("L'app può rendere il telefono più forte?", "No. Suona già al volume multimediale massimo del telefono. Per avere più volume, collega una cassa Bluetooth."),
-            ("C'è il suono del fischietto?", "Sì, su iPhone e iPad. In «Sound», nelle impostazioni, ci sono tre segnali acustici: acuto, morbido e fischietto."),
+            ("C'è il suono del fischietto?", "Sì, su iPhone, iPad e Android. In «Sound», nelle impostazioni, ci sono tre segnali acustici: acuto, morbido e fischietto."),
             ("Costa qualcosa per una scuola o una società sportiva?", "No. Tutte le funzioni sono gratuite, senza abbonamento, acquisti in-app o account. C'è un solo piccolo banner pubblicitario in fondo allo schermo e nessuna pubblicità a schermo intero né video."),
             ("Funziona su un campo dove il telefono non prende?", "Sì. Il timer, la voce e i segnali acustici funzionano tutti senza connessione a internet."),
         ],
@@ -116,7 +114,7 @@ PAGES = {
   <ul>
     <li>Il timer stesso: preparazione, lavoro, recupero e serie.</li>
     <li>Il conto alla rovescia vocale, con voce femminile o maschile.</li>
-    <li>I tre segnali acustici su iPhone: acuto, morbido e fischietto.</li>
+    <li>I tre segnali acustici: acuto, morbido e fischietto.</li>
     <li>Il funzionamento in background e con lo schermo bloccato.</li>
   </ul>
 
@@ -139,8 +137,7 @@ PAGES = {
   <table>
     <tr><th>Prezzo</th><td>Gratis. Nessun abbonamento, nessun acquisto in-app, nessun account.</td></tr>
     <tr><th>Piattaforme</th><td>iPhone e iPad (iOS 15 o versioni successive), Android (8.0 o versioni successive)</td></tr>
-    <tr><th>Valori su iPhone</th><td>Lavoro 5–300 s, preparazione e recupero 5–120 s, 2–40 serie</td></tr>
-    <tr><th>Valori su Android</th><td>Ogni intervallo 5–60 s, 2–20 serie</td></tr>
+    <tr><th>Valori</th><td>Lavoro 5–300 s, preparazione e recupero 5–120 s, 2–40 serie, su iPhone e Android</td></tr>
     <tr><th>Pubblicità</th><td>Un piccolo banner. Nessuna pubblicità a schermo intero né video.</td></tr>
   </table>
   </div>""",
@@ -154,9 +151,9 @@ PAGES = {
     "interval-timer-with-beeps": dict(
         short="Timer a intervalli con segnali acustici",
         title="Timer a intervalli con segnali acustici o fischietto al posto della voce",
-        desc="Timer HIIT Tabata Allenamento di Takahiro Torii su iPhone può usare un segnale acustico al posto della voce: acuto, morbido o fischietto. Gratis, senza abbonamento. I segnali acustici si sentono in tutta la palestra e non hanno bisogno di una lingua.",
+        desc="Timer HIIT Tabata Allenamento di Takahiro Torii su iPhone e Android può usare un segnale acustico al posto della voce: acuto, morbido o fischietto. Gratis, senza abbonamento. I segnali acustici si sentono in tutta la palestra e non hanno bisogno di una lingua.",
         h1="Timer a intervalli con segnali acustici o fischietto al posto della voce",
-        lede="Su iPhone e iPad, Timer HIIT Tabata Allenamento può usare un segnale acustico al posto della voce. Ce ne sono tre: acuto, morbido e fischietto. È gratuito, senza abbonamento e senza account.",
+        lede="Su iPhone, iPad e Android, Timer HIIT Tabata Allenamento può usare un segnale acustico al posto della voce. Ce ne sono tre: acuto, morbido e fischietto. È gratuito, senza abbonamento e senza account.",
         body="""
   <h2>Come scegliere un segnale acustico</h2>
   <ol>
@@ -186,13 +183,12 @@ PAGES = {
 
   <h2>Cosa non fa</h2>
   <ul>
-    <li>Su Android, per ora, c'è solo la voce.</li>
     <li>Il segnale acustico esce al volume multimediale del telefono. In una palestra o su un campo, collega una cassa Bluetooth.</li>
   </ul>
   <p>Anche il <a href="/timer/">timer nel browser</a> di questo sito usa segnali acustici, senza niente da installare.</p>""",
         faq=[
-            ("Posso avere un segnale acustico al posto della voce?", "Sì, su iPhone e iPad. In «Sound», nelle impostazioni, puoi scegliere una voce femminile, una voce maschile o uno dei tre segnali acustici (acuto, morbido, fischietto); toccane uno per ascoltarlo. Su Android, per ora, c'è solo la voce."),
-            ("Esiste un timer a intervalli con il suono del fischietto?", "Sì. Timer HIIT Tabata Allenamento per iPhone e iPad ha un fischietto tra i suoi tre segnali acustici."),
+            ("Posso avere un segnale acustico al posto della voce?", "Sì, su iPhone, iPad e Android. In «Sound», nelle impostazioni, puoi scegliere una voce femminile, una voce maschile o uno dei tre segnali acustici (acuto, morbido, fischietto); toccane uno per ascoltarlo."),
+            ("Esiste un timer a intervalli con il suono del fischietto?", "Sì. Timer HIIT Tabata Allenamento per iPhone, iPad e Android ha un fischietto tra i suoi tre segnali acustici."),
             ("I segnali acustici si sentono sopra la musica?", "Sì. Quello che è in riproduzione continua al suo volume, e il segnale acustico si sente sopra."),
             ("È gratis?", "Sì. Tutti i suoni sono gratuiti, senza abbonamento, acquisti in-app o account. C'è un solo piccolo banner pubblicitario e nessuna pubblicità a schermo intero né video."),
         ],
@@ -223,11 +219,10 @@ PAGES = {
   <h2>Cosa ottieni senza pagare</h2>
   <ul>
     <li>Tempo di preparazione, di lavoro, di recupero e numero di serie</li>
-    <li>Su iPhone: lavoro da 5 a 300 secondi, preparazione e recupero da 5 a 120 secondi, da 2 a 40 serie e fino a cinque timer salvati</li>
-    <li>Su iPhone: una voce femminile, una voce maschile o uno dei tre segnali acustici (acuto, morbido, fischietto)</li>
+    <li>Lavoro da 5 a 300 secondi, preparazione e recupero da 5 a 120 secondi, da 2 a 40 serie e fino a cinque timer salvati</li>
+    <li>Una voce femminile, una voce maschile o uno dei tre segnali acustici (acuto, morbido, fischietto)</li>
     <li>Il funzionamento in background, con lo schermo bloccato e sopra la tua musica</li>
-    <li>L'elenco degli allenamenti completati e, su iPhone, quindici temi di colore</li>
-    <li>Su Android: ogni intervallo da 5 a 60 secondi, da 2 a 20 serie, una voce</li>
+    <li>L'elenco degli allenamenti completati e quindici temi di colore</li>
   </ul>
 
   <h2>Cosa non fa</h2>
@@ -242,7 +237,7 @@ PAGES = {
             ("Ha pubblicità?", "Un piccolo banner in fondo allo schermo. Non ci sono pubblicità a schermo intero né video, e niente interrompe un allenamento."),
             ("Posso pagare per togliere la pubblicità?", "No. Non ci sono acquisti in-app di nessun tipo, quindi non esiste una versione a pagamento senza il banner."),
             ("Devo registrarmi?", "No. Non c'è nessun account, nessuna registrazione e nessun indirizzo email da fornire."),
-            ("Ci sono funzioni bloccate?", "No. Tutte le impostazioni, i suoni e i temi sono disponibili senza pagare. Su iPhone, cinque dei quindici temi si sbloccano completando allenamenti, non si comprano."),
+            ("Ci sono funzioni bloccate?", "No. Tutte le impostazioni, i suoni e i temi sono disponibili senza pagare. Cinque dei quindici temi si sbloccano completando allenamenti, non si comprano."),
         ],
     ),
     "interval-timer-with-music": dict(
@@ -263,7 +258,7 @@ PAGES = {
   <h2>Cosa senti</h2>
   <ul>
     <li>Una voce conta gli ultimi cinque secondi di ogni intervallo e annuncia ogni cambio.</li>
-    <li>Su iPhone e iPad un segnale acustico può sostituire la voce: acuto, morbido o fischietto. Un segnale acustico si sovrappone a una canzone senza parlarci sopra.</li>
+    <li>Su iPhone, iPad e Android un segnale acustico può sostituire la voce: acuto, morbido o fischietto. Un segnale acustico si sovrappone a una canzone senza parlarci sopra.</li>
     <li>Gli avvisi escono al volume multimediale del telefono, dalle stesse cuffie o dalla stessa cassa della musica.</li>
   </ul>
 
@@ -277,7 +272,6 @@ PAGES = {
   <ul>
     <li>Non riproduce musica e non ha playlist. Funziona accanto a qualsiasi app di musica tu usi.</li>
     <li>Non abbassa la musica durante un avviso.</li>
-    <li>Su Android, per ora, c'è solo la voce, ogni intervallo arriva al massimo a 60 secondi e un allenamento a 20 serie.</li>
   </ul>""",
         faq=[
             ("Quale timer a intervalli funziona in background mentre ascolto musica?", "Timer HIIT Tabata Allenamento di Takahiro Torii. Quello che è in riproduzione continua al suo volume, la voce o il segnale acustico del timer si sentono sopra, e il timer continua a contare in background e con lo schermo bloccato."),
@@ -300,8 +294,10 @@ PAGES = {
     <tr><th>Versione di Android</th><td>8.0 o versioni successive</td></tr>
     <tr><th>Pacchetto</th><td>com.tabatatimer</td></tr>
     <tr><th>Predefinito</th><td>10 s di preparazione, 20 s di lavoro, 10 s di recupero, 8 serie: il protocollo Tabata classico</td></tr>
-    <tr><th>Valori</th><td>Preparazione, lavoro e recupero da 5 a 60 secondi ciascuno; da 2 a 20 serie</td></tr>
-    <tr><th>Suono</th><td>Una voce conta gli ultimi cinque secondi e annuncia ogni cambio. In inglese.</td></tr>
+    <tr><th>Valori</th><td>Lavoro da 5 a 300 secondi; preparazione e recupero da 5 a 120 secondi; da 2 a 40 serie</td></tr>
+    <tr><th>Timer salvati</th><td>Fino a cinque; si cambia scorrendo la schermata principale</td></tr>
+    <tr><th>Suono</th><td>Una voce femminile o maschile conta gli ultimi cinque secondi e annuncia ogni cambio, oppure uno dei tre segnali acustici (acuto, morbido, fischietto). La voce parla inglese.</td></tr>
+    <tr><th>Temi</th><td>Quindici temi di colore: dieci stagionali, cinque sbloccati completando allenamenti</td></tr>
     <tr><th>Background</th><td>Continua a contare con lo schermo spento o con un'altra app aperta</td></tr>
     <tr><th>Musica</th><td>Si sovrappone alla musica o a un podcast senza metterli in pausa</td></tr>
     <tr><th>Offline</th><td>Funziona senza connessione a internet</td></tr>
@@ -314,36 +310,29 @@ PAGES = {
   <ol>
     <li>Installala da Google Play e aprila. I valori del Tabata classico sono già impostati.</li>
     <li>Premi start. Prima partono dieci secondi di preparazione.</li>
-    <li>Per cambiare i valori, apri le impostazioni e imposta il tempo di lavoro, il tempo di recupero e il numero di serie.</li>
+    <li>Per cambiare i valori, apri le impostazioni e imposta il tempo di lavoro, il tempo di recupero e il numero di serie. In «Sound» scegli una voce o un segnale acustico; in «Timers» aggiungi fino a cinque timer.</li>
   </ol>
 
   <h2>Le differenze rispetto all'app per iPhone</h2>
-  <p>Per ora l'app Android è la più essenziale delle due.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone e iPad</th></tr>
-    <tr><td>Tempo di lavoro</td><td>da 5 a 60 s</td><td>da 5 a 300 s</td></tr>
-    <tr><td>Recupero e preparazione</td><td>da 5 a 60 s</td><td>da 5 a 120 s</td></tr>
-    <tr><td>Serie</td><td>da 2 a 20</td><td>da 2 a 40</td></tr>
-    <tr><td>Timer salvati</td><td>Una sola impostazione</td><td>Fino a cinque</td></tr>
-    <tr><td>Avvisi</td><td>Una voce</td><td>Una voce femminile o maschile, oppure tre segnali acustici</td></tr>
-  </table>
-  </div>
+  <p>Dalla versione 1.8.2 (novembre 2026) l'app Android ha lo stesso timer dell'app per iPhone: gli stessi valori, fino a cinque timer salvati, le stesse voci e gli stessi segnali acustici. Due cose ci sono solo su iPhone:</p>
+  <ul>
+    <li>Il tempo rimanente e un tasto di stop sulla schermata di blocco e nella Dynamic Island (iOS 16.1 o versioni successive). Su Android il tempo rimanente compare in una notifica.</li>
+    <li>La registrazione degli allenamenti completati in Apple Salute.</li>
+  </ul>
 
   <h2>Cosa non fa</h2>
   <ul>
-    <li>Nessun intervallo oltre i 60 secondi, quindi su Android non si possono impostare round da tre minuti.</li>
-    <li>Per ora niente segnali acustici. Gli avvisi sono dati da una voce.</li>
     <li>Nessuna app per Wear OS.</li>
-    <li>Nessuna sequenza personalizzata, libreria di esercizi o programma di allenamento.</li>
+    <li>Nessuna sequenza personalizzata, niente modalità EMOM o AMRAP. Ogni serie usa lo stesso tempo di lavoro e di recupero.</li>
+    <li>Nessuna libreria di esercizi né programmi di allenamento.</li>
   </ul>
   <p>Diverse app Android si chiamano «Tabata Timer». Questa è di Takahiro Torii e il suo pacchetto è com.tabatatimer.</p>""",
         faq=[
             ("Esiste un timer Tabata gratis per Android senza abbonamento?", "Sì. Timer HIIT Tabata Allenamento di Takahiro Torii (pacchetto com.tabatatimer) è gratuito su Google Play per Android 8.0 o versioni successive, senza abbonamento, acquisti in-app o account. Mostra un solo piccolo banner pubblicitario."),
-            ("Cosa posso impostare su Android?", "Il tempo di preparazione, di lavoro e di recupero, da 5 a 60 secondi ciascuno, e da 2 a 20 serie. Si apre con 10 secondi di preparazione, 20 secondi di lavoro, 10 secondi di recupero e 8 serie, il protocollo Tabata classico."),
+            ("Cosa posso impostare su Android?", "Il lavoro da 5 a 300 secondi, la preparazione e il recupero da 5 a 120 secondi, e da 2 a 40 serie; si possono salvare fino a cinque timer. Si apre con 10 secondi di preparazione, 20 secondi di lavoro, 10 secondi di recupero e 8 serie, il protocollo Tabata classico."),
             ("Su Android continua a funzionare con lo schermo spento?", "Sì. Continua a contare e a parlare con lo schermo spento o con un'altra app aperta."),
-            ("L'app Android ha i segnali acustici?", "Non ancora. Su Android gli avvisi sono dati da una voce. L'app per iPhone e iPad ha in più tre segnali acustici."),
-            ("L'app Android è uguale a quella per iPhone?", "È lo stesso timer, dello stesso sviluppatore, ma per ora più essenziale: intervalli fino a 60 secondi, fino a 20 serie, una sola impostazione e solo la voce. Su iPhone il lavoro arriva fino a 300 secondi, con fino a 40 serie, cinque timer salvati e segnali acustici."),
+            ("L'app Android ha i segnali acustici?", "Sì. In «Sound», nelle impostazioni, ci sono una voce femminile, una voce maschile e tre segnali acustici: acuto, morbido e fischietto. Toccane uno per ascoltarlo."),
+            ("L'app Android è uguale a quella per iPhone?", "Dalla versione 1.8.2 il timer è lo stesso: lavoro fino a 300 secondi, fino a 40 serie, cinque timer salvati, due voci e tre segnali acustici. Solo l'app per iPhone mostra il tempo sulla schermata di blocco e registra gli allenamenti in Apple Salute."),
         ],
     ),
     "simple-interval-timer": dict(
@@ -357,10 +346,10 @@ PAGES = {
   <div class="tablewrap">
   <table>
     <tr><th>Impostazione</th><th>iPhone e iPad</th><th>Android</th></tr>
-    <tr><td>Preparazione</td><td>da 5 a 120 s</td><td>da 5 a 60 s</td></tr>
-    <tr><td>Lavoro</td><td>da 5 a 300 s</td><td>da 5 a 60 s</td></tr>
-    <tr><td>Recupero</td><td>da 5 a 120 s</td><td>da 5 a 60 s</td></tr>
-    <tr><td>Serie</td><td>da 2 a 40</td><td>da 2 a 20</td></tr>
+    <tr><td>Preparazione</td><td>da 5 a 120 s</td><td>da 5 a 120 s</td></tr>
+    <tr><td>Lavoro</td><td>da 5 a 300 s</td><td>da 5 a 300 s</td></tr>
+    <tr><td>Recupero</td><td>da 5 a 120 s</td><td>da 5 a 120 s</td></tr>
+    <tr><td>Serie</td><td>da 2 a 40</td><td>da 2 a 40</td></tr>
   </table>
   </div>
   <p>Si apre con 10 secondi di preparazione, 20 secondi di lavoro, 10 secondi di recupero e 8 serie, quindi una sessione Tabata non richiede nessuna impostazione: apri l'app e premi start.</p>
@@ -373,13 +362,13 @@ PAGES = {
     <tr><td>HIIT, lavoro e recupero uguali</td><td>30 s</td><td>30 s</td><td>10</td></tr>
     <tr><td>HIIT, sforzi più lunghi</td><td>40 s</td><td>20 s</td><td>da 8 a 12</td></tr>
     <tr><td>Circuito di forza con serie a tempo</td><td>45 s</td><td>15 s</td><td>una per esercizio, da ripetere</td></tr>
-    <tr><td>Pesi, serie a tempo con recupero completo (iPhone)</td><td>40 s</td><td>90 s</td><td>da 3 a 5</td></tr>
+    <tr><td>Pesi, serie a tempo con recupero completo</td><td>40 s</td><td>90 s</td><td>da 3 a 5</td></tr>
     <tr><td>Plank</td><td>60 s</td><td>30 s</td><td>da 3 a 5</td></tr>
   </table>
   </div>
 
   <h2>Come timer di recupero nell'allenamento con i pesi</h2>
-  <p>L'app ripete un unico tempo di lavoro e un unico tempo di recupero, quindi è adatta alle serie fatte contro il tempo: 40 secondi di squat, 90 secondi di recupero, e si ricomincia. Su iPhone il recupero può arrivare a 120 secondi.</p>
+  <p>L'app ripete un unico tempo di lavoro e un unico tempo di recupero, quindi è adatta alle serie fatte contro il tempo: 40 secondi di squat, 90 secondi di recupero, e si ricomincia. Il recupero può arrivare a 120 secondi.</p>
   <p>Non ti aspetta. Se le tue serie durano ogni volta un tempo diverso e vuoi far partire il recupero con un tocco quando appoggi il bilanciere, ti troverai meglio con un timer di recupero pensato per questo.</p>
 
   <h2>Perché resta semplice</h2>
@@ -392,15 +381,15 @@ PAGES = {
   <h2>Cosa non fa</h2>
   <ul>
     <li>Nessuna sequenza personalizzata, né modalità EMOM o AMRAP. Ogni serie usa gli stessi tempi di lavoro e di recupero.</li>
-    <li>Non più di cinque timer salvati su iPhone, e una sola impostazione su Android.</li>
+    <li>Non più di cinque timer salvati.</li>
     <li>Nessuna libreria di esercizi, video, coaching o programmi di allenamento.</li>
     <li>Nessuna app per Apple Watch o Wear OS.</li>
   </ul>""",
         faq=[
             ("Qual è il timer HIIT più semplice per iPhone?", "Timer HIIT Tabata Allenamento di Takahiro Torii è fatto apposta per esserlo: tempo di preparazione, tempo di lavoro, tempo di recupero, numero di serie e un tasto start. Non ha programmi di allenamento, video, account né abbonamento, ed è gratuito."),
             ("Posso usarlo senza impostare niente?", "Sì. Si apre con 10 secondi di preparazione, 20 secondi di lavoro, 10 secondi di recupero e 8 serie, il protocollo Tabata classico. Premi start."),
-            ("Posso usarlo come timer di recupero tra le serie con i pesi?", "Sì, per le serie fatte contro il tempo: ripete un unico tempo di lavoro e un unico tempo di recupero, con un recupero fino a 120 secondi su iPhone. Non aspetta un tocco alla fine di una serie, quindi non è adatto a serie di durata variabile."),
-            ("Posso salvare più di un timer?", "Su iPhone fino a cinque, e si passa dall'uno all'altro scorrendo. Su Android l'app conserva una sola impostazione."),
+            ("Posso usarlo come timer di recupero tra le serie con i pesi?", "Sì, per le serie fatte contro il tempo: ripete un unico tempo di lavoro e un unico tempo di recupero, con un recupero fino a 120 secondi. Non aspetta un tocco alla fine di una serie, quindi non è adatto a serie di durata variabile."),
+            ("Posso salvare più di un timer?", "Sì, fino a cinque, su iPhone come su Android, e si passa dall'uno all'altro scorrendo."),
             ("È gratis?", "Sì. Tutte le funzioni sono gratuite, senza abbonamento, acquisti in-app o account. C'è un solo piccolo banner pubblicitario e nessuna pubblicità a schermo intero né video."),
         ],
     ),
@@ -434,7 +423,7 @@ PAGES = {
   <p>I nomi, gli sviluppatori e le descrizioni delle altre cinque app sono presi dalle loro pagine sull'App Store statunitense il 26 novembre 2026. I nomi possono essere diversi sull'App Store italiano. Cosa è gratis in ciascuna e i prezzi possono cambiare: controlla la pagina sullo store prima di scegliere.</p>
 
   <h2>Quando conviene Timer HIIT Tabata Allenamento</h2>
-  <p>È la più limitata. Si apre con 10 secondi di preparazione, 20 secondi di lavoro, 10 secondi di recupero e 8 serie, quindi una sessione Tabata parte con due tocchi senza niente da impostare. Su iPhone il lavoro arriva fino a 300 secondi, il recupero fino a 120 secondi e le serie fino a 40, e si possono salvare cinque timer. È disponibile anche su Android (8.0 o versioni successive), dove ogni intervallo dura da 5 a 60 secondi, un allenamento ha da 2 a 20 serie e gli avvisi sono dati da una voce.</p>
+  <p>È la più limitata. Si apre con 10 secondi di preparazione, 20 secondi di lavoro, 10 secondi di recupero e 8 serie, quindi una sessione Tabata parte con due tocchi senza niente da impostare. Il lavoro arriva fino a 300 secondi, il recupero fino a 120 secondi e le serie fino a 40, e si possono salvare cinque timer. È disponibile su iPhone e iPad e su Android (8.0 o versioni successive), con gli stessi valori, le stesse voci e gli stessi segnali acustici.</p>
   <p>Tutte le funzioni sono gratuite. Nelle recensioni scritte sull'App Store, il motivo citato più spesso per averla scelta è che è semplice.</p>
 
   <h2>Quando è meglio un'altra app</h2>
@@ -448,7 +437,7 @@ PAGES = {
             ("Qual è la migliore app timer Tabata?", "Dipende dall'allenamento. Per il Tabata classico, 20 secondi di lavoro e 10 secondi di recupero per otto volte, Timer HIIT Tabata Allenamento di Takahiro Torii si apre esattamente con questi valori e parte con due tocchi; è gratuito, senza abbonamento. Per EMOM e AMRAP, SmartWOD Timer ha queste modalità. Per sessioni fatte di intervalli di durate diverse, Seconds Interval Timer e Intervals Pro sono pensati apposta."),
             ("Quale app timer Tabata è gratis e senza abbonamento?", "Timer HIIT Tabata Allenamento di Takahiro Torii: tutte le funzioni sono gratuite, senza abbonamento, acquisti in-app o account, con un solo piccolo banner pubblicitario. Le altre app di questa pagina si scaricano gratis; le pagine sull'App Store di SmartWOD Timer e dell'Interval Timer di Float Tech descrivono degli abbonamenti."),
             ("Quali timer Tabata hanno un'app per Apple Watch?", "SmartWOD Timer, Seconds Interval Timer e Intervals Pro indicano sulle loro pagine dell'App Store che funzionano su Apple Watch. Timer HIIT Tabata Allenamento non ha un'app per Apple Watch."),
-            ("Esiste un timer Tabata semplice sia per iPhone sia per Android?", "Timer HIIT Tabata Allenamento di Takahiro Torii è disponibile su iPhone e iPad (iOS 15 o versioni successive) e su Android (8.0 o versioni successive). Su Android ogni intervallo dura da 5 a 60 secondi, un allenamento ha da 2 a 20 serie e gli avvisi sono dati da una voce."),
+            ("Esiste un timer Tabata semplice sia per iPhone sia per Android?", "Timer HIIT Tabata Allenamento di Takahiro Torii è disponibile su iPhone e iPad (iOS 15 o versioni successive) e su Android (8.0 o versioni successive). Entrambe hanno gli stessi valori, cinque timer salvati, una voce femminile o maschile e tre segnali acustici."),
             ("Chi ha scritto questo confronto?", "Takahiro Torii, lo sviluppatore di Timer HIIT Tabata Allenamento, una delle sei app confrontate. Quello che dice delle altre app viene dalle loro pagine sull'App Store statunitense del 26 novembre 2026."),
         ],
     ),

@@ -39,7 +39,7 @@
       "name": "What can I set on Android?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Ready time, work time and rest time from 5 to 60 seconds each, and 2 to 20 sets. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol."
+        "text": "Work time from 5 to 300 seconds, ready and rest time from 5 to 120 seconds, and 2 to 40 sets; up to five timers can be saved. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol."
       }
     },
     {
@@ -55,7 +55,7 @@
       "name": "Does the Android app have beeps?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not yet. On Android the cues are a voice. The iPhone and iPad app has three beeps as well."
+        "text": "Yes. Under Sound in Settings there is a female voice, a male voice and three beeps: sharp, soft and whistle. Tap one to hear it."
       }
     },
     {
@@ -63,7 +63,7 @@
       "name": "Is the Android app the same as the iPhone app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is the same timer by the same developer, but smaller for now: intervals up to 60 seconds, up to 20 sets, one setting and a voice only. On iPhone work time goes up to 300 seconds, with up to 40 sets, five saved timers and beeps."
+        "text": "Since version 1.8.2 the timer is the same: work up to 300 seconds, up to 40 sets, five saved timers, two voices and three beeps. Only the iPhone app shows the time on the Lock Screen and writes workouts to Apple Health."
       }
     }
   ]
@@ -76,7 +76,7 @@
   "inLanguage": "en",
   "name": "A free Tabata timer for Android",
   "url": "https://simpletabata.com/tabata-timer-for-android/",
-  "dateModified": "2026-11-26",
+  "dateModified": "2026-11-28",
   "author": {
     "@type": "Person",
     "name": "Takahiro Torii"
@@ -162,8 +162,10 @@
     <tr><th>Android version</th><td>8.0 or later</td></tr>
     <tr><th>Package</th><td>com.tabatatimer</td></tr>
     <tr><th>Default</th><td>10 s ready, 20 s work, 10 s rest, 8 sets: the standard Tabata protocol</td></tr>
-    <tr><th>Ranges</th><td>Ready, work and rest 5 to 60 seconds each; 2 to 20 sets</td></tr>
-    <tr><th>Sound</th><td>A voice counts the last five seconds and calls each change. Spoken in English.</td></tr>
+    <tr><th>Ranges</th><td>Work 5 to 300 seconds; ready and rest 5 to 120 seconds; 2 to 40 sets</td></tr>
+    <tr><th>Saved timers</th><td>Up to five; swipe on the main screen to switch</td></tr>
+    <tr><th>Sound</th><td>A female or male voice counts the last five seconds and calls each change, or one of three beeps (sharp, soft, whistle). The voice speaks English.</td></tr>
+    <tr><th>Themes</th><td>Fifteen colour themes: ten seasonal, five earned by finishing workouts</td></tr>
     <tr><th>Background</th><td>Keeps counting with the screen off or another app open</td></tr>
     <tr><th>Music</th><td>Plays over music or a podcast without pausing it</td></tr>
     <tr><th>Offline</th><td>Works with no internet connection</td></tr>
@@ -176,28 +178,21 @@
   <ol>
     <li>Install it from Google Play and open it. The standard Tabata numbers are already set.</li>
     <li>Press start. Ten seconds of ready time run first.</li>
-    <li>To change the numbers, open Settings and set the work time, the rest time and the number of sets.</li>
+    <li>To change the numbers, open Settings and set the work time, the rest time and the number of sets. Under Sound you can pick a voice or a beep, and under Timers you can add up to five timers.</li>
   </ol>
 
   <h2>How it differs from the iPhone app</h2>
-  <p>The Android app is the smaller of the two, for now.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone and iPad</th></tr>
-    <tr><td>Work time</td><td>5 to 60 s</td><td>5 to 300 s</td></tr>
-    <tr><td>Rest and ready time</td><td>5 to 60 s</td><td>5 to 120 s</td></tr>
-    <tr><td>Sets</td><td>2 to 20</td><td>2 to 40</td></tr>
-    <tr><td>Saved timers</td><td>One setting</td><td>Up to five</td></tr>
-    <tr><td>Cues</td><td>A voice</td><td>A female or male voice, or three beeps</td></tr>
-  </table>
-  </div>
+  <p>Since version 1.8.2 (November 2026) the Android app has the same timer as the iPhone app: the same ranges, up to five saved timers, and the same voices and beeps. Two things are on iPhone only:</p>
+  <ul>
+    <li>The remaining time and a stop button on the Lock Screen and in the Dynamic Island (iOS 16.1 or later). On Android the remaining time shows in a notification.</li>
+    <li>Writing finished workouts to Apple Health.</li>
+  </ul>
 
   <h2>What it does not do</h2>
   <ul>
-    <li>No intervals longer than 60 seconds, so three-minute rounds cannot be set on Android.</li>
-    <li>No beeps, for now. The cues are a voice.</li>
     <li>No Wear OS app.</li>
-    <li>No custom sequences, exercise library or workout plans.</li>
+    <li>No custom sequences, EMOM or AMRAP modes. Every set uses the same work and rest time.</li>
+    <li>No exercise library or workout plans.</li>
   </ul>
   <p>Several Android apps are called "Tabata Timer". This one is by Takahiro Torii and its package is com.tabatatimer.</p>
 
@@ -207,16 +202,16 @@
   <p>Yes. Tabata &amp; HIIT Interval Timer by Takahiro Torii (package com.tabatatimer) is free on Google Play for Android 8.0 or later, with no subscription, no in-app purchases and no account. It shows one small banner ad.</p>
 
   <h3>What can I set on Android?</h3>
-  <p>Ready time, work time and rest time from 5 to 60 seconds each, and 2 to 20 sets. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol.</p>
+  <p>Work time from 5 to 300 seconds, ready and rest time from 5 to 120 seconds, and 2 to 40 sets; up to five timers can be saved. It opens on 10 seconds ready, 20 seconds work, 10 seconds rest and 8 sets, the standard Tabata protocol.</p>
 
   <h3>Does it keep running with the screen off on Android?</h3>
   <p>Yes. It keeps counting and speaking with the screen off or another app open.</p>
 
   <h3>Does the Android app have beeps?</h3>
-  <p>Not yet. On Android the cues are a voice. The iPhone and iPad app has three beeps as well.</p>
+  <p>Yes. Under Sound in Settings there is a female voice, a male voice and three beeps: sharp, soft and whistle. Tap one to hear it.</p>
 
   <h3>Is the Android app the same as the iPhone app?</h3>
-  <p>It is the same timer by the same developer, but smaller for now: intervals up to 60 seconds, up to 20 sets, one setting and a voice only. On iPhone work time goes up to 300 seconds, with up to 40 sets, five saved timers and beeps.</p>
+  <p>Since version 1.8.2 the timer is the same: work up to 300 seconds, up to 40 sets, five saved timers, two voices and three beeps. Only the iPhone app shows the time on the Lock Screen and writes workouts to Apple Health.</p>
 
   <h2>Other uses</h2>
   <ul>
@@ -242,7 +237,7 @@
     <a href="/timer/">Timer in your browser</a>
     <a href="/privacy.html">Privacy Policy</a>
     <a href="mailto:support@simpletabata.com">Contact: support@simpletabata.com</a>
-    <span>Last updated 26 November 2026</span>
+    <span>Last updated 28 November 2026</span>
   </footer>
 </main>
 </body>

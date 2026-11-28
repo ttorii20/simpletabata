@@ -6,10 +6,10 @@
 PAGES = {
     "boxing-round-timer": dict(
         short="Minuteur de rounds de boxe",
-        title="Minuteur de rounds de boxe gratuit pour iPhone : rounds de 3 minutes, 1 minute de repos",
+        title="Minuteur de rounds de boxe gratuit pour iPhone et Android : rounds de 3 minutes, 1 minute de repos",
         desc="Réglez des rounds de trois minutes avec une minute de repos dans Minuteur Sport HIIT & Tabata, une app gratuite de Takahiro Torii. Rounds jusqu'à cinq minutes, jusqu'à 40 rounds, voix ou bip, sans abonnement.",
         h1="Minuteur de rounds de boxe gratuit : rounds de 3 minutes, 1 minute de repos",
-        lede="Minuteur Sport HIIT &amp; Tabata chronomètre les rounds de boxe sur iPhone et iPad. Un round peut durer jusqu'à cinq minutes et un repos jusqu'à deux, pour 2 à 40 rounds : des rounds de trois minutes avec une minute de repos se règlent donc directement. L'app est gratuite, sans abonnement et sans compte.",
+        lede="Minuteur Sport HIIT &amp; Tabata chronomètre les rounds de boxe sur iPhone, iPad et Android. Un round peut durer jusqu'à cinq minutes et un repos jusqu'à deux, pour 2 à 40 rounds : des rounds de trois minutes avec une minute de repos se règlent donc directement. L'app est gratuite, sans abonnement et sans compte.",
         body="""
   <h2>Comment le régler</h2>
   <ol>
@@ -32,7 +32,7 @@ PAGES = {
   </table>
   </div>
   <p>Le temps d'effort se règle de 5 à 60 secondes par pas de cinq, de 70 à 120 par pas de dix, ou sur 150, 180, 210, 240, 270 ou 300 secondes. Le repos et la préparation s'arrêtent à 120 secondes.</p>
-  <p>Sur iPhone, on peut enregistrer jusqu'à cinq minuteurs : le sparring, le sac et la corde à sauter gardent ainsi chacun leurs propres valeurs. Balayez l'écran principal vers la gauche ou la droite pour passer de l'un à l'autre.</p>
+  <p>On peut enregistrer jusqu'à cinq minuteurs : le sparring, le sac et la corde à sauter gardent ainsi chacun leurs propres valeurs. Balayez l'écran principal vers la gauche ou la droite pour passer de l'un à l'autre.</p>
 
   <h2>L'entendre dans une salle</h2>
   <p>Dans les réglages, « Sound » propose une voix féminine, une voix masculine ou l'un des trois bips : aigu, doux ou sifflet. Un bip porte plus loin qu'une voix par-dessus le bruit des sacs et la musique. Le son est joué au volume multimédia du téléphone : relié à une enceinte Bluetooth, il est aussi fort que l'enceinte. La musique continue en dessous, à son propre volume.</p>
@@ -40,16 +40,15 @@ PAGES = {
   <h2>Ce qu'il ne fait pas</h2>
   <ul>
     <li>Tous les rounds ont la même durée, et tous les repos aussi. Pour une séance avec des rounds de durées différentes, il faut un minuteur d'intervalles plus complet.</li>
-    <li>Sur Android, chaque intervalle s'arrête à 60 secondes : les rounds de trois minutes sont donc réservés à l'iPhone et à l'iPad, pour l'instant.</li>
     <li>Il n'y a pas d'app Apple Watch.</li>
     <li>Les annonces vocales sont en anglais. Les bips, eux, n'ont pas de langue.</li>
   </ul>""",
         faq=[
-            ("Peut-il chronométrer des rounds de boxe de trois minutes ?", "Oui, sur iPhone et iPad. Mettez le temps d'effort sur 180 secondes, le temps de repos sur 60 secondes, et le nombre de séries sur le nombre de rounds. L'effort va jusqu'à 300 secondes, le repos jusqu'à 120 secondes, et l'on peut faire de 2 à 40 rounds."),
+            ("Peut-il chronométrer des rounds de boxe de trois minutes ?", "Oui, sur iPhone, iPad et Android. Mettez le temps d'effort sur 180 secondes, le temps de repos sur 60 secondes, et le nombre de séries sur le nombre de rounds. L'effort va jusqu'à 300 secondes, le repos jusqu'à 120 secondes, et l'on peut faire de 2 à 40 rounds."),
             ("Le minuteur de rounds de boxe est-il gratuit ?", "Oui. Toutes les fonctions sont gratuites, sans abonnement, sans achats intégrés et sans compte. Il y a une seule petite bannière publicitaire en bas de l'écran, et aucune publicité plein écran ni vidéo."),
             ("Continue-t-il de chronométrer les rounds écran verrouillé ?", "Oui. Le décompte et le son continuent en arrière-plan et écran verrouillé. Sur iPhone, sous iOS 16.1 ou version ultérieure, le temps restant et un bouton d'arrêt s'affichent sur l'écran verrouillé."),
             ("Puis-je l'utiliser pour des rounds de MMA ou de grappling ?", "Oui. Un round peut durer jusqu'à cinq minutes (300 secondes), avec un repos allant jusqu'à deux minutes."),
-            ("La version Android chronomètre-t-elle des rounds de trois minutes ?", "Pas encore. Sur Android, chaque intervalle dure de 5 à 60 secondes et une séance compte de 2 à 20 séries."),
+            ("La version Android chronomètre-t-elle des rounds de trois minutes ?", "Oui. Depuis la version 1.8.2, l'app Android a les mêmes plages que l'app iPhone : l'effort jusqu'à 300 secondes, le repos jusqu'à 120 secondes et de 2 à 40 rounds."),
         ],
     ),
     "team-practice-timer": dict(
@@ -82,7 +81,7 @@ PAGES = {
     <tr><td>Exercices de trois minutes</td><td>180 s</td><td>60 s</td><td>4 à 6</td></tr>
   </table>
   </div>
-  <p>Sur iPhone, l'effort va de 5 à 300 secondes, le repos de 5 à 120 secondes, et une séance compte de 2 à 40 séries. On peut enregistrer jusqu'à cinq minuteurs : l'échauffement, le circuit et les sprints gardent ainsi chacun leurs propres valeurs ; on passe de l'un à l'autre en balayant l'écran.</p>
+  <p>L'effort va de 5 à 300 secondes, le repos de 5 à 120 secondes, et une séance compte de 2 à 40 séries. On peut enregistrer jusqu'à cinq minuteurs : l'échauffement, le circuit et les sprints gardent ainsi chacun leurs propres valeurs ; on passe de l'un à l'autre en balayant l'écran.</p>
 
   <h2>Pendant la séance</h2>
   <ul>
@@ -94,13 +93,12 @@ PAGES = {
   <h2>Ce qu'il ne fait pas</h2>
   <ul>
     <li>Chaque série utilise les mêmes temps d'effort et de repos. Pour une séance avec une durée différente à chaque atelier, il faut un minuteur d'intervalles plus complet.</li>
-    <li>Sur Android, le signal est uniquement une voix, chaque intervalle s'arrête à 60 secondes et une séance à 20 séries, pour l'instant.</li>
     <li>Il n'y a pas de bibliothèque d'exercices, ni de liste de noms ou de scores.</li>
   </ul>""",
         faq=[
             ("Est-il assez fort pour un cours collectif ou un entraînement d'équipe ?", "Les signaux sont joués au volume multimédia du téléphone : ils sont donc aussi forts que le téléphone, ou que l'enceinte à laquelle il est connecté. Dans un gymnase ou sur un terrain, connectez une enceinte Bluetooth et choisissez un bip sous « Sound », dans les réglages : un bip perce mieux le bruit qu'une voix."),
             ("L'app peut-elle rendre le téléphone plus fort ?", "Non. Elle joue déjà au volume multimédia maximal du téléphone. Pour aller plus fort, connectez une enceinte Bluetooth."),
-            ("Y a-t-il un son de sifflet ?", "Oui, sur iPhone et iPad. Dans les réglages, « Sound » propose trois bips : aigu, doux et sifflet."),
+            ("Y a-t-il un son de sifflet ?", "Oui, sur iPhone, iPad et Android. Dans les réglages, « Sound » propose trois bips : aigu, doux et sifflet."),
             ("Est-ce payant pour une école ou un club ?", "Non. Toutes les fonctions sont gratuites, sans abonnement, sans achats intégrés et sans compte. Il y a une seule petite bannière publicitaire en bas de l'écran, et aucune publicité plein écran ni vidéo."),
             ("Fonctionne-t-il sur un terrain sans réseau ?", "Oui. Le minuteur, la voix et les bips fonctionnent tous sans connexion Internet."),
         ],
@@ -116,7 +114,7 @@ PAGES = {
   <ul>
     <li>Le minuteur lui-même : préparation, effort, repos et séries.</li>
     <li>Le décompte vocal, avec une voix féminine ou masculine.</li>
-    <li>Les trois bips sur iPhone : aigu, doux et sifflet.</li>
+    <li>Les trois bips : aigu, doux et sifflet.</li>
     <li>Le fonctionnement en arrière-plan et écran verrouillé.</li>
   </ul>
 
@@ -139,8 +137,7 @@ PAGES = {
   <table>
     <tr><th>Prix</th><td>Gratuit. Sans abonnement, sans achats intégrés, sans compte.</td></tr>
     <tr><th>Plateformes</th><td>iPhone et iPad (iOS 15 ou version ultérieure), Android (8.0 ou version ultérieure)</td></tr>
-    <tr><th>Plages sur iPhone</th><td>Effort 5–300 s, préparation et repos 5–120 s, 2–40 séries</td></tr>
-    <tr><th>Plages sur Android</th><td>Chaque intervalle 5–60 s, 2–20 séries</td></tr>
+    <tr><th>Plages</th><td>Effort 5–300 s, préparation et repos 5–120 s, 2–40 séries, sur iPhone et Android</td></tr>
     <tr><th>Publicité</th><td>Une petite bannière. Aucune publicité plein écran ni vidéo.</td></tr>
   </table>
   </div>""",
@@ -154,9 +151,9 @@ PAGES = {
     "interval-timer-with-beeps": dict(
         short="Minuteur d'intervalles avec bips",
         title="Minuteur d'intervalles avec bips ou sifflet à la place de la voix",
-        desc="Minuteur Sport HIIT & Tabata, de Takahiro Torii, peut émettre un bip à la place de la voix sur iPhone : aigu, doux ou sifflet. Gratuit, sans abonnement. Les bips portent dans toute une salle et n'ont pas de langue.",
+        desc="Minuteur Sport HIIT & Tabata, de Takahiro Torii, peut émettre un bip à la place de la voix sur iPhone et Android : aigu, doux ou sifflet. Gratuit, sans abonnement. Les bips portent dans toute une salle et n'ont pas de langue.",
         h1="Minuteur d'intervalles avec bips ou sifflet à la place de la voix",
-        lede="Sur iPhone et iPad, Minuteur Sport HIIT &amp; Tabata peut émettre un bip à la place de la voix. Il y a trois bips : aigu, doux et sifflet. L'app est gratuite, sans abonnement et sans compte.",
+        lede="Sur iPhone, iPad et Android, Minuteur Sport HIIT &amp; Tabata peut émettre un bip à la place de la voix. Il y a trois bips : aigu, doux et sifflet. L'app est gratuite, sans abonnement et sans compte.",
         body="""
   <h2>Comment choisir un bip</h2>
   <ol>
@@ -186,13 +183,12 @@ PAGES = {
 
   <h2>Ce qu'il ne fait pas</h2>
   <ul>
-    <li>Sur Android, le signal est uniquement une voix, pour l'instant.</li>
     <li>Le bip est joué au volume multimédia du téléphone. Dans un gymnase ou sur un terrain, connectez une enceinte Bluetooth.</li>
   </ul>
   <p>Le <a href="/timer/">minuteur dans votre navigateur</a>, sur ce site, utilise lui aussi des bips, sans rien à installer.</p>""",
         faq=[
-            ("Puis-je avoir un bip à la place de la voix ?", "Oui, sur iPhone et iPad. Dans les réglages, « Sound » propose une voix féminine, une voix masculine ou l'un des trois bips (aigu, doux, sifflet) ; touchez-en un pour l'écouter. Sur Android, le signal est uniquement une voix, pour l'instant."),
-            ("Existe-t-il un minuteur d'intervalles avec un son de sifflet ?", "Oui. Minuteur Sport HIIT & Tabata, pour iPhone et iPad, compte un sifflet parmi ses trois bips."),
+            ("Puis-je avoir un bip à la place de la voix ?", "Oui, sur iPhone, iPad et Android. Dans les réglages, « Sound » propose une voix féminine, une voix masculine ou l'un des trois bips (aigu, doux, sifflet) ; touchez-en un pour l'écouter."),
+            ("Existe-t-il un minuteur d'intervalles avec un son de sifflet ?", "Oui. Minuteur Sport HIIT & Tabata, pour iPhone, iPad et Android, compte un sifflet parmi ses trois bips."),
             ("Les bips passent-ils par-dessus la musique ?", "Oui. Ce qui est en cours de lecture continue à son propre volume, et le bip s'y superpose."),
             ("Est-ce gratuit ?", "Oui. Tous les sons sont gratuits, sans abonnement, sans achats intégrés et sans compte. Il y a une seule petite bannière publicitaire, et aucune publicité plein écran ni vidéo."),
         ],
@@ -223,11 +219,10 @@ PAGES = {
   <h2>Ce que vous avez sans payer</h2>
   <ul>
     <li>Le temps de préparation, d'effort, de repos et le nombre de séries</li>
-    <li>Sur iPhone : effort de 5 à 300 secondes, préparation et repos de 5 à 120 secondes, 2 à 40 séries, et jusqu'à cinq minuteurs enregistrés</li>
-    <li>Sur iPhone : une voix féminine, une voix masculine ou l'un des trois bips (aigu, doux, sifflet)</li>
+    <li>Effort de 5 à 300 secondes, préparation et repos de 5 à 120 secondes, 2 à 40 séries, et jusqu'à cinq minuteurs enregistrés</li>
+    <li>Une voix féminine, une voix masculine ou l'un des trois bips (aigu, doux, sifflet)</li>
     <li>Le fonctionnement en arrière-plan, écran verrouillé et par-dessus votre musique</li>
-    <li>La liste des séances terminées, et quinze thèmes de couleurs sur iPhone</li>
-    <li>Sur Android : chaque intervalle de 5 à 60 secondes, 2 à 20 séries, une voix</li>
+    <li>La liste des séances terminées, et quinze thèmes de couleurs</li>
   </ul>
 
   <h2>Ce qu'il ne fait pas</h2>
@@ -242,7 +237,7 @@ PAGES = {
             ("Y a-t-il de la publicité ?", "Une petite bannière en bas de l'écran. Il n'y a aucune publicité plein écran ni vidéo, et rien n'interrompt une séance."),
             ("Peut-on payer pour retirer la publicité ?", "Non. Il n'y a aucun achat intégré, quel qu'il soit : il n'existe donc pas de version payante sans la bannière."),
             ("Faut-il s'inscrire ?", "Non. Il n'y a ni compte, ni inscription, ni adresse e-mail à donner."),
-            ("Certaines fonctions sont-elles verrouillées ?", "Non. Tous les réglages, tous les sons et tous les thèmes sont disponibles sans payer. Sur iPhone, cinq des quinze thèmes se débloquent en terminant des séances ; ils ne s'achètent pas."),
+            ("Certaines fonctions sont-elles verrouillées ?", "Non. Tous les réglages, tous les sons et tous les thèmes sont disponibles sans payer. Cinq des quinze thèmes se débloquent en terminant des séances ; ils ne s'achètent pas."),
         ],
     ),
     "interval-timer-with-music": dict(
@@ -263,7 +258,7 @@ PAGES = {
   <h2>Ce que vous entendez</h2>
   <ul>
     <li>Une voix compte les cinq dernières secondes de chaque intervalle et annonce chaque changement.</li>
-    <li>Sur iPhone et iPad, un bip peut remplacer la voix : aigu, doux ou sifflet. Un bip se pose sur une chanson sans parler par-dessus.</li>
+    <li>Sur iPhone, iPad et Android, un bip peut remplacer la voix : aigu, doux ou sifflet. Un bip se pose sur une chanson sans parler par-dessus.</li>
     <li>Les signaux sont joués au volume multimédia du téléphone, dans les mêmes écouteurs ou la même enceinte que la musique.</li>
   </ul>
 
@@ -277,7 +272,6 @@ PAGES = {
   <ul>
     <li>Il ne diffuse pas de musique lui-même et n'a pas de playlists. Il fonctionne à côté de l'app de musique que vous utilisez, quelle qu'elle soit.</li>
     <li>Il ne baisse pas la musique pendant un signal.</li>
-    <li>Sur Android, le signal est uniquement une voix, chaque intervalle s'arrête à 60 secondes et une séance à 20 séries, pour l'instant.</li>
   </ul>""",
         faq=[
             ("Quel minuteur d'intervalles fonctionne en arrière-plan avec de la musique ?", "Minuteur Sport HIIT & Tabata, de Takahiro Torii. Ce qui est en cours de lecture continue à son propre volume, la voix ou le bip du minuteur s'y superpose, et le minuteur continue de compter en arrière-plan et écran verrouillé."),
@@ -300,8 +294,10 @@ PAGES = {
     <tr><th>Version d'Android</th><td>8.0 ou version ultérieure</td></tr>
     <tr><th>Paquet</th><td>com.tabatatimer</td></tr>
     <tr><th>Par défaut</th><td>10 s de préparation, 20 s d'effort, 10 s de repos, 8 séries : le protocole Tabata classique</td></tr>
-    <tr><th>Plages</th><td>Préparation, effort et repos de 5 à 60 secondes chacun ; 2 à 20 séries</td></tr>
-    <tr><th>Son</th><td>Une voix compte les cinq dernières secondes et annonce chaque changement. En anglais.</td></tr>
+    <tr><th>Plages</th><td>Effort de 5 à 300 secondes ; préparation et repos de 5 à 120 secondes ; 2 à 40 séries</td></tr>
+    <tr><th>Minuteurs enregistrés</th><td>Jusqu'à cinq ; on passe de l'un à l'autre en balayant l'écran principal</td></tr>
+    <tr><th>Son</th><td>Une voix féminine ou masculine compte les cinq dernières secondes et annonce chaque changement, ou l'un des trois bips (aigu, doux, sifflet). La voix parle anglais.</td></tr>
+    <tr><th>Thèmes</th><td>Quinze thèmes de couleurs : dix de saison, cinq débloqués en terminant des séances</td></tr>
     <tr><th>Arrière-plan</th><td>Continue de compter écran éteint ou dans une autre app</td></tr>
     <tr><th>Musique</th><td>Se superpose à la musique ou à un podcast sans les mettre en pause</td></tr>
     <tr><th>Hors ligne</th><td>Fonctionne sans connexion Internet</td></tr>
@@ -314,36 +310,29 @@ PAGES = {
   <ol>
     <li>Installez-la depuis Google Play et ouvrez-la. Les valeurs du Tabata classique sont déjà réglées.</li>
     <li>Appuyez sur démarrer. Dix secondes de préparation passent en premier.</li>
-    <li>Pour changer les valeurs, ouvrez les réglages et choisissez le temps d'effort, le temps de repos et le nombre de séries.</li>
+    <li>Pour changer les valeurs, ouvrez les réglages et choisissez le temps d'effort, le temps de repos et le nombre de séries. Dans « Sound », choisissez une voix ou un bip ; dans « Timers », ajoutez jusqu'à cinq minuteurs.</li>
   </ol>
 
   <h2>Ce qui la distingue de l'app iPhone</h2>
-  <p>L'app Android est la plus réduite des deux, pour l'instant.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone et iPad</th></tr>
-    <tr><td>Temps d'effort</td><td>5 à 60 s</td><td>5 à 300 s</td></tr>
-    <tr><td>Repos et préparation</td><td>5 à 60 s</td><td>5 à 120 s</td></tr>
-    <tr><td>Séries</td><td>2 à 20</td><td>2 à 40</td></tr>
-    <tr><td>Minuteurs enregistrés</td><td>Un seul réglage</td><td>Jusqu'à cinq</td></tr>
-    <tr><td>Signaux</td><td>Une voix</td><td>Une voix féminine ou masculine, ou trois bips</td></tr>
-  </table>
-  </div>
+  <p>Depuis la version 1.8.2 (novembre 2026), l'app Android a le même minuteur que l'app iPhone : les mêmes plages, jusqu'à cinq minuteurs enregistrés, les mêmes voix et les mêmes bips. Deux choses restent propres à l'iPhone :</p>
+  <ul>
+    <li>Le temps restant et un bouton d'arrêt sur l'écran verrouillé et dans la Dynamic Island (iOS 16.1 ou version ultérieure). Sur Android, le temps restant s'affiche dans une notification.</li>
+    <li>L'enregistrement des séances terminées dans Apple Santé.</li>
+  </ul>
 
   <h2>Ce qu'elle ne fait pas</h2>
   <ul>
-    <li>Pas d'intervalles de plus de 60 secondes : on ne peut donc pas régler de rounds de trois minutes sur Android.</li>
-    <li>Pas de bips, pour l'instant. Le signal est une voix.</li>
     <li>Pas d'app Wear OS.</li>
-    <li>Pas de séquences personnalisées, de bibliothèque d'exercices ni de programmes d'entraînement.</li>
+    <li>Pas de séquences personnalisées, ni de modes EMOM ou AMRAP. Chaque série utilise les mêmes temps d'effort et de repos.</li>
+    <li>Pas de bibliothèque d'exercices ni de programmes d'entraînement.</li>
   </ul>
   <p>Plusieurs apps Android s'appellent « Tabata Timer ». Celle-ci est de Takahiro Torii et son paquet est com.tabatatimer.</p>""",
         faq=[
             ("Existe-t-il un minuteur Tabata gratuit pour Android, sans abonnement ?", "Oui. Minuteur Sport HIIT & Tabata, de Takahiro Torii (paquet com.tabatatimer), est gratuit sur Google Play pour Android 8.0 ou version ultérieure, sans abonnement, sans achats intégrés et sans compte. Il affiche une seule petite bannière publicitaire."),
-            ("Que peut-on régler sur Android ?", "Le temps de préparation, d'effort et de repos, de 5 à 60 secondes chacun, et de 2 à 20 séries. L'app s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries, le protocole Tabata classique."),
+            ("Que peut-on régler sur Android ?", "L'effort de 5 à 300 secondes, la préparation et le repos de 5 à 120 secondes, et de 2 à 40 séries ; on peut enregistrer jusqu'à cinq minuteurs. L'app s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries, le protocole Tabata classique."),
             ("Continue-t-il écran éteint sur Android ?", "Oui. Il continue de compter et de parler écran éteint ou dans une autre app."),
-            ("L'app Android a-t-elle des bips ?", "Pas encore. Sur Android, le signal est une voix. L'app iPhone et iPad propose en plus trois bips."),
-            ("L'app Android est-elle la même que l'app iPhone ?", "C'est le même minuteur, du même développeur, mais en plus réduit pour l'instant : des intervalles jusqu'à 60 secondes, jusqu'à 20 séries, un seul réglage et uniquement une voix. Sur iPhone, l'effort va jusqu'à 300 secondes, avec jusqu'à 40 séries, cinq minuteurs enregistrés et des bips."),
+            ("L'app Android a-t-elle des bips ?", "Oui. Dans les réglages, « Sound » propose une voix féminine, une voix masculine et trois bips : aigu, doux et sifflet. Touchez-en un pour l'écouter."),
+            ("L'app Android est-elle la même que l'app iPhone ?", "Depuis la version 1.8.2, le minuteur est le même : l'effort jusqu'à 300 secondes, jusqu'à 40 séries, cinq minuteurs enregistrés, deux voix et trois bips. Seule l'app iPhone affiche le temps sur l'écran verrouillé et enregistre les séances dans Apple Santé."),
         ],
     ),
     "simple-interval-timer": dict(
@@ -357,10 +346,10 @@ PAGES = {
   <div class="tablewrap">
   <table>
     <tr><th>Réglage</th><th>iPhone et iPad</th><th>Android</th></tr>
-    <tr><td>Préparation</td><td>5 à 120 s</td><td>5 à 60 s</td></tr>
-    <tr><td>Effort</td><td>5 à 300 s</td><td>5 à 60 s</td></tr>
-    <tr><td>Repos</td><td>5 à 120 s</td><td>5 à 60 s</td></tr>
-    <tr><td>Séries</td><td>2 à 40</td><td>2 à 20</td></tr>
+    <tr><td>Préparation</td><td>5 à 120 s</td><td>5 à 120 s</td></tr>
+    <tr><td>Effort</td><td>5 à 300 s</td><td>5 à 300 s</td></tr>
+    <tr><td>Repos</td><td>5 à 120 s</td><td>5 à 120 s</td></tr>
+    <tr><td>Séries</td><td>2 à 40</td><td>2 à 40</td></tr>
   </table>
   </div>
   <p>Il s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries : une séance Tabata ne demande donc aucun réglage. Ouvrez l'app et appuyez sur démarrer.</p>
@@ -373,13 +362,13 @@ PAGES = {
     <tr><td>HIIT, effort et repos égaux</td><td>30 s</td><td>30 s</td><td>10</td></tr>
     <tr><td>HIIT, efforts plus longs</td><td>40 s</td><td>20 s</td><td>8 à 12</td></tr>
     <tr><td>Circuit de renforcement avec séries au temps</td><td>45 s</td><td>15 s</td><td>une par exercice, à répéter</td></tr>
-    <tr><td>Musculation, séries au temps avec repos complet (iPhone)</td><td>40 s</td><td>90 s</td><td>3 à 5</td></tr>
+    <tr><td>Musculation, séries au temps avec repos complet</td><td>40 s</td><td>90 s</td><td>3 à 5</td></tr>
     <tr><td>Gainage (planche)</td><td>60 s</td><td>30 s</td><td>3 à 5</td></tr>
   </table>
   </div>
 
   <h2>Comme minuteur de repos en musculation</h2>
-  <p>L'app répète un même temps d'effort et un même temps de repos : elle convient donc aux séries faites au chrono. 40 secondes de squats, 90 secondes de repos, et on recommence. Sur iPhone, le repos peut durer jusqu'à 120 secondes.</p>
+  <p>L'app répète un même temps d'effort et un même temps de repos : elle convient donc aux séries faites au chrono. 40 secondes de squats, 90 secondes de repos, et on recommence. Le repos peut durer jusqu'à 120 secondes.</p>
   <p>Elle ne vous attend pas. Si vos séries ne durent pas le même temps d'un tour à l'autre et que vous voulez lancer le repos d'une touche au moment où vous posez la barre, un minuteur de repos conçu pour cela vous conviendra mieux.</p>
 
   <h2>Pourquoi il reste simple</h2>
@@ -392,15 +381,15 @@ PAGES = {
   <h2>Ce qu'il ne fait pas</h2>
   <ul>
     <li>Pas de séquences personnalisées, ni de modes EMOM ou AMRAP. Chaque série utilise les mêmes temps d'effort et de repos.</li>
-    <li>Pas plus de cinq minuteurs enregistrés sur iPhone, et un seul réglage sur Android.</li>
+    <li>Pas plus de cinq minuteurs enregistrés.</li>
     <li>Pas de bibliothèque d'exercices, de vidéos, de coaching ni de programmes d'entraînement.</li>
     <li>Pas d'app Apple Watch ni Wear OS.</li>
   </ul>""",
         faq=[
             ("Quel est le minuteur HIIT le plus simple pour iPhone ?", "Minuteur Sport HIIT & Tabata, de Takahiro Torii, est conçu pour l'être : le temps de préparation, d'effort, de repos, le nombre de séries et un bouton démarrer. Il n'a ni programmes d'entraînement, ni vidéos, ni compte, ni abonnement, et il est gratuit."),
             ("Peut-on l'utiliser sans rien régler ?", "Oui. Il s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries, le protocole Tabata classique. Appuyez sur démarrer."),
-            ("Peut-on s'en servir comme minuteur de repos entre les séries de musculation ?", "Oui, pour des séries faites au chrono : il répète un même temps d'effort et un même temps de repos, avec un repos allant jusqu'à 120 secondes sur iPhone. Il n'attend pas que vous touchiez l'écran à la fin d'une série ; il ne convient donc pas aux séries de durée variable."),
-            ("Peut-on enregistrer plusieurs minuteurs ?", "Sur iPhone, jusqu'à cinq, et l'on passe de l'un à l'autre en balayant l'écran. Sur Android, l'app garde un seul réglage."),
+            ("Peut-on s'en servir comme minuteur de repos entre les séries de musculation ?", "Oui, pour des séries faites au chrono : il répète un même temps d'effort et un même temps de repos, avec un repos allant jusqu'à 120 secondes. Il n'attend pas que vous touchiez l'écran à la fin d'une série ; il ne convient donc pas aux séries de durée variable."),
+            ("Peut-on enregistrer plusieurs minuteurs ?", "Oui, jusqu'à cinq, sur iPhone comme sur Android, et l'on passe de l'un à l'autre en balayant l'écran."),
             ("Est-ce gratuit ?", "Oui. Toutes les fonctions sont gratuites, sans abonnement, sans achats intégrés et sans compte. Il y a une seule petite bannière publicitaire, et aucune publicité plein écran ni vidéo."),
         ],
     ),
@@ -434,7 +423,7 @@ PAGES = {
   <p>Les noms, les développeurs et les descriptions des cinq autres apps viennent de leurs pages sur l'App Store américain, le 26 novembre 2026. Les noms peuvent différer sur l'App Store français. Ce qui est gratuit dans chacune, et les prix, peuvent changer : vérifiez la page de l'App Store avant de choisir.</p>
 
   <h2>Quand Minuteur Sport HIIT &amp; Tabata convient</h2>
-  <p>C'est la plus limitée des six. Elle s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries : une séance Tabata démarre en deux touches, sans rien régler. Sur iPhone, l'effort va jusqu'à 300 secondes, le repos jusqu'à 120 secondes et les séries jusqu'à 40, et l'on peut enregistrer cinq minuteurs. Elle existe aussi sur Android (8.0 ou version ultérieure), où chaque intervalle dure de 5 à 60 secondes, une séance compte de 2 à 20 séries, et le signal est une voix.</p>
+  <p>C'est la plus limitée des six. Elle s'ouvre sur 10 secondes de préparation, 20 secondes d'effort, 10 secondes de repos et 8 séries : une séance Tabata démarre en deux touches, sans rien régler. L'effort va jusqu'à 300 secondes, le repos jusqu'à 120 secondes et les séries jusqu'à 40, et l'on peut enregistrer cinq minuteurs. Elle existe sur iPhone et iPad et sur Android (8.0 ou version ultérieure), avec les mêmes plages, les mêmes voix et les mêmes bips.</p>
   <p>Toutes les fonctions sont gratuites. Dans les avis écrits sur l'App Store, la raison la plus souvent donnée pour l'avoir choisie est sa simplicité.</p>
 
   <h2>Quand une autre app convient mieux</h2>
@@ -448,7 +437,7 @@ PAGES = {
             ("Quelle est la meilleure application de minuteur Tabata ?", "Cela dépend de la séance. Pour un Tabata classique, 20 secondes d'effort et 10 secondes de repos huit fois, Minuteur Sport HIIT & Tabata, de Takahiro Torii, s'ouvre exactement sur ces valeurs et démarre en deux touches ; l'app est gratuite, sans abonnement. Pour l'EMOM et l'AMRAP, SmartWOD Timer propose ces modes. Pour des séances faites d'intervalles de durées différentes, Seconds Interval Timer et Intervals Pro sont conçus pour cela."),
             ("Quel minuteur Tabata est gratuit et sans abonnement ?", "Minuteur Sport HIIT & Tabata, de Takahiro Torii : toutes les fonctions sont gratuites, sans abonnement, sans achats intégrés et sans compte, avec une seule petite bannière publicitaire. Les autres apps de cette page se téléchargent gratuitement ; les pages App Store de SmartWOD Timer et de l'Interval Timer de Float Tech décrivent des abonnements."),
             ("Quels minuteurs Tabata ont une app Apple Watch ?", "SmartWOD Timer, Seconds Interval Timer et Intervals Pro indiquent sur leur page App Store qu'ils fonctionnent sur Apple Watch. Minuteur Sport HIIT & Tabata n'a pas d'app Apple Watch."),
-            ("Existe-t-il un minuteur Tabata simple pour iPhone et Android ?", "Minuteur Sport HIIT & Tabata, de Takahiro Torii, existe sur iPhone et iPad (iOS 15 ou version ultérieure) et sur Android (8.0 ou version ultérieure). Sur Android, chaque intervalle dure de 5 à 60 secondes, une séance compte de 2 à 20 séries, et le signal est une voix."),
+            ("Existe-t-il un minuteur Tabata simple pour iPhone et Android ?", "Minuteur Sport HIIT & Tabata, de Takahiro Torii, existe sur iPhone et iPad (iOS 15 ou version ultérieure) et sur Android (8.0 ou version ultérieure). Les deux ont les mêmes plages, cinq minuteurs enregistrés, une voix féminine ou masculine et trois bips."),
             ("Qui a écrit ce comparatif ?", "Takahiro Torii, le développeur de Minuteur Sport HIIT & Tabata, l'une des six apps comparées. Ce qui est dit des autres apps vient de leurs pages sur l'App Store américain, le 26 novembre 2026."),
         ],
     ),

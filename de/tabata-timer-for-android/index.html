@@ -39,7 +39,7 @@
       "name": "Was lässt sich unter Android einstellen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Vorbereitungszeit, Belastungszeit und Pausenzeit jeweils von 5 bis 60 Sekunden, dazu 2 bis 20 Sätze. Die App startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen, dem klassischen Tabata-Protokoll."
+        "text": "Belastungszeit von 5 bis 300 Sekunden, Vorbereitungs- und Pausenzeit von 5 bis 120 Sekunden, dazu 2 bis 40 Sätze; bis zu fünf Timer lassen sich speichern. Die App startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen, dem klassischen Tabata-Protokoll."
       }
     },
     {
@@ -55,7 +55,7 @@
       "name": "Hat die Android-App Signaltöne?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Noch nicht. Unter Android ist das Signal eine Stimme. Die App für iPhone und iPad hat zusätzlich drei Signaltöne."
+        "text": "Ja. Unter „Sound“ in den Einstellungen stehen eine weibliche Stimme, eine männliche Stimme und drei Signaltöne zur Wahl: scharf, weich und Pfeife. Antippen, um sie zu hören."
       }
     },
     {
@@ -63,7 +63,7 @@
       "name": "Ist die Android-App dieselbe wie die iPhone-App?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Es ist derselbe Timer vom selben Entwickler, vorerst aber kleiner: Intervalle bis 60 Sekunden, bis zu 20 Sätze, eine Einstellung und nur die Stimme. Auf dem iPhone reicht die Belastungszeit bis 300 Sekunden, bei bis zu 40 Sätzen, fünf gespeicherten Timern und Signaltönen."
+        "text": "Seit Version 1.8.2 ist der Timer derselbe: Belastung bis 300 Sekunden, bis zu 40 Sätze, fünf gespeicherte Timer, zwei Stimmen und drei Signaltöne. Nur die iPhone-App zeigt die Zeit auf dem Sperrbildschirm und speichert Workouts in Apple Health."
       }
     }
   ]
@@ -76,7 +76,7 @@
   "inLanguage": "de",
   "name": "Kostenloser Tabata-Timer für Android",
   "url": "https://simpletabata.com/de/tabata-timer-for-android/",
-  "dateModified": "2026-11-26",
+  "dateModified": "2026-11-28",
   "author": {
     "@type": "Person",
     "name": "Takahiro Torii"
@@ -162,8 +162,10 @@
     <tr><th>Android-Version</th><td>8.0 oder neuer</td></tr>
     <tr><th>Paket</th><td>com.tabatatimer</td></tr>
     <tr><th>Standard</th><td>10 s Vorbereitung, 20 s Belastung, 10 s Pause, 8 Sätze: das klassische Tabata-Protokoll</td></tr>
-    <tr><th>Bereiche</th><td>Vorbereitung, Belastung und Pause jeweils 5 bis 60 Sekunden; 2 bis 20 Sätze</td></tr>
-    <tr><th>Ton</th><td>Eine Stimme zählt die letzten fünf Sekunden herunter und sagt jeden Wechsel an. Auf Englisch gesprochen.</td></tr>
+    <tr><th>Bereiche</th><td>Belastung 5 bis 300 Sekunden; Vorbereitung und Pause 5 bis 120 Sekunden; 2 bis 40 Sätze</td></tr>
+    <tr><th>Gespeicherte Timer</th><td>Bis zu fünf; Wechsel per Wischen auf dem Hauptbildschirm</td></tr>
+    <tr><th>Ton</th><td>Eine weibliche oder männliche Stimme zählt die letzten fünf Sekunden herunter und sagt jeden Wechsel an, oder einer von drei Signaltönen (scharf, weich, Pfeife). Die Stimme spricht Englisch.</td></tr>
+    <tr><th>Themen</th><td>Fünfzehn Farbthemen: zehn saisonale, fünf durch beendete Workouts freigeschaltet</td></tr>
     <tr><th>Hintergrund</th><td>Zählt weiter, wenn der Bildschirm aus ist oder eine andere App geöffnet ist</td></tr>
     <tr><th>Musik</th><td>Läuft über Musik oder einem Podcast, ohne sie anzuhalten</td></tr>
     <tr><th>Offline</th><td>Funktioniert ohne Internetverbindung</td></tr>
@@ -176,28 +178,21 @@
   <ol>
     <li>Bei Google Play installieren und öffnen. Die klassischen Tabata-Werte sind schon eingestellt.</li>
     <li>Start drücken. Zuerst laufen zehn Sekunden Vorbereitungszeit.</li>
-    <li>Um die Werte zu ändern, die Einstellungen öffnen und Belastungszeit, Pausenzeit und Anzahl der Sätze einstellen.</li>
+    <li>Um die Werte zu ändern, die Einstellungen öffnen und Belastungszeit, Pausenzeit und Anzahl der Sätze einstellen. Unter „Sound“ wählen Sie eine Stimme oder einen Signalton, unter „Timers“ legen Sie bis zu fünf Timer an.</li>
   </ol>
 
   <h2>Worin er sich von der iPhone-App unterscheidet</h2>
-  <p>Die Android-App ist vorerst die kleinere der beiden.</p>
-  <div class="tablewrap">
-  <table>
-    <tr><th></th><th>Android</th><th>iPhone und iPad</th></tr>
-    <tr><td>Belastungszeit</td><td>5 bis 60 s</td><td>5 bis 300 s</td></tr>
-    <tr><td>Pausen- und Vorbereitungszeit</td><td>5 bis 60 s</td><td>5 bis 120 s</td></tr>
-    <tr><td>Sätze</td><td>2 bis 20</td><td>2 bis 40</td></tr>
-    <tr><td>Gespeicherte Timer</td><td>Eine Einstellung</td><td>Bis zu fünf</td></tr>
-    <tr><td>Signale</td><td>Eine Stimme</td><td>Eine weibliche oder männliche Stimme oder drei Signaltöne</td></tr>
-  </table>
-  </div>
+  <p>Seit Version 1.8.2 (November 2026) hat die Android-App denselben Timer wie die iPhone-App: dieselben Bereiche, bis zu fünf gespeicherte Timer, dieselben Stimmen und Signaltöne. Nur auf dem iPhone gibt es zwei Dinge:</p>
+  <ul>
+    <li>Restzeit und Stopp-Taste auf dem Sperrbildschirm und in der Dynamic Island (iOS 16.1 oder neuer). Unter Android erscheint die Restzeit in einer Benachrichtigung.</li>
+    <li>Das Speichern beendeter Workouts in Apple Health.</li>
+  </ul>
 
   <h2>Was er nicht kann</h2>
   <ul>
-    <li>Keine Intervalle über 60 Sekunden; 3-Minuten-Runden lassen sich unter Android also nicht einstellen.</li>
-    <li>Vorerst keine Signaltöne. Das Signal ist eine Stimme.</li>
     <li>Keine App für Wear OS.</li>
-    <li>Keine eigenen Abfolgen, keine Übungsbibliothek, keine Trainingspläne.</li>
+    <li>Keine eigenen Abläufe, keine EMOM- oder AMRAP-Modi. Jeder Satz hat dieselbe Belastungs- und Pausenzeit.</li>
+    <li>Keine Übungsbibliothek und keine Trainingspläne.</li>
   </ul>
   <p>Mehrere Android-Apps heißen „Tabata Timer“. Diese hier stammt von Takahiro Torii, ihr Paket ist com.tabatatimer.</p>
 
@@ -207,16 +202,16 @@
   <p>Ja. Intervall-Timer HIIT &amp; Tabata von Takahiro Torii (Paket com.tabatatimer) ist bei Google Play für Android 8.0 oder neuer kostenlos, ohne Abo, ohne In-App-Käufe und ohne Konto. Die App zeigt ein kleines Werbebanner.</p>
 
   <h3>Was lässt sich unter Android einstellen?</h3>
-  <p>Vorbereitungszeit, Belastungszeit und Pausenzeit jeweils von 5 bis 60 Sekunden, dazu 2 bis 20 Sätze. Die App startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen, dem klassischen Tabata-Protokoll.</p>
+  <p>Belastungszeit von 5 bis 300 Sekunden, Vorbereitungs- und Pausenzeit von 5 bis 120 Sekunden, dazu 2 bis 40 Sätze; bis zu fünf Timer lassen sich speichern. Die App startet mit 10 Sekunden Vorbereitung, 20 Sekunden Belastung, 10 Sekunden Pause und 8 Sätzen, dem klassischen Tabata-Protokoll.</p>
 
   <h3>Läuft er unter Android weiter, wenn der Bildschirm aus ist?</h3>
   <p>Ja. Er zählt und spricht weiter, wenn der Bildschirm aus ist oder eine andere App geöffnet ist.</p>
 
   <h3>Hat die Android-App Signaltöne?</h3>
-  <p>Noch nicht. Unter Android ist das Signal eine Stimme. Die App für iPhone und iPad hat zusätzlich drei Signaltöne.</p>
+  <p>Ja. Unter „Sound“ in den Einstellungen stehen eine weibliche Stimme, eine männliche Stimme und drei Signaltöne zur Wahl: scharf, weich und Pfeife. Antippen, um sie zu hören.</p>
 
   <h3>Ist die Android-App dieselbe wie die iPhone-App?</h3>
-  <p>Es ist derselbe Timer vom selben Entwickler, vorerst aber kleiner: Intervalle bis 60 Sekunden, bis zu 20 Sätze, eine Einstellung und nur die Stimme. Auf dem iPhone reicht die Belastungszeit bis 300 Sekunden, bei bis zu 40 Sätzen, fünf gespeicherten Timern und Signaltönen.</p>
+  <p>Seit Version 1.8.2 ist der Timer derselbe: Belastung bis 300 Sekunden, bis zu 40 Sätze, fünf gespeicherte Timer, zwei Stimmen und drei Signaltöne. Nur die iPhone-App zeigt die Zeit auf dem Sperrbildschirm und speichert Workouts in Apple Health.</p>
 
   <h2>Weitere Einsatzzwecke</h2>
   <ul>
@@ -242,7 +237,7 @@
     <a href="/timer/">Timer im Browser (auf Englisch)</a>
     <a href="/privacy.html">Datenschutzerklärung</a>
     <a href="mailto:support@simpletabata.com">Kontakt: support@simpletabata.com</a>
-    <span>Zuletzt aktualisiert: 26. November 2026</span>
+    <span>Zuletzt aktualisiert: 28. November 2026</span>
   </footer>
 </main>
 </body>
